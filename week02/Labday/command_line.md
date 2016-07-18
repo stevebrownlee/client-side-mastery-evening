@@ -6,6 +6,7 @@
 	$ cd #takes you to root directory
 	$ cd workspace #takes you to workspace directory
 	$ cd .. #takes you to back one directory
+	$ cd - #takes you to where you previously were
 	```
 2. cat - reads a file and prints it to the terminal
 	
@@ -52,6 +53,8 @@
 
 	```
 	$ mkdir html #makes a directory called html
+	$ mkdir a b c #makes 3 different folders
+	$ mkdir a/cat #makes cat folder inside a folder - only works if a already exists
 	```
 10. sudo - superuser do - allows you to run certain tasks as administrator
 	
@@ -64,6 +67,7 @@
 
 	```
 	$ cal #calendar of current month
+	$ cal -y #shows calendar for full year
 	```
 12. top - displays information about running processes
 
@@ -146,3 +150,5 @@
 	```
 	$ grep boo /etc/passwd  #searches for boo in /etc/passwd
 	```
+
+27. echo
