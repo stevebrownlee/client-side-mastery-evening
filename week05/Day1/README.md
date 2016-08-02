@@ -124,3 +124,8 @@ to see what changes have been made in a fill use git diff
 ```
 git diff main.js
 ```
+
+<hr/>
+## END - Assign the javascript quiz in github classroom - have them clone down, add files, push to branch, open PR
+
+#### REMINDER - you don't close a PR until an instructor give you a thumbs up.  Once you are done with the quiz add a line in the comments of the quiz that you are done so we know to look at it.
