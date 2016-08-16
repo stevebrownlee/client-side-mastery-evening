@@ -130,13 +130,15 @@ fruits.sort().reverse().splice(4, 0, "Apricot");
 The `forEach` method on an array executed a [callback](http://www.impressivewebs.com/callback-functions-javascript/) [function](http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/) for each element in the array.
 
 
-Write a function called `outputFruitOld` that consoles every fruit in a fruit array
+Write a function called `outputFruitOld` that consoles every fruit in a fruit array.
 ```js
 var fruits = ["apple", "banana", "cherry"];
-for( var i = 0; i < fruits.length; i++ ) {
-  console.log('fruits[' + i + ']  = ' + fruits[i]);
+function outputFruitOld(array){
+  for( var i = 0; i < array.length; i++ ) {
+    console.log('array[' + i + ']  = ' + array[i]);
+  }   
 }
-fruits.forEach(outputFruitOld);
+outputFruitOld(fruits);
 ```
 Now we will write the same thing with a forEach loop:
 
@@ -152,22 +154,30 @@ fruits.forEach(outputFruit);
 
 The `map()` method *creates a new array* with the results of calling a provided function on every element in this array.
 
+Write a function called `backwardFruitsOld` that reverses the letters in each word in the fruits array.
+
 ```js
-function reverseIt(element, index, array) {
+var fruits = ["apple", "banana", "cherry"];
+function backwardFruitsOld(array){
+  var backwardFruits = [];
+  for( var i = 0; i < array.length; i++ ) {
+    backwardFruits.push(array[i].split("").reverse().join(""));
+  }
+  console.log(backwardFruits); // ["elppa", "ananab", "yrrehc"]
+}
+backwardFruitsOld(fruits);
+```
+
+Now we will write the same thing using map:
+
+
+```js
+function reverseIt(element, index) {
   return element.split("").reverse().join("");
 }
 
 var fruits = ["apple", "banana", "cherry"];
 var backwardFruits = fruits.map(reverseIt); 
-console.log(backwardFruits); // ["elppa", "ananab", "yrrehc"]
-```
-The above is the same as this `for` loop:
-
-```js
-var backwardFruits = [];
-for( var i = 0; i < fruits.length; i++ ) {
-  backwardFruits.push(fruits[i].split("").reverse().join(""));
-}
 console.log(backwardFruits); // ["elppa", "ananab", "yrrehc"]
 ```
 
@@ -176,8 +186,27 @@ console.log(backwardFruits); // ["elppa", "ananab", "yrrehc"]
 
 The `filter()` method creates a new array with all elements that pass the test implemented by the provided function.
 
+Write a function called `fiveLettersOnlyOld` that only returns fruits that have 5 letters.
+
 ```js
-function filterIt(element, index, array) {
+var fruits = ["apple", "banana", "cherry"];
+function fiveLettersOnlyOld(array){
+  var filteredFruits = [];
+  for( var i = 0; i < array.length; i++ ) {
+    if (array[i].length === 5) {
+      filteredFruits.push(array[i]);
+    }
+  }
+  console.log(filteredFruits); // // ["apple"]
+}
+fiveLettersOnlyOld(fruits);
+```
+
+same code using filter method:
+
+
+```js
+function filterIt(element, index) {
   if (element.length === 5) {
     return element;
   }
@@ -187,37 +216,32 @@ var fruits = ["apple", "banana", "cherry"];
 var filteredFruits = fruits.filter(filterIt);
 console.log(filteredFruits); // ["apple"]
 ```
-The above is the same as this `for` loop:
-
-```js
-var filteredFruits = [];
-for( var i = 0; i < fruits.length; i++ ) {
-  if (fruits[i].length === 5) {
-    filteredFruits.push(fruits[i]);
-  }
-}
-console.log(filteredFruits); // // ["apple"]
-```
 
 
 #### reduce
 
 The `reduce()` method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
 
+Write a function called `addzOld` that returns the sum of an array.
 ```js
-var sum = [0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index, array) {
+var numbers = [0, 1, 2, 3, 4];
+function addzOld(array){
+  var sum = 0;
+  for( var i = 0; i < array.length; i++ ) {
+    sum = sum + array[i];
+  }
+  console.log(sum);
+}
+addzOld(numbers);
+```
+
+Using the reduce method:
+
+```js
+var sum = [0, 1, 2, 3, 4].reduce(function(previousValue, currentValue, index) {
   console.log("curent index: " + index);
   return previousValue + currentValue;
 });
 console.log(sum);
 ```
-The above is the same as this `for` loop:
 
-```js
-var sum = 0;
-var numbers = [0, 1, 2, 3, 4];
-for( var i = 0; i < numbers.length; i++ ) {
-  sum = sum + numbers[i];
-}
-console.log(sum);
-```
