@@ -1,5 +1,4 @@
-
-var bookInfo = {
+bookInfo = {
   price: "24.99",
   title: "Harry Potter Does Stuff",
   image: "/book.jpg"
