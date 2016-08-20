@@ -1,56 +1,11 @@
-// var planets = SolarSystem.getArray();
-// var myStuff = document.getElementById("myStuff");
+console.log("last modified", SolarSystem.last_modified);
 
-// for (var i = 0; i < planets.length; i++) {
-//   myStuff.innerHTML += `<p>${planets[i]}</p>`;
-// }
+SolarSystem.addSpacecraft("New Horizon");
+SolarSystem.addSpacecraft("Voyager 1");
+SolarSystem.addSpacecraft("Voyager 2");
+SolarSystem.setPlanetsLandedOn(34);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log("Sedan color, called from main.js:", Sedan.getColor());
-// console.log("Called from main.js: ", Sedan.sayHello());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("last modified", SolarSystem.last_modified);
+console.log("planets", SolarSystem.getPlanets());
+console.log("active spacecraft", SolarSystem.getSpacecraft());
 
