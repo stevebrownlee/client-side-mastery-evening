@@ -4,6 +4,7 @@
 
 
 **Groups:**
+
 Team A:  Bin, Debra, Josh, Taylor S.
 
 Team B:  Blair, Dustin, Jennifer, Max
