@@ -113,9 +113,9 @@
 
 #### Week 11 - Start Modern JS developer Saturday
 * **Day 1** - Chatty
-* **Day 2** - Chatty, demo at end
+* **Day 2** - Chatty
 * **HW** - Finish SPA quiz and exercises
-* **Lab Day** - Intro to Jquery, task runners and package managers, Exercises
+* **Lab Day** - Demo Chatty projects, Intro to Jquery, task runners and package managers, Exercises
 	* MJ_JQUERY_MUSIC_HISTORY_5
 	* MJ_JQUERY_SLIDESHOW
 
