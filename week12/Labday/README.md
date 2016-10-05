@@ -1,3 +1,3 @@
 # Week 12 Labday Agenda
 
-> **Agenda:** promises
+> **Agenda:** prototypes continued, is-a vs has-a

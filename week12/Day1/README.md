@@ -1,3 +1,3 @@
 # Week 12 - Day 1
 
-> **Agenda:** this, prototypal inheritance
+> **Agenda:** jQuery cont, this
