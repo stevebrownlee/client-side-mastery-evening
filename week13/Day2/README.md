@@ -1,3 +1,3 @@
 # Week 13 - Day 2
 
-> **Agenda:** review week - this, prototypal inheritance, promises
+> **Agenda:** workday: complete SPA exercises/quiz and start working on prototype exercises
