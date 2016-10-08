@@ -1,4 +1,5 @@
-"use strict";
+/*jshint esversion: 6 */
+/*global console, $, setInterval, clearInterval */
 
 let interval = null;
 let counter = 1;
@@ -10,12 +11,13 @@ const outputDiv = $("#output");
 
 function Plant(){
   this.height = 0;
-};
+}
+
 // Create a Tree function.
 // Tree should have a property of branches.
 function Tree(){
   this.branches = 0;
-};
+}
 
 // Plant should be the prototype of Tree.
 Tree.prototype = new Plant();
@@ -28,8 +30,8 @@ Plant.prototype.increaseHeight = function(growth) {
     this.height += 1;
     if (this.height%10 === 0) {
       this.branches++;
-    };
-  };
+    }
+  }
 };
 
 // decreaseHeight should decrease the value of the height property by the amount passed in as an argument.
@@ -76,7 +78,7 @@ interval = setInterval(function () {
   PearTree.grow(2);
   OakTree.grow(3);
 
-  let output = `<p>counter ${counter}</p>`
+  let output = `<p>counter ${counter}</p>`;
   output += `<p>Pear tree is now ${PearTree.height}cm tall and has ${PearTree.branches} branches<br>`;
   output += `Oak tree is now ${OakTree.height}cm tall and has ${OakTree.branches} branches</p>`;
   outputDiv.append(output);
@@ -85,12 +87,12 @@ interval = setInterval(function () {
     PearTree.trim(3);
     OakTree.trim(5);
     outputDiv.innerHTML += `<p class="trim">Trim #${counter/10}</p>`;
-  };
+  }
 
   counter++;
 
   if (counter > 30) {
     clearInterval(interval);
     console.log("finished");
-  };
+  }
 }, 1000);
