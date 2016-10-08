@@ -1,16 +1,12 @@
 {
   "name": "orchard",
-  "version": "1.0.0",
-  "homepage": "https://github.com/zoeames/NSS-evening-class-curriculum",
+  "description": "",
+  "main": "index.js",
   "authors": [
     "Zoe Ames <zoeames@gmail.com>"
   ],
-  "description": "orchard",
-  "main": "main.js",
-  "keywords": [
-    "trees"
-  ],
   "license": "MIT",
+  "homepage": "https://github.com/zoeames/NSS-evening-class-curriculum",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -19,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~3.1.1"
+    "jquery": "^3.1.1"
   }
 }
