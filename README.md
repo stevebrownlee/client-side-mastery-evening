@@ -139,9 +139,18 @@
 ***
 
 #### Week 13
-* **All Days** - review week - this, prototypal inheritance, promises
+* **Day 1** - workday: complete SPA exercises/quiz and start working on prototype exercises
+* **Day 2** - workday: complete SPA exercises/quiz and start working on prototype exercises
+* **HW** - any outstanding SPA exercises
+	* SPA quizzes
+	* JQUERY Slideshow
+	* Prototypes - Cars
+	* Prototypes - Employees
+	* MH3
+	* MH4
+	* MH5 - jquery
 
-***
+* **Lab Day** - review prototypal inheritance and task runners, officially introduce ES6
 
 #### Week 14
 * **All Days** - Gauntlet
