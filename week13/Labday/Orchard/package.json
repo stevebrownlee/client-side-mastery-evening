@@ -1,0 +1,14 @@
+{
+  "name": "orchard",
+  "version": "1.0.0",
+  "description": "tree grower",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "trees"
+  ],
+  "author": "Zoe Ames <zoeames@gmail.com>",
+  "license": "MIT"
+}
