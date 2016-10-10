@@ -2,23 +2,51 @@
 
 $(document).ready(function() {
   console.log("jquery is ready");
-  $.ajax({
-    url: "../songs.json"
-  }).done(function(data) {
-    console.log("data", data);
-    // Get a reference to the DOM element that
-    // holds all the songs
-    var contentEl = $("#all-my-songs");
-    
+  // Get a reference to the DOM element that
+  // holds all the songs
+  var songData = "";
+  var currentSong;
+  var contentEl = $("#all-my-songs");
+  var songs = [];
+
+
+  function getSongs(){
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: "../songs.json"
+      }).done(function(data) {
+        // console.log("data", data);
+        resolve(data);
+      }).fail(function(xhr, status, error) {
+      reject(error);
+      });
+    });
+  }
+
+  function getSongs2(resultOfFirstAjax){
+    return new Promise((resolve, reject) => {
+      $.ajax({
+        url: "../songs2.json",
+        data: resultOfFirstAjax
+      }).done(function(data) {
+        // console.log("data2 in getSongs2", data);
+        // console.log("data1 in getSongs2", resultOfFirstAjax);
+        songs = resultOfFirstAjax.songs;
+        resolve(data);
+      }).fail(function(xhr, status, error) {
+      reject(error);
+      });
+    });
+  }
+
+
+  function doSomeStuffWhenAjaxIsDone(){
     /*
       Loop through all the songs and build the
       DOM elements for each one
      */
-    var songData = "";
-    var currentSong;
-
-    for (var i = 0; i < data.songs.length; i++) {
-      currentSong = data.songs[i];
+    for (var i = 0; i < songs.length; i++) {
+      currentSong = songs[i];
 
       /*
         Build up some HTML to display the songs,
@@ -37,8 +65,17 @@ $(document).ready(function() {
 
     console.log("songData", songData);
     contentEl.html(songData);
-  }).fail(function(error) {
-    console.log( "error" , error);
-  });
+  }
 
+  getSongs().then(function(dataPass){
+    return getSongs2(dataPass);
+  }).then(function(dataPass2){
+    console.log("dataPass inside 2nd then", songs);
+    console.log("dataPass2", dataPass2);
+    dataPass2.songs.forEach(function(song){
+      songs.push(song);
+    })
+    console.log("fin", songs);
+    doSomeStuffWhenAjaxIsDone();
+  });
 });
