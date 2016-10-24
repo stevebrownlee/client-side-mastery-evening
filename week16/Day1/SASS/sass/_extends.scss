@@ -1,0 +1,13 @@
+// Use extend when you want to share the same code between multiple elements
+// The % means it won’t get printed to the stylesheet unless extended
+%block {
+  width: 50px;
+  height: 50px;
+  border: 2px solid;
+  display: inline-block;
+}
+
+%kats {
+  height: 300px;
+  float: left;
+}

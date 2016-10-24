@@ -1,7 +1,37 @@
-body {
-  background-color: blue;
+@import 'footer';
+@import 'extends';
+@import 'mixins';
 
-  h1 { 
-    color: white;
+$new-white: #333#FFDEAD;
+$text: teal;
+$pink: #FFCCCB;
+$blue:  #93CCEA;
+$middle-yo: center;
+$image-height: 500px;
+
+
+body {
+  background-color: $new-white;
+  color: $text;
+  h1 {
+    text-align: $middle-yo;
+  }
+}
+
+.container{
+  background-color: $blue;
+}
+
+
+#tab_a {
+  h4 {
+    color: $pink;
+  }
+}
+
+#tab_b {
+  img{
+    @extend %kats;
+    @include border-radius(20px);
   }
 }

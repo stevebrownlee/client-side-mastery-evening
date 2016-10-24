@@ -1,0 +1,7 @@
+// Use a mixin when you want to share similar code with different args
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
