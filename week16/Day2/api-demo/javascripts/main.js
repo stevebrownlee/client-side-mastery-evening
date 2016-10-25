@@ -3,11 +3,11 @@
 let apiKeys = {};
 
  let imageList = (searchText) => {
-    return new Promise(function(resolve, reject){
+    return new Promise((resolve, reject) => {
       $.ajax({
         method: 'GET',
-        url: `apikeys.json`
-      }).then(function successCallback(response) { // THIS IS TO MAKE SURE CLIENT ID IS PUSHED UP FIRST SO YOU CAN ACCESS IMGUR API
+        url: `apiKeys.json`
+      }).then((response) =>  { // THIS IS TO MAKE SURE CLIENT ID IS PUSHED UP FIRST SO YOU CAN ACCESS IMGUR API
           // console.log(response);
           apiKeys = response;
           let authHeader = 'Client-ID '+apiKeys.client_id;
@@ -17,40 +17,35 @@ let apiKeys = {};
             'Authorization': authHeader
           }, // SEARCH API BASED ON USER SEARCH TEXT
           url: `https://api.imgur.com/3/gallery/t/${searchText}`
-      })
-          .then(function successCallback(response) {
-          // this callback will be called asynchronously
-          // when the response is available
-          // console.log('IMGR response', response);
+      }).then((response) =>  {
           resolve(response.data.items);
-      }, function errorCallback(response) {
-          // called asynchronously if an error occurs
-          // or server returns response with an error status.
+      }, (response)  => {  //error function for ajax call to IMGUR API
         reject(response);
       });
 
-      }, function errorCallback(response) {
+      }, (response) => { //error function for ajax call to apiKeys.json
       });
       
     });
-  };
-
-
-
+  };  
 
 $(document).ready(function() {
-  console.log("jquery is ready");
-      imageList("cat")
-      .then((dataFromImgur) =>{
+  $('#clicky-button').on('click', function(){
+    $(this).button('loading');
+    $('#output').html("");
+    let searchy = $('#imgur-search').val();
+    imageList(searchy).then((dataFromImgur) =>{
+        $(this).button('reset');
         let stuff = dataFromImgur;
-        console.log ("IMGR", stuff);
+        // console.log ("IMGUR", stuff);
         stuff.forEach((image) => {
-          $('#output').append(`<img src="${image.link}">`)
-        })
+          $('#output').append(`<img src="${image.link}">`);
+        }); 
         
-      });
-
-
-
+    });
+  });
 });
+
+
+
 
