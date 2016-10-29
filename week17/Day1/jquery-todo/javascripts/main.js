@@ -1,19 +1,7 @@
-/* globals firebase */
 "use strict";
 
 let apiKeys = {};
 let todoItems = [];
-
-$.ajax({
-  method: 'GET',
-  url: 'apiKeys.json'
-}).then((response) => {
-  console.log("response", response);
-  apiKeys = response;
-  firebase.initializeApp(apiKeys);
-}, (errorResponse) =>{
-  console.log('errorResponse', errorResponse);
-});
 
 function putTodoInDOM(newTodo){
       //generate and add new list item
@@ -34,6 +22,12 @@ function putTodoInDOM(newTodo){
 
 
 $(document).ready(function(){
+  FbAPI.firebaseCredentials().then(function(keys){
+    apiKeys = keys;
+    firebase.initializeApp(apiKeys);
+    FbAPI.getTodos();
+  });
+  
   //watches input - on keyup event enables button if input has content.
     $('#add-todo-text').keyup(function(){
         $('#add-todo-button').prop('disabled', this.value === "" ? true : false);     
