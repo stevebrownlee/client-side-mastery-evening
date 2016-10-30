@@ -3,51 +3,79 @@
 let apiKeys = {};
 let todoItems = [];
 
-function putTodoInDOM(newTodo){
-      //generate and add new list item
-      let newListItem = '<li>';
-      newListItem+='<div class="col-xs-8">';
-      newListItem+='<input class="checkboxStyle" type="checkbox">';
-      newListItem+=`<label class="inputLabel">${newTodo}</label>`;
-      newListItem+='<input type="text" class="inputTask">';
-      newListItem+='</div>';
-      newListItem+='<div class="col-xs-4">';
-      newListItem+='<button class="btn btn-default col-xs-6 edit">Edit</button>';
-      newListItem+='<button class="btn btn-danger col-xs-6 delete">Delete</button> ';
-      newListItem+='</div>';
-      newListItem+='</li>';
-      //apend to list
-      $('ul#incomplete-tasks').append(newListItem);
+function putTodoInDOM(items){
+  items.forEach(function(item){
+    //generate and add new list item
+    let newListItem = '<li>';
+    newListItem+='<div class="col-xs-8">';
+    newListItem+='<input class="checkboxStyle" type="checkbox">';
+    newListItem+=`<label class="inputLabel">${item.task}</label>`;
+    newListItem+='<input type="text" class="inputTask">';
+    newListItem+='</div>';
+    newListItem+='<div class="col-xs-4">';
+    newListItem+=`<button class="btn btn-default col-xs-6 edit" data-fbid="${item.id}">Edit</button>`;
+    newListItem+=`<button class="btn btn-danger col-xs-6 delete" data-fbid="${item.id}">Delete</button>`;
+    newListItem+='</div>';
+    newListItem+='</li>';
+    if(item.isCompleted === true){
+      $('#completed-tasks').append(newListItem);          
+    } else {
+      $('#incomplete-tasks').append(newListItem);        
+    }
+  });
+
 }
 
 
 $(document).ready(function(){
+  //GET initial items from DB on page load
   FbAPI.firebaseCredentials().then(function(keys){
     apiKeys = keys;
     firebase.initializeApp(apiKeys);
-    FbAPI.getTodos();
+    return FbAPI.getTodos(apiKeys);
+  }).then(function(items){
+    todoItems = items;
+    putTodoInDOM(todoItems);
   });
-  
+
   //watches input - on keyup event enables button if input has content.
     $('#add-todo-text').keyup(function(){
         $('#add-todo-button').prop('disabled', this.value === "" ? true : false);     
     });
-  //ADD ITEM
+
+  // ADD a new item
   $('#add-todo-button').on('click',function(){
-    
-
-
-    //get input's value
-     let $newTask = $('#add-todo-text').val();
-
-     putTodoInDOM($newTask);
-
-      $('.inputTask').val($newTask);
-      //empty input value and disable submit button
+    let newItem = {
+      "task" : $('#add-todo-text').val(),
+      "isCompleted": false
+     };
+     FbAPI.addTodo(apiKeys,newItem).then(function(){
       $('#add-todo-text').val('');
       $('#add-todo-button').prop('disabled',true);
-    countTask();
-  });//end button click function
+        return FbAPI.getTodos(apiKeys);
+     }).then(function(items){
+      todoItems = items;
+      $('#completed-tasks').html("");      
+      $('#incomplete-tasks').html("");  
+      putTodoInDOM(todoItems);
+    });
+  });
+
+  //DELETE an item
+  $('ul').on('click','.delete',function(){
+    let itemId = $(this).data("fbid");
+    FbAPI.deleteTodo(apiKeys, itemId).then(function(){
+     return FbAPI.getTodos(apiKeys);
+     }).then(function(items){
+      console.log("NEW LOAD");
+      todoItems = items;
+      $('#completed-tasks').html("");      
+      $('#incomplete-tasks').html("");  
+      putTodoInDOM(todoItems);
+    });
+  });//end delete function
+
+
 
   //EDIT TASK
   $('ul').on('click', '.edit',function(){
@@ -80,21 +108,16 @@ $(document).ready(function(){
     }else if(currentList == 'completed-tasks'){
       $('#incomplete-tasks').append(grandpa);
     }
-    countTask();
+    // countTask();
   });
   
-  //DELETE TASK
-  $('ul').on('click','.delete',function(){
-    $(this).closest('li').remove();
-    countTask();
-  });//end delete function
 
   //TASK COUNTER
-  function countTask(){
-    var remainTask = $('#incomplete-tasks li').length;
-    $('#counter').hide().fadeIn(300).html(remainTask);
-  }
-  countTask();
+  // function countTask(){
+  //   var remainTask = $('#incomplete-tasks li').length;
+  //   $('#counter').hide().fadeIn(300).html(remainTask);
+  // }
+  // countTask();
 
 });//end dom ready
 
