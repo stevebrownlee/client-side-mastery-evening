@@ -22,7 +22,6 @@ var FbAPI = (function(oldFirebase){
       });
   };
 
-
     oldFirebase.addTodo = function(apiKeys, newItem){
       return new Promise((resolve, reject) => {
         $.ajax({
@@ -40,16 +39,12 @@ var FbAPI = (function(oldFirebase){
       });
   };
 
-
-
     oldFirebase.deleteTodo = function(apiKeys, itemId){
       return new Promise((resolve, reject) => {
         $.ajax({
           method: 'DELETE',
           url: `${apiKeys.databaseURL}/items/${itemId}.json`
         }).then(() =>  { 
-          console.log(itemId);
-            // console.log(response);  //response is object of objects want to make that array of objects with key inside object
             resolve();
         }, (errorResponse) => { //error function for ajax call to apiKeys.json
           reject(errorResponse);
@@ -57,6 +52,26 @@ var FbAPI = (function(oldFirebase){
         
       });
   };
+
+    oldFirebase.editTodo = function(apiKeys, itemId, updatedItem){
+      return new Promise((resolve, reject) => {
+        $.ajax({
+          method: 'PUT',
+          url: `${apiKeys.databaseURL}/items/${itemId}.json`,
+          data: JSON.stringify(updatedItem),
+          dataType: 'json'
+        }).then((response) =>  { 
+            // console.log(response);  //response is object of objects want to make that array of objects with key inside object
+            resolve(response);
+        }, (errorResponse) => { //error function for ajax call to apiKeys.json
+          reject(errorResponse);
+        });
+        
+      });
+  };
+
+
+
 
 return oldFirebase;
 
