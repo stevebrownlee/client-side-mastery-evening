@@ -41,7 +41,10 @@ $(document).ready(function(){
   FbAPI.firebaseCredentials().then(function(keys){
     apiKeys = keys;
     firebase.initializeApp(apiKeys);
+    // FbAPI.registerUser({"email":"bob2@aol.com", "password":"123456"});
+    FbAPI.loginUser({"email":"bob@aol.com", "password":"123456"});
     putTodoInDOM();  
+
   });
 
   //watches input - on keyup event enables button if input has content.
@@ -59,6 +62,8 @@ $(document).ready(function(){
         $('#add-todo-text').val('');
         $('#add-todo-button').prop('disabled',true);
         putTodoInDOM();  
+        let currentUser = FbAPI.credentialsCurrentUser().uid;
+        console.log("currentUser", currentUser);
     });
   });
 
