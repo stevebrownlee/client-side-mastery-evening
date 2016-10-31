@@ -108,6 +108,42 @@ $(document).ready(function(){
       putTodoInDOM();  
     });
   });
+
+  $('#registerButton').on('click', function(){
+    console.log("you clicked register");
+    let email = $('#inputEmail').val();
+    let password = $('#inputPassword').val();
+    let username = $('#inputUsername').val();
+    let user = {
+      email : email,
+      password : password
+    }
+    FbAPI.registerUser(user).then(function(response){
+      return FbAPI.loginUser(user);
+    }).then(function(response){
+      $('#login-container').addClass("hide");
+      $('#todo-container').removeClass("hide");
+    });
+  });
+
+  $('#loginButton').on('click', function(){
+    console.log("you clicked login");
+    let email = $('#inputEmail').val();
+    let password = $('#inputPassword').val();
+    let user = {
+      email : email,
+      password : password
+    }
+    FbAPI.loginUser(user).then(function(response){
+      $('#login-container').addClass("hide");
+      $('#todo-container').removeClass("hide");
+    });
+  });
+
+
+
+
+
 });
 
 

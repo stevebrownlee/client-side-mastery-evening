@@ -18,7 +18,6 @@ var FbAPI = (function(oldFirebase){
     return new Promise((resolve, reject) => {
       firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
       .then((authData) =>{
-        console.log("user logged in", authData);
         resolve(authData);
       })
       .catch((error)=>{
