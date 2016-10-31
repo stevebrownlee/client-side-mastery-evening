@@ -126,6 +126,7 @@ $(document).ready(function(){
     });
   });
 
+
   $('#loginButton').on('click', function(){
     console.log("you clicked login");
     let email = $('#inputEmail').val();
@@ -140,9 +141,12 @@ $(document).ready(function(){
     });
   });
 
-
-
-
+$('#logoutButton').on('click', function(){
+    console.log("you clicked logout");
+    FbAPI.logoutUser();
+    $('#login-container').removeClass("hide");
+    $('#todo-container').addClass("hide");
+  });
 
 });
 
