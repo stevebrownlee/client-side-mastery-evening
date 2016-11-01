@@ -2,12 +2,11 @@
 
 var FbAPI = (function(oldFirebase){
   
-  oldFirebase.getTodos = function(apiKeys){
+  oldFirebase.getTodos = function(apiKeys, uid){
       return new Promise((resolve, reject) => {
         $.ajax({
           method: 'GET',
-          url: `${apiKeys.databaseURL}/items.json`
-
+          url: `${apiKeys.databaseURL}/items.json?orderBy="uid"&equalTo="${uid}"`
         }).then((response) =>  { 
             let items = [];
             Object.keys(response).forEach(function(key){
@@ -30,7 +29,6 @@ var FbAPI = (function(oldFirebase){
           data: JSON.stringify(newItem),
           dataType: 'json'
         }).then((response) =>  { 
-            // console.log(response);  //response is object of objects want to make that array of objects with key inside object
             resolve(response);
         }, (errorResponse) => { //error function for ajax call to apiKeys.json
           reject(errorResponse);
@@ -61,7 +59,6 @@ var FbAPI = (function(oldFirebase){
           data: JSON.stringify(updatedItem),
           dataType: 'json'
         }).then((response) =>  { 
-            // console.log(response);  //response is object of objects want to make that array of objects with key inside object
             resolve(response);
         }, (errorResponse) => { //error function for ajax call to apiKeys.json
           reject(errorResponse);
