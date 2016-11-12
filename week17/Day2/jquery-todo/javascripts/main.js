@@ -118,8 +118,8 @@ $(document).ready(function(){
     let password = $('#inputPassword').val();
     let username = $('#inputUsername').val();
     let user = {
-      email : email,
-      password : password
+      "email" : email,
+      "password" : password
     }
     FbAPI.registerUser(user).then(function(response){
       let newUser = {

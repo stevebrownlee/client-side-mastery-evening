@@ -1,4 +1,4 @@
-# Week 16 - Day 2
+# Week 17 - Day 2
 
 > **Agenda:** Add Firebase Auth to Todo App
 
