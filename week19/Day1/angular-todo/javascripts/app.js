@@ -7,7 +7,7 @@ app.controller("NavCtrl", function($scope){
 });
 
 app.controller("TodoCtrl", function($scope){
-  $scope.welcome = "hello";
+      $scope.welcome = "hello";
       $scope.showListView = true;
       $scope.newTask = {};
       $scope.items = [
@@ -15,31 +15,19 @@ app.controller("TodoCtrl", function($scope){
           id: 0,
           task: "mow the lawn",
           isCompleted: true,
-          dueDate: "12/5/17",
-          assignedTo: "greg",
-          location: "Zoe's house",
-          urgency: "low",
-          dependencies: "sunshine, clippers, hat, water, headphones"
+          assignedTo: "William",
         },
         {
           id: 1,
           task: "grade quizzes",
           isCompleted: false,
-          dueDate: "12/5/15",
-          assignedTo: "Joe",
-          location: "NSS",
-          urgency: "high",
-          dependencies: "wifi, tissues, vodka"
+          assignedTo: "Zoe",
         },
         {
           id: 2,
           task: "take a nap",
           isCompleted: false,
-          dueDate: "5/21/16",
-          assignedTo: "zoe",
-          location: "Zoe's house",
-          urgency: "medium",
-          dependencies: "hammock, cat, pillow, blanket"
+          assignedTo: "Zoe",
         }
       ];
 
@@ -60,13 +48,5 @@ app.controller("TodoCtrl", function($scope){
         $scope.items.push($scope.newTask);
         $scope.newTask="";
       };
-
-
-
-
-
-
-
-
 
 });
