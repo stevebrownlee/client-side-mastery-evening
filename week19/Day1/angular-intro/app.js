@@ -7,11 +7,12 @@ myApp.config(['$controllerProvider', function($controllerProvider) {
 // The other way to write a controller to make it part of the module:
 // myApp.controller('MessageController', ['$scope', function ($scope) {
 function MessageController($scope) {
+  let cat ="fred"
   $scope.message  = "This is a model.";
 }
 
 function CountController($scope) {
-  $scope.count = function() { return 12; }
+  $scope.count = function() { return 22; }
 }
 
 // Two controllers with the same 'name' property
@@ -54,7 +55,7 @@ myApp.value('score', {points: 0});
 
 myApp.controller('ScoreController', function($scope, score) {
   $scope.score = score;
-  $scope.increment = function() {
+  increment = function() {
     $scope.score.points++;
   };
 });
