@@ -6,30 +6,30 @@
 <!-- With ng-init, you can initialize variables for use anywhere within the element to which it is applied. -->
 <body ng-init="names=['Dave','Joe','Larry','Moe']">
 
-  <div class="container">
+<!--   <div class="container">
     <ul>
       <li ng-repeat="name in names">{{name}}</li>
     </ul>
-  </div>
+  </div> -->
  
 <!-- *********************************************** -->
-  <input type="text" size="25" ng-model="coolBinding" placeholder="This input is bound to "> this: {{coolBinding}}
+<!--   <input type="text" size="25" ng-model="coolBinding" placeholder="This input is bound to "> this: {{coolBinding}} -->
 <!-- *********************************************** -->
 
 
 <!-- *********************************************** -->
   <!-- built in Js function -->
-  <p>{{"Angular" + "js".toUpperCase()}}</p>
+  <!-- <p>{{"Angular" + "js".toUpperCase()}}</p> -->
 <!-- *********************************************** -->
 
 
 <!-- *********************************************** -->
   <!-- use a var from one set of delimiters in another set -->
-  <p>{{a = 12}} remains </p>
-  <p>{{a}}</p> 
+  <!-- <p>{{a = 12}} remains </p>
+  <p>{{a}}</p>  -->
 
   <!-- The reverse breaks everything -->
-  <p>{{a}} remains {{a = 2}}</p>
+  <!-- <p>{{a}} remains {{a = 2}}</p> -->
 
   <!-- Nope, doesn't work -->
   <!-- <p>{{console.log("Hello world")}}</p> -->
@@ -58,16 +58,6 @@
     <input type="button" value="toggle" ng-click="allowed = !allowed">
   </p> -->
 <!-- *********************************************** -->
-
-
-<!-- *********************************************** -->
-<!--   <!-- The value bound to a checkbox can be a string rather than a boolean if you set the ng-true-value and ng-false-value parameters. -->
-<!--   <input type='checkbox' ng-init='feeling = "love it"' ng-model='feeling'
-    ng-true-value='"love it"' ng-false-value='"hate it"'>
-  is bound to
-  "<strong ng-bind="feeling"></strong>". Change it! -->
-<!-- *********************************************** -->
-
 
 <!-- CONTROLLERS Let's add our own module-->
 <!-- *********************************************** -->
@@ -132,12 +122,12 @@
 
 <!-- *********************************************** -->
   <!-- Set up a super simple service -->
-  <p ng-controller="ScoreController">
+<!--   <p ng-controller="ScoreController">
     Score: {{score.points}}
   </p>
   <p ng-controller="ScoreController">
     <button ng-click="increment()">Increment</button>
-  </p>
+  </p> -->
 <!-- *********************************************** -->
 
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">

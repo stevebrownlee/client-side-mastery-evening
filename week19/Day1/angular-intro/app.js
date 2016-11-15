@@ -1,8 +1,8 @@
 var myApp = angular.module('app', []);
 
-myApp.config(['$controllerProvider', function($controllerProvider) {
-  $controllerProvider.allowGlobals();
-}]);
+// myApp.config(['$controllerProvider', function($controllerProvider) {
+//   $controllerProvider.allowGlobals();
+// }]);
 
 // The other way to write a controller to make it part of the module:
 // myApp.controller('MessageController', ['$scope', function ($scope) {

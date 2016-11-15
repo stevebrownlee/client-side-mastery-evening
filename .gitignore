@@ -16,17 +16,19 @@ week16/Labday/jquery-todo/lib/node_modules/
 week16/Labday/jquery-todo/lib/bower_components/
 week16/Labday/jquery-todo/apiKeys.json
 
-
 week17/Day1/jquery-todo/lib/node_modules/
 week17/Day1/jquery-todo/lib/bower_components/
 week17/Day1/jquery-todo/apiKeys.json
-
 
 week17/Day2/jquery-todo/lib/node_modules/
 week17/Day2/jquery-todo/lib/bower_components/
 week17/Day2/jquery-todo/apiKeys.json
 week17/Day2/jquery-todo/public/
 
-
 week19/Day1/angular-todo/lib/node_modules/
 week19/Day1/angular-todo/lib/bower_components/
+
+week19/Day2/angular-todo/lib/node_modules/
+week19/Day2/angular-todo/lib/bower_components/
+week19/Day2/angular-todo/apiKeys.json
+week19/Day2/angular-todo/javascripts/AppConstants.js
