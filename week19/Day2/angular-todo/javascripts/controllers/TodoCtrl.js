@@ -18,7 +18,7 @@ app.controller("TodoCtrl", function($scope, ItemFactory){
       getItems();
 
       $scope.newItem = function(){   
-          $scope.showListView = false;
+        $scope.showListView = false;
       };
       
       $scope.allItem = function(){
@@ -27,12 +27,11 @@ app.controller("TodoCtrl", function($scope, ItemFactory){
 
       $scope.addNewItem = function(){
         $scope.newTask.isCompleted = false;
-        ItemFactory.postNewItem($scope.newTask)
-            .then(function (response) {
-                console.log('controller post respose', response);
-                getItems();
-                $scope.showListView = true;
-            });
+        ItemFactory.postNewItem($scope.newTask).then(function (response) {
+          getItems();
+          $scope.newTask = {};
+          $scope.showListView = true;
+        });
       };
 
       $scope.deleteItem = function(itemId){
