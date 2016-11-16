@@ -88,7 +88,7 @@
                                     <div class="col-xs-1"><input type="checkbox" name="" ng-checked="thingy.isCompleted"/></div>
                                     <div class="col-xs-7">{{thingy.task}}</div>
                                     <div class="col-xs-1 col-xs-offset-2">{{thingy.assignedTo}}</div>            
-                                    <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
+                                    <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(thingy.id)"></button></div>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                                     <div class="col-xs-1"><input type="checkbox" name="" ng-checked="thingy.isCompleted"/></div>
                                     <div class="col-xs-7">{{thingy.task}}</div>
                                     <div class="col-xs-1  col-xs-offset-2">{{thingy.assignedTo}}</div>            
-                                    <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o"></button></div>
+                                    <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(thingy.id)"></button></div>
                                 </div>
                             </div>
                         </div>
