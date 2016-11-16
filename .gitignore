@@ -30,5 +30,8 @@ week19/Day1/angular-todo/lib/bower_components/
 
 week19/Day2/angular-todo/lib/node_modules/
 week19/Day2/angular-todo/lib/bower_components/
-week19/Day2/angular-todo/apiKeys.json
 week19/Day2/angular-todo/javascripts/AppConstants.js
+
+week19/Labday/angular-todo/lib/node_modules/
+week19/Labday/angular-todo/lib/bower_components/
+week19/Labday/angular-todo/javascripts/AppConstants.js

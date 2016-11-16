@@ -1,6 +1,6 @@
 # Week 19 - Day 2
 
-> **Agenda:** Angular
+> **Agenda:** Angular - GET, POST, DELETE from firebase
 
 
 * Make new firebase repo
