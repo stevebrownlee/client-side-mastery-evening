@@ -61,7 +61,69 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
         });
   };
 
-  return {getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem, getSingleItem:getSingleItem};
+  var editItem = function(editItem){
+    return $q(function(resolve, reject) {
+        $http.put(`${FIREBASE_CONFIG.databaseURL}/items/${editItem.id}.json`,
+            JSON.stringify({
+                assignedTo: editItem.assignedTo,
+                isCompleted: editItem.isCompleted,
+                task: editItem.task,
+            })
+        )
+        .success(
+            function(objectFromFirebase) {
+                resolve(objectFromFirebase);
+            }
+        );
+    });
+  }
+
+
+
+
+
+
+
+  return {getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem, getSingleItem:getSingleItem, editItem:editItem};
+
+
+
+
+  // var updateItem = function(itemId, newItem){
+  //       let user = AuthFactory.getUser();
+
+  // };
+
+  //   var updateCompletedStatus = function(newItem){
+  //       return $q(function(resolve, reject) {
+  //           $http.put(
+  //               firebaseURL + "items/" + newItem.id + ".json",
+  //               JSON.stringify({
+  //                   assignedTo: newItem.assignedTo,
+  //                   dependencies: newItem.dependencies,
+  //                   dueDate: newItem.dueDate,
+  //                   isCompleted: newItem.isCompleted,
+  //                   location: newItem.location,
+  //                   task: newItem.task,
+  //                   urgency: newItem.urgency
+  //               })
+  //           )
+  //           .success(
+  //               function(objectFromFirebase) {
+  //                   resolve(objectFromFirebase);
+  //               }
+  //           );
+  //       });
+  // };
+
+
+
+
+
+
+
+
+
 
   //   oldFirebase.editTodo = function(apiKeys, itemId, updatedItem){
   //     return new Promise((resolve, reject) => {
