@@ -19,6 +19,18 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
     });
   };
 
+  var getSingleItem = function(itemId){
+    return $q(function(resolve, reject){
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/items/${itemId}.json`)
+        .success(function(itemObject){
+          resolve(itemObject);
+        })
+        .error(function(error){
+          reject(error);
+        });
+    });
+  };
+
   var deleteItem = function(itemId){
     return $q(function(resolve, reject){
       $http
@@ -31,8 +43,6 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
         });
     });
   };
-
-
 
   var postNewItem = function(newItem){
         return $q(function(resolve, reject) {
@@ -51,7 +61,7 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
         });
   };
 
-  return {getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem};
+  return {getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem, getSingleItem:getSingleItem};
 
   //   oldFirebase.editTodo = function(apiKeys, itemId, updatedItem){
   //     return new Promise((resolve, reject) => {
