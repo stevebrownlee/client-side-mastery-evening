@@ -1,82 +1,35 @@
 <h1>ITEM LIST</h1>
-{{message}}
+<div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <div class="input-group">
+            <span class="input-group-btn">
+                <button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </span>
+            <input type="text" class="form-control" placeholder="Search for..." ng-model="searchText">
+        </div>
+    </div>
+</div>
 
+<h3>Todo</h3>
+<div ng-if="items.length > 0" ng-repeat="thingy in items | filter:{isCompleted:false} | filter: searchText">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-1"><input type="checkbox" name="" ng-checked="thingy.isCompleted"/></div>
+            <div class="col-xs-7">{{thingy.task}}</div>
+            <div class="col-xs-1 col-xs-offset-2">{{thingy.assignedTo}}</div>            
+            <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(thingy.id)"></button></div>
+        </div>
+    </div>
+</div>
 
-
-
-
-
-
-
-<!-- 
-
-        <div ng-controller="TodoCtrl">
-            <div class="row">
-                <div class="col-xs-6 col-xs-offset-3">
-                    <button class="col-xs-6 btn btn-success" ng-click="newItem()">New Item</button>
-                    <button class="col-xs-6 btn btn-info" ng-click="allItem()"> All Items</button>
-                </div>    
-            </div>
-
-            <div class="row">
-                <div class="col-xs-offset-2 col-xs-8">
-                    <h1>NG Todo</h1>
-                    <div ng-show="!showListView">
-                        <h3>New Todo</h3>
-                        <form>
-                                <div class="form-group">
-                                    <label>Task Description</label>
-                                    <input type="text" class="form-control" placeholder="Some important task" ng-model="newTask.task"/>
-                                </div>
-                                <div class="form-group">
-                                    <label>Assigned To</label>
-                                    <input type="text" class="form-control" placeholder="Zoe" ng-model="newTask.assignedTo"/>
-                                </div>
-                                <button class="btn btn-default" ng-click="addNewItem()">Submit</button>
-                            </form>
-
-                    </div>
-
-
-
-
-
-                    <div ng-show="showListView">
-                        <div class="row">
-                            <div class="col-xs-6 col-xs-offset-3">
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="Search for..." ng-model="searchText">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3>Todo</h3>
-                        <div ng-if="items.length > 0" ng-repeat="thingy in items | filter:{isCompleted:false} | filter: searchText">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    <div class="col-xs-1"><input type="checkbox" name="" ng-checked="thingy.isCompleted"/></div>
-                                    <div class="col-xs-7">{{thingy.task}}</div>
-                                    <div class="col-xs-1 col-xs-offset-2">{{thingy.assignedTo}}</div>            
-                                    <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(thingy.id)"></button></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <h3>Completed</h3>
-                        <div ng-repeat="thingy in items | filter:{isCompleted:true}">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    <div class="col-xs-1"><input type="checkbox" name="" ng-checked="thingy.isCompleted"/></div>
-                                    <div class="col-xs-7">{{thingy.task}}</div>
-                                    <div class="col-xs-1  col-xs-offset-2">{{thingy.assignedTo}}</div>            
-                                    <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(thingy.id)"></button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+<h3>Completed</h3>
+<div ng-repeat="thingy in items | filter:{isCompleted:true}">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-xs-1"><input type="checkbox" name="" ng-checked="thingy.isCompleted"/></div>
+            <div class="col-xs-7">{{thingy.task}}</div>
+            <div class="col-xs-1  col-xs-offset-2">{{thingy.assignedTo}}</div>            
+            <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(thingy.id)"></button></div>
+        </div>
+    </div>
+</div>
