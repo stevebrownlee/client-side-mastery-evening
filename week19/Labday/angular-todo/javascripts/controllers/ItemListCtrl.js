@@ -1,3 +1,5 @@
+"use strict";
+
 app.controller("ItemListCtrl", function($scope, ItemFactory){
   	$scope.message = "ItemListCtrl";
 	$scope.newTask = {};
@@ -10,7 +12,7 @@ app.controller("ItemListCtrl", function($scope, ItemFactory){
 			console.log("error", error);
 			$scope.items = [];
 		});  
-	}
+	};
 
 	getItems();
 
@@ -18,11 +20,11 @@ app.controller("ItemListCtrl", function($scope, ItemFactory){
 		ItemFactory.deleteItem(itemId).then(function (response) {
 			getItems();              
 		});
-	}
+	};
+
 	$scope.inputChange = function(thingy){
-		// console.log("checkbox", thingy);
 		ItemFactory.updateCompletedStatus(thingy).then(function(response){
 	        console.log("inputChange response", response);
-	    })
-	}
+	    });
+	};
 });

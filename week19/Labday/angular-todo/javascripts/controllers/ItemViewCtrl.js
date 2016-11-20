@@ -1,3 +1,5 @@
+"use strict";
+
 app.controller("ItemViewCtrl", function($scope, $routeParams, ItemFactory){
   	$scope.selectedItem = {};
 	ItemFactory.getSingleItem($routeParams.id).then(function(fbItem){

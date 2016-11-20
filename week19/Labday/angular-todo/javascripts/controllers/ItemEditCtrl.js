@@ -1,3 +1,5 @@
+"use strict";
+
 app.controller("ItemEditCtrl", function($scope, $location, $routeParams, ItemFactory){
   	$scope.newTask = {};
 	ItemFactory.getSingleItem($routeParams.id).then(function(fbItem){

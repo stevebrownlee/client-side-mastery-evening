@@ -1,3 +1,5 @@
+"use strict";
+
 app.constant("FIREBASE_CONFIG", {
       apiKey: "",
       authDomain: "",

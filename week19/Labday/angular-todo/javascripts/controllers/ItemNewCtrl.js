@@ -1,3 +1,5 @@
+"use strict";
+
 app.controller("ItemNewCtrl", function($scope, ItemFactory, $location){
   $scope.message = "ItemNewCtrl";
 

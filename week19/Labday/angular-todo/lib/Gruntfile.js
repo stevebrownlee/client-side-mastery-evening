@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     jshint: {
       files: ['../javascripts/**/*.js'],
       options: {
-        predef: [ "document", "console", "$", "firebase", "FbAPI"],
+        predef: [ "document", "console", "$", "firebase", "app", "angular"],
         esnext: true,
         globalstrict: true,
         globals: {},
@@ -32,4 +32,6 @@ module.exports = function(grunt) {
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.registerTask('default', ['sass', 'jshint', 'watch']);
+  grunt.registerTask('lint', ['jshint']);
+  grunt.registerTask('sass', ['sass']);
 };

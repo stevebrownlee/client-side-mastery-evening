@@ -1,4 +1,5 @@
 'use strict';
+
 app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
   
   var getItemList = function(){
@@ -76,7 +77,7 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
             }
         );
     });
-  }
+  };
 
   var updateCompletedStatus = function(newItem){
     return $q(function(resolve, reject) {
@@ -95,45 +96,6 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
     });
   };
 
-
-
-
-
-
   return {getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem, getSingleItem:getSingleItem, editItem:editItem, updateCompletedStatus:updateCompletedStatus};
 
-
-
-
-  // var updateItem = function(itemId, newItem){
-  //       let user = AuthFactory.getUser();
-
-  // };
-
- 
-
-
-
-
-
-
-
-
-
-
-  //   oldFirebase.editTodo = function(apiKeys, itemId, updatedItem){
-  //     return new Promise((resolve, reject) => {
-  //       $.ajax({
-  //         method: 'PUT',
-  //         url: `${apiKeys.databaseURL}/items/${itemId}.json`,
-  //         data: JSON.stringify(updatedItem),
-  //         dataType: 'json'
-  //       }).then((response) =>  { 
-  //           resolve(response);
-  //       }, (errorResponse) => { //error function for ajax call to apiKeys.json
-  //         reject(errorResponse);
-  //       });
-        
-  //     });
-  // };
 });
