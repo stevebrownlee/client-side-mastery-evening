@@ -14,7 +14,7 @@
 <div ng-if="items.length > 0" ng-repeat="thingy in items | filter:{isCompleted:false} | filter: searchText">
     <div class="panel panel-default">
         <div class="panel-body">
-            <div class="col-xs-1"><input type="checkbox" name="" ng-checked="thingy.isCompleted"/></div>
+            <div class="col-xs-1"><input type="checkbox" ng-model="thingy.isCompleted" ng-change="inputChange(thingy)"/></div>
             <div class="col-xs-7"><a ng-href="#/items/view/{{ thingy.id }}">{{thingy.task}}</a></div>
             <div class="col-xs-1 col-xs-offset-2">{{thingy.assignedTo}}</div>            
             <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(thingy.id)"></button></div>
@@ -26,9 +26,9 @@
 <div ng-repeat="thingy in items | filter:{isCompleted:true}">
     <div class="panel panel-default">
         <div class="panel-body">
-            <div class="col-xs-1"><input type="checkbox" name="" ng-checked="thingy.isCompleted"/></div>
+            <div class="col-xs-1"><input type="checkbox" ng-model="thingy.isCompleted" ng-change="inputChange(thingy)"/></div>
             <div class="col-xs-7"><a ng-href="#/items/view/{{ thingy.id }}">{{thingy.task}}</a></div>
-            <div class="col-xs-1  col-xs-offset-2">{{thingy.assignedTo}}</div>            
+            <div class="col-xs-1  col-xs-offset-2">{{thingy.assignedTo}}</div>
             <div class="col-xs-1"><button class="btn btn-danger fa fa-trash-o" ng-click="deleteItem(thingy.id)"></button></div>
         </div>
     </div>

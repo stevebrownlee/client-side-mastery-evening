@@ -14,11 +14,15 @@ app.controller("ItemListCtrl", function($scope, ItemFactory){
 
 	getItems();
 
-
-
 	$scope.deleteItem = function(itemId){
 		ItemFactory.deleteItem(itemId).then(function (response) {
 			getItems();              
 		});
+	}
+	$scope.inputChange = function(thingy){
+		// console.log("checkbox", thingy);
+		ItemFactory.updateCompletedStatus(thingy).then(function(response){
+	        console.log("inputChange response", response);
+	    })
 	}
 });
