@@ -79,23 +79,6 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
     });
   };
 
-  var updateCompletedStatus = function(newItem){
-    return $q(function(resolve, reject) {
-      $http.put(`${FIREBASE_CONFIG.databaseURL}/items/${newItem.id}.json`,
-        JSON.stringify({
-          assignedTo: newItem.assignedTo,
-          isCompleted: newItem.isCompleted,
-          task: newItem.task,
-        })
-      )
-      .success(
-        function(objectFromFirebase) {
-          resolve(objectFromFirebase);
-        }
-      );
-    });
-  };
-
-  return {getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem, getSingleItem:getSingleItem, editItem:editItem, updateCompletedStatus:updateCompletedStatus};
+  return {getItemList:getItemList, deleteItem:deleteItem, postNewItem:postNewItem, getSingleItem:getSingleItem, editItem:editItem};
 
 });

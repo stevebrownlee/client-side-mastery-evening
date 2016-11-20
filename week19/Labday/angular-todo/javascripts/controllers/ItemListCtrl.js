@@ -23,7 +23,7 @@ app.controller("ItemListCtrl", function($scope, ItemFactory){
 	};
 
 	$scope.inputChange = function(thingy){
-		ItemFactory.updateCompletedStatus(thingy).then(function(response){
+		ItemFactory.editItem(thingy).then(function(response){
 	        console.log("inputChange response", response);
 	    });
 	};
