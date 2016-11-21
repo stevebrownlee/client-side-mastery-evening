@@ -91,7 +91,31 @@ ul li.editMode label {
   display:none;
 }
 
+$info-color: #5bc0de;
+$success-color: #5cb85c;
 
 
 
+.authContainer {
+  .form-group {
+      padding: 10px 0px;
+  }
+  
+  label {
+    padding-left: 15px;
+  }
+  
+  .btn {
+    margin-bottom: 15px;
+  }
+}
 
+.registerContainer {
+  background-color: lighten( $success-color, 20% );
+}
+
+
+
+.loginContainer {
+  background-color: lighten( $info-color, 20% );
+}
