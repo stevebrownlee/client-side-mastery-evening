@@ -16,6 +16,7 @@
 	* Make route for /logout, use same template/ctrl as Auth
 	* Add if statement to AuthCtrl to check if route is /logout and unauthenticate if it is.
 * Fix getItemList in ItemFactory to use orderby/equalto
-* 
+* Fix PostNewItem and EditItem in ItemFactory to include uid in body
+* Add in isAuth check to routes
 
 
