@@ -5,4 +5,4 @@
 
 Cleanup Stuff:
 
-* make login helper function in authctrl to not have to reuse code
+* 

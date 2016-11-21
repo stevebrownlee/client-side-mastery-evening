@@ -1,9 +1,8 @@
 "use strict";
 
 app.factory("UserFactory", function($q, $http, $rootScope, FIREBASE_CONFIG) {
-  let currentUserData = null;
 
-  let storeUser = (authData) => {
+  let addUser = (authData) => {
     return $q((resolve, reject) => {
       $http.post(`${FIREBASE_CONFIG.databaseURL}/users.json`, 
         JSON.stringify({ 
@@ -20,7 +19,7 @@ app.factory("UserFactory", function($q, $http, $rootScope, FIREBASE_CONFIG) {
     });
   };
 
-  let getUserInfo = (userId) =>{
+  let getUser = (userId) =>{
     return $q(function(resolve, reject){
       $http.get(`${FIREBASE_CONFIG.databaseURL}/users.json?orderBy="uid"&equalTo="${userId}"`)
         .success(function(userObject){
@@ -37,5 +36,5 @@ app.factory("UserFactory", function($q, $http, $rootScope, FIREBASE_CONFIG) {
     });
   };
 
-  return {storeUser:storeUser, getUserInfo:getUserInfo};
+  return {addUser:addUser, getUser:getUser};
 });

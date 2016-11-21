@@ -5,15 +5,19 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
   	$scope.registerContainer = false;
   	$scope.register = {};
   	$scope.login = {};
-  	let currentUser = {};
   	
+    if($location.path() === "/logout"){
+      AuthFactory.logout();
+      $rootScope.user = {};
+      $location.url('/auth');
+    }
+
+
   	let logMeIn = function(loginStuff){
 		AuthFactory.authenticate(loginStuff).then(function(didLogin){
-  			return UserFactory.getUserInfo(didLogin.uid);
+  			return UserFactory.getUser(didLogin.uid);
   		}).then(function(userCreds){
-  			console.log("userCreds", userCreds);
-  			currentUser = userCreds;
-  			$rootScope.user = currentUser;
+  			$rootScope.user = userCreds;
   			$scope.login = {};
   			$scope.register = {};
   			$location.url("/items/list");
@@ -33,7 +37,7 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
   	$scope.registerUser = function(registerNewUser){
   		AuthFactory.registerWithEmail(registerNewUser).then(function(didRegister){
   			registerNewUser.uid = didRegister.uid;
-  			return UserFactory.storeUser(registerNewUser);
+  			return UserFactory.addUser(registerNewUser);
   		}).then(function(registerComplete){
   			return logMeIn(registerNewUser);
 		});
@@ -42,4 +46,8 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
   	$scope.loginUser = function(loginNewUser){
   		logMeIn(loginNewUser);
   	};
+
+
+
+
 });
