@@ -4,14 +4,16 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
   	$scope.loginContainer = true;
   	$scope.registerContainer = false;
   	$scope.register = {};
-  	$scope.login = {};
+  	$scope.login = {
+      email: 'a@a.com',
+      password: "123456"
+    };
   	
     if($location.path() === "/logout"){
       AuthFactory.logout();
       $rootScope.user = {};
       $location.url('/auth');
     }
-
 
   	let logMeIn = function(loginStuff){
 		AuthFactory.authenticate(loginStuff).then(function(didLogin){
@@ -25,12 +27,12 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
   	};
 
   	$scope.setRegisterContainer = function(){
-		$scope.loginContainer = false;
+		  $scope.loginContainer = false;
   		$scope.registerContainer = true;
   	};
 
   	$scope.setLoginContainer = function(){
-		$scope.loginContainer = true;
+		  $scope.loginContainer = true;
   		$scope.registerContainer = false;
   	};
 
@@ -40,14 +42,10 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
   			return UserFactory.addUser(registerNewUser);
   		}).then(function(registerComplete){
   			return logMeIn(registerNewUser);
-		});
+		  });
   	};
 
   	$scope.loginUser = function(loginNewUser){
   		logMeIn(loginNewUser);
   	};
-
-
-
-
 });

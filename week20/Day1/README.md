@@ -13,6 +13,9 @@
 * Make a User factory for saving/retreiving username
 * Make a helper function for Login promise resolve to use in register/login click events
 * Hook up logout
-	* make route for /logout, use same template/ctrl as Auth
+	* Make route for /logout, use same template/ctrl as Auth
+	* Add if statement to AuthCtrl to check if route is /logout and unauthenticate if it is.
+* Fix getItemList in ItemFactory to use orderby/equalto
+* 
 
 

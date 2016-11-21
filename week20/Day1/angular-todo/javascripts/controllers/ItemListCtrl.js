@@ -1,12 +1,12 @@
 "use strict";
 
-app.controller("ItemListCtrl", function($scope, ItemFactory){
+app.controller("ItemListCtrl", function($scope, $rootScope, ItemFactory){
   	$scope.message = "ItemListCtrl";
 	$scope.newTask = {};
 	$scope.items = [];
 
 	let getItems = function(){
-		ItemFactory.getItemList().then(function(fbItems){
+		ItemFactory.getItemList($rootScope.user.uid).then(function(fbItems){
 			$scope.items = fbItems;
 		}, function(error){
 			console.log("error", error);
