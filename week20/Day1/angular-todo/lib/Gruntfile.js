@@ -34,4 +34,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['sass', 'jshint', 'watch']);
   grunt.registerTask('lint', ['jshint']);
   grunt.registerTask('sass', ['sass']);
+  grunt.registerTask('deploy', ['sass']);
 };
