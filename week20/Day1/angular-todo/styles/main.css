@@ -69,18 +69,3 @@ ul li.editMode input[type=text] {
 
 ul li.editMode label {
   display: none; }
-
-.authContainer .form-group {
-  padding: 10px 0px; }
-
-.authContainer label {
-  padding-left: 15px; }
-
-.authContainer .btn {
-  margin-bottom: 15px; }
-
-.registerContainer {
-  background-color: #a3d7a3; }
-
-.loginContainer {
-  background-color: #b0e1ef; }
