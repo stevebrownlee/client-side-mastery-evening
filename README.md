@@ -153,10 +153,83 @@
 * **Lab Day** - review prototypal inheritance and task runners, officially introduce ES6
 
 #### Week 14
-* **All Days** - Gauntlet
+* **Day 1** - promises
+* **Day 2** - gauntlet
+* **HW** - Gauntlet
+* **Lab Day** - gauntlet
 
 ***
 
-#### Week 15 - Start Rich Browser Milestone
+#### Week 15
+* **Day 1** - Group Project: Gauntlet
+* **Day 2** - Demo gauntlet, assign quizzes
+* **HW** - exercises and quizzes from modern JS
+* **Lab Day** - exercises and quizzes from modern JS
 
 ***
+
+#### Week 16
+* **Day 1** - SASS
+* **Day 2** - In class API 
+* **HW** - Local Weather Application, MH 7
+* **Lab Day** - Firebase - make a todo app
+
+***
+
+#### Week 17
+* **Day 1** - Add Firebase to Todo App
+* **Day 2** - Add Firebase Auth to Todo App
+* **HW** - Firebase and API exercises
+	* Family Tree, 
+	* finish weather API, 
+	* MH7 (SASS and bootstrap), 
+	* MH8(songs on firebase), 
+	* MH9 (firebase Auth)
+* **Lab Day** - Firebase and API exercises
+
+***
+
+#### Week 18
+* **Day 1** - Group Project: Movie History
+* **Day 2** - Group Project: Movie History
+* **HW** - Group Project: Movie History
+* **Lab Day** - demo movie history, Firebase deployment, complete rich browser exercises, assign optional quiz
+
+***
+
+#### Week 19
+* **Day 1** - Angular Intro, Start Todo App
+* **Day 2** - Angular - GET, POST, DELETE from firebase
+* **HW** - Start Addressbook app
+* **Lab Day** - Angular - routing
+
+***
+
+#### Week 20
+* **Day 1** - ANGULAR: auth
+* **Day 2** - Angular: cleanup, Capstone requirements
+* **HW** - Capstone Ideas, finish contacts app
+* **Lab Day** - THANKSGIVING
+
+
+***
+
+#### Week 21
+* **Day 1** - group project - pinterest
+* **Day 2** - group project - pinterest
+* **HW** - group project - pinterest
+* **Lab Day** - demo pinterest, start capstones
+
+***
+
+#### Week 22
+CAPSTONES
+
+***
+
+#### Week 23
+CAPSTONES
+
+***
+
+
