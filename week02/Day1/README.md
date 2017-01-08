@@ -1,3 +1,3 @@
-# Week 2 - Day 1
+# Week 2 - Day 1 (January 9)
 
-> **Agenda:** complete installs, intro to command line, basic html, start blog exercise
+> **Agenda:** Installs, open sublime from command line, set up github SSH

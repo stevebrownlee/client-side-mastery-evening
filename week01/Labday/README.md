@@ -1,6 +1,3 @@
-# Week 1 - Labday
+# Week 1 - Labday (January 7)
 
-> **Agenda:** E3 demos, installs
-
-
-Package Controll for Sublime = https://packagecontrol.io/installation
+> **Agenda:** E4 demos

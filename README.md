@@ -1,31 +1,32 @@
 # NSS Evening Class Curriculum
 
 
-### Week by week doccumentation of what was covered - Currently for E4
+### Week by week doccumentation of what was covered - Currently for E5
 
 
 ***
 
-#### Week 1
-* **Day 1** - Holiday - 4th of july
+#### Week 1 (January 2-7)
+* **Day 1** - Holiday - New Years
 * **Day 2** - Introductions and administrative stuff
 * **HW** - complete prework
-* **Lab Day** - E3 demos, installs
+* **Lab Day** - E4 demos
 
 ***
 
-#### Week 2
-* **Day 1** - complete installs, intro to command line, basic html, start blog exercise
-* **Day 2** - sublime (preferences and packages), open sublime from command line, set up github SSH, study groups, assign command line lightning talks
+#### Week 2 (January 9-14)
+* **Day 1** - Installs, open sublime from command line, set up github SSH
+* **Day 2** - Sublime (preferences and packages), study groups, assign command line lightning talks, intro to command line, basic html, start blog exercise
 * **HW** - lightning talks, prework
 * **Lab Day** - command line lightning talks, GITHUB, github branching
 
 ***
 
-#### Week 3
+#### Week 3 (January 16-21)
 * **Day 1** - github review, CSS 101, Chrome Dev Tools
 * **Day 2** - css 102, begin 5 CSS exercises from milestones
 * **HW** - CSS exercises
+	* Blog Exercise
 	* Article Styles
 	* Banking Validate
 	* Interactive Navigation
@@ -121,16 +122,11 @@
 
 ***
 
-#### Week 12 -
-* **Day 1** - this, prototypal inheritance
-* **Day 2** - prototypes continued, is-a vs has-a
-* **HW** - prototypal inheritance Exercises
-	* MJ_PROTOTYPAL_CARS
-	* MJ_PROTOTYPAL_EMPLOYEES
-	* MJ_PROTOTYPAL_TREE_FARM
-	* MJ_PROTOTYPAL_ZOO.md
-* **Lab Day** - promises
-	* MJ_PROMISES_ACME_EXPLOSIVES
+#### Week 12
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
@@ -139,97 +135,97 @@
 ***
 
 #### Week 13
-* **Day 1** - workday: complete SPA exercises/quiz and start working on prototype exercises
-* **Day 2** - workday: complete SPA exercises/quiz and start working on prototype exercises
-* **HW** - any outstanding SPA exercises
-	* SPA quizzes
-	* JQUERY Slideshow
-	* Prototypes - Cars
-	* Prototypes - Employees
-	* MH3
-	* MH4
-	* MH5 - jquery
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
-* **Lab Day** - review prototypal inheritance and task runners, officially introduce ES6
+***
 
 #### Week 14
-* **Day 1** - promises
-* **Day 2** - gauntlet
-* **HW** - Gauntlet
-* **Lab Day** - gauntlet
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 15
-* **Day 1** - Group Project: Gauntlet
-* **Day 2** - Demo gauntlet, assign quizzes
-* **HW** - exercises and quizzes from modern JS
-* **Lab Day** - exercises and quizzes from modern JS
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 16
-* **Day 1** - SASS
-* **Day 2** - In class API 
-* **HW** - Local Weather Application, MH 7
-* **Lab Day** - Firebase - make a todo app
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 17
-* **Day 1** - Add Firebase to Todo App
-* **Day 2** - Add Firebase Auth to Todo App
-* **HW** - Firebase and API exercises
-	* Family Tree, 
-	* finish weather API, 
-	* MH7 (SASS and bootstrap), 
-	* MH8(songs on firebase), 
-	* MH9 (firebase Auth)
-* **Lab Day** - Firebase and API exercises
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 18
-* **Day 1** - Group Project: Movie History
-* **Day 2** - Group Project: Movie History
-* **HW** - Group Project: Movie History
-* **Lab Day** - demo movie history, Firebase deployment, complete rich browser exercises, assign optional quiz
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 19
-* **Day 1** - Angular Intro, Start Todo App
-* **Day 2** - Angular - GET, POST, DELETE from firebase
-* **HW** - Start Addressbook app
-* **Lab Day** - Angular - routing
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 20
-* **Day 1** - ANGULAR: auth
-* **Day 2** - Angular: cleanup, Capstone requirements
-* **HW** - Capstone Ideas, finish contacts app
-* **Lab Day** - THANKSGIVING
-
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 21
-* **Day 1** - group project - pinterest
-* **Day 2** - group project - pinterest
-* **HW** - group project - pinterest
-* **Lab Day** - demo pinterest, start capstones
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 22
-CAPSTONES
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
 #### Week 23
-CAPSTONES
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
 ***
 
+#### Week 24
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
 
+***

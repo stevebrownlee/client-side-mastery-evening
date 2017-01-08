@@ -1,3 +1,3 @@
-# Week 2 - Day 2
+# Week 2 - Day 2 (January 10)
 
-> **Agenda:** sublime (preferences and packages), open sublime from command line, set up github SSH, study groups, assign command line lightning talks
+> **Agenda:** sublime (preferences and packages), study groups, assign command line lightning talks, intro to command line, basic html, start blog exercise

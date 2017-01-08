@@ -1,5 +1,5 @@
-# Week 1
+# Week 1 (January 2-7)
 
-* **Day 1** - Holiday - 4th of july
+* **Day 1** - Holiday - New Years Day
 * **Day 2** - Introductions and administrative stuff
-* **Lab Day** - E3 demos, installs
+* **Lab Day** - E4 demos
