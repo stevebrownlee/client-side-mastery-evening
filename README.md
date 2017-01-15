@@ -16,15 +16,15 @@
 
 #### Week 2 (January 9-14)
 * **Day 1** - Installs, open sublime from command line, set up github SSH
-* **Day 2** - Sublime (preferences and packages), study groups, assign command line lightning talks, intro to command line, basic html, start blog exercise
+* **Day 2** - Sublime (preferences and packages), study groups, assign command line lightning talks, intro to command line
 * **HW** - lightning talks, prework
 * **Lab Day** - command line lightning talks, GITHUB, github branching
 
 ***
 
 #### Week 3 (January 16-21)
-* **Day 1** - github review, CSS 101, Chrome Dev Tools
-* **Day 2** - css 102, begin 5 CSS exercises from milestones
+* **Day 1** - github review/github branching (Zoe), intro to HTML (Callan), CSS 101 (Callan)
+* **Day 2** - CSS 102 (Callan), Chrome Dev Tools (Callan), begin 5 CSS exercises from milestones (Zoe)
 * **HW** - CSS exercises
 	* Blog Exercise
 	* Article Styles
@@ -32,32 +32,32 @@
 	* Interactive Navigation
 	* Pseudoclasses
 	* Relationship Selectors
-* **Lab Day** - lab day - 5 css exercises, music history, demo how to fork a repo
+* **Lab Day** - Big/Little Sib, CSS overflow (Zoe), lab day - 5 css exercises, music history, demo how to fork a repo
 
 ***
 
-#### Week 4
-* **Day 1** - JS 101 through arrays, how many seconds old am I exercises?, sonnet
-* **Day 2** - JS 101 finish arrays, switch statements, for loops, for exercise, assign HTML quiz
+#### Week 4 (January 23-28)
+* **Day 1** - JS 101 through arrays, how many seconds old am I exercises?, sonnet (Lauren)
+* **Day 2** - JS 101 finish arrays, switch statements, for loops, for exercise, assign HTML quiz (Lauren/Zoe)
 * **HW** - JS exercises
 	* chapters 10-25 of “A smarter way to learn JS”, do ALL interactive coding exercises for each chapter
 	* Grades
 	* Reindeer
 	* Boybands
 	* Music History 1 and 2
-* **Lab Day** - objects, functions, exercises:
+* **Lab Day** - objects, functions, exercises (Lauren/Zoe)
 
 ***
 
-#### Week 5
-* **Day 1** - more advanced github - merge conflicts, give out JS quiz
-* **Day 2** - review gitflow for groups, working in groups (trello mockups), announce 1st group project  - company profile website (each person does one page)
+#### Week 5 (January 30 - February 4)
+* **Day 1** - more advanced github - merge conflicts, give out JS quiz (Zoe)
+* **Day 2** - review gitflow for groups (Zoe), working in groups: trello mockups (Callan), announce 1st group project  - company profile website: each person does one page (Zoe)
 * **HW** - Group projects
 * **Lab Day** - Group projects 
 
 ***
 
-#### Week 6
+#### Week 6 (February 6-11)
 * **Day 1** - demo group projects, exercises and quizzes
 * **Day 2** - exercises and quizzes
 * **HW** - exercises and quizzes
@@ -65,7 +65,7 @@
 
 ***
 
-#### Week 7
+#### Week 7 (February 13-18)
 * **Day 1** - Git workflow, Array Methods
 * **Day 2** - IIFE Lecture
 * **HW** - exercises and quizzes
@@ -77,7 +77,7 @@
 
 ***
 
-#### Week 8
+#### Week 8 (February 20-25)
 * **Day 1** - Event Handlers, Markdown, Github Readme
 * **Day 2** - Readme and Exercises
 * **HW** - exercises and quizzes
@@ -90,7 +90,7 @@
 
 ***
 
-#### Week 9
+#### Week 9 (February 27 - March 4)
 * **Day 1** - demo IIFE translator, XHR
 * **Day 2** - event bubbling
 * **HW** - exercises and quizzes
@@ -103,7 +103,7 @@
 
 ***
 
-#### Week 10
+#### Week 10 (March 6-11)
 * **Day 1** - Labor DAY - NO CLASS
 * **Day 2** - intro to bootstrap, assign SPA quiz
 * **HW** - exercises and quizzes
@@ -112,7 +112,7 @@
 
 ***
 
-#### Week 11 - Start Modern JS developer Saturday
+#### Week 11 - Start Modern JS developer Saturday (March 13-18)
 * **Day 1** - Chatty
 * **Day 2** - Chatty
 * **HW** - Finish SPA quiz and exercises
@@ -122,7 +122,7 @@
 
 ***
 
-#### Week 12
+#### Week 12 (March 20-25)
 * **Day 1** - 
 * **Day 2** - 
 * **HW** - 
@@ -130,7 +130,7 @@
 
 ***
 
-#### BREAK WEEK - HW work on exercises
+#### BREAK WEEK - HW work on exercises (March 27 - April 1)
 
 ***
 

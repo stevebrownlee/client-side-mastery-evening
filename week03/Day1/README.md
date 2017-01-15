@@ -1,3 +1,6 @@
 # Week 3 - Day 1
 
-> **Agenda:** github review, CSS 101, Chrome Dev Tools
+> **Agenda:** 
+>	* github review/github branching (Zoe), 
+>	* intro to HTML (Callan), 
+>	* CSS 101 (Callan)

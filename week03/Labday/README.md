@@ -1,3 +1,8 @@
 # Week 3 Labday Agenda
 
-> **Agenda:** 5 css exercises, music history, demo how to fork a repo
+> **Agenda:**  
+> * Big/Little Sib (Zoe), 
+> * CSS overflow (Zoe), 
+> * music history, demo how to use Github Classroom - will need to show how to clone
+> * lab day - 5 css exercises, 
+

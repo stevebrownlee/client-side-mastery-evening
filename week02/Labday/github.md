@@ -1,51 +1,51 @@
 # Week 2 Labday - Github
 
-
-
 ### What is git?
+* Version Controll system
+* Git open source project developed in 2005
+* Committing new changes, branching, merging and comparing past versions are all optimized for performance.
+*  Git thinks of its data more like a set of snapshots of a miniature filesystem. Every time you commit, or save the state of your project in Git, it basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored. 
+* Git thinks about its data more like a stream of snapshots.
+* Git has three main states that your files can reside in: committed, modified, and staged. 
+	* Committed means that the data is safely stored in your local database. 
+	* Modified means that you have changed the file but have not committed it to your database yet. 
+	* Staged means that you have marked a modified file in its current version to go into your next commit snapshot.
 
 ### Tour of github interface
+* Show location of:
+	* Contribution Calendar 
+	* Repository List
+	* Stars
+	* Followers
+	* Following
+
+### Make a folder locally to push to Github
+* Create a new folder  ```mkdir test1```
+* Go into test1 folder ```cd test1```
+* Make index.html file ```touch index.html```
 
 ### How to make a new repository on github
+* Click plus sign
+* Click New Repository
+* Add in Repository Name - make it the same as the name of your folder on your local machine
+* It will list all steps you need for the next step
 
-### How to make 
+### Link local folder to Github repo
+* Initialize a new repo ```git init```
+* Add the index file ```git add index.html```
+* Commit the file you added ```git commit -m "first commit"```
+* On github make sure you have selected SSH and copy the following line
+	* ```git remote add origin git@github.com:zoeames/test1.git```
+* Change Author settings - see next section
+* Push your changes```git push -u origin master```
 
+### Set Author on local machine - will need to do 1st time you push
+* ```git config --global user.name "Your Name"```
+* ```git config --global user.email you@example.com```
+* Check last commit to see if author email has changed
+	* If needed:  reset author commit: ```git commit --amend --reset-author```
 
-
-
-GITHUB!
-Log in to github
-upper right hand corner create new repo -> /blog
-Click green btn
-Highlight https button
-Follow first set of instrux to copy commands to clipboard
-go back to terminal
-cd into blog direx
-Paste and hit enter
-Copy config files one by one and change to user credentials
-User name is user first space last
-Then git config —global -l
-Show adding/committing/push
-Change a file and show how git status changes
-git log
-q to quit (if log is long enough)
-
-Git remote add origin <url>
-type in creds
-Quick tour of github
-
-===== ^^^ 3 hours
-
-git branching
-git branch add-button
-git branch to show all branches
-git checkout add-button
-Make changes to branch and commit a couple of times, then switch to master to see that those changes are not there.
-Make a second branch (change-colors) make changes, blah blah
-Add a style tag to head.
-body { background-color: red }
-Add and commit
-push a branch - git push origin add-button
-Have students go to module 6 in curriculum. Paste in second command
-After next push no more adding credentials
-Open blog file on master branch, kill the style tag
+### Rest of class
+* Make new repo with index.html at least 4 more times
+* Then make multiple add/commits on the same repo to show you can push each time or push at the end
+* HW = make 20 repos
