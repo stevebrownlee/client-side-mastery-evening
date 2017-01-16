@@ -50,8 +50,8 @@
 ***
 
 #### Week 5 (January 30 - February 4)
-* **Day 1** - more advanced github - merge conflicts, give out JS quiz (Zoe)
-* **Day 2** - review gitflow for groups (Zoe), working in groups: trello mockups (Callan), announce 1st group project  - company profile website: each person does one page (Zoe)
+* **Day 1** - More advanced github - merge conflicts, give out JS quiz (Zoe)
+* **Day 2** - Review gitflow for groups (Zoe), working in groups: trello mockups (Callan), announce 1st group project  - company profile website: each person does one page (Zoe)
 * **HW** - Group projects
 * **Lab Day** - Group projects 
 
