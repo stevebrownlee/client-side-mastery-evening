@@ -92,6 +92,42 @@ input:invalid {
 }
 ```
 
+## Pseudo Selectors
+### nth-of-type versus :nth-child
+
+```html
+<section>
+   <p>Little</p>
+   <p>Piggy</p>    <!-- Want this one -->
+</section>
+```
+These two selectors do the same thing:
+```css
+p:nth-child(2) { color: red; }
+p:nth-of-type(2) { color: red; }
+```
+Our :nth-child selector, in "Plain English," means select an element if:
+
+* It is a paragraph element
+* It is the second child of a parent
+
+Our :nth-of-type selector, in "Plain English," means:
+
+* Select the second paragraph child of a parent
+
+:nth-of-type is... what's a good way to say it... less conditional.
+
+To demonstrate this we can change the HTML
+
+```html
+<section>
+   <h1>Words</h1>
+   <p>Little</p>
+   <p>Piggy</p>    <!-- Want this one -->
+</section>
+```
+This causes the nth-child() to break.
+
 
 # Want to learn more?
 
