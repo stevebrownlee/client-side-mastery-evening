@@ -25,6 +25,20 @@ You can then access the value of any of those keys.
 console.log("My car has " + myCar.doors + " doors.");
 ```
 
+or using bracket notation:
+```js
+console.log("My car has " + myCar["doors"] + " doors.");
+```
+
+#### For In loops
+```js
+var myCar = {make: "Ford", model:"Mustang", year:1969}
+for (var prop in myCar) {
+  console.log('obj.' + prop, '=', myCar[prop]);
+}
+
+```
+
 ## Functions
 
 ##### Simple function
