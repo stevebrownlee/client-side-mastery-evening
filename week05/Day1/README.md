@@ -1,6 +1,6 @@
 # Week 5 - Day 1
 
-> **Agenda:** more advanced github - merge conflicts, give out JS quiz
+> **Agenda:** * **Day 1** - more advanced github - merge conflicts,  working in groups (trello mockups), give out JS quiz
 
 
 ## Intermediate Git usage
