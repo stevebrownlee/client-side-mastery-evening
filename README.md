@@ -65,25 +65,22 @@
 
 ***
 
-#### Week 7 (February 13-18)
-* **Day 1** - Git workflow, Array Methods
-* **Day 2** - IIFE Lecture
+#### Week 7 (February 13-18) START SPA MILESTONE
+* **Day 1** - Array Method Exercise, JS=objects(callan), IIFE Lecture(zoe)
+* **Day 2** - IIFE Lecture - Solar System(zoe)
 * **HW** - exercises and quizzes
-	* SP_JS_ARRAYS_CHAINING.md
-	* SP_JS_ARRAYS_SOLAR_SYSTEM.md
 	* SP_JS_ARRAYS_STRING_MANIPULATION.md
 	* SP_JS_IIFE_SANDWICH.md
-* **Lab Day** - IIFE continued, IIFE Exercises
+* **Lab Day** - IIFE Exercises
 
 ***
 
 #### Week 8 (February 20-25)
-* **Day 1** - Event Handlers, Markdown, Github Readme
-* **Day 2** - Readme and Exercises
+* **Day 1** - Markdown, Github Readme (callan), Exercises
+* **Day 2** - Event handlers/event bubbling(zoe), Exercises
 * **HW** - exercises and quizzes
 	* SP_JS_EVENT_LISTENERS_DYNAMIC_CARDS.md
 	* SP_JS_EVENT_LISTENERS_GUINEA_PIG.md
-	* SP_JS_EVENT_LISTENERS_TSA.md
 	* SP_JS_EVENT_LISTENERS_WYSIWYG.md
 	* SP_JS_MUSIC_HISTORY_3.md
 * **Lab Day** - Group project - IIFE Translator
@@ -91,46 +88,42 @@
 ***
 
 #### Week 9 (February 27 - March 4)
-* **Day 1** - demo IIFE translator, XHR
-* **Day 2** - event bubbling
+* **Day 1** - IIFE translator, demo IIFE translator
+* **Day 2** - bootstrap (lauren)
 * **HW** - exercises and quizzes
-	* XHR_SEASONAL_SALES
-	* MUSIC_HISTORY_3
-	* MUSIC_HISTORY_4
-	* XHR_MIND_MELTING - Advanced Students:
-	* XHR_FOOD.md - Advanced Students
-* **Lab Day** - IIFE, XHR exercises
+	* WYSIWYG - focus for study buddies
+	* SP_JS_IIFE_BOOTSTRAP
+* **Lab Day** - exercises
 
 ***
 
 #### Week 10 (March 6-11)
-* **Day 1** - Labor DAY - NO CLASS
-* **Day 2** - intro to bootstrap, assign SPA quiz
-* **HW** - exercises and quizzes
-	* SP_JS_IIFE_BOOTSTRAP
-* **Lab Day** - Assign and work on chatty
+* **Day 1** - XHR(zoe)
+* **Day 2** - XHR continued
+* **HW** - exercises
+	* XHR_SEASONAL_SALES
+	* MUSIC_HISTORY_4
+* **Lab Day** - Exercises, assign quiz
 
 ***
 
-#### Week 11 - Start Modern JS developer Saturday (March 13-18)
+#### Week 11 - (March 13-18)
 * **Day 1** - Chatty
 * **Day 2** - Chatty
-* **HW** - Finish SPA quiz and exercises
-* **Lab Day** - Demo Chatty projects, Intro to Jquery, task runners and package managers, Exercises
-	* MJ_JQUERY_MUSIC_HISTORY_5
-	* MJ_JQUERY_SLIDESHOW
+* **HW** - Chatty
+* **Lab Day** - Chatty
 
 ***
 
 #### Week 12 (March 20-25)
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+* **Day 1** - Demo Chatty
+* **Day 2** - advanced bootstrap(callan), exercises/quiz
+* **HW** - exercises/quiz
+* **Lab Day** - exercises/quiz
 
 ***
 
-#### BREAK WEEK - HW work on exercises (March 27 - April 1)
+#### BREAK WEEK - Look at Jquery and try MH5 (March 27 - April 1)
 
 ***
 
