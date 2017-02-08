@@ -66,7 +66,7 @@
 ***
 
 #### Week 7 (February 13-18) START SPA MILESTONE
-* **Day 1** - Array Method Exercise, JS=objects(callan), IIFE Lecture(zoe)
+* **Day 1** - Advanced Array Methods (lauren), JS=objects(callan), IIFE Lecture(zoe)
 * **Day 2** - IIFE Lecture - Solar System(zoe)
 * **HW** - exercises and quizzes
 	* SP_JS_ARRAYS_STRING_MANIPULATION.md
