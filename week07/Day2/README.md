@@ -23,7 +23,9 @@ console.log("inside global? ", inside ); //this line shows reference error - ins
 scopeStuff();
 ```
 
+
 6.  Show example of a function that is not immediately executed:
+
 ```
 // This function is not immediately executed
 var global_base = 500;
@@ -36,6 +38,7 @@ throwAway(); //console.log global base after execution
 ```
 
 7.  use an iife to immediately execute the previous function
+
 ```
 var global_base = 300;
 (function () {
@@ -44,4 +47,33 @@ var global_base = 300;
   console.log("_internal_sum",_internal_sum)
 }());
 ```
-8.  create some simple IIFEs - see iife-intro
+
+This works because add the () around the function makes this function into a function expression
+
+8.  Explain the difference between function declarations and function Expressions
+
+This is a function expression:
+```
+function printCats(cat){
+	console.log(cat)
+};
+
+printCats("fluffy");
+
+```
+
+This is a function declaration:
+```
+printCats("fluffy"); //Gives an error because printCats is not defined.
+var printCats = function(cat){
+	console.log(cat)
+};
+
+printCats("fluffy");  //fluffy
+
+```
+Function expressions get loaded on page load, function expressions get loaded when that line of the file is reached.  So if you try to execute a function expression before it is defined you get an error.
+
+
+
+9.  create some simple IIFEs - see iife-intro
