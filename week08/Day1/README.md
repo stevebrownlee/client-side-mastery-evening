@@ -1,6 +1,6 @@
 # Week 8 - Day 1
 
-> **Agenda:** Event Handlers, Markdown, Github Readme
+> **Agenda:** Markdown, Github Readme (callan), Exercises
 
 
 

@@ -1,5 +1,9 @@
-# Week 8
+#### Week 8 (February 20-25)
+* **Day 1** - Markdown, Github Readme (callan), Exercises
+* **Day 2** - Event handlers/event bubbling(zoe), Exercises
+* **HW** - exercises and quizzes
+	* SP_JS_EVENT_LISTENERS_DYNAMIC_CARDS.md
+	* SP_JS_EVENT_LISTENERS_GUINEA_PIG.md
+	* SP_JS_EVENT_LISTENERS_WYSIWYG.md
 
-* **Day 1** - Event Handlers, Markdown, Github Readme
-* **Day 2** - Readme and Exercises
 * **Lab Day** - Group project - IIFE Translator

@@ -71,7 +71,8 @@
 * **HW** - exercises and quizzes
 	* SP_JS_ARRAYS_STRING_MANIPULATION.md
 	* SP_JS_IIFE_SANDWICH.md
-* **Lab Day** - IIFE Exercises
+	* SP_JS_MUSIC_HISTORY_3.md
+* **Lab Day** - IIFE Augmentors, IIFE Exercises
 
 ***
 
@@ -82,7 +83,7 @@
 	* SP_JS_EVENT_LISTENERS_DYNAMIC_CARDS.md
 	* SP_JS_EVENT_LISTENERS_GUINEA_PIG.md
 	* SP_JS_EVENT_LISTENERS_WYSIWYG.md
-	* SP_JS_MUSIC_HISTORY_3.md
+
 * **Lab Day** - Group project - IIFE Translator
 
 ***
