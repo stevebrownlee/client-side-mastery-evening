@@ -90,11 +90,11 @@
 
 #### Week 9 (February 27 - March 4)
 * **Day 1** - IIFE translator, demo IIFE translator
-* **Day 2** - bootstrap (lauren)
-* **HW** - exercises and quizzes
+* **Day 2** - exercises
+* **HW** - exercises
 	* WYSIWYG - focus for study buddies
 	* SP_JS_IIFE_BOOTSTRAP
-* **Lab Day** - exercises
+* **Lab Day** - bootstrap (lauren), exercises
 
 ***
 
@@ -104,7 +104,7 @@
 * **HW** - exercises
 	* XHR_SEASONAL_SALES
 	* MUSIC_HISTORY_4
-* **Lab Day** - Exercises, assign quiz
+* **Lab Day** - Exercises
 
 ***
 
@@ -117,7 +117,7 @@
 ***
 
 #### Week 12 (March 20-25)
-* **Day 1** - Demo Chatty
+* **Day 1** - Demo Chatty, assign quiz
 * **Day 2** - advanced bootstrap(callan), exercises/quiz
 * **HW** - exercises/quiz
 * **Lab Day** - exercises/quiz
