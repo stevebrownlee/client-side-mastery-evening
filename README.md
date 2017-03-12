@@ -128,98 +128,101 @@
 
 ***
 
-#### Week 13
-* **Day 1** - 
+#### Week 13 (April 3-8)
+* **Day 1** - Jquery - Dom and CSS (lauren)
+* **Day 2** - Jquery - events and $.ajax (lauren)
+* **HW** -
+	* MUSIC_HISTORY_5
+	* WYSIWYG - with jquery
+	* NEW jquery exercise
+* **Lab Day** - Grunt, .gitignore, NPM, Bower (Callan)
+
+***
+
+#### Week 14 (April 10-15)
+* **Day 1** - This (zoe)
+* **Day 2** - Promises(zoe)
+* **HW** - Acme
+* **Lab Day** - exercises
+
+***
+
+#### Week 15 (April 17-22)
+* **Day 1** - exercises
+* **Day 2** - ES6, promises with ES6 (callan)
+* **HW** - Create es6/promise exercise
+* **Lab Day** - CREATE inclass 5 hour quiz
+
+***
+
+#### Week 16 (April 24-27)
+* **Day 1** - API (lauren)
+* **Day 2** - firebase REST (zoe), momentJS(zoe)
+* **HW** - weather API (no auth)
+* **Lab Day** - exercises
+
+***
+
+#### Week 17 (May 1-6)
+* **Day 1** - Firebase Auth (zoe)
+* **Day 2** - SASS (callan), grunt SASS (callan)
+* **HW** - weather api auth
+* **Lab Day** - NO BIG/LITTLE SIB, group project (full crud, auth, jquery) - single day 
+
+***
+
+#### Week 18 (May 8-15)
+* **Day 1** - group project demo, angular intro(zoe)
+* **Day 2** - angular 1 controller/1 view
+* **HW** - MAKE ANGULAR EXERCISE
+* **Lab Day** - angular 1 controller/1 view
+
+***
+
+#### Week 19 (May 15-20)
+* **Day 1** - Angular Routing
 * **Day 2** - 
 * **HW** - 
 * **Lab Day** - 
 
 ***
 
-#### Week 14
-* **Day 1** - 
+#### Week 20 (May 22-27)
+* **Day 1** - Angular Auth 
 * **Day 2** - 
 * **HW** - 
-* **Lab Day** - 
+* **Lab Day** - Pinterest, list big/little sib
 
 ***
 
-#### Week 15
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 21 (May 29-June 3)
+* **Day 1** - HOLIDAY (memorial day)
+* **Day 2** - pinterest
+* **HW** - pinterest
+* **Lab Day** - pinterst, talk about capstones, proposals due 10th
 
 ***
 
-#### Week 16
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 22 (June 5-10)
+* **Day 1** - pinterest demo, prototypal inheritance
+* **Day 2** - angular prototypal inheritance
+* **HW** - protoype exercise, angular prototype exercise
+* **Lab Day** - capstone checkins, exercises
 
 ***
 
-#### Week 17
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 23 (June 12-17)
+* **Day 1** - CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - CAPSTONES
+* **Lab Day** - CAPSTONES
 
 ***
 
-#### Week 18
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
-
-***
-
-#### Week 19
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
-
-***
-
-#### Week 20
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
-
-***
-
-#### Week 21
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
-
-***
-
-#### Week 22
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
-
-***
-
-#### Week 23
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
-
-***
-
-#### Week 24
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 24 (June 19-24)
+* **Day 1** - CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - CAPSTONES
+* **Lab Day** - CAPSTONES
 
 ***
