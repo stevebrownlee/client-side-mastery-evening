@@ -5,15 +5,16 @@ module.exports = function(grunt) {
   // begins with `grunt-`. It will then load those packages for execution.
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-
   // The initConfig method is where you will configure a series
   // of tasks that you want Grunt to automatically run for you
   grunt.initConfig({
     jshint: {
-      files: ['../javascripts/**/*.js']
+      files: ['../javascripts/**/*.js'],
+      options: {
+        esnext: true
+      }
     },
   });
-
 
   // Set up the default Grunt task. The default task is executed
   // when you type `grunt`, without any additional parameters in the
