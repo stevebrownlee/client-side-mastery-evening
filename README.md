@@ -140,8 +140,8 @@
 ***
 
 #### Week 14 (April 10-15)
-* **Day 1** - This (zoe)
-* **Day 2** - Promises(zoe)
+* **Day 1** - WYSIWYG live code (callan), exercises
+* **Day 2** - This (zoe), Promises(zoe)
 * **HW** - Acme
 * **Lab Day** - exercises
 
