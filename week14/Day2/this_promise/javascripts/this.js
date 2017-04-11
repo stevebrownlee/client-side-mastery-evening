@@ -1,3 +1,11 @@
+$ ("#my-button").click (function (event) {
+  // $(this) will have the value of the button object​ because the button object invokes the click () method​
+  console.log ("event", event);
+  console.log ("event.target", event.target);
+  console.log ("this", $(this)); //its event.target!!! but as a jquery object
+});
+
+
 //this can refer to the "global object", in most web browsers this is window
 // this.a = 37;
 // console.log(window.a); // 37
