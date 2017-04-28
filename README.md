@@ -157,15 +157,15 @@
 
 #### Week 16 (April 24-27)
 * **Day 1** - API (lauren)
-* **Day 2** - firebase REST (zoe), momentJS(zoe)
+* **Day 2** - SASS (callan), grunt SASS (callan)
 * **HW** - weather API (no auth)
-* **Lab Day** - exercises
+* **Lab Day** - todo app with firebase (zoe)
 
 ***
 
 #### Week 17 (May 1-6)
-* **Day 1** - Firebase Auth (zoe)
-* **Day 2** - SASS (callan), grunt SASS (callan)
+* **Day 1** - todo App cont, momentJS(zoe)
+* **Day 2** - Firebase Auth (zoe)
 * **HW** - weather api auth
 * **Lab Day** - NO BIG/LITTLE SIB, group project (full crud, auth, jquery) - single day 
 
@@ -197,9 +197,9 @@
 
 #### Week 21 (May 29-June 3)
 * **Day 1** - HOLIDAY (memorial day)
-* **Day 2** - pinterest
+* **Day 2** - pinterest, talk about capstones, proposals due to Zoe by June 6th
 * **HW** - pinterest
-* **Lab Day** - pinterst, talk about capstones, proposals due 10th
+* **Lab Day** - pinterst
 
 ***
 

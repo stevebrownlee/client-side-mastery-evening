@@ -2,8 +2,5 @@
 
 * **Day 1** - exercises
 * **Day 2** - ES6, promises with ES6 (callan)
-* **HW** - Create es6/promise exercise
+* **HW** - Treehouse Cage Match
 * **Lab Day** - Inclass 5 hour quiz
-
-
-HW - Treehouse Cage Match
