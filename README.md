@@ -191,7 +191,7 @@
 * **Day 1** - Angular Auth 
 * **Day 2** - 
 * **HW** - 
-* **Lab Day** - Pinterest, list big/little sib
+* **Lab Day** - Pinterest, last big/little sib
 
 ***
 
