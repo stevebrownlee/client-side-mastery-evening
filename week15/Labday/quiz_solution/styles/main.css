@@ -2,7 +2,6 @@ body {
   background-color: #504a4a;
 }
 
-
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
@@ -17,11 +16,9 @@ body {
   margin-right: 20px;
 }
 
-
 .nav > li {
   padding-top: 8px;
 }
-
 
 .navbar-brand {
   padding: 0px;
@@ -31,7 +28,6 @@ body {
   padding: 5px;
   width: auto;
 }
-
 
 .panel > .panel-heading {
   background-image: none;
@@ -67,8 +63,8 @@ body {
   display: block;
   opacity: 0.5;
 }
-/*#e23636	
-#000000	
-#504a4a	
-#518cca	
-#f78f3f*/
+/*red = #e23636	
+black = #000000	
+gray = #504a4a	
+blue = #518cca	
+orange = #f78f3f*/
