@@ -25,14 +25,16 @@ var FbAPI = ((oldFirebase) => {
         data: JSON.stringify(newTodo),
       }).done((data) => resolve())
       .fail((error) => reject(error));
-      
     });
   };
 
   oldFirebase.deleteTodo = (apiKeys, id) => {
     return new Promise((resolve, reject) => {
-      FbAPI.duhlete(id);
-      resolve();
+      $.ajax({
+        method: 'DELETE',
+        url: `${apiKeys.databaseURL}/items/${id}.json`
+      }).done((data) => resolve())
+      .fail((error) => reject(error));
     });
   };
 

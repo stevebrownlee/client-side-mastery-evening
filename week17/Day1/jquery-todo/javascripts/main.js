@@ -39,7 +39,7 @@ $(document).ready(function() {
 
   //delete todos
 	$('.main-container').on('click', '.delete', (event) => {
-		FbAPI.deleteTodo(event.currentTarget.id).then(() => {
+		FbAPI.deleteTodo(apiKeys, event.currentTarget.id).then(() => {
     	FbAPI.writeDom(apiKeys);
     	countTask();
 	  }).catch((error) => {
