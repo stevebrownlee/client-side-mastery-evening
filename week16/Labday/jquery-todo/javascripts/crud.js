@@ -25,10 +25,9 @@ var FbAPI = ((oldFirebase) => {
     });
   };
 
-  oldFirebase.deleteTodo = () => {
+  oldFirebase.deleteTodo = (id) => {
     return new Promise((resolve, reject) => {
-      // newTodo.id = `item${FbAPI.todoGetter().length}`;
-      // FbAPI.addSingleTodo(newTodo);
+      FbAPI.duhlete(id);
       resolve();
     });
   };

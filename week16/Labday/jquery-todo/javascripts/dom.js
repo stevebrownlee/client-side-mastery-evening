@@ -15,8 +15,8 @@ var FbAPI = (function(oldFirebase) {
         doneString += `<input type="text" class="inputTask">`;
         doneString += `</div>`;
         doneString += `<div class="col-xs-4">`;
-        doneString += `<button class="btn btn-default col-xs-6 edit">Edit</button>`;
-        doneString += `<button class="btn btn-danger col-xs-6 delete">Delete</button>`;
+        doneString += `<button class="btn btn-default col-xs-6 edit" id="${todo.id}">Edit</button>`;
+        doneString += `<button class="btn btn-danger col-xs-6 delete" id="${todo.id}">Delete</button>`;
         doneString += `</div>`;
         doneString += `</li>`;
       } else {
@@ -28,7 +28,7 @@ var FbAPI = (function(oldFirebase) {
         notDoneString += `</div>`;
         notDoneString += `<div class="col-xs-4">`;
         notDoneString += `<button class="btn btn-default col-xs-6 edit" id="${todo.id}">Edit</button>`;
-        notDoneString += `<button class="btn btn-danger col-xs-6 delete id="${todo.id}"">Delete</button> `;
+        notDoneString += `<button class="btn btn-danger col-xs-6 delete" id="${todo.id}">Delete</button> `;
         notDoneString += `</div>`;
         notDoneString += `</li>`;
       }
