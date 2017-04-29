@@ -43,10 +43,7 @@ var FbAPI = ((oldFirebase) => {
 
   oldFirebase.checker = (id) => {
     return new Promise((resolve, reject) => {
-      let todos = FbAPI.todoGetter();
-      const position = id.split("item")[1];
-      todos[position].isCompleted = !todos[position].isCompleted;
-      FbAPI.setTodos(todos);
+      FbAPI.setChecked(id);
       resolve();
     });
   };

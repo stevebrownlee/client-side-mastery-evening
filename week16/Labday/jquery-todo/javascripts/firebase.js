@@ -9,6 +9,10 @@ var FbAPI = (function() {
     },
     addSingleTodo: (newTodo) => {
       todos.push(newTodo);
+    },
+    setChecked: (id) => {
+      const position = id.split("item")[1];
+      todos[position].isCompleted = !todos[position].isCompleted;
     }
   };
 })();

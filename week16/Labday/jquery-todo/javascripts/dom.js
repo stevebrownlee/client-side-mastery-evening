@@ -27,8 +27,8 @@ var FbAPI = (function(oldFirebase) {
         notDoneString += `<input type="text" class="inputTask">`;
         notDoneString += `</div>`;
         notDoneString += `<div class="col-xs-4">`;
-        notDoneString += `<button class="btn btn-default col-xs-6 edit">Edit</button>`;
-        notDoneString += `<button class="btn btn-danger col-xs-6 delete">Delete</button> `;
+        notDoneString += `<button class="btn btn-default col-xs-6 edit" id="${todo.id}">Edit</button>`;
+        notDoneString += `<button class="btn btn-danger col-xs-6 delete id="${todo.id}"">Delete</button> `;
         notDoneString += `</div>`;
         notDoneString += `</li>`;
       }

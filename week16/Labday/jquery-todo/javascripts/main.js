@@ -39,7 +39,13 @@ $(document).ready(function() {
   });
 
   //delete todos
-
+	$('.main-container').on('click', 'delete', (event) => {
+		FbAPI.checker(event.currentTarget.id).then(() => {
+    	FbAPI.writeDom();
+	  }).catch((error) => {
+	    console.log("error in addTodos", error);
+	  });
+	});
   //edit todos
 
   //complete todos
@@ -51,6 +57,5 @@ $(document).ready(function() {
 	  });
   });
 });
-
 
 
