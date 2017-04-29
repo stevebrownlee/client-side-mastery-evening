@@ -1,4 +1,7 @@
 .DS_Store
 
 week15/Labday/quiz_solution/lib/bower_components/
-week15/Labday/quiz_solution/lib/bower_components/
+week15/Labday/quiz_solution/lib/node_modules/
+
+week16/Labday/jquery-todo/lib/bower_components/
+week16/Labday/jquery-todo/lib/node_modules/
