@@ -1,8 +1,14 @@
 var FbAPI = (function() {
   let todos = [];
   return {
-    todoGetter: function() {
+    todoGetter: () => {
       return todos;
+    },
+    setTodos: (newList) => {
+      todos = newList;
+    },
+    addSingleTodo: (newTodo) => {
+      todos.push(newTodo);
     }
   };
 })();

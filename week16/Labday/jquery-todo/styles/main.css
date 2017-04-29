@@ -2,6 +2,12 @@ body h1 {
   color: green;
   text-align: center; }
 
+.main-container .form-spacing {
+  margin: 10px 0; }
+
+.main-container .row {
+  text-align: center; }
+
 .main-container .search-bar {
   text-align: center; }
   .main-container .search-bar input {
