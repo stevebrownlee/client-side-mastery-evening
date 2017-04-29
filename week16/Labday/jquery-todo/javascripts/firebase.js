@@ -15,7 +15,6 @@ var FbAPI = (function() {
       todos[position].isCompleted = !todos[position].isCompleted;
     },
 		duhlete: (id) => {
-			console.log("duhlete", id);
       const position = id.split("item")[1];
       todos.splice(position, 1);
     }

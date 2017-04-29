@@ -32,10 +32,9 @@ var FbAPI = ((oldFirebase) => {
     });
   };
 
-  oldFirebase.editTodo = () => {
+  oldFirebase.editTodo = (id) => {
     return new Promise((resolve, reject) => {
-      // newTodo.id = `item${FbAPI.todoGetter().length}`;
-      // FbAPI.addSingleTodo(newTodo);
+      oldFirebase.deleteTodo(id);
       resolve();
     });
   };
