@@ -1,45 +1,49 @@
 var FbAPI = ((oldFirebase) => {
 
-  oldFirebase.getTodos = () => {
+  oldFirebase.getTodos = (apiKeys) => {
     let items = [];
     return new Promise((resolve, reject) => {
-      $.ajax("./database/seeder.json")
+      $.ajax(`${apiKeys.databaseURL}/items.json`)
       .done((data) => {
-        let response = data.items;
+        let response = data;
         Object.keys(response).forEach((key) => {
           response[key].id = key;
           items.push(response[key]);
         });
-        FbAPI.setTodos(items);
-        resolve();
+        resolve(items);
       })
       .fail((error) => reject(error));
     });
   };
 
-  oldFirebase.addTodo = (newTodo) => {
+  oldFirebase.addTodo = (apiKeys, newTodo) => {
+    console.log("apiKeys", apiKeys)
     return new Promise((resolve, reject) => {
-      newTodo.id = `item${FbAPI.todoGetter().length}`;
-      FbAPI.addSingleTodo(newTodo);
-      resolve();
+      $.ajax({
+        method: 'POST',
+        url: `${apiKeys.databaseURL}/items.json`,
+        data: JSON.stringify(newTodo),
+      }).done((data) => resolve())
+      .fail((error) => reject(error));
+      
     });
   };
 
-  oldFirebase.deleteTodo = (id) => {
+  oldFirebase.deleteTodo = (apiKeys, id) => {
     return new Promise((resolve, reject) => {
       FbAPI.duhlete(id);
       resolve();
     });
   };
 
-  oldFirebase.editTodo = (id) => {
+  oldFirebase.editTodo = (apiKeys, id) => {
     return new Promise((resolve, reject) => {
       oldFirebase.deleteTodo(id);
       resolve();
     });
   };
 
-  oldFirebase.checker = (id) => {
+  oldFirebase.checker = (apiKeys, id) => {
     return new Promise((resolve, reject) => {
       FbAPI.setChecked(id);
       resolve();
