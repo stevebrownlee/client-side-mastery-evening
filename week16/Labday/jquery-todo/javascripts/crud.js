@@ -1,4 +1,4 @@
-var FbAPI = (function(oldFirebase) {
+var FbAPI = ((oldFirebase) => {
 
   oldFirebase.getTodos = () => {
     let items = [];
@@ -17,8 +17,7 @@ var FbAPI = (function(oldFirebase) {
     });
   };
 
-
-  oldFirebase.addTodo = function(newTodo) {
+  oldFirebase.addTodo = (newTodo) => {
     return new Promise((resolve, reject) => {
       newTodo.id = `item${FbAPI.todoGetter().length}`;
       FbAPI.addSingleTodo(newTodo);
@@ -26,10 +25,33 @@ var FbAPI = (function(oldFirebase) {
     });
   };
 
-  oldFirebase.deleteTodo = function() {};
+  oldFirebase.deleteTodo = () => {
+    return new Promise((resolve, reject) => {
+      // newTodo.id = `item${FbAPI.todoGetter().length}`;
+      // FbAPI.addSingleTodo(newTodo);
+      resolve();
+    });
+  };
 
-  oldFirebase.editTodo = function() {};
+  oldFirebase.editTodo = () => {
+    return new Promise((resolve, reject) => {
+      // newTodo.id = `item${FbAPI.todoGetter().length}`;
+      // FbAPI.addSingleTodo(newTodo);
+      resolve();
+    });
+  };
 
+  oldFirebase.checker = (id) => {
+    return new Promise((resolve, reject) => {
+      let todos = FbAPI.todoGetter();
+      const position = id.split("item")[1];
+      todos[position].isCompleted = !todos[position].isCompleted;
+      FbAPI.setTodos(todos);
+      resolve();
+    });
+  };
+
+  
   return oldFirebase;
 
 })(FbAPI || {});

@@ -15,7 +15,6 @@ $(document).ready(function() {
 
   }
 
-
   //Get todos
   FbAPI.getTodos().then(() => {
  		FbAPI.writeDom();
@@ -44,11 +43,14 @@ $(document).ready(function() {
   //edit todos
 
   //complete todos
-
- 	
-  
-
-
-
-
+  $('.main-container').on('click', 'input[type="checkbox"]', (event) => {
+  	FbAPI.checker(event.currentTarget.id).then(() => {
+    	FbAPI.writeDom();
+	  }).catch((error) => {
+	    console.log("error in addTodos", error);
+	  });
+  });
 });
+
+
+
