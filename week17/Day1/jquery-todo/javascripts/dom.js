@@ -34,10 +34,8 @@ var FbAPI = (function(oldFirebase) {
       $('#completed-tasks').html(doneString);
       $('#incomplete-tasks').html(notDoneString);
     }).catch((error) => {
-      console.log("error in getTodos", error)
-    })
-
-
+      console.log("error in getTodos", error);
+    });
   };
 
   return oldFirebase;

@@ -1,5 +1,6 @@
 $(document).ready(function() {
   let apiKeys;
+  let editId = "";
   $('#new-item').click(() => {
     $('.list-container').addClass("hide");
     $('.new-container').removeClass("hide");
@@ -26,15 +27,28 @@ $(document).ready(function() {
 			isCompleted: false, 
 			task: $('#add-todo-text').val()
 		};
-		FbAPI.addTodo(apiKeys, newTodo).then(() => {
-			$('#add-todo-text').val("");
-			$('.new-container').addClass("hide");
-    	$('.list-container').removeClass("hide");
-    	FbAPI.writeDom(apiKeys);
-    	countTask();
-	  }).catch((error) => {
-	    console.log("error in addTodos", error);
-	  });
+    if(editId.length > 0){
+      FbAPI.editTodo(apiKeys, newTodo, editId).then(() => {
+        $('#add-todo-text').val("");
+        editId = "";
+        $('.new-container').addClass("hide");
+        $('.list-container').removeClass("hide");
+        FbAPI.writeDom(apiKeys);
+        countTask();
+      }).catch((error) => {
+        console.log("error in addTodos", error);
+      }); 
+    } else {
+      FbAPI.addTodo(apiKeys, newTodo).then(() => {
+        $('#add-todo-text').val("");
+        $('.new-container').addClass("hide");
+        $('.list-container').removeClass("hide");
+        FbAPI.writeDom(apiKeys);
+        countTask();
+      }).catch((error) => {
+        console.log("error in addTodos", error);
+      });      
+    }
   });
 
   //delete todos
@@ -50,13 +64,10 @@ $(document).ready(function() {
   //edit todos - really hard to fake, going to delete and add a new one
 	$('.main-container').on('click', '.edit', (event) => {
 		let editText = $(event.target).closest('.col-xs-4').siblings('.col-xs-8').find('.task').html();
-		FbAPI.editTodo(event.currentTarget.id).then(() => {
-			$('.list-container').addClass("hide");
-    	$('.new-container').removeClass("hide");
-    	$('#add-todo-text').val(editText);
-	  }).catch((error) => {
-	    console.log("error in deleteTodo", error);
-	  });
+		editId = event.currentTarget.id;
+		$('.list-container').addClass("hide");
+  	$('.new-container').removeClass("hide");
+  	$('#add-todo-text').val(editText);
 	});
 
   //complete todos

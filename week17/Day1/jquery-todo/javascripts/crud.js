@@ -17,7 +17,6 @@ var FbAPI = ((oldFirebase) => {
   };
 
   oldFirebase.addTodo = (apiKeys, newTodo) => {
-    console.log("apiKeys", apiKeys)
     return new Promise((resolve, reject) => {
       $.ajax({
         method: 'POST',
@@ -38,10 +37,14 @@ var FbAPI = ((oldFirebase) => {
     });
   };
 
-  oldFirebase.editTodo = (apiKeys, id) => {
+  oldFirebase.editTodo = (apiKeys, updatedItem, itemId) => {
     return new Promise((resolve, reject) => {
-      oldFirebase.deleteTodo(id);
-      resolve();
+      $.ajax({
+        method: 'PUT',
+        url: `${apiKeys.databaseURL}/items/${itemId}.json`,
+        data: JSON.stringify(updatedItem),
+      }).done((data) => resolve())
+      .fail((error) => reject(error));
     });
   };
 
