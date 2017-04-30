@@ -47,14 +47,6 @@ var FbAPI = ((oldFirebase) => {
       .fail((error) => reject(error));
     });
   };
-
-  oldFirebase.checker = (apiKeys, id) => {
-    return new Promise((resolve, reject) => {
-      FbAPI.setChecked(id);
-      resolve();
-    });
-  };
-
   
   return oldFirebase;
 

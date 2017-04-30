@@ -18,6 +18,7 @@ var FbAPI = ((oldFirebase) => {
   };
 
   oldFirebase.addTodo = (apiKeys, newTodo) => {
+    newTodo.uid = FbAPI.credentialsCurrentUser().uid;
     return new Promise((resolve, reject) => {
       $.ajax({
         method: 'POST',
@@ -39,6 +40,7 @@ var FbAPI = ((oldFirebase) => {
   };
 
   oldFirebase.editTodo = (apiKeys, updatedItem, itemId) => {
+    updatedItem.uid = FbAPI.credentialsCurrentUser().uid;
     return new Promise((resolve, reject) => {
       $.ajax({
         method: 'PUT',
@@ -48,14 +50,6 @@ var FbAPI = ((oldFirebase) => {
       .fail((error) => reject(error));
     });
   };
-
-  oldFirebase.checker = (apiKeys, id) => {
-    return new Promise((resolve, reject) => {
-      FbAPI.setChecked(id);
-      resolve();
-    });
-  };
-
   
   return oldFirebase;
 
