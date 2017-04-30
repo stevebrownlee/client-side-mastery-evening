@@ -70,7 +70,7 @@ $(document).ready(function() {
   	let modifiedTodo = {
       isCompleted: event.target.checked, 
       task: $(event.target).siblings('.task').html()
-    }
+    };
     FbAPI.editTodo(apiKeys, modifiedTodo, event.target.id).then(() => {
       FbAPI.writeDom(apiKeys);
     }).catch((error) => {
