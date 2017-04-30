@@ -1,5 +1,11 @@
 var FbAPI = (function(oldFirebase) {
 
+  oldFirebase.countTask = () => {
+    let remainTask = $('#incomplete-tasks li').length;
+    $('#counter').hide().fadeIn(300).html(remainTask);
+  };
+
+
   oldFirebase.writeDom = (keys) => {
     FbAPI.getTodos(keys).then((results) => {
       let todos = results;
@@ -33,6 +39,7 @@ var FbAPI = (function(oldFirebase) {
 
       $('#completed-tasks').html(doneString);
       $('#incomplete-tasks').html(notDoneString);
+      oldFirebase.countTask();
     }).catch((error) => {
       console.log("error in getTodos", error);
     });
