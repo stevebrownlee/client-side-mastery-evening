@@ -15,13 +15,13 @@ app.controller("TodoCtrl", function($scope){
           id: 0,
           task: "mow the lawn",
           isCompleted: true,
-          assignedTo: "William",
+          assignedTo: "Callan",
         },
         {
           id: 1,
           task: "grade quizzes",
           isCompleted: false,
-          assignedTo: "Zoe",
+          assignedTo: "Lauren",
         },
         {
           id: 2,
