@@ -174,16 +174,16 @@
 #### Week 18 (May 8-15)
 * **Day 1** - group project demo, angular intro(zoe)
 * **Day 2** - angular 1 controller/1 view
-* **HW** - 
-* **Lab Day** - 
+* **HW** - Set up 5 angular repos - 3 whatever, 1 for music history, 1 for address book
+* **Lab Day** - GET and POST with Firebase
 
 ***
 
 #### Week 19 (May 15-20)
-* **Day 1** - Angular Routing
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+* **Day 1** - Angular Routing, repo re-structure (partials, templates)
+* **Day 2** - PUT and DELETE, More complicated structure (add tools collection), momentJS
+* **HW** - Route Routing, MH10, address book 3 - full CRUD
+* **Lab Day** - exercises
 
 ***
 
