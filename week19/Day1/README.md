@@ -1,6 +1,6 @@
 # Week 19 - Day 1
 
-> **Agenda:**  Angular Routing
+> **Agenda:**  Angular Routing, repo re-structure (partials, templates)
 
 
 * Install Angular-Route

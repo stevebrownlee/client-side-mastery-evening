@@ -181,17 +181,17 @@
 
 #### Week 19 (May 15-20)
 * **Day 1** - Angular Routing, repo re-structure (partials, templates)
-* **Day 2** - PUT and DELETE, More complicated structure (add tools collection), momentJS
-* **HW** - Route Routing, MH10, address book 3 - full CRUD
+* **Day 2** - PUT and DELETE
+* **HW** - Route Routing, MH10, address book 3 - full CRUD, Music History - full crud
 * **Lab Day** - exercises
 
 ***
 
 #### Week 20 (May 22-27)
-* **Day 1** - Angular Auth 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - Pinterest, last big/little sib
+* **Day 1** - Angular Auth, last big/little sib
+* **Day 2** - Angular Auth continued, Moment JS
+* **HW** - address book 4 - Auth, Music History - Auth
+* **Lab Day** - Pinterest
 
 ***
 
@@ -204,9 +204,9 @@
 ***
 
 #### Week 22 (June 5-10)
-* **Day 1** - pinterest demo, prototypal inheritance
-* **Day 2** - angular prototypal inheritance
-* **HW** - protoype exercise, angular prototype exercise
+* **Day 1** - pinterest demo, firebase deployment
+* **Day 2** - prototypal inheritance
+* **HW** - Finish any outstanding Angular exercises, work on capstone planning
 * **Lab Day** - capstone checkins, exercises
 
 ***
