@@ -1,3 +1,3 @@
 # Week 20 Labday Agenda
 
-> **Agenda:** Pinterest, last big/little sib
+> **Agenda:** Group project: Pinterest (planning day)

@@ -1,3 +1,3 @@
 # Week 20 - Day 2
 
-> **Agenda:** 
+> **Agenda:** Angular Auth continued, Moment JS
