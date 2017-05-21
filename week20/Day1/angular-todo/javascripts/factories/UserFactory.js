@@ -22,8 +22,8 @@ app.factory("UserFactory", function($q, $http, FIREBASE_CONFIG) {
       $http.get(`${FIREBASE_CONFIG.databaseURL}/users.json?orderBy="uid"&equalTo="${userId}"`)
         .then((userObject) => {
           let users = [];
-          Object.keys(userObject).forEach((key) => {
-            users.push(userObject[key]);
+          Object.keys(userObject.data).forEach((key) => {
+            users.push(userObject.data[key]);
           });
           resolve(users[0]);
         })
