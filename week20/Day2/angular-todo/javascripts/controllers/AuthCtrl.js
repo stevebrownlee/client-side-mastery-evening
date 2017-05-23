@@ -33,11 +33,14 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
     AuthFactory.registerWithEmail($scope.auth).then((didRegister) => {
       $scope.auth.uid = didRegister.uid;
       return UserFactory.addUser($scope.auth);
-    }, (error) => {
-    	console.log("registerWithEmail error", error.message);
-    }).then((registerComplete) => {
+    }
+    // , (error) => {
+    //   console.log("registerWithEmail error", error.message);
+    // }
+    ).then((registerComplete) => {
       return logMeIn($scope.auth);
     }).catch((error) => {
+      $scope.alerts.push({msg: error.message});
     	console.log('logMeIn error', error);
     });
   };
