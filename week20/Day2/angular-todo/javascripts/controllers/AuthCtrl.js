@@ -1,7 +1,13 @@
 app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope, AuthFactory, UserFactory) {
+
+  $scope.alerts = [];
   $scope.auth = {
   	email: "a@a.com",
   	password: "123456"
+  };
+
+  $scope.closeAlert = function(index) {
+    $scope.alerts.splice(index, 1);
   };
 
   if ($location.path() === "/logout") {
@@ -18,6 +24,7 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
       $scope.auth = {};
       	$location.url("/items/list");	
     }).catch((error) => {
+        $scope.alerts.push({msg: error.message});
     	console.log('getUser error', error);
     });
   };
@@ -27,7 +34,7 @@ app.controller("AuthCtrl", function($scope, $location, $routeParams, $rootScope,
       $scope.auth.uid = didRegister.uid;
       return UserFactory.addUser($scope.auth);
     }, (error) => {
-    	console.log("registerWithEmail error", error);
+    	console.log("registerWithEmail error", error.message);
     }).then((registerComplete) => {
       return logMeIn($scope.auth);
     }).catch((error) => {
