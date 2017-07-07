@@ -1,4 +1,4 @@
-# Week 3 (January 16-21)
+# Week 3 (July 17-22)
 
 * **Day 1** - github review/github branching (Zoe), intro to HTML (Callan), CSS 101 (Callan)
 * **Day 2** - CSS 102 (Callan), Chrome Dev Tools (Callan), begin 5 CSS exercises from milestones (Zoe)

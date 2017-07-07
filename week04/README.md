@@ -1,4 +1,4 @@
-# Week 4
+# Week 4 (July 24-29)
 
 * **Day 1** - JS 101 through arrays, how many seconds old am I exercises?, sonnet
 * **Day 2** - JS 101 finish arrays, switch statements, for loops, for exercise, assign HTML quiz

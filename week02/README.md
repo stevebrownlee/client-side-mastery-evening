@@ -1,10 +1,6 @@
-# Week 2 (January 9-14)
+# Week 2 (July 10-15)
 
-* **Day 1** - Installs, open sublime from command line, set up github SSH
-* **Day 2** - Sublime (preferences and packages), study groups, assign command line lightning talks, intro to command line, basic html, start blog exercise
+* **Day 1** - E5 Demos
+* **Day 2** - Sublime (preferences and packages), study groups, assign command line lightning talks, intro to command line
 * **HW** - lightning talks, prework
-* **Lab Day** - Command line lightning talks, GITHUB
-
-
-
-
+* **Lab Day** - command line lightning talks, GITHUB, github branching

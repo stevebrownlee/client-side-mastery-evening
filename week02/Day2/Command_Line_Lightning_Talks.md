@@ -1,8 +1,7 @@
 **GROUP 0 - aka instructor demo**
 * mkdir
 * cd
-* man
-* date
+* ssh
 
 **Group 1**
 * cat
@@ -14,7 +13,7 @@
 * pwd
 * mv
 * curl
-* ssh
+* man
 
 **Group 3**
 * !!
@@ -30,6 +29,6 @@
 
 **Group 5**
 * rm
-* rm -rf
+* date
 * lsof -i :8080
 * kill

@@ -1,4 +1,4 @@
-# Week 2 - Day 2 (January 10)
+# Week 2 - Day 2 (July 11)
 
 > **Agenda:** sublime (preferences and packages), study groups, assign command line lightning talks, intro to command line
 
