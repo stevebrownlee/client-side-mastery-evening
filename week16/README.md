@@ -1,5 +1,5 @@
-# Week 16 (April 24-27)
-* **Day 1** - API (lauren)
-* **Day 2** - SASS (callan), grunt SASS (callan)
-* **HW** - weather API (no auth)
-* **Lab Day** - todo app with firebase (zoe)
+# Week 16 ()
+* **Day 1** -
+* **Day 2** -
+* **HW** -
+* **Lab Day** -

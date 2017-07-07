@@ -1,3 +1,3 @@
 # Week 14 Labday Agenda
 
-> **Agenda:** exercises
+> **Agenda:** 

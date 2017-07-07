@@ -1,8 +1,6 @@
-# Week 10 (March 6-11)
+# Week 10 ()
 
-* **Day 1** - XHR (zoe)
-* **Day 2** - XHR continued (zoe)
-* **HW** - exercises
-	* XHR_SEASONAL_SALES
-	* MUSIC_HISTORY_4
-* **Lab Day** - Exercises
+* **Day 1** - 
+* **Day 2** - 
+* **HW** - 
+* **Lab Day** - 
