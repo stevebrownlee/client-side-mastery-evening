@@ -140,11 +140,4 @@
 ***
 
 
-AFTER BREAK:
-this
-promises
-SASS
-APIs
-Firebase
-Angular
-Capstones
+AFTER BREAK: this, promises, SASS, APIs, Firebase, Angular, Capstones
