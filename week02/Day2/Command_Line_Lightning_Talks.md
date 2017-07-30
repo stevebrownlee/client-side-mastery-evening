@@ -1,11 +1,11 @@
 **GROUP 0 - aka instructor demo**
 * mkdir
 * cd
-* ssh
+* touch
 
 **Group 1**
 * cat
-* touch
+* ssh
 * cp
 * whoami
 
