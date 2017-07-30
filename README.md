@@ -31,7 +31,7 @@
 	* Personal Site 1, 2, and 3
 	* Relationship Selectors
 	* CSS Diner
-* **Lab Day** - CSS overflow (Callan), lab day - 5 css exercises, music history, demo how to fork a repo
+* **Lab Day** - CSS overflow (Callan), lab day - 5 css exercises, demo how to fork a repo
 
 ***
 
