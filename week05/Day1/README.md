@@ -1,6 +1,6 @@
 # Week 5 - Day 1
 
-> **Agenda:** * **Day 1** - more advanced github - merge conflicts,  working in groups (trello mockups), give out JS quiz
+> **Agenda:** * **Day 1** - More advanced github and github for teams (Zoe, Callan, and Lauren), wireframes (zoe)
 
 
 ## Intermediate Git usage
