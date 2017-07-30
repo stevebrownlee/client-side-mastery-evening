@@ -44,7 +44,7 @@
 	* Reindeer
 	* Personal Site 4
 	* Blog Post
-* **Lab Day** - objects, functions, exercises (Lauren/Zoe)
+* **Lab Day** - objects, functions, exercises (Lauren, Callan)
 
 ***
 
