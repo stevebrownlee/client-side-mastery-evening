@@ -1,6 +1,3 @@
-var getPlanetsButton = document.getElementById('showPlanets');
-var planetHolderDiv = document.getElementById('planetHolder');
-
 var planets = [{
   name: 'mercury',
   url: 'https://www.nasa.gov/sites/default/files/mercury_1.jpg'
@@ -27,29 +24,68 @@ var planets = [{
   url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/260px-Neptune_Full.jpg'
 }];
 
+var getPlanetsButton = document.getElementById('showPlanets');
+var planetHolderDiv = document.getElementById('planetHolder');
+var inputField = document.getElementById('searchInput');
+var clearButton = document.getElementById('clearButton');
+
+// shows planet name
 function showMeTheMoney(event) {
-  console.log(event.target.parentNode.id); //gets unique id of box
-  console.log("hidden", event.target.previousSibling); //gets unique id of box
+  // console.log(event.target.parentNode.id); //gets unique id of box
+  // console.log("hidden", event.target.previousSibling); //gets unique id of box
   event.target.previousSibling.classList.remove('hidden');
 }
 
-function writeToDom() {
-  planetHolderDiv.innerHTML = ''
-  for (var i = 0; i < planets.length; i++) {
+//created domstring
+function domString(planetz) {
+  planetString = ''
+  for (var i = 0; i < planetz.length; i++) {
     var newPlanet = "";
     newPlanet += `<div class='planetBox'id='planetBox-${i}' >`
-    newPlanet += `<div class='planetName hidden'> ${planets[i].name}</div>`
-    newPlanet += `<img class="planetImage" src="${planets[i].url}">`
+    newPlanet += `<div class='planetName hidden'> ${planetz[i].name}</div>`
+    newPlanet += `<img class="planetImage" src="${planetz[i].url}">`
     newPlanet += `</div>`
-    planetHolderDiv.innerHTML += newPlanet;
+    planetString += newPlanet;
   }
+  writeToDom(planetString);
 }
 
-getPlanetsButton.addEventListener("mouseenter", writeToDom);
+//puts domstring in dom
+function writeToDom(strang) {
+  planetHolderDiv.innerHTML = strang;
+}
 
+function clearInput(){
+  inputField.value = '';
+}
+
+// on mouse enter shows all the planet cards
+// getPlanetsButton.addEventListener("mouseenter", domString);// - DO THIS FIRST
+
+getPlanetsButton.addEventListener("mouseenter", function(){
+  domString(planets);
+});
+
+// on click show planet name
 document.body.addEventListener('click', function(event) {
   if (event.target.className === 'planetImage') {
     console.log(event);
     showMeTheMoney(event);
   };
 });
+
+inputField.addEventListener('keypress', function(event){
+  if(event.key === 'Enter'){
+    var searchText = inputField.value;
+    // console.log("searchText", searchText);
+    var results = planets.filter(function (entry) { 
+      return entry.name.indexOf(searchText)>-1;
+    });
+    domString(results);
+    // console.log("results", results);
+  } else {
+    // console.log("event", event.key);
+  }
+})
+
+clearButton.addEventListener('click', clearInput)
