@@ -1,6 +1,6 @@
-# Week 8 ()
-
-* **Day 1** - 
-* **Day 2** - 
+# Week 8 (August 21-26)
+* **Day 1** - Exercises
+* **Day 2** - XHR
 * **HW** - 
-* **Lab Day** - 
+	* Seasonal Sales
+* **Lab Day** (Zoe and Callan Out)- exercises

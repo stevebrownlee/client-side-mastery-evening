@@ -1,3 +1,3 @@
 # Week 7 - Day 1
 
-> **Agenda:**
+> **Agenda:** Advanced Javascript Arrays (Lauren), Markdown and READMEs (Callan)

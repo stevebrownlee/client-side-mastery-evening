@@ -1,3 +1,3 @@
 # Week 7 - Day 2
 
-> **Agenda:** 
+> **Agenda:** Event Listeners (Zoe)
