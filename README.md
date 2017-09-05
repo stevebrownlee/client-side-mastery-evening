@@ -88,20 +88,21 @@
 ***
 
 #### Week 9 (August 28 - September 2)
-* **Day 1** - IIFE Augmentors
-* **Day 2** - More IIFE
+* **Day 1** - XHR with multiple files
+* **Day 2** - Bootstrap
 * **HW** - IIFE
-	* IIFE Sandwhich
-* **Lab Day** (Zoe Out) - Exercises
+	* Persional bio - XHR
+	* Persional bio - bootstrap
+* **Lab Day** (Zoe Out) - ES6, exercises
 
 ***
 
 #### Week 10 (September 4 - 9)
 * **Day 1** - Holiday - Labor Day
-* **Day 2** - Bootstrap
-* **HW** - Bootstrap
-	* IIFE Bootstrap
-* **Lab Day** - Group Project - IIFE Translator
+* **Day 2** - IIFE Augmentors
+* **HW** - 
+	* IIFE Sandwhich
+* **Lab Day** - IIFE, task runners, exercises
 
 ***
 
