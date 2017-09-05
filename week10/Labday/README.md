@@ -1,3 +1,3 @@
 # Week 10 Labday Agenda
 
-> **Agenda:**
+> **Agenda:** IIFE, exercises

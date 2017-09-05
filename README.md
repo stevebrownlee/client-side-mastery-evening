@@ -102,12 +102,12 @@
 * **Day 2** - IIFE Augmentors
 * **HW** - 
 	* IIFE Sandwhich
-* **Lab Day** - IIFE, task runners, exercises
+* **Lab Day** - IIFE, exercises
 
 ***
 
 #### Week 11 (September 11-16)
-* **Day 1** - Browserify
+* **Day 1** - Task Runners
 * **Day 2** - Browserify
 * **HW** - 
 * **Lab Day** - Browserify

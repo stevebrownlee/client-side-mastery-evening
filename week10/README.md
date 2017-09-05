@@ -1,6 +1,6 @@
-# Week 10 ()
-
-* **Day 1** - 
-* **Day 2** - 
+# Week 10 (September 4 - 9)
+* **Day 1** - Holiday - Labor Day
+* **Day 2** - IIFE Augmentors
 * **HW** - 
-* **Lab Day** - 
+	* IIFE Sandwhich
+* **Lab Day** - IIFE, exercises

@@ -1,3 +1,3 @@
 # Week 10 - Day 1
 
-> **Agenda:** 
+> **Agenda:** Holiday - Labor Day
