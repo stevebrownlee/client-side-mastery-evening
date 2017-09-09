@@ -1,6 +1,6 @@
-var CatStore = (function(oldCatStore){
+var CatStore = ((oldCatStore) => {
 
-	oldCatStore.shitBroke = function(){
+	oldCatStore.shitBroke = () => {
 		console.log("WHAT DID YOU DO?");
 	};
 
@@ -20,7 +20,7 @@ var CatStore = (function(oldCatStore){
 		CatStore.combineArrays(cats, owners);
 	};
 
-	oldCatStore.ownerXHR = function(){
+	oldCatStore.ownerXHR = () => {
 		let myOwners = new XMLHttpRequest;
 		myOwners.addEventListener("load", CatStore.ownerLoadWorks);
 		myOwners.addEventListener("error", CatStore.shitBroke);
@@ -28,7 +28,7 @@ var CatStore = (function(oldCatStore){
 		myOwners.send();
 	};
 
-	oldCatStore.catXHR = function(){
+	oldCatStore.catXHR = () => {
 		let myCats = new XMLHttpRequest;
 		myCats.addEventListener("load", CatStore.catLoadWorks);
 		myCats.addEventListener("error", CatStore.shitBroke);

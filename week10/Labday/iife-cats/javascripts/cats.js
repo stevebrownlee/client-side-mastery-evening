@@ -1,15 +1,15 @@
-var CatStore = (function(oldCatStore){
+var CatStore = ((oldCatStore) => {
 	let cats = [];
 
-	oldCatStore.getCats = function(){
+	oldCatStore.getCats = () => {
 		return cats;
 	};
 
-	oldCatStore.setCat = function(newCat){
+	oldCatStore.setCat = (newCat) => {
 		cats.push(newCat);
 	};
 
-	oldCatStore.setAllCats = function(xhrCats){
+	oldCatStore.setAllCats = (xhrCats) => {
 		cats = xhrCats;
 	};
 	

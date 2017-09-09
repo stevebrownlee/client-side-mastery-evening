@@ -1,9 +1,9 @@
-var CatStore = (function(oldCatStore){
+var CatStore = ((oldCatStore) => {
 	let owners = [];
 
-	oldCatStore.combineArrays = function(cats, owners){
-		cats.forEach(function(cat){
-			owners.forEach(function(owner){
+	oldCatStore.combineArrays = (cats, owners) =>{
+		cats.forEach((cat) => {
+			owners.forEach((owner) =>{
 				if(cat.ownerId === owner.id){
 					cat.owner = owner.name;
 				}
@@ -12,7 +12,7 @@ var CatStore = (function(oldCatStore){
 		CatStore.domString(cats)
 	};
 
-	oldCatStore.domString = function(inputArray){
+	oldCatStore.domString = (inputArray) => {
 		let catz = '';
 		for(let i=0; i<inputArray.length; i++){
 			let newCat = "";
@@ -23,7 +23,7 @@ var CatStore = (function(oldCatStore){
 			if(inputArray[i].owner !== "None"){
 				newCat+= `<button class="btn btn-default owner">${inputArray[i].owner}</button>`
 			} else {
-				newCat+= `<button class="btn btn-danger owner">Adopt Me!</button>`
+				newCat+= `<button class="btn btn-danger owner" id="adopt-${i}">Adopt Me!</button>`
 			}
 			newCat+= `</div>`
 			newCat+= `</div>`
@@ -32,7 +32,7 @@ var CatStore = (function(oldCatStore){
 		CatStore.writeToDom(catz);
 	};
 
-	oldCatStore.writeToDom = function(strang){
+	oldCatStore.writeToDom = (strang) => {
 		let fancyPetStore = document.getElementById("fancyPetStore");
 		fancyPetStore.innerHTML = strang;
 	};

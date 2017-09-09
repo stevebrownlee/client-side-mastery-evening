@@ -1,15 +1,15 @@
-var CatStore = (function(oldCatStore){
+var CatStore = ((oldCatStore) => {
 	let owners = [];
 
-	oldCatStore.getOwners = function(){
+	oldCatStore.getOwners = () => {
 		return owners;
 	};
 
-	oldCatStore.setOwner = function(newOwner){
+	oldCatStore.setOwner = (newOwner) => {
 		owners.push(newOwner);
 	};
 
-	oldCatStore.setAllOwners = function(xhrOwners){
+	oldCatStore.setAllOwners = (xhrOwners) => {
 		owners = xhrOwners;
 	};
 	
