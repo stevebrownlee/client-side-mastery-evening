@@ -3,4 +3,4 @@
 * **Day 2** - IIFE Augmentors
 * **HW** - 
 	* IIFE Sandwhich
-* **Lab Day** - IIFE, exercises
+* **Lab Day** - IIFE & XHR, exercises
