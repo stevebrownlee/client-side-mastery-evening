@@ -1,5 +1,5 @@
 var CatStore = (function(oldCatStore){
-	const owners = [];
+	let owners = [];
 
 	oldCatStore.getOwners = function(){
 		return owners;
@@ -9,7 +9,7 @@ var CatStore = (function(oldCatStore){
 		owners.push(newOwner);
 	};
 
-	oldCatStore.setAllCats = function(xhrOwners){
+	oldCatStore.setAllOwners = function(xhrOwners){
 		owners = xhrOwners;
 	};
 	

@@ -1,5 +1,5 @@
 var CatStore = (function(oldCatStore){
-	const cats = [];
+	let cats = [];
 
 	oldCatStore.getCats = function(){
 		return cats;
