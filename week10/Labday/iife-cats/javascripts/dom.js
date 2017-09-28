@@ -25,6 +25,7 @@ var CatStore = ((oldCatStore) => {
 			} else {
 				newCat+= `<button class="btn btn-danger owner" id="adopt-${i}">Adopt Me!</button>`
 			}
+			newCat+= `<div class="catSkill text-center">${inputArray[i].specialSkill}</div>`
 			newCat+= `</div>`
 			newCat+= `</div>`
 			catz += newCat;

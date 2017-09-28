@@ -10,7 +10,6 @@ var CatStore = ((oldCatStore) => {
 		CatStore.ownerXHR();
 	};
 
-
 	oldCatStore.ownerLoadWorks = function(){
 		var ownersData = JSON.parse(this.responseText).owners;
 		CatStore.setAllOwners(ownersData);

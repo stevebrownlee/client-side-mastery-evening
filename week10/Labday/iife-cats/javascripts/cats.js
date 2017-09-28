@@ -5,8 +5,11 @@ var CatStore = ((oldCatStore) => {
 		return cats;
 	};
 
-	oldCatStore.setCat = (newCat) => {
-		cats.push(newCat);
+	oldCatStore.adoptCat = (catIndex) => {
+		cats[catIndex].ownerId = 1;
+		let myCats = CatStore.getCats();
+		let owners = CatStore.getOwners();
+		CatStore.combineArrays(myCats, owners)
 	};
 
 	oldCatStore.setAllCats = (xhrCats) => {
