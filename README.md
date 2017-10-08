@@ -132,13 +132,102 @@
 
 ***
 
-#### Week 12 (October 2-7) BREAK WEEK
+#### Week 14 (October 2-7) BREAK WEEK
 * **Day 1** - Intersession break
 * **Day 2** - Intersession break
 * **HW** - no studygroup
-* **Lab Day** - Some kind of hack?  or review day?
+* **Lab Day** - Treehouse Badge Hack, Chatty Retrospectives
 
 ***
+
+#### Week 15 (October 9-14)
+* **Day 1** - Promises
+* **Day 2** - ES6 Promises, this (lauren)
+* **HW** - Acme Explosives
+* **Lab Day** - SASS (callan), Exercises
+
+***
+
+#### Week 16 (October 16-21)
+* **Day 1** - APIs(Lauren)
+* **Day 2** - Intro to Firebase, start todo app
+* **HW** - Weather API, simple firebase assignment
+* **Lab Day** - BARCAMP
+
+***
+
+#### Week 17 (October 23-28)
+* **Day 1** - finish todo App, Firebase authentication (callan)
+* **Day 2** - finish firebase auth (callan), start group project
+* **HW** - Group Project: Theme Park
+* **Lab Day** - Group Project: Theme Park
+
+***
+
+#### Week 18 (October 30 - November 4)
+* **Day 1** - Group Project: Theme Park
+* **Day 2** - Group Project: Theme Park
+* **HW** - Group Project: Theme Park
+* **Lab Day** - Group Project: Theme Park
+
+***
+
+#### Week 19 (November 6-11)
+* **Day 1** - demo Group Project: Theme Park, Angular
+* **Day 2** - Angular
+* **HW** - Angular
+* **Lab Day** - Angular
+
+***
+
+#### Week 20 (November 13-18)
+* **Day 1** - Angular
+* **Day 2** - Angular
+* **HW** - Angular
+* **Lab Day** - Angular
+
+***
+
+#### Week 21 (November 20-25)
+* **Day 1** - Angular
+* **Day 2** - Angular
+* **HW** - Angular
+* **Lab Day** - Start pinterest group project
+
+***
+
+#### Week 22 (November 27 - December 2)
+* **Day 1** - Group Project: Pinterest
+* **Day 2** - Group Project: Pinterest
+* **HW** - Group Project: Pinterest
+* **Lab Day** - Capstone Checkins, Group Project: Pinterest
+
+***
+
+#### Week 23 (December 4-9)
+* **Day 1** - demo Group Project: Pinterest, CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - CAPSTONES
+* **Lab Day** - CAPSTONES
+
+***
+
+#### Week 24 (December 11-16)
+* **Day 1** - CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - CAPSTONES
+* **Lab Day** - CAPSTONES
+
+***
+
+#### Week 25 (December 18-19)
+* **Day 1** - CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - Break
+* **Lab Day** - Break
+
+***
+
 
 
 AFTER BREAK: this, promises, SASS, APIs, Firebase, Angular, Capstones
