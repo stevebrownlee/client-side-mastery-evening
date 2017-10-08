@@ -227,7 +227,3 @@
 * **Lab Day** - Break
 
 ***
-
-
-
-AFTER BREAK: this, promises, SASS, APIs, Firebase, Angular, Capstones
