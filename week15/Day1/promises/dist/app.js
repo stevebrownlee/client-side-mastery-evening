@@ -31,9 +31,6 @@ var dinosaurs = [];
 // 	});
 // };
 
-
-
-
   var firstDinosaurJSON = function() {
     return new Promise(function(resolve, reject){
       $.ajax("./db/dinosaurs1.json").done(function(data) {
@@ -92,30 +89,46 @@ var dinosaurs = [];
 
 
   //much better solution - chained promises.  however we don't have access to results or results2 in the final .then.
-  var dinoGetter = function(){
-	  firstDinosaurJSON().then(function(results){
-	    // console.log("results", results);
-	    results.forEach(function(dino){
-		    dinosaurs.push(dino);
-		  });	
-	    return secondDinosaurJSON();
-	  }).then(function(results2){
-	    // console.log("results2", results2);
-	    results2.forEach(function(dino){
-		    dinosaurs.push(dino);
-		  });	
-	    return thirdDinosaurJSON();
-	  }).then(function(results3){
-	    // console.log("results2 in promise3", results2);//undefined
-	    // console.log("results3", results3);
-	    results3.forEach(function(dino){
-		    dinosaurs.push(dino);
-		  });	
-	 		makeDinos();
-	  }).catch(function(err){
-    	console.log("error", err);
-	  });
-	};
+ //  var dinoGetter = function(){
+	//   firstDinosaurJSON().then(function(results){
+	//     // console.log("results", results);
+	//     results.forEach(function(dino){
+	// 	    dinosaurs.push(dino);
+	// 	  });	
+	//     return secondDinosaurJSON();
+	//   }).then(function(results2){
+	//     // console.log("results2", results2);
+	//     results2.forEach(function(dino){
+	// 	    dinosaurs.push(dino);
+	// 	  });	
+	//     return thirdDinosaurJSON();
+	//   }).then(function(results3){
+	//     // console.log("results2 in promise3", results2);//undefined
+	//     // console.log("results3", results3);
+	//     results3.forEach(function(dino){
+	// 	    dinosaurs.push(dino);
+	// 	  });	
+	//  		makeDinos();
+	//   }).catch(function(err){
+ //    	console.log("error", err);
+	//   });
+	// };
+
+
+var dinoGetter = function(){
+	Promise.all([firstDinosaurJSON(), secondDinosaurJSON(), thirdDinosaurJSON()]).then(function(resultz){ 
+    console.log("ALL PROMISE", resultz);
+    resultz.forEach(function(dinos){
+      dinos.forEach(function(dino){
+        dinosaurs.push(dino);
+      });
+    });
+    // console.log(dinosaurs);
+    makeDinos();
+  }).catch(function(error){ 
+    console.log(error);
+  });
+};
 
 var makeDinos = function(){
 	dinosaurs.forEach(function(dino){
@@ -127,7 +140,7 @@ var initializer = () => {
 	dinoGetter();
 };
 
-const getDinosaurs = () => {
+var getDinosaurs = () => {
 	return dinosaurs;
 };
 
