@@ -1,3 +1,3 @@
 # Week 15 Labday Agenda
 
-> **Agenda:** 
+> **Agenda:** SASS (callan), Exercises
