@@ -150,14 +150,14 @@
 
 #### Week 16 (October 16-21)
 * **Day 1** - APIs(Lauren)
-* **Day 2** - Intro to Firebase, start todo app
+* **Day 2** - Intro to Firebase, start movie-history
 * **HW** - Weather API, simple firebase assignment
 * **Lab Day** - BARCAMP
 
 ***
 
 #### Week 17 (October 23-28)
-* **Day 1** - finish todo App, Firebase authentication (callan)
+* **Day 1** - finish movie-history, Firebase authentication (callan)
 * **Day 2** - finish firebase auth (callan), start group project
 * **HW** - Group Project: Theme Park
 * **Lab Day** - Group Project: Theme Park

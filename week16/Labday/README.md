@@ -1,3 +1,3 @@
 # Week 16 Labday Agenda
 
-> **Agenda:** 
+> **Agenda:** BARCAMP

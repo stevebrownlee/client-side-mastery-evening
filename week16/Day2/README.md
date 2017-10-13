@@ -1,3 +1,3 @@
 # Week 16 - Day 2
 
-> **Agenda:** 
+> **Agenda:** Intro to Firebase, start movie-history
