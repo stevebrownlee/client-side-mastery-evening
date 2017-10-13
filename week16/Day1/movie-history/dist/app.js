@@ -24,14 +24,52 @@ const retrieveKeys = () => {
 };
 
 module.exports = {retrieveKeys};
-},{"./tmdb":4}],2:[function(require,module,exports){
+},{"./tmdb":5}],2:[function(require,module,exports){
+"use strict";
+
+const outputDiv = $('#movies');
+
+const domString = (movieArray, config) => {
+	let domStrang = ``;
+		for(let i=0; i<movieArray.length; i++){	
+			if(i % 3 === 0){
+				domStrang +=`<div class="row">`;
+			}
+
+			domStrang +=`  <div class="col-sm-6 col-md-4">`;
+			domStrang +=`    <div class="thumbnail">`;
+			domStrang +=`      <img src="${config.base_url}/w500/${movieArray[i].poster_path}" alt="...">`;
+			domStrang +=`      <div class="caption">`;
+			domStrang +=`        <h3>${movieArray[i].title}</h3>`;
+			domStrang +=`        <p>${movieArray[i].overview}</p>`;
+			domStrang +=`        <p><a href="#" class="btn btn-primary" role="button">Review</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>`;
+			domStrang +=`      </div>`;
+			domStrang +=`    </div>`;
+			domStrang +=`  </div>`;
+
+			if(i % 3 === 2){
+				domStrang +=`</div>`;		
+			}	
+		}
+	printToDom(domStrang);
+};
+
+
+const printToDom = (strang) => {
+	outputDiv.append(strang);
+};
+
+const clearDom = () => {
+	outputDiv.empty();
+};
+
+module.exports = {domString, clearDom};
+},{}],3:[function(require,module,exports){
 "use strict";
 
 var tmdb = require('./tmdb');
 
 const searchBar = $('#searchBar');
-
-
 
 const pressEnter = () => {
 	$(document).keypress((e) =>{
@@ -43,7 +81,7 @@ const pressEnter = () => {
 };
 
 module.exports = {pressEnter};
-},{"./tmdb":4}],3:[function(require,module,exports){
+},{"./tmdb":5}],4:[function(require,module,exports){
 "use strict";
 
 const apiKeys = require('./apiKeys');
@@ -52,10 +90,10 @@ const events = require('./events');
 
 apiKeys.retrieveKeys();
 events.pressEnter();
-},{"./apiKeys":1,"./events":2}],4:[function(require,module,exports){
+},{"./apiKeys":1,"./events":3}],5:[function(require,module,exports){
 "use strict";
 
-// // var dom = require('./dom');
+var dom = require('./dom');
 
 let tmdbKey = "";
 let imgConfig = {};
@@ -81,9 +119,8 @@ const tmdbConfiguration = () => {
 };
 
 const searchMovies = (searchText) => {
-	console.log("searchMovies from tmdb", searchText);
 	searchTMDB(searchText).then((result) => {
-		console.log("result", result);
+		showResults(result);
 	}).catch((err) => {
 		console.log("err", err);
 	});
@@ -96,7 +133,35 @@ const getConfig = () => {
 	}).catch((err) => {
 		console.log("err", err);
 	});
+};
 
+
+
+// START WITH THIS TO SHOW YOU CAN DO THE ASSIGNMENT WITHOUT WAITING FOR SOMEONE TO COME UP WITH the API CALLS
+// const showResults = () => {
+// 	let singleMovie = {
+// 		adult:false,
+// 		backdrop_path:"/c2Ax8Rox5g6CneChwy1gmu4UbSb.jpg",
+// 		genre_ids:[28, 12, 878, 14],
+// 		id:140607,
+// 		original_language:"en",
+// 		original_title:"Star Wars: The Force Awakens",
+// 		overview:"Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers.",
+// 		popularity:49.408373,
+// 		poster_path:"/weUSwMdQIa3NaXVzwUoIIcAi85d.jpg",
+// 		release_date:"2015-12-15",
+// 		title:"Star Wars: The Force Awakens",
+// 		video:false,
+// 		vote_average:7.5,
+// 		vote_count:7965
+// 	};
+// 	dom.domString([singleMovie, singleMovie, singleMovie, singleMovie, singleMovie, singleMovie], imgConfig);
+// };
+
+
+const showResults = (movieArray) => {
+	dom.clearDom();
+	dom.domString(movieArray, imgConfig);
 };
 
 const setKey = (key) => {
@@ -105,4 +170,4 @@ const setKey = (key) => {
 };
 
 module.exports = {setKey, getConfig, searchMovies};
-},{}]},{},[3]);
+},{"./dom":2}]},{},[4]);

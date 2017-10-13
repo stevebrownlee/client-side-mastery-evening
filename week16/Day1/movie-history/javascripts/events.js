@@ -4,8 +4,6 @@ var tmdb = require('./tmdb');
 
 const searchBar = $('#searchBar');
 
-
-
 const pressEnter = () => {
 	$(document).keypress((e) =>{
 		if(e.key === "Enter"){
