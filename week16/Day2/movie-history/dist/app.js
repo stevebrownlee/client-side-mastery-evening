@@ -83,7 +83,20 @@ const pressEnter = () => {
 	});
 };
 
-module.exports = {pressEnter};
+const myLinks = () =>{
+	$(document).click((e) => {
+		console.log(e.target.id);
+		if(e.target.id === "navSearch"){
+			$("#search").removeClass("hide");
+			$("#myMovies").addClass("hide");
+		} else if(e.target.id === "mine"){
+			$("#myMovies").removeClass("hide");
+			$("#search").addClass("hide");
+		}
+	});
+};
+
+module.exports = {pressEnter, myLinks};
 },{"./tmdb":6}],4:[function(require,module,exports){
 "use strict";
 
@@ -102,6 +115,7 @@ const events = require('./events');
 
 
 apiKeys.retrieveKeys();
+events.myLinks();
 events.pressEnter();
 },{"./apiKeys":1,"./events":3}],6:[function(require,module,exports){
 "use strict";

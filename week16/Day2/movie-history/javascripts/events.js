@@ -13,4 +13,17 @@ const pressEnter = () => {
 	});
 };
 
-module.exports = {pressEnter};
+const myLinks = () =>{
+	$(document).click((e) => {
+		console.log(e.target.id);
+		if(e.target.id === "navSearch"){
+			$("#search").removeClass("hide");
+			$("#myMovies").addClass("hide");
+		} else if(e.target.id === "mine"){
+			$("#myMovies").removeClass("hide");
+			$("#search").addClass("hide");
+		}
+	});
+};
+
+module.exports = {pressEnter, myLinks};
