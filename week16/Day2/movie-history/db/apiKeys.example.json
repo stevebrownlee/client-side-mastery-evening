@@ -2,6 +2,14 @@
 	"apiKeys": {
 		"tmdb": {
 			"apiKey": ""
-		}
+		},
+		"": {
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": ""
+  }
 	}
 }
