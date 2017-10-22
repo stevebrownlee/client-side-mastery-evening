@@ -6,4 +6,5 @@ const events = require('./events');
 
 apiKeys.retrieveKeys();
 events.myLinks();
+events.googleAuth();
 events.pressEnter();

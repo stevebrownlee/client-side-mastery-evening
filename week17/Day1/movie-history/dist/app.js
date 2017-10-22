@@ -70,7 +70,8 @@ module.exports = {domString, clearDom};
 },{}],3:[function(require,module,exports){
 "use strict";
 
-var tmdb = require('./tmdb');
+let firebaseApi = require('./firebaseApi');
+let tmdb = require('./tmdb');
 
 const searchBar = $('#searchBar');
 
@@ -85,28 +86,86 @@ const pressEnter = () => {
 
 const myLinks = () =>{
 	$(document).click((e) => {
-		console.log(e.target.id);
 		if(e.target.id === "navSearch"){
 			$("#search").removeClass("hide");
 			$("#myMovies").addClass("hide");
+			$("#authScreen").addClass("hide");
 		} else if(e.target.id === "mine"){
 			$("#myMovies").removeClass("hide");
 			$("#search").addClass("hide");
+			$("#authScreen").addClass("hide");
+			firebaseApi.getMovieList().then((result) => {
+				console.log("getMovieList", result);
+			}).catch((err) => {
+				console.log("error in getMovieList", err);
+			});
+		} else {
+			$("#myMovies").addClass("hide");
+			$("#search").addClass("hide");
+			$("#authScreen").removeClass("hide");
 		}
 	});
 };
 
-module.exports = {pressEnter, myLinks};
-},{"./tmdb":6}],4:[function(require,module,exports){
+const googleAuth = () => {
+	$('#googleButton').click(() => {
+		firebaseApi.authenticateGoogle().then((result) =>{
+			console.log("authenticateGoogle", result);
+		}).catch((error) =>{
+			console.log("googleAuth", error);
+		});
+	});
+};
+
+module.exports = {pressEnter, myLinks, googleAuth};
+},{"./firebaseApi":4,"./tmdb":6}],4:[function(require,module,exports){
 "use strict";
 
 let firebaseKey = "";
+let userUid = "";
 
 const setKey = (key) => {
-	firebaseKey=key;
+    firebaseKey = key;
 };
 
-module.exports = {setKey};
+//Firebase: GOOGLE - Use input credentials to authenticate user.
+let authenticateGoogle = () => {
+    return new Promise((resolve, reject) => {
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+            .then((authData) => {
+                userUid = authData.user.uid;
+                resolve(authData.user);
+            }).catch((error) => {
+                reject(error);
+            });
+    });
+};
+
+let getMovieList = () => {
+    let movies = [];
+    return new Promise((resolve, reject) => {
+        $.ajax(`${firebaseKey.databaseURL}/movies.json?orderBy="uid"&equalTo="${userUid}"`)
+            .then((fbMovies) => {
+                if (fbMovies !== null) {
+                    Object.keys(fbMovies).forEach((key) => {
+                        fbMovies[key].id = key;
+                        movies.push(fbMovies[key]);
+                    });
+                }
+                resolve(movies);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
+};
+
+module.exports = {
+    setKey,
+    authenticateGoogle,
+    getMovieList
+};
 },{}],5:[function(require,module,exports){
 "use strict";
 
@@ -116,6 +175,7 @@ const events = require('./events');
 
 apiKeys.retrieveKeys();
 events.myLinks();
+events.googleAuth();
 events.pressEnter();
 },{"./apiKeys":1,"./events":3}],6:[function(require,module,exports){
 "use strict";

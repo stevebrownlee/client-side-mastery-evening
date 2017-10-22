@@ -1,3 +1,17 @@
 # Week 17 - Day 1
 
-> **Agenda:** 
+> **Agenda:** Firebase
+
+
+```
+{
+  "rules": {
+    ".read": "true",
+    ".write": "true",
+    "movies":{
+      ".indexOn": "uid"
+    }
+  }
+}
+
+```
