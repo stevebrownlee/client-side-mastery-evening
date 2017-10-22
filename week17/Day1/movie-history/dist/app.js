@@ -30,9 +30,10 @@ module.exports = {retrieveKeys};
 },{"./firebaseApi":4,"./tmdb":6}],2:[function(require,module,exports){
 "use strict";
 
-const outputDiv = $('#movies');
-
-const domString = (movieArray, config) => {
+const domString = (movieArray, config, divName) => {
+	console.log("movieArray", movieArray);
+	console.log("config", config);
+	console.log("divName", divName);
 	let domStrang = ``;
 		for(let i=0; i<movieArray.length; i++){	
 			if(i % 3 === 0){
@@ -54,16 +55,16 @@ const domString = (movieArray, config) => {
 				domStrang +=`</div>`;		
 			}	
 		}
-	printToDom(domStrang);
+	printToDom(domStrang, divName);
 };
 
 
-const printToDom = (strang) => {
-	outputDiv.append(strang);
+const printToDom = (strang, divName) => {
+	$('#' + divName).append(strang);
 };
 
-const clearDom = () => {
-	outputDiv.empty();
+const clearDom = (divName) => {
+	$('#' + divName).empty();
 };
 
 module.exports = {domString, clearDom};
@@ -72,6 +73,7 @@ module.exports = {domString, clearDom};
 
 let firebaseApi = require('./firebaseApi');
 let tmdb = require('./tmdb');
+let dom = require('./dom');
 
 const searchBar = $('#searchBar');
 
@@ -95,7 +97,8 @@ const myLinks = () =>{
 			$("#search").addClass("hide");
 			$("#authScreen").addClass("hide");
 			firebaseApi.getMovieList().then((result) => {
-				console.log("getMovieList", result);
+				dom.clearDom('moviesSearch');
+				dom.domString(result, tmdb.getImgConfig(), 'moviesMine');
 			}).catch((err) => {
 				console.log("error in getMovieList", err);
 			});
@@ -110,7 +113,6 @@ const myLinks = () =>{
 const googleAuth = () => {
 	$('#googleButton').click(() => {
 		firebaseApi.authenticateGoogle().then((result) =>{
-			console.log("authenticateGoogle", result);
 		}).catch((error) =>{
 			console.log("googleAuth", error);
 		});
@@ -118,7 +120,7 @@ const googleAuth = () => {
 };
 
 module.exports = {pressEnter, myLinks, googleAuth};
-},{"./firebaseApi":4,"./tmdb":6}],4:[function(require,module,exports){
+},{"./dom":2,"./firebaseApi":4,"./tmdb":6}],4:[function(require,module,exports){
 "use strict";
 
 let firebaseKey = "";
@@ -223,8 +225,8 @@ const getConfig = () => {
 };
 
 const showResults = (movieArray) => {
-	dom.clearDom();
-	dom.domString(movieArray, imgConfig);
+	dom.clearDom('moviesSearch');
+	dom.domString(movieArray, imgConfig, 'moviesSearch');
 };
 
 const setKey = (key) => {
@@ -232,5 +234,9 @@ const setKey = (key) => {
 	getConfig();
 };
 
-module.exports = {setKey, getConfig, searchMovies};
+const getImgConfig = () => {
+	return imgConfig;
+};
+
+module.exports = {setKey, getConfig, searchMovies, getImgConfig};
 },{"./dom":2}]},{},[5]);

@@ -1,8 +1,9 @@
 "use strict";
 
-const outputDiv = $('#movies');
-
-const domString = (movieArray, config) => {
+const domString = (movieArray, config, divName) => {
+	console.log("movieArray", movieArray);
+	console.log("config", config);
+	console.log("divName", divName);
 	let domStrang = ``;
 		for(let i=0; i<movieArray.length; i++){	
 			if(i % 3 === 0){
@@ -24,16 +25,16 @@ const domString = (movieArray, config) => {
 				domStrang +=`</div>`;		
 			}	
 		}
-	printToDom(domStrang);
+	printToDom(domStrang, divName);
 };
 
 
-const printToDom = (strang) => {
-	outputDiv.append(strang);
+const printToDom = (strang, divName) => {
+	$('#' + divName).append(strang);
 };
 
-const clearDom = () => {
-	outputDiv.empty();
+const clearDom = (divName) => {
+	$('#' + divName).empty();
 };
 
 module.exports = {domString, clearDom};

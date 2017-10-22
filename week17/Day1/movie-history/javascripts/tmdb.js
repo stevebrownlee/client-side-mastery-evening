@@ -43,8 +43,8 @@ const getConfig = () => {
 };
 
 const showResults = (movieArray) => {
-	dom.clearDom();
-	dom.domString(movieArray, imgConfig);
+	dom.clearDom('moviesSearch');
+	dom.domString(movieArray, imgConfig, 'moviesSearch');
 };
 
 const setKey = (key) => {
@@ -52,4 +52,8 @@ const setKey = (key) => {
 	getConfig();
 };
 
-module.exports = {setKey, getConfig, searchMovies};
+const getImgConfig = () => {
+	return imgConfig;
+};
+
+module.exports = {setKey, getConfig, searchMovies, getImgConfig};

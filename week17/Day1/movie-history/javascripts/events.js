@@ -2,6 +2,7 @@
 
 let firebaseApi = require('./firebaseApi');
 let tmdb = require('./tmdb');
+let dom = require('./dom');
 
 const searchBar = $('#searchBar');
 
@@ -25,7 +26,8 @@ const myLinks = () =>{
 			$("#search").addClass("hide");
 			$("#authScreen").addClass("hide");
 			firebaseApi.getMovieList().then((result) => {
-				console.log("getMovieList", result);
+				dom.clearDom('moviesSearch');
+				dom.domString(result, tmdb.getImgConfig(), 'moviesMine');
 			}).catch((err) => {
 				console.log("error in getMovieList", err);
 			});
@@ -40,7 +42,6 @@ const myLinks = () =>{
 const googleAuth = () => {
 	$('#googleButton').click(() => {
 		firebaseApi.authenticateGoogle().then((result) =>{
-			console.log("authenticateGoogle", result);
 		}).catch((error) =>{
 			console.log("googleAuth", error);
 		});
