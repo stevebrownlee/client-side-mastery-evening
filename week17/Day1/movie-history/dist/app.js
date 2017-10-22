@@ -102,7 +102,7 @@ const myLinks = () =>{
 			}).catch((err) => {
 				console.log("error in getMovieList", err);
 			});
-		} else {
+		} else if (e.target.id === 'authenticate'){
 			$("#myMovies").addClass("hide");
 			$("#search").addClass("hide");
 			$("#authScreen").removeClass("hide");
@@ -119,7 +119,14 @@ const googleAuth = () => {
 	});
 };
 
-module.exports = {pressEnter, myLinks, googleAuth};
+
+const init = () => {
+	myLinks();
+	googleAuth();
+	pressEnter();
+};
+
+module.exports = {init};
 },{"./dom":2,"./firebaseApi":4,"./tmdb":6}],4:[function(require,module,exports){
 "use strict";
 
@@ -176,9 +183,7 @@ const events = require('./events');
 
 
 apiKeys.retrieveKeys();
-events.myLinks();
-events.googleAuth();
-events.pressEnter();
+events.init();
 },{"./apiKeys":1,"./events":3}],6:[function(require,module,exports){
 "use strict";
 

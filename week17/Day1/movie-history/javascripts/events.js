@@ -31,7 +31,7 @@ const myLinks = () =>{
 			}).catch((err) => {
 				console.log("error in getMovieList", err);
 			});
-		} else {
+		} else if (e.target.id === 'authenticate'){
 			$("#myMovies").addClass("hide");
 			$("#search").addClass("hide");
 			$("#authScreen").removeClass("hide");
@@ -48,4 +48,11 @@ const googleAuth = () => {
 	});
 };
 
-module.exports = {pressEnter, myLinks, googleAuth};
+
+const init = () => {
+	myLinks();
+	googleAuth();
+	pressEnter();
+};
+
+module.exports = {init};
