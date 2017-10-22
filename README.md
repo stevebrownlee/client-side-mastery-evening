@@ -150,16 +150,16 @@
 
 #### Week 16 (October 16-21)
 * **Day 1** - APIs(Lauren)
-* **Day 2** - Intro to Firebase, start movie-history
-* **HW** - Weather API, simple firebase assignment
+* **Day 2** - movie-history
+* **HW** - Weather API
 * **Lab Day** - BARCAMP
 
 ***
 
 #### Week 17 (October 23-28)
-* **Day 1** - finish movie-history, Firebase authentication (callan)
-* **Day 2** - finish firebase auth (callan), start group project
-* **HW** - Group Project: Theme Park
+* **Day 1** - firebase
+* **Day 2** - firebase
+* **HW** - weather assignment #2
 * **Lab Day** - Group Project: Theme Park
 
 ***
@@ -173,10 +173,10 @@
 ***
 
 #### Week 19 (November 6-11)
-* **Day 1** - demo Group Project: Theme Park, Angular
-* **Day 2** - Angular
-* **HW** - Angular
-* **Lab Day** - Angular
+* **Day 1** - Group Project: Theme Park
+* **Day 2** - Group Project: Theme Park
+* **HW** - Group Project: Theme Park
+* **Lab Day** - demo Group Project: Theme Park, start angular
 
 ***
 
