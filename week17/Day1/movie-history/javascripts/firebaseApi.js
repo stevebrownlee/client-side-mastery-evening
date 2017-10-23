@@ -40,19 +40,34 @@ let getMovieList = () => {
     });
 };
 
-let saveMovie = (movie) =>{
+let saveMovie = (movie) => {
     movie.uid = userUid;
     return new Promise((resolve, reject) => {
         $.ajax({
-            method: "POST",
-            url: `${firebaseKey.databaseURL}/movies.json`,
-            data: JSON.stringify(movie)
-        }).then((fbMovies) => {
-            resolve(fbMovies);
-        })
-        .catch((error) => {
-            reject(error);
-        }); 
+                method: "POST",
+                url: `${firebaseKey.databaseURL}/movies.json`,
+                data: JSON.stringify(movie)
+            }).then((fbMovies) => {
+                resolve(fbMovies);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
+};
+
+
+let deleteMovie = (movieId) => {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+                method: "DELETE",
+                url: `${firebaseKey.databaseURL}/movies/${movieId}.json`
+            }).then((fbMovies) => {
+                resolve(fbMovies);
+            })
+            .catch((error) => {
+                reject(error);
+            });
     });
 };
 
@@ -60,5 +75,6 @@ module.exports = {
     setKey,
     authenticateGoogle,
     getMovieList,
-    saveMovie
+    saveMovie,
+    deleteMovie
 };

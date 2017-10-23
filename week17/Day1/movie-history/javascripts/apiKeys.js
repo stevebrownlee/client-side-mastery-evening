@@ -18,7 +18,6 @@ const retrieveKeys = () => {
 		tmdb.setKey(results.tmdb.apiKey);
 		firebaseApi.setKey(results.firebaseKeys);
 		firebase.initializeApp(results.firebaseKeys);
-		// console.log("firebase apps?", firebase.apps);
 	}).catch((err) => {
 		console.log("err", err);
 	});
