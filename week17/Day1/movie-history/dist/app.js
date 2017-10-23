@@ -5,71 +5,76 @@ const tmdb = require('./tmdb');
 const firebaseApi = require('./firebaseApi');
 
 const apiKeys = () => {
-	return new Promise((resolve, reject) => {
-		$.ajax('./db/apiKeys.json').done((data) => {
-			resolve(data.apiKeys);
-		}).fail((error) => {
-			reject(error);
-		});
-	});
+    return new Promise((resolve, reject) => {
+        $.ajax('./db/apiKeys.json').done((data) => {
+            resolve(data.apiKeys);
+        }).fail((error) => {
+            reject(error);
+        });
+    });
 };
 
 const retrieveKeys = () => {
-	apiKeys().then((results) => {
-		tmdb.setKey(results.tmdb.apiKey);
-		firebaseApi.setKey(results.firebaseKeys);
-		firebase.initializeApp(results.firebaseKeys);
-	}).catch((err) => {
-		console.log("err", err);
-	});
+    apiKeys().then((results) => {
+        tmdb.setKey(results.tmdb.apiKey);
+        firebaseApi.setKey(results.firebaseKeys);
+        firebase.initializeApp(results.firebaseKeys);
+    }).catch((err) => {
+        console.log("err", err);
+    });
 };
 
 
-module.exports = {retrieveKeys};
+module.exports = {
+    retrieveKeys
+};
 },{"./firebaseApi":4,"./tmdb":6}],2:[function(require,module,exports){
 "use strict";
 
 const domString = (movieArray, config, divName, search) => {
-	let domStrang = ``;
-		for(let i=0; i<movieArray.length; i++){	
-			if(i % 3 === 0){
-				domStrang +=`<div class="row">`;
-			}
-			domStrang +=`      <div class="col-sm-6 col-md-4 movie">`;
-			domStrang +=`        <div class="thumbnail">`;
-			if(!search){
-				domStrang +=        `<a class="btn btn-default delete" data-firebase-id="${movieArray[i].id}">X</a>`;
-			}
-			domStrang +=`            <img class="poster_path" src="${config.base_url}/w342/${movieArray[i].poster_path}" alt="...">`;
-			domStrang +=`            <div class="caption">`;
-			domStrang +=`                <h3 class="title">${movieArray[i].title}</h3>`;
-			domStrang +=`                <p class="overview">${movieArray[i].overview}</p>`;
-			if(search){
-				domStrang +=`            <p><a class="btn btn-primary review" role="button">Review</a> <a class="btn btn-default wishlist" role="button">Wishlist</a></p>`;
-			} else{
-				domStrang +=`             <p>Rating: ${movieArray[i].rating}</p>`;
-			}
-			domStrang +=`            </div>`;
-			domStrang +=`         </div>`;
-			domStrang +=`        </div>`;
+    let domStrang = ``;
+    for (let i = 0; i < movieArray.length; i++) {
+        if (i % 3 === 0) {
+            domStrang += `<div class="row">`;
+        }
+        domStrang += `      <div class="col-sm-6 col-md-4 movie">`;
+        domStrang += `        <div class="thumbnail">`;
+        if (!search) {
+            domStrang += `<a class="btn btn-default delete" data-firebase-id="${movieArray[i].id}">X</a>`;
+        }
+        domStrang += `            <img class="poster_path" src="${config.base_url}/w342/${movieArray[i].poster_path}" alt="...">`;
+        domStrang += `            <div class="caption">`;
+        domStrang += `                <h3 class="title">${movieArray[i].title}</h3>`;
+        domStrang += `                <p class="overview">${movieArray[i].overview}</p>`;
+        if (search) {
+            domStrang += `            <p><a class="btn btn-primary review" role="button">Review</a> <a class="btn btn-default wishlist" role="button">Wishlist</a></p>`;
+        } else {
+            domStrang += `             <p>Rating: ${movieArray[i].rating}</p>`;
+        }
+        domStrang += `            </div>`;
+        domStrang += `         </div>`;
+        domStrang += `        </div>`;
 
-			if(i % 3 === 2){
-				domStrang +=`</div>`;		
-			}	
-		}
-	printToDom(domStrang, divName);
+        if (i % 3 === 2) {
+            domStrang += `</div>`;
+        }
+    }
+    printToDom(domStrang, divName);
 };
 
 
 const printToDom = (strang, divName) => {
-	$('#' + divName).append(strang);
+    $('#' + divName).append(strang);
 };
 
 const clearDom = (divName) => {
-	$('#' + divName).empty();
+    $('#' + divName).empty();
 };
 
-module.exports = {domString, clearDom};
+module.exports = {
+    domString,
+    clearDom
+};
 },{}],3:[function(require,module,exports){
 "use strict";
 
@@ -80,115 +85,116 @@ let dom = require('./dom');
 const searchBar = $('#searchBar');
 
 const pressEnter = () => {
-	$(document).keypress((e) =>{
-		if(e.key === "Enter"){
-			let searchNoSpaces =searchBar.val().replace(" ", "%20");
-				tmdb.searchMovies(searchNoSpaces);
-		}
-	});
+    $(document).keypress((e) => {
+        if (e.key === "Enter") {
+            let searchNoSpaces = searchBar.val().replace(" ", "%20");
+            tmdb.searchMovies(searchNoSpaces);
+        }
+    });
 };
 
 
-const getMahMovies = () =>{
-	firebaseApi.getMovieList().then((result) => {
-		dom.clearDom('moviesMine');
-		dom.domString(result, tmdb.getImgConfig(), 'moviesMine');
-	}).catch((err) => {
-		console.log("error in getMovieList", err);
-	});
+const getMahMovies = () => {
+    firebaseApi.getMovieList().then((result) => {
+        dom.clearDom('moviesMine');
+        dom.domString(result, tmdb.getImgConfig(), 'moviesMine');
+    }).catch((err) => {
+        console.log("error in getMovieList", err);
+    });
 };
 
-const myLinks = () =>{
-	$(document).click((e) => {
-		if(e.target.id === "navSearch"){
-			$("#search").removeClass("hide");
-			$("#myMovies").addClass("hide");
-			$("#authScreen").addClass("hide");
-		} else if(e.target.id === "mine"){
-			$("#myMovies").removeClass("hide");
-			$("#search").addClass("hide");
-			$("#authScreen").addClass("hide");
-			getMahMovies();
-		} else if (e.target.id === 'authenticate'){
-			$("#myMovies").addClass("hide");
-			$("#search").addClass("hide");
-			$("#authScreen").removeClass("hide");
-		}
-	});
+const myLinks = () => {
+    $(document).click((e) => {
+        if (e.target.id === "navSearch") {
+            $("#search").removeClass("hide");
+            $("#myMovies").addClass("hide");
+            $("#authScreen").addClass("hide");
+        } else if (e.target.id === "mine") {
+            $("#myMovies").removeClass("hide");
+            $("#search").addClass("hide");
+            $("#authScreen").addClass("hide");
+            getMahMovies();
+        } else if (e.target.id === 'authenticate') {
+            $("#myMovies").addClass("hide");
+            $("#search").addClass("hide");
+            $("#authScreen").removeClass("hide");
+        }
+    });
 };
 
 const googleAuth = () => {
-	$('#googleButton').click(() => {
-		firebaseApi.authenticateGoogle().then((result) =>{
-		}).catch((error) =>{
-			console.log("googleAuth", error);
-		});
-	});
+    $('#googleButton').click(() => {
+        firebaseApi.authenticateGoogle().then((result) => {}).catch((error) => {
+            console.log("googleAuth", error);
+        });
+    });
 };
 
 
-const wishlistEvents = () =>{
-	$('body').on('click', '.wishlist', (e) =>{
-		let mommy = e.target.closest('.movie');
-		let newMovie = {
-			"title": $(mommy).find('.title').html(),
-			"overview": $(mommy).find('.overview').html(),
-			"poster_path":$(mommy).find('.poster_path').attr('src').split('/').pop(),
-			"rating": 0,
-			"isWatched": false,
-			"uid": ""
-		};
+const wishlistEvents = () => {
+    $('body').on('click', '.wishlist', (e) => {
+        let mommy = e.target.closest('.movie');
+        let newMovie = {
+            "title": $(mommy).find('.title').html(),
+            "overview": $(mommy).find('.overview').html(),
+            "poster_path": $(mommy).find('.poster_path').attr('src').split('/').pop(),
+            "rating": 0,
+            "isWatched": false,
+            "uid": ""
+        };
 
-		firebaseApi.saveMovie(newMovie).then(() =>{
-			$(mommy).remove();
-		}).catch((err) =>{
-			console.log("watchlist didn't save", err);
-		});
-	});
+        firebaseApi.saveMovie(newMovie).then(() => {
+            $(mommy).remove();
+        }).catch((err) => {
+            console.log("watchlist didn't save", err);
+        });
+    });
 };
 
 
-const reviewEvents = () =>{
-	$('body').on('click', '.review', (e) =>{
-		let mommy = e.target.closest('.movie');
-		let newMovie = {
-			"title": $(mommy).find('.title').html(),
-			"overview": $(mommy).find('.overview').html(),
-			"poster_path":$(mommy).find('.poster_path').attr('src').split('/').pop(),
-			"rating": 0,
-			"isWatched": true,
-			"uid": ""
-		};
+const reviewEvents = () => {
+    $('body').on('click', '.review', (e) => {
+        let mommy = e.target.closest('.movie');
+        let newMovie = {
+            "title": $(mommy).find('.title').html(),
+            "overview": $(mommy).find('.overview').html(),
+            "poster_path": $(mommy).find('.poster_path').attr('src').split('/').pop(),
+            "rating": 0,
+            "isWatched": true,
+            "uid": ""
+        };
 
-		firebaseApi.saveMovie(newMovie).then(() =>{
-			$(mommy).remove();
-		}).catch((err) =>{
-			console.log("watchlist didn't save", err);
-		});
-	});
+        firebaseApi.saveMovie(newMovie).then(() => {
+            $(mommy).remove();
+        }).catch((err) => {
+            console.log("watchlist didn't save", err);
+        });
+    });
 };
 
-const deleteMovie = () =>{
-	$('body').on('click', '.delete', (e) =>{
-		let movieId = $(e.target).data('firebase-id');
-		firebaseApi.deleteMovie(movieId).then((result) =>{
-			getMahMovies();
-		}).catch((err) =>{
-			console.log("error deleting movie", err);	
-		});
-	});
+const deleteMovie = () => {
+    $('body').on('click', '.delete', (e) => {
+        let movieId = $(e.target).data('firebase-id');
+        firebaseApi.deleteMovie(movieId).then((result) => {
+            getMahMovies();
+        }).catch((err) => {
+            console.log("error deleting movie", err);
+        });
+    });
 };
 
 const init = () => {
-	myLinks();
-	googleAuth();
-	pressEnter();
-	wishlistEvents();
-	reviewEvents();
-	deleteMovie();
+    myLinks();
+    googleAuth();
+    pressEnter();
+    wishlistEvents();
+    reviewEvents();
+    deleteMovie();
 };
 
-module.exports = {init};
+module.exports = {
+    init
+};
 },{"./dom":2,"./firebaseApi":4,"./tmdb":6}],4:[function(require,module,exports){
 "use strict";
 
@@ -288,55 +294,60 @@ let tmdbKey = "";
 let imgConfig = {};
 
 const searchTMDB = (txt) => {
-	return new Promise((resolve, reject) => {
-		$.ajax(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&language=en-US&query=${txt}&page=1&include_adult=false`).done((data) => {
-			resolve(data.results);
-		}).fail((error) => {
-			reject(error);
-		});
-	});
+    return new Promise((resolve, reject) => {
+        $.ajax(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&language=en-US&query=${txt}&page=1&include_adult=false`).done((data) => {
+            resolve(data.results);
+        }).fail((error) => {
+            reject(error);
+        });
+    });
 };
 
 const tmdbConfiguration = () => {
-		return new Promise((resolve, reject) => {
-		$.ajax(`https://api.themoviedb.org/3/configuration?api_key=${tmdbKey}`).done((data) => {
-			resolve(data);
-		}).fail((error) => {
-			reject(error);
-		});
-	});
+    return new Promise((resolve, reject) => {
+        $.ajax(`https://api.themoviedb.org/3/configuration?api_key=${tmdbKey}`).done((data) => {
+            resolve(data);
+        }).fail((error) => {
+            reject(error);
+        });
+    });
 };
 
 const searchMovies = (searchText) => {
-	searchTMDB(searchText).then((result) => {
-		showResults(result);
-	}).catch((err) => {
-		console.log("err", err);
-	});
+    searchTMDB(searchText).then((result) => {
+        showResults(result);
+    }).catch((err) => {
+        console.log("err", err);
+    });
 
 };
 
 const getConfig = () => {
-	tmdbConfiguration().then((result) => {
-		imgConfig = result.images;
-	}).catch((err) => {
-		console.log("err", err);
-	});
+    tmdbConfiguration().then((result) => {
+        imgConfig = result.images;
+    }).catch((err) => {
+        console.log("err", err);
+    });
 };
 
 const showResults = (movieArray) => {
-	dom.clearDom('moviesSearch');
-	dom.domString(movieArray, imgConfig, 'moviesSearch', true);
+    dom.clearDom('moviesSearch');
+    dom.domString(movieArray, imgConfig, 'moviesSearch', true);
 };
 
 const setKey = (key) => {
-	tmdbKey=key;
-	getConfig();
+    tmdbKey = key;
+    getConfig();
 };
 
 const getImgConfig = () => {
-	return imgConfig;
+    return imgConfig;
 };
 
-module.exports = {setKey, getConfig, searchMovies, getImgConfig};
+module.exports = {
+    setKey,
+    getConfig,
+    searchMovies,
+    getImgConfig
+};
 },{"./dom":2}]},{},[5]);
