@@ -44,7 +44,7 @@ const getConfig = () => {
 
 const showResults = (movieArray) => {
 	dom.clearDom('moviesSearch');
-	dom.domString(movieArray, imgConfig, 'moviesSearch');
+	dom.domString(movieArray, imgConfig, 'moviesSearch', true);
 };
 
 const setKey = (key) => {

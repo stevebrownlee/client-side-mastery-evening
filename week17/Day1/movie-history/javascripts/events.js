@@ -90,6 +90,11 @@ const reviewEvents = () =>{
 	});
 };
 
+const deleteMovie = () =>{
+	$('body').on('click', '.delete', (e) =>{
+		console.log("hello delete");
+	});
+};
 
 const init = () => {
 	myLinks();
@@ -97,6 +102,7 @@ const init = () => {
 	pressEnter();
 	wishlistEvents();
 	reviewEvents();
+	deleteMovie();
 };
 
 module.exports = {init};
