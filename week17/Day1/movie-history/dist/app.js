@@ -30,6 +30,8 @@ module.exports = {
 };
 },{"./firebaseApi":4,"./tmdb":6}],2:[function(require,module,exports){
 "use strict";
+let firebaseApi = require('./firebaseApi');
+
 
 const domString = (movieArray, config, divName, search) => {
     let domStrang = ``;
@@ -50,7 +52,7 @@ const domString = (movieArray, config, divName, search) => {
             domStrang += `            <p><a class="btn btn-primary review" role="button">Review</a> <a class="btn btn-default wishlist" role="button">Wishlist</a></p>`;
         } else {
         	domStrang += `<label for="stars_${movieArray[i].id}" class="control-label">Rate This</label>`;
-			domStrang += `<input id="stars_${movieArray[i].id}" name="stars_${movieArray[i].id}" value="${movieArray[i].rating}" class="rating-loading">`;
+			domStrang += `<input id="stars_${movieArray[i].id}" name="stars_${movieArray[i].id}"  class="stars" value="${movieArray[i].rating}" class="rating-loading">`;
         }
         domStrang += `            </div>`;
         domStrang += `         </div>`;
@@ -68,11 +70,25 @@ const domString = (movieArray, config, divName, search) => {
 
 };
 
-
 const initializeStars = (starArray) =>{
-	console.log("starArray", starArray);
 	starArray.forEach((star) =>{
-		$('#stars_' + star.id).rating({min: 0, max: 5, step: 1, stars: 5});
+		$('#stars_' + star.id).rating({min: 0, max: 5, step: 1, stars: 5}).on("rating.change", (e, value) => {
+        	let movieId = $(e.target.closest('.thumbnail')).find('.delete').data('firebase-id');
+        	let mommy = e.target.closest('.movie');
+        	let modifiedMovie = {
+	            "title": $(mommy).find('.title').html(),
+	            "overview": $(mommy).find('.overview').html(),
+	            "poster_path": $(mommy).find('.poster_path').attr('src').split('/').pop(),
+	            "rating": value,
+	            "isWatched": true,
+	            "uid": ""
+	        };
+	        firebaseApi.editMovie(modifiedMovie, movieId).then((results) => {
+	        	console.log(results);
+	        }).catch((err) =>{
+	        	console.log("editMovie error", err);
+	        });
+    	});
 	});
 };
 
@@ -92,7 +108,7 @@ module.exports = {
     domString,
     clearDom
 };
-},{}],3:[function(require,module,exports){
+},{"./firebaseApi":4}],3:[function(require,module,exports){
 "use strict";
 
 let firebaseApi = require('./firebaseApi');
@@ -200,6 +216,15 @@ const deleteMovie = () => {
     });
 };
 
+// const starChange = () => {
+// 	$('body').on('change', '.stars', (e) =>{
+// 		console.log(change,);
+// 	});
+// };
+
+
+
+
 const init = () => {
     myLinks();
     googleAuth();
@@ -271,7 +296,6 @@ let saveMovie = (movie) => {
     });
 };
 
-
 let deleteMovie = (movieId) => {
     return new Promise((resolve, reject) => {
         $.ajax({
@@ -286,12 +310,29 @@ let deleteMovie = (movieId) => {
     });
 };
 
+let editMovie = (modifiedMovie, movieId) =>{
+    modifiedMovie.uid = userUid;
+    return new Promise((resolve, reject) => {
+        $.ajax({
+                method: "PUT",
+                url: `${firebaseKey.databaseURL}/movies/${movieId}.json`,
+                data: JSON.stringify(modifiedMovie)
+            }).then((fbMovies) => {
+                resolve(fbMovies);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
+};
+
 module.exports = {
     setKey,
     authenticateGoogle,
     getMovieList,
     saveMovie,
-    deleteMovie
+    deleteMovie,
+    editMovie
 };
 },{}],5:[function(require,module,exports){
 "use strict";

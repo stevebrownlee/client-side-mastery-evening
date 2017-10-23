@@ -56,7 +56,6 @@ let saveMovie = (movie) => {
     });
 };
 
-
 let deleteMovie = (movieId) => {
     return new Promise((resolve, reject) => {
         $.ajax({
@@ -71,10 +70,27 @@ let deleteMovie = (movieId) => {
     });
 };
 
+let editMovie = (modifiedMovie, movieId) =>{
+    modifiedMovie.uid = userUid;
+    return new Promise((resolve, reject) => {
+        $.ajax({
+                method: "PUT",
+                url: `${firebaseKey.databaseURL}/movies/${movieId}.json`,
+                data: JSON.stringify(modifiedMovie)
+            }).then((fbMovies) => {
+                resolve(fbMovies);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
+};
+
 module.exports = {
     setKey,
     authenticateGoogle,
     getMovieList,
     saveMovie,
-    deleteMovie
+    deleteMovie,
+    editMovie
 };

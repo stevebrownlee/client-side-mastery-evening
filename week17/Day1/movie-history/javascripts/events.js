@@ -105,6 +105,15 @@ const deleteMovie = () => {
     });
 };
 
+// const starChange = () => {
+// 	$('body').on('change', '.stars', (e) =>{
+// 		console.log(change,);
+// 	});
+// };
+
+
+
+
 const init = () => {
     myLinks();
     googleAuth();
