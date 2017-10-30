@@ -190,9 +190,9 @@
 
 #### Week 21 (November 20-25)
 * **Day 1** - Angular
-* **Day 2** - Angular
-* **HW** - Angular
-* **Lab Day** - Start pinterest group project
+* **Day 2** - Angular, capstone discussion
+* **HW** - Angular, capstone proposals
+* **Lab Day** - Thanksgiving Break
 
 ***
 
