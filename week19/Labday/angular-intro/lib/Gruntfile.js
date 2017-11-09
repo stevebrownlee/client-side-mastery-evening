@@ -7,7 +7,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     jshint: {
       options: {
-        predef: ["document", "console", "$", "firebase"],
+        predef: ["document", "console", "angular"],
         esnext: true,
         globalstrict: true,
         globals: {},
@@ -21,7 +21,7 @@ module.exports = function (grunt) {
       },
       javascripts: {
         files: ['../javascripts/**/*.js'],
-        tasks: ['jshint', 'browserify']
+        tasks: ['jshint']
       }
     }
   });

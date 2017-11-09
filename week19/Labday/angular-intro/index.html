@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Intro to Angular</title>
+</head>
+
+<body ng-app="bitchinApp">
+
+  <div class="container" ng-controller="MainCtrl">
+
+
+
+    <!-- 1.  show handlebars and that you can write JS in them -->
+    <p>{{"Angular" + "js".toUpperCase()}}</p>
+
+
+    <!-- 2.  show 2-way binding -->
+    <input type="text" size="25" ng-model="coolBinding" placeholder="This input is bound to "> this: {{coolBinding}}
+
+
+
+    <!-- 3.  ng-show and ng-hide -->
+    <!-- Change true to false and see what happens.OOOh, magic.  -->
+    <p ng-init="authorized = false">
+      The secret code is
+      <span ng-show="authorized">0123</span>
+      <span ng-hide="authorized">not for you to see</span>
+    </p>
+
+    <!-- 4.  introduce a controller and have a $scope variable in it -->
+    <div>{{yo_mama}}</div>
+
+    <!-- 5. button click -->
+    <button ng-click="fancyButtonFunction()">Click Me</button>
+
+    <!-- 5.  simple ng-repeat -->
+    <div ng-repeat="color in colors">{{color}}</div>
+
+    <!-- 6. Complex ng-repeat with ng-init and nested ng-repeat -->
+    <div ng-init="printMovies()">
+      <div ng-repeat="movie in movies">
+        <div>Title: {{movie.title}}</div>
+        <div>Overview: {{movie.overview}}</div>
+        <div>Super important people in this movie:</div>
+        <ul>
+          <li ng-repeat="actor in movie.actors">{{actor}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="./lib/node_modules/angular/angular.min.js"></script>
+  <script src="javascripts/main.js"></script>
+</body>
+
+</html>
