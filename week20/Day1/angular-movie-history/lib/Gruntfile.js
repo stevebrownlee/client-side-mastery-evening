@@ -10,7 +10,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     jshint: {
       options: {
-        predef: ["document", "console", "angular"],
+        predef: ["document", "console", "angular", "app"],
         esnext: true,
         globalstrict: true,
         globals: {}
