@@ -1,5 +1,5 @@
 'use strict';
 
-app.controller("SearchCtrl", () => {
+app.controller("SearchCtrl", function($scope) {
 	
 });
