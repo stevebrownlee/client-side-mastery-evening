@@ -1,15 +1,2 @@
-#search #movies {
-  margin-top: 15px; }
-  #search #movies .movie h3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
-  #search #movies .movie .poster_path {
-    height: 495px; }
-  #search #movies .movie .overview {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    height: 100px; }
-
 body {
   background-color: deepskyblue; }

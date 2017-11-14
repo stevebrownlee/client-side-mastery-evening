@@ -2,11 +2,6 @@
 
 app.run(function($rootScope, FIREBASE_CONFIG, tmdbService){
   firebase.initializeApp(FIREBASE_CONFIG);
-  tmdbService.tmdbConfiguration().then((results) => {
-    $rootScope.image_url = results.data.images.base_url;
-  }).catch((error) => {
-    console.log("error in tmdbConfiguration", error);
-  });
 });
 
 app.config(function($routeProvider) {
