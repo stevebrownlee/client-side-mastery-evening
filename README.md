@@ -183,7 +183,8 @@
 #### Week 20 (November 13-18)
 * **Day 1** - Angular Movie History
 * **Day 2** - Angular Movie History
-* **HW** - Angular
+* **Day 3** - Angular Movie History
+* **HW** - Angular Contacts
 * **Lab Day** - Angular Movie History
 
 ***
@@ -191,7 +192,7 @@
 #### Week 21 (November 20-25)
 * **Day 1** - Angular Movie History
 * **Day 2** - Angular Movie History, capstone discussion
-* **HW** - Angular, capstone proposals
+* **HW** - Angular Contacts, capstone proposals
 * **Lab Day** - Thanksgiving Break
 
 ***
