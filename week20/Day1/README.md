@@ -2,6 +2,9 @@
 
 > **Agenda:** Angular Movie History
 
+NOTES:
+* Email me links to your deployed personal site
+
 ## Introduce Making Aliases
 1. create ~/.bash_profile
 1. Open bash_profie in sublime/vs code
