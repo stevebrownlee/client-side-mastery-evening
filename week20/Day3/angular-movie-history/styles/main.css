@@ -10,6 +10,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
     height: 100px; }
+  #movies .movie .thumbnail {
+    position: relative; }
+    #movies .movie .thumbnail .delete {
+      position: absolute;
+      right: 15px;
+      top: 15px; }
 
 body {
   background-color: deepskyblue; }
