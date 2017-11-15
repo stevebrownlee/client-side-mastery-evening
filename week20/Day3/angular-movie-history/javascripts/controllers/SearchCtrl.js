@@ -24,7 +24,7 @@ app.controller("SearchCtrl", function ($location, $rootScope, $scope, MovieServi
     };
   };
 
-  $scope.saveWatched = (selectedMovie) => {
+  $scope.saveRated = (selectedMovie) => {
     let newMovie = createMovie(selectedMovie);
     MovieService.postNewMovie(newMovie).then((result) => {
       $location.path('/rated');
