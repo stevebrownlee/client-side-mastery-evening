@@ -10,7 +10,7 @@ app.service("MovieService", function ($http, $q, FIREBASE_CONFIG) {
           if (movieCollection !== null) {
             Object.keys(movieCollection).forEach((key) => {
               movieCollection[key].id = key;
-              if(movieCollection[key].isWatched){
+              if (movieCollection[key].isWatched) {
                 moviez.push(movieCollection[key]);
               }
             });
@@ -32,7 +32,7 @@ app.service("MovieService", function ($http, $q, FIREBASE_CONFIG) {
           if (movieCollection !== null) {
             Object.keys(movieCollection).forEach((key) => {
               movieCollection[key].id = key;
-              if(!movieCollection[key].isWatched){
+              if (!movieCollection[key].isWatched) {
                 moviez.push(movieCollection[key]);
               }
             });
@@ -45,7 +45,19 @@ app.service("MovieService", function ($http, $q, FIREBASE_CONFIG) {
     });
   };
 
+  const postNewMovie = (newMovie) => {
+    return $q((resolve, reject) => {
+      $http.post(`${FIREBASE_CONFIG.databaseURL}/movies.json`, JSON.stringify(newMovie))
+        .then((resultz) => {
+          resolve(resultz);
+        }).catch((error) => {
+          reject(error);
+        });
+    });
+  };
 
 
-  return { getRatedMovies, getWishlistMovies };
+
+
+  return { getRatedMovies, getWishlistMovies, postNewMovie };
 });
