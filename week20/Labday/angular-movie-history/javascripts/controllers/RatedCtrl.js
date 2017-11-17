@@ -24,4 +24,16 @@ app.controller("RatedCtrl", function($location, $scope,  $rootScope, MovieServic
   $scope.movieDetail = (movieId) => {
     $location.path(`/movie/${movieId}`);
   };
+
+  $scope.starChange = (event, movie) => {
+    if(event.rating){
+      movie.rating = event.rating;
+      let updatedMovie = MovieService.createMovieObject(movie);
+      MovieService.updateMovie(updatedMovie, movie.id).then((results) =>{
+        getMovies();
+      }).catch((err) => {
+        console.log("errror in updateMovie", err);
+      });
+    }
+  };
 });
