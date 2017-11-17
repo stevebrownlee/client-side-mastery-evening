@@ -1,0 +1,15 @@
+<div>
+  <div class="col-xs-4">
+    <img class="poster_path" ng-src="{{image_url}}/w342/{{movie.poster_path}}" alt="">
+  </div>
+  <div class="col-xs-8">
+    <h3 class="title">{{movie.title}}</h3>
+    <p class="overview">{{movie.overview}}</p>
+    <p ng-if="movie.isWatched">
+      Rating: {{movie.rating}}
+    </p>
+    <p ng-if="!movie.isWatched">
+      <button class="btn btn-success" ng-click="switchWatched(movie)">Watched it!</button>
+    </p>
+  </div>
+</div>

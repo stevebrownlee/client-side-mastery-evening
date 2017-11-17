@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("RatedCtrl", function($scope,  $rootScope, MovieService) {
+app.controller("RatedCtrl", function($location, $scope,  $rootScope, MovieService) {
   $scope.movies = [];
 
   const getMovies = () => {
@@ -19,5 +19,9 @@ app.controller("RatedCtrl", function($scope,  $rootScope, MovieService) {
     }).catch((err) => {
       console.log("errror in deleteMovie", err);
     });
+  };
+
+  $scope.movieDetail = (movieId) => {
+    $location.path(`/movie/${movieId}`);
   };
 });

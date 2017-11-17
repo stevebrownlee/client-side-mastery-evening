@@ -25,7 +25,10 @@ app.controller("SearchCtrl", function ($location, $rootScope, $scope, MovieServi
   };
 
   $scope.saveRated = (selectedMovie) => {
-    let newMovie = createMovie(selectedMovie);
+    selectedMovie.isWatched = true;
+    selectedMovie.rating = 0;
+    selectedMovie.uid = $rootScope.uid;
+    let newMovie = MovieService.createMovieObject(selectedMovie);
     MovieService.postNewMovie(newMovie).then((result) => {
       $location.path('/rated');
     }).catch((error) => {
@@ -34,14 +37,14 @@ app.controller("SearchCtrl", function ($location, $rootScope, $scope, MovieServi
   };
 
   $scope.saveWishlist = (selectedMovie) => {
-    let newMovie = createMovie(selectedMovie);
-    newMovie.isWatched = false;
+    selectedMovie.isWatched = false;
+    selectedMovie.rating = 0;
+    selectedMovie.uid = $rootScope.uid;
+    let newMovie = MovieService.createMovieObject(selectedMovie);
     MovieService.postNewMovie(newMovie).then((result) => {
       $location.path('/wishlist');
     }).catch((error) => {
       console.log("error in postNewMovie - wishlist", error);
     });
   };
-
-
 });
