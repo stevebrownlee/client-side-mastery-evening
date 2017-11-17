@@ -18,4 +18,15 @@ app.controller("MovieDetailCtrl", function ($location, $routeParams, $scope, Mov
       console.log("errror in updateMovie", err);
     });
   };
+
+  $scope.starChange = (event, movie) => {
+    if(event.rating){
+      movie.rating = event.rating;
+      let updatedMovie = MovieService.createMovieObject(movie);
+      MovieService.updateMovie(updatedMovie, $routeParams.id).then(() =>{
+      }).catch((err) => {
+        console.log("errror in updateMovie", err);
+      });
+    }
+  };
 });

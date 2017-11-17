@@ -6,7 +6,8 @@
     <h3 class="title">{{movie.title}}</h3>
     <p class="overview">{{movie.overview}}</p>
     <p ng-if="movie.isWatched">
-      Rating: {{movie.rating}}
+      Rating: 
+      <star-rating-comp rating="movie.rating" size="'large'" num-of-stars="5" on-click="starChange($event, movie)"></star-rating-comp>
     </p>
     <p ng-if="!movie.isWatched">
       <button class="btn btn-success" ng-click="switchWatched(movie)">Watched it!</button>
