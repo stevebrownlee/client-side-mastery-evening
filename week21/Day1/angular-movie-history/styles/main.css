@@ -1,0 +1,25 @@
+#movies {
+  margin-top: 15px; }
+  #movies .movie h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  #movies .movie .poster_path {
+    height: 495px; }
+  #movies .movie .overview {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100px; }
+  #movies .movie .thumbnail {
+    position: relative; }
+    #movies .movie .thumbnail .delete {
+      position: absolute;
+      right: 15px;
+      top: 15px; }
+    #movies .movie .thumbnail .detail {
+      position: absolute;
+      left: 15px;
+      top: 15px; }
+
+body {
+  background-color: deepskyblue; }
