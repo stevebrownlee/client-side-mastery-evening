@@ -6,202 +6,202 @@
 
 ***
 
-#### Week 1 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 1 (February 12 - 17)
+* **Day 1** - Don't be an Asshole Talk, introductions, Installs
+* **Day 2** - Installs, VS Code, HTML
+* **HW** - finish prework
+* **Lab Day** - finsh HTML, CSS
 
 ***
 
-#### Week 2 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 2 (February 19 - 24)
+* **Day 1** - intro to command line, Github
+* **Day 2** - Github branching
+* **HW** - CSS, HTML HW
+* **Lab Day** - Advanced CSS, Dev tools,  github review, exercise time, 
 
 ***
 
-#### Week 3 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 3 (February 26 - March 3)
+* **Day 1** - JS
+* **Day 2** - JS
+* **HW** - JS
+* **Lab Day** - JS
 
 ***
 
-#### Week 4 ()
-* **Day 1** - 
-* **Day 2** - 
+#### Week 4 (March 5 - 10)
+* **Day 1** - Advanced JS 
+* **Day 2** -  Git for teams, wireframes, give assignment to plan out(not temp converter)
 * **HW** - 
-* **Lab Day** - 
+* **Lab Day** - Exercises
 
 ***
 
-#### Week 5 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 5 (March 12 - 17)
+* **Day 1** - Group Project
+* **Day 2** - Group Project
+* **HW** - Group Project
+* **Lab Day** - Group Project
 
 ***
 
-#### Week 6 ()
-* **Day 1** - 
-* **Day 2** - 
+#### Week 6 (March 9 - 24)
+* **Day 1** - Demo Group Project, Markdown (README.md)
+* **Day 2** -  Event Listeners
 * **HW** - 
-* **Lab Day** - 
+* **Lab Day** - exercises
 
 ***
 
-#### Week 7 ()
-* **Day 1** - 
-* **Day 2** - 
+#### Week 7 (March 26 - 31)
+* **Day 1** - XHR
+* **Day 2** - XHR
 * **HW** - 
-* **Lab Day** - 
+* **Lab Day** - XHR Exercises
 
 ***
 
-#### Week 8 ()
-* **Day 1** - 
-* **Day 2** - 
+#### Week 8 (April 2 - 7)
+* **Day 1** - Bootstrap
+* **Day 2** - Bootstrap
 * **HW** - 
-* **Lab Day** - 
+* **Lab Day** - Bootstrap exercises
 
 ***
 
-#### Week 9 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 9 (April 9 - 14)
+* **Day 1** - Task Runners
+* **Day 2** - Browserify
+* **HW** - Browserify
+* **Lab Day** - Browserify
 
 ***
 
-#### Week 10 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 10 (April 16 - 21)
+* **Day 1** - Browserify
+* **Day 2** - Browserify
+* **HW** - Browserify
+* **Lab Day** - Browserify
 
 ***
-#### Week 11 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
-
-***
-
-#### Week 12 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 11 (April 23 - 28)
+* **Day 1** - Group Project - Chatty
+* **Day 2** - Group Project - Chatty
+* **HW** - Group Project - Chatty
+* **Lab Day** - Group Project - Chatty
 
 ***
 
-#### Week 13 ()
-* **Day 1** - 
-* **Day 2** - 
+#### Week 12 (April 30 - May 5)
+* **Day 1** - demo chatty, jQuery selectors
+* **Day 2** - jQuery ajax
 * **HW** - 
-* **Lab Day** - 
+* **Lab Day** - jQuery exercises
 
 ***
 
-#### Week 14 ()
-* **Day 1** - 
-* **Day 2** - 
+#### Week 13 (May 7 - 12) - BREAK
+* **Day 1** - BREAK
+* **Day 2** - BREAK
 * **HW** - 
-* **Lab Day** - 
+* **Lab Day** - BREAK
 
 ***
 
-#### Week 15 ()
-* **Day 1** - 
-* **Day 2** - 
+#### Week 14 (May 14 - 19)
+* **Day 1** - Promises
+* **Day 2** - Promises
 * **HW** - 
-* **Lab Day** - 
+* **Lab Day** - exercises
 
 ***
 
-#### Week 16 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 15 (May 21 - 26)
+* **Day 1** - promise review, SASS
+* **Day 2** - Advanced SASS
+* **HW** - exercises
+* **Lab Day** - exercises
 
 ***
 
-#### Week 17 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 16 (May 28 - June 2)
+* **Day 1** - HOLIDAY: Memorial Day
+* **Day 2** - APIs
+* **HW** - APIs
+* **Lab Day** - APIs 
 
 ***
 
-#### Week 18 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 17 (June 4 - 9)
+* **Day 1** - firebase
+* **Day 2** - firebase
+* **HW** - firebase
+* **Lab Day** - firebase
 
 ***
 
-#### Week 19 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 18 (June 11 - 16)
+* **Day 1** - firebase auth
+* **Day 2** - firebase auth
+* **HW** - firebase auth
+* **Lab Day** - firebase auth
 
 ***
 
-#### Week 20 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 19 (June 18 - 23)
+* **Day 1** - Group Project - Theme park?
+* **Day 2** - Group Project - Theme park?
+* **HW** - Group Project - Theme park?
+* **Lab Day** - Group Project - Theme park?
+
+***
+
+#### Week 20 (June 25 - 30)
+* **Day 1** - REACT
+* **Day 2** - REACT
+* **HW** - REACT
+* **Lab Day** - REACT
 
 ***
 
 
-#### Week 21 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 21 (July 2 - 7)
+* **Day 1** - REACT
+* **Day 2** - REACT
+* **HW** - REACT
+* **Lab Day** - REACT
 
 ***
 
-#### Week 22 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 22 (July 9 - 14)
+* **Day 1** - REACT
+* **Day 2** - REACT
+* **HW** - REACT
+* **Lab Day** - REACT
 
 ***
 
-#### Week 23 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 23 (July 16 - 21)
+* **Day 1** - REACT GROUP PROJECT
+* **Day 2** - REACT GROUP PROJECT
+* **HW** - REACT GROUP PROJECT
+* **Lab Day** - REACT GROUP PROJECT
 
 ***
 
-#### Week 24 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 24 (July 23 - 28)
+* **Day 1** - CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - CAPSTONES
+* **Lab Day** - CAPSTONES
 
 ***
 
-#### Week 25 ()
-* **Day 1** - 
-* **Day 2** - 
-* **HW** - 
-* **Lab Day** - 
+#### Week 25 (July 30 - August 4)
+* **Day 1** - CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - CAPSTONES
+* **Lab Day** - CAPSTONES
 
 ***
