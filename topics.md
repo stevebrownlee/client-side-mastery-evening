@@ -16,8 +16,7 @@
 1. XHR (Zoe)
 1. Bootstrap (Zoe)
 1. Browserify (Zoe)
-1. jQuery Selectors
-1. jQuery Ajax (callan)
+1. jQuery (callan)
 1. Promises (Lauren)
 1. SASS (Callan)
 1. APIs (Zoe)
