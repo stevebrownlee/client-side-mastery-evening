@@ -1,26 +1,26 @@
 # Topics that need to be taught
 
 1. Installs - Zoe (Mac), Lauren (PC)
-1. VS Code
-1. HTML
-1. CSS
-1. Command Line
-1. Github
-1. Github Branching
-1. Advanced CSS and Dev Tools
-1. JS (introduce const and let)
-1. Advanced JS and ES6 (fat arrow and object notation)
+1. VS Code (lauren)
+1. HTML (Zoe)
+1. CSS (Zoe)
+1. Command Line (Callan)
+1. Github (lauren)
+1. Github Branching (Callan)
+1. JS: introduce const and let (zoe)
+1. Advanced CSS and Dev Tools (zoe)
+1. Advanced JS and ES6: fat arrow and object notation (Lauren)
 1. Github for Teams (all will demo this)
-1. Wireframes
-1. Event Listeners
-1. XHR
-1. Bootstrap
-1. Browserify
+1. Wireframes (Lauren)
+1. Event Listeners (callan)
+1. XHR (Zoe)
+1. Bootstrap (Zoe)
+1. Browserify (Zoe)
 1. jQuery Selectors
-1. jQuery Ajax
-1. Promises
-1. SASS
-1. APIs
-1. Firebase
-1. Firebase Auth
-1. React (we can break this up)
+1. jQuery Ajax (callan)
+1. Promises (Lauren)
+1. SASS (Callan)
+1. APIs (Zoe)
+1. Firebase (Callan)
+1. Firebase Auth (lauren)
+1. React (zoe, callan, lauren)
