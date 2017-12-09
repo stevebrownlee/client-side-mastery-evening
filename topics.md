@@ -9,7 +9,7 @@
 1. Github Branching
 1. Advanced CSS and Dev Tools
 1. JS
-1. Advanced JS
+1. Advanced JS and ES6
 1. Github for Teams (all will demo this)
 1. Wireframes
 1. Event Listeners
