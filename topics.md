@@ -15,7 +15,7 @@
 1. Event Listeners (callan)
 1. XHR (Zoe)
 1. Bootstrap (Zoe)
-1. Browserify (Zoe)
+1. Browserify and task runners (Zoe)
 1. jQuery (callan)
 1. Promises (Lauren)
 1. SASS (Callan)
