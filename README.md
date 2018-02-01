@@ -7,15 +7,15 @@
 ***
 
 #### Week 1 (February 12 - 17)
-* **Day 1** - Don't be an Asshole Talk, introductions, Installs
-* **Day 2** - Installs, VS Code, HTML
-* **HW** - finish prework
-* **Lab Day** - finsh HTML, CSS
+* **Day 1** - Introductions, John's Intro talk, Class Expectations, Installs
+* **Day 2** - Finish Installs, HTML
+* **HW** - Finish prework, surveys (personality type, studygroup location)
+* **Lab Day** - Finsh HTML, CSS
 
 ***
 
 #### Week 2 (February 19 - 24)
-* **Day 1** - intro to command line, Github
+* **Day 1** - intro to command line, VS Code, Github
 * **Day 2** - Github branching
 * **HW** - CSS, HTML HW
 * **Lab Day** - Advanced CSS, Dev tools,  github review, exercise time, 
