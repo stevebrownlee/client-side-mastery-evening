@@ -69,6 +69,7 @@ li {
 	width: 30%;
 	background-color: #998A67;
 	height: 100%;
+	position: relative;
 }
 
 header img {
@@ -95,7 +96,14 @@ header img {
 /*  p  _____________________________________________________________________________________*/
 
 
-/*  links  _________________________________________________________________________________*/
+/*  footer  _________________________________________________________________________________*/
+footer{
+	background-color: #679DC0;
+	height:	34px;
+	line-height: 34px;
+	text-align: center;
+}
+
 footer a{
 	text-decoration: underline;
 }
@@ -106,6 +114,8 @@ footer a:hover {
 	color: 			#fff;
 }
 
+
+/*  right column  _________________________________________________________________________________*/
 .right-column li a {
 	font-weight: 	bold;
 	color: 			#E5D9BC;
@@ -113,11 +123,9 @@ footer a:hover {
 	list-style-type: disc;
 	list-style-position: inside;
 	padding-bottom: 4px;
-	/* background: 	url(https://raw.githubusercontent.com/nss-evening-cohort-7/css-lecture/master/dot2.gif) no-repeat 0 1px; */
 }
 .right-column li a:hover {
 	color: 			#7ECDFF;
-	/* background: 	transparent url(https://raw.githubusercontent.com/nss-evening-cohort-7/css-lecture/master/dot2on.gif) no-repeat 0 1px; */
 }
 .right-column li a.designer-name {
 	display: 		inline;
@@ -141,4 +149,18 @@ footer a:hover {
 
 .flowers {
 	float: right;
+}
+
+
+.footer-image {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.footer-grad {
+	height: 14px;
+	margin: 0 auto;
+	width: 60%;
+	background: linear-gradient(#998A67, black);
 }
