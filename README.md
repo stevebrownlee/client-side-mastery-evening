@@ -23,15 +23,15 @@
 ***
 
 #### Week 3 (February 26 - March 3)
-* **Day 1** - JS
-* **Day 2** - JS
+* **Day 1** - JS strings
+* **Day 2** - JS arrays
 * **HW** - JS
-* **Lab Day** - JS
+* **Lab Day** - JS objects
 
 ***
 
 #### Week 4 (March 5 - 10)
-* **Day 1** - Advanced JS and ES6
+* **Day 1** - Advanced JS - array methods
 * **Day 2** -  Git for teams, wireframes, give assignment to plan out(not temp converter)
 * **HW** - 
 * **Lab Day** - Exercises
