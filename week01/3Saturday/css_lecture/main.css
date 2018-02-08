@@ -16,6 +16,7 @@ p {
 	}
 a{
 	text-decoration: none;
+	border-bottom: dotted 1px #5785A4;
 }
 a:link ,a:visited {
 	color: 			#5785A4;
@@ -24,9 +25,9 @@ a:hover {
 	color: 			#1D8FDB;
 }
 h3 {
-	font: 			normal 10px/12px Arial,Helvetica,sans-serif;
+	font: 			normal 12px Arial,Helvetica,sans-serif;
 	text-transform: uppercase;
-	margin: 		20px 0 0 30px;
+	margin: 		20px 0 0 20px;
 	color: 			#574D33;
 }
 
@@ -42,6 +43,21 @@ li {
 }
 
 /* grid ____________________________________________________________________________________*/
+
+#main-container{
+	position: relative;
+}
+
+#main-container .title{
+	font-size: 25px;
+	color: #C3C2B5;
+	position: absolute;
+	top: 280px;
+	left: 20px;
+	transform: rotate(-90deg);
+	transform-origin: top left;
+}
+
 #main-container header{ 
 	margin: 		0 auto;
 	width: 			60%;
@@ -96,6 +112,16 @@ header img {
 /*  p  _____________________________________________________________________________________*/
 
 
+/* authors div */
+.requirements p:nth-child(5){
+	margin-bottom: 40px;
+}
+
+.requirements p:nth-child(6) {
+	margin-bottom: 110px;
+	text-align: center;
+}
+
 /*  footer  _________________________________________________________________________________*/
 footer{
 	background-color: #679DC0;
@@ -123,6 +149,7 @@ footer a:hover {
 	list-style-type: disc;
 	list-style-position: inside;
 	padding-bottom: 4px;
+	border: 0px;
 }
 .right-column li a:hover {
 	color: 			#7ECDFF;
@@ -139,9 +166,36 @@ footer a:hover {
 	color: 			#7ECDFF;
 }
 
+/*  Summary  __________________________________________________________________________*/
+.summary{
+	height: 180px;
+	position: relative;
+	color: #786A47;
+  font-size: 13px;
+  font-weight: 600;
+}
 
+.left-summary{
+	float: left;
+	margin-left: 30px;
+	margin-top: 30px;
+}
 
-/*  crap i added  __________________________________________________________________________*/
+.right-summary{
+	float: right;
+	margin-right: 30px;
+	margin-top: 10px;
+	text-align: right;
+}
+
+.summary p {
+	position: absolute;
+	font-size: 11px;
+	bottom: 0;
+	right: 0;
+}
+
+/*  Custom  __________________________________________________________________________*/
 
 .whole-div-shaddow{
 	box-shadow: 0 0 10px #999;
@@ -150,7 +204,6 @@ footer a:hover {
 .flowers {
 	float: right;
 }
-
 
 .footer-image {
 	position: absolute;
