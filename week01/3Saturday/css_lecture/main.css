@@ -5,41 +5,16 @@
 }
 
 body { 
-	font: 			11px Arial,Helvetica,sans-serif; 
-	text-align: 	center;
-	background: 	#bebcad;
+	font-size: 11px; 
+	text-align: center;
+	background: #BEBCAD;
 	}
-p { 
-	text-align: 	justify;
-	padding: 		5px 30px 15px 30px;
-	color: 			#786A47;
-	}
-a{
-	text-decoration: none;
-	border-bottom: dotted 1px #5785A4;
-}
-a:link ,a:visited {
-	color: 			#5785A4;
-}
-a:hover {
-	color: 			#1D8FDB;
-}
-h3 {
-	font: 			normal 12px Arial,Helvetica,sans-serif;
-	text-transform: uppercase;
-	margin: 		20px 0 0 20px;
-	color: 			#574D33;
-}
 
-ul {
-	list-style: 	none; 
-	margin: 		10px 20px 30px 10px;
-}
-li {
-	padding-left: 	1px;
-	margin: 		10px 0 0 8px;
-	display: 		block;
-	border-bottom: dotted 1px black;
+h3 {
+	font-size: 12px;
+	text-transform: uppercase;
+	margin: 20px 0 0 20px;
+	color: #574D33;
 }
 
 /* grid ____________________________________________________________________________________*/
@@ -59,15 +34,15 @@ li {
 }
 
 #main-container header{ 
-	margin: 		0 auto;
-	width: 			60%;
+	margin: 0 auto;
+	width: 60%;
 
 }
 
 #column-container{ 
-	margin: 		0 auto;
-	text-align: 	left;
-	width: 			60%;
+	margin: 0 auto;
+	text-align: left;
+	width: 60%;
 	display: table;
 }
 
@@ -88,13 +63,37 @@ li {
 	position: relative;
 }
 
+/* lists and links ____________________________________________________________________________________*/
+ul {
+	list-style: none; 
+	margin: 10px 20px 30px 10px;
+}
+
+li {
+	padding-left: 1px;
+	margin: 10px 0 0 8px;
+	display: block;
+	border-bottom: dotted 1px black;
+}
+
+a{
+	text-decoration: none;
+	border-bottom: dotted 1px #5785A4;
+}
+
+a:link ,a:visited {
+	color: #5785A4;
+}
+a:hover {
+	color: #1D8FDB;
+}
+
+/* headers _________________________________________________________________________________*/
 header img {
 	width: 100%;
 	display: inherit;
 }
 
-
-/* headers _________________________________________________________________________________*/
 .header-h1{
 	height: 30px;
 	padding-left: 15px;
@@ -110,7 +109,11 @@ header img {
 }
 
 /*  p  _____________________________________________________________________________________*/
-
+p { 
+	text-align: 	justify;
+	padding: 		5px 30px 15px 30px;
+	color: 			#786A47;
+	}
 
 /* authors div */
 .requirements p:nth-child(5){
@@ -142,7 +145,6 @@ footer a:link, footer a:visited {
 footer a:hover {
 	color: 			#fff;
 }
-
 
 /*  right column  _________________________________________________________________________________*/
 .right-column li a {
@@ -199,7 +201,6 @@ footer a:hover {
 }
 
 /*  Custom  __________________________________________________________________________*/
-
 .whole-div-shaddow{
 	box-shadow: 0 0 10px #999;
 }
