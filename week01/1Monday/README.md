@@ -22,7 +22,6 @@
 * Visual Studio Code
 	* MAC = use brew: ```brew cask install visual-studio-code```
 	* WINDOWS = [download](https://code.visualstudio.com/)
-		* note: use SUBL instead of SUBLIME so mac an PC access sublime the same way
 
 ### Set up Github SSH - do this saturday
 * [Check if you have an SSH keys](https://help.github.com/articles/checking-for-existing-ssh-keys/)
