@@ -46,7 +46,7 @@
 
 ***
 
-#### Week 6 (March 9 - 24)
+#### Week 6 (March 19 - 24)
 * **Day 1** - Demo Group Project, Markdown (README.md)
 * **Day 2** -  Event Listeners
 * **HW** - 
