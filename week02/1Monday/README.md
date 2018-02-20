@@ -15,7 +15,7 @@
 
 * To check your git config
 ``` git config -l ```
-* Add your Username
+* Add your [Username](https://help.github.com/articles/setting-your-username-in-git/)
 ``` git config --global user.name "Zoe Ames" ```
-* Add your email
+* Add your [email](https://help.github.com/articles/setting-your-commit-email-address-in-git/)
 ``` git config --global user.email "zoeames@gmail.com" ```
