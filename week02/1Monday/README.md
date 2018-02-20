@@ -1,3 +1,21 @@
-# Week ??? - Day 1
+# Week 2 - Day 1
 
-> **Agenda:** 
+> **Agenda:** Command Line, Github
+
+
+### Set up Github SSH
+* [Check if you have an SSH keys](https://help.github.com/articles/checking-for-existing-ssh-keys/)
+* [Generate an SSH key](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
+* [Add SSH to github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+* Check your SSH key link:
+``` ssh -T git@github.com ```
+
+
+### Set up Github global config
+
+* To check your git config
+``` git config -l ```
+* Add your Username
+``` git config --global user.name "Zoe Ames" ```
+* Add your email
+``` git config --global user.email "zoeames@gmail.com" ```
