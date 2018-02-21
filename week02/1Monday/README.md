@@ -1,6 +1,6 @@
 # Week 2 - Day 1
 
-> **Agenda:** Command Line, Github
+> **Agenda:** Intro to command line, VS Code, Github
 
 
 ### Set up Github SSH

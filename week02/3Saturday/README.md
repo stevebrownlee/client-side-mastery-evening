@@ -1,3 +1,3 @@
-# Week ??? - Day 3
+# Week 2 - Day 3
 
-> **Agenda:** 
+> **Agenda:** github review, Dev tools, Advanced CSS
