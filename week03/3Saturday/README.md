@@ -1,3 +1,3 @@
-# Week ??? - Day 3
+# Week 3 - Day 3
 
-> **Agenda:** 
+> **Agenda:** JS Objects, JS Functions

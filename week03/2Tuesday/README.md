@@ -1,3 +1,3 @@
-# Week ??? - Day 2
+# Week 3 - Day 2
 
-> **Agenda:** 
+> **Agenda:** JS Arrays
