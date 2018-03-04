@@ -12,6 +12,7 @@
 1. Advanced JS (Lauren)
 1. Github for Teams (all will demo this)
 1. Wireframes (Lauren)
+1. Markdown (zoe)
 1. ES6 - const, let, fat arrow, object notation (lauren)
 1. Event Listeners (callan)
 1. XHR (Zoe)
