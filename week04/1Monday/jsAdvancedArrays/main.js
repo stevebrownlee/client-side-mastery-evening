@@ -1,118 +1,131 @@
-// CHALLENGE #1
-var challengeOneInput = "jumbo shrimp"
-var words = challengeOneInput.toLowerCase().split(' ');
-var bestScore = 0;
-var bestWord = '';
-var word;
-var score;
-var char;
-for (var i = 0; i < words.length; i++) {
-    word = words[i];
-    score = 0;
-    for (var j = 0; j < word.length; j++) {
-        char = word[j];
-        var letterCode = (char.charCodeAt(0) - 'a'.charCodeAt(0) + 1)
-        score += (letterCode >= 1 || letterCode <= 26) ? letterCode: 0;
-    }
-    if (score > bestScore) {
-        bestScore = score;
-        bestWord = word;
-    }
+function writeToDom(input, id){
+    document.getElementById(id).innerHTML += input;
 }
-document.getElementById("challenge-1").innerHTML += bestWord;
+
 
 // CHALLENGE #1 with forEach
-var challengeOneInput = "jumbo shrimp"
-var words = challengeOneInput.toLowerCase().split(' ');
-var bestScore = 0;
-var bestWord = '';
-var word, score, char;
+function challenge1b(input){
+    var words = input.toLowerCase().split(' ');
+    var best = findBestWord(words);
+    writeToDom(best.word, "challenge-1b");
+}
 
-words.forEach(function(word){
-    score = 0;
-    word.split().forEach(function(char){
-        var letterCode = (char.charCodeAt(0) - 'a'.charCodeAt(0) + 1)
-        score += (letterCode >= 1 || letterCode <= 26) ? letterCode: 0;
+function findBestWord(words){
+    var bestWord = { score: 0 };
+    words.forEach(function(word){
+        score = 0;
+        word.split().forEach(function(char){
+            var letterCode = (char.charCodeAt(0) - 'a'.charCodeAt(0) + 1)
+            score += (letterCode >= 1 || letterCode <= 26) ? letterCode: 0;
+        });
+        if (score > bestWord.score) {
+            bestWord.score = score;
+            bestWord.word = word;
+        }
     });
-    if (score > bestScore) {
-        bestScore = score;
-        bestWord = word;
-    }
-});
-document.getElementById("challenge-1b").innerHTML += bestWord;
-
-// CHALLENGE #3
-
-var input = [ 1, 1, 1, 2, 1, 1 ];  // 2
-var repeater, unique;
-
-if (input[0] === input[input.length-1]) {
-    repeater = input[0];
-} else if (input[0] === input[1]) {
-    repeater = input[i];
+    return bestWord;
 }
 
-for (var i = 0; i < input.length; i++){
-    if (input[i] !== repeater){
-        unique = input[i];
-    }
-}
-
-document.getElementById("challenge-3").innerHTML += unique;
+challenge1b("jumbo shrimp");
 
 // CHALLENGE #3 with Sort Method
-var element3b = document.getElementById("challenge-3b");
 
-input.sort(function(a, b){ return a - b });
-if (input[0]===input[1]){
-    element3b.innerHTML += input.pop();
-} else {
-    element3b.innerHTML += element[0];
+function challenge3b(input){
+    var unique = findUnique(input);
+    writeToDom(unique, "challenge-3b");
 }
 
-// CHALLENGE #5
-var array1 = [1, 2, 4, 7, 5, 9];
-var array2 = [5, 9, 2];
-var finalArray = array1.slice();
+function findUnique(array){
+    input3b.sort(function(a, b){ return a - b });
+    if (input3b[0]===input3b[1]){
+        return input3b.pop();
+    } else {
+        return element[0];
+    }
+}
 
-for (var a = 0; a < array1.length; a++){
-    for (var b = 0; b < array2.length; b++){
-        if (array1[a] === array2[b]){
-            var index = finalArray.indexOf(array1[a]);
-            finalArray.splice(index, 1);
+var input3b = [ 1, 1, 1, 2, 1, 1 ];  // 2
+challenge3b(input3b);
+
+// CHALLENGE #4 with map
+
+function challenge4b(input){
+    var doubled = double(input);
+    writeToDom(doubled, "challenge-4b");
+}
+function double(nums){
+    var answer4b = nums.map(function(item){
+        return item * 2;
+    });
+    return answer4b;
+}
+
+challenge4b([ 3, 8, 1, 2, 4, 12 ]);
+
+// CHALLENGE #5 with Filter
+function challenge5b(array1, array2){
+    var answer = filter(array1, array2);
+    writeToDom(answer, "challenge-5b");
+}
+
+function filter(one, two){
+    return one.filter(function(num){
+        return two.indexOf(num) === -1;
+    });
+}
+
+challenge5b([1, 2, 4, 7, 5, 9], [5, 9, 2])
+
+// CHALLENGE #6 with includes
+
+function challenge6b(input){
+    var missing = findMissing(input);
+    writeToDom(missing, "challenge-6b");
+}
+
+function findMissing(nums){
+    for (var i = 0; i < input6b.length + 1; i++){
+        if (!input6b.includes(input6b[i])){
+            return i;
         }
     }
 }
-document.getElementById("challenge-5").innerHTML += finalArray;
+var input6b = [13,11,10,3,2,1,4,5,6,9,7,8]; // 12
+challenge6b(input6b);
 
-// CHALLENGE #5 with Filter
-var array1 = [1, 2, 4, 7, 5, 9];
-var array2 = [5, 9, 2];
+/// OBJECTS ///
 
-var finalArray = array1.filter(function(num){
-    return array2.indexOf(num) === -1;
-})
+// CHALLENGE #1 with reduce
 
-document.getElementById("challenge-5b").innerHTML += array1;
-
-// CHALLENGE #7
-
-var numBeggers = 3;
-var offerings = [1, 2, 3, 4, 5];
-var result = [];
-// first one takes [1, 4]=5 second one takes [2, 5]=7 second one takes [3]=3
-// display [5, 7, 3]
-function beggars(values, n) {
-    var final = [];
-    for (var i = n; 0 < n; i--) {
-        values.forEach((value, index) => {
-            var finalIndex = i - n;
-            if (index % i === 0) {
-                final[finalIndex] += value
-            }
-        })
-    }
-    return final;
+function challenge1b_obj(players){
+    findTotals(players);
+    var winner = findWinner(players);
+    var text = userFriendlyText(winner);
+    writeToDom(text, "challenge-obj-1b");
 }
 
-beggars(offerings, numBeggers);
+function findTotals(players){
+    players.forEach(function(player){
+        player.total = player.scores.reduce(function(prev, curr){ return prev + curr });
+    });
+}
+
+function findWinner(players){
+    var winner = { total: 0 }
+    players.forEach(function(player){
+        if (player.total <= 100 && player.total > winner.total){
+            winner = player;
+        }
+    });
+    return winner;
+}
+
+function userFriendlyText(winner){
+    return winner.name + " with a score of " + winner.total;
+}
+
+var players = [ { name: "Bob", scores: [10, 65] },
+                { name: "Bill", scores: [90, 5] },
+                { name: "Charlie", scores: [40, 55] }
+              ]; // Displays "Bill"
+challenge1b_obj(players);
