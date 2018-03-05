@@ -1,0 +1,32 @@
+* {
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+}
+
+h3 {
+    text-align: center;
+}
+
+.simple {
+    grid-column: 2 / span 1;
+}
+
+.simple > div {
+    margin: 10%;
+    padding: 5%;
+    border: 1px navy solid;
+}
+
+.advanced {
+    grid-column: 3 / span 1;
+}
+
+.advanced > div {
+    margin: 10%;
+    padding: 5%;
+    border: 1px darkred solid;
+}
