@@ -36,15 +36,15 @@ function challenge3b(input){
 }
 
 function findUnique(array){
-    input3b.sort(function(a, b){ return a - b });
-    if (input3b[0]===input3b[1]){
+    array.sort(function(a, b){ return a - b });
+    if (array[0]===array[1]){
         return input3b.pop();
     } else {
         return element[0];
     }
 }
 
-var input3b = [ 1, 1, 1, 2, 1, 1 ];  // 2
+var input3b = [ 1, 1, 7, 1, 1, 1, 1 ];  // 2
 challenge3b(input3b);
 
 // CHALLENGE #4 with map
