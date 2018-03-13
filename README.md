@@ -63,10 +63,10 @@
 ***
 
 #### Week 8 (April 2 - 7)
-* **Day 1** - Bootstrap
-* **Day 2** - Bootstrap
+* **Day 1** - Bootstrap 3
+* **Day 2** - Bootstrap 3
 * **HW** - 
-* **Lab Day** - Bootstrap exercises
+* **Lab Day** - event bubbling, Bootstrap exercises
 
 ***
 
