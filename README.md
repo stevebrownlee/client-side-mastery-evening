@@ -48,8 +48,8 @@
 
 #### Week 6 (March 19 - 24)
 * **Day 1** - Demo Group Project, ES6, Markdown (README.md)
-* **Day 2** -  Event Listeners
-* **HW** - 
+* **Day 2** -  Interacting with the dom (Event Listeners, traversing, dynamic event listeners)
+* **HW** - Travel Diary, convert personal site ES6 - add readme
 * **Lab Day** - exercises
 
 ***
@@ -57,7 +57,7 @@
 #### Week 7 (March 26 - 31)
 * **Day 1** - XHR
 * **Day 2** - XHR
-* **HW** - 
+* **HW** - treehouse cagematch, put personal site blogs/projects in JSON
 * **Lab Day** - XHR Exercises
 
 ***
@@ -65,24 +65,24 @@
 #### Week 8 (April 2 - 7)
 * **Day 1** - Bootstrap 3
 * **Day 2** - Bootstrap 3
-* **HW** - 
+* **HW** - clicky planets on steroids, personal site add bootstrap
 * **Lab Day** - event bubbling, Bootstrap exercises
 
 ***
 
 #### Week 9 (April 9 - 14)
 * **Day 1** - Task Runners
-* **Day 2** - Browserify
-* **HW** - Browserify
-* **Lab Day** - Browserify
+* **Day 2** - Browserify + events
+* **HW** - Browserify + events
+* **Lab Day** - Browserify + events
 
 ***
 
 #### Week 10 (April 16 - 21)
-* **Day 1** - Browserify
-* **Day 2** - Browserify
-* **HW** - Browserify
-* **Lab Day** - Browserify
+* **Day 1** - Browserify + XHR
+* **Day 2** - Browserify + XHR
+* **HW** - Browserify + XHR
+* **Lab Day** -  Group Project - Chatty
 
 ***
 #### Week 11 (April 23 - 28)
@@ -96,7 +96,7 @@
 #### Week 12 (April 30 - May 5)
 * **Day 1** - demo chatty, jQuery selectors
 * **Day 2** - jQuery ajax
-* **HW** - 
+* **HW** - add jquery to personalsite, browserify + XHR + jquery exercise (something like acme explosives - 3 jsons)
 * **Lab Day** - jQuery exercises
 
 ***
@@ -112,7 +112,7 @@
 #### Week 14 (May 14 - 19)
 * **Day 1** - Promises
 * **Day 2** - Promises
-* **HW** - 
+* **HW** - redo browserify + XHR + jquery exercise (something like acme explosives - 3 jsons)
 * **Lab Day** - exercises
 
 ***
