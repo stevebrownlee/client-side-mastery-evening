@@ -1,0 +1,40 @@
+{
+  "animals": [
+    {
+      "name": "Zebra",
+      "number": 3,
+      "isCarnivore": false,
+      "imageUrl": ""
+    },
+    {
+      "name": "Lion",
+      "number": 2,
+      "isCarnivore": true,
+      "imageUrl": ""
+    },
+    {
+      "name": "Giraffe",
+      "number": 5,
+      "isCarnivore": false,
+      "imageUrl": ""
+    },
+    {
+      "name": "Turtle",
+      "number": 3,
+      "isCarnivore": false,
+      "imageUrl": ""
+    },
+    {
+      "name": "Mongoose",
+      "number": 3,
+      "isCarnivore": true,
+      "imageUrl": ""
+    },
+    {
+      "name": "Bird",
+      "number": 3,
+      "isCarnivore": false,
+      "imageUrl": ""
+    }
+  ]
+}
