@@ -1,0 +1,25 @@
+{
+  "cats": [
+    {
+      "name": "Fluffy",
+      "color": "Orange",
+      "age": "2 years",
+      "url":
+        "https://s-media-cache-ak0.pinimg.com/736x/bc/05/08/bc0508cc3d2579ca3d4386a87f801a4f.jpg"
+    },
+    {
+      "name": "Killer",
+      "color": "White",
+      "age": "2 months",
+      "url":
+        "https://s-media-cache-ak0.pinimg.com/736x/bc/05/08/bc0508cc3d2579ca3d4386a87f801a4f.jpg"
+    },
+    {
+      "name": "Sabrina",
+      "color": "Black",
+      "age": "22 years",
+      "url":
+        "https://s-media-cache-ak0.pinimg.com/736x/bc/05/08/bc0508cc3d2579ca3d4386a87f801a4f.jpg"
+    }
+  ]
+}
