@@ -9,7 +9,7 @@ const buildDomString = (studentArray) => {
       domString += `<div class="card">`;
      domString +=     `<h1>${animal.name}</h1>`;
      domString +=     `<h3>${animal.number}</h3>`;
-     domString +=     `<img src="${animal.imageUrl}" alt="">`;
+     domString +=     `<img class="animal-image" src="${animal.imageUrl}" alt="">`;
      domString +=     `<button class="escaped">Escaped</button>`;
      domString +=  `</div>`;
   });
