@@ -1,3 +1,3 @@
-# Week ??? - Day 1
+# Week 7 - Day 1
 
-> **Agenda:** 
+> **Agenda:** JSON
