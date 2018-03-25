@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-.card {
+.animal {
   margin: 1%;
   padding: 2%;
   width: 400px;
@@ -12,13 +12,13 @@
   text-align: center;
 }
 
-.card-button {
-  margin: 0 auto;
-}
-
 
 .green {
-  color: green;
+  background-color: green;
+}
+
+.red {
+  background-color: red;
 }
 
 .animal-image{
