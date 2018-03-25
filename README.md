@@ -49,15 +49,15 @@
 #### Week 6 (March 19 - 24)
 * **Day 1** - Demo Group Project, ES6, Markdown (README.md)
 * **Day 2** -  Interacting with the dom (Event Listeners, traversing, dynamic event listeners)
-* **HW** - Travel Diary, convert personal site ES6 - add readme
+* **HW** - Travel Diary 
 * **Lab Day** - exercises
 
 ***
 
 #### Week 7 (March 26 - 31)
-* **Day 1** - XHR
+* **Day 1** - JSON
 * **Day 2** - XHR
-* **HW** - treehouse cagematch, put personal site blogs/projects in JSON
+* **HW** - treehouse cage match, put personal site blogs/projects in JSON, ES6, README
 * **Lab Day** - XHR Exercises
 
 ***
