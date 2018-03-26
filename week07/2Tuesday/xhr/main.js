@@ -14,7 +14,9 @@ const buildDomString = (studentArray) => {
       domString +=     `<h1>${animal.name}</h1>`;
       domString +=     `<h3>${animal.number}</h3>`;
       domString +=     `<img class="animal-image" src="${animal.imageUrl}" alt="">`;
-      domString +=     `<button class="escaped">Escaped</button>`;
+      domString +=     `<div class="button-container">`;
+      domString +=       `<button class="escaped">Escaped</button>`;
+      domString +=    `</div>`;
       domString +=  `</div>`;
   });
   printToDom(domString, 'animals');
@@ -29,14 +31,16 @@ const addedEscapedEventListeners = () => {
 };
 
 const animalEscaped = (e) => {
-  const badAnimal = e.target.parentNode.children[0];
+  const badAnimal = e.target.parentNode;
   showCarnivores();
   showVegetables();
+  showFoundButton(badAnimal);
 };
 
 const showCarnivores = () => {
   const carnivores = document.getElementsByClassName('carnivore');
   for (let i = 0; i < carnivores.length; i++) {
+    carnivores[i].children[3].innerHTML = '';
     carnivores[i].classList.add('red');
   }
 };
@@ -44,9 +48,28 @@ const showCarnivores = () => {
 const showVegetables = () => {
   const vegetables = document.getElementsByClassName('vegetable');
   for (let i = 0; i < vegetables.length; i++) {
+    vegetables[i].children[3].innerHTML = `<button class="eat">EAT ME!!!!</button>`;
     vegetables[i].classList.add('green');
   }
-}
+};
+
+const showFoundButton = (runAway) => {
+  runAway.innerHTML += `<button id="found">found</button>`;
+  initalizeFoundButton();
+};
+
+const initalizeFoundButton = () => {
+  const foundButton = document.getElementById('found');
+  foundButton.addEventListener('click', () => {
+    const animals = document.getElementsByClassName('animal');
+    for (let i = 0; i < animals.length; i++) {
+      animals[i].children[3].innerHTML = `<button class="escaped">Escaped</button>`;
+      animals[i].classList.remove('green');
+      animals[i].classList.remove('red');
+    }
+    addedEscapedEventListeners();
+  });
+};
 
 function executeThisCodeIfXHRFails () {
   console.log("An error occurred while transferring");
