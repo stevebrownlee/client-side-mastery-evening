@@ -33,23 +33,30 @@ const addedEscapedEventListeners = () => {
 const animalEscaped = (e) => {
   const badAnimal = e.target.parentNode;
   const escapeeName = e.target.parentNode.parentNode.children[0].innerHTML;
-  showCarnivores();
-  showVegetables(escapeeName);
+  if(!e.target.parentNode.parentNode.classList.contains("vegetable")){
+    showCarnivores(true);
+    showVegetables(escapeeName, false);
+  }else{
+    showCarnivores(false);
+    showVegetables(escapeeName, true);
+  }
   showFoundButton(badAnimal);
 };
 
-const showCarnivores = () => {
+const showCarnivores = (isVegetable) => {
   const carnivores = document.getElementsByClassName('carnivore');
   for (let i = 0; i < carnivores.length; i++) {
     carnivores[i].children[3].innerHTML = '';
-    carnivores[i].classList.add('red');
+    if(!isVegetable){
+      carnivores[i].classList.add('red');
+    }
   }
 };
 
-const showVegetables = (escapeeName) => {
+const showVegetables = (escapeeName, isVegetable) => {
   const vegetables = document.getElementsByClassName('vegetable');
   for (let i = 0; i < vegetables.length; i++) {
-    if(vegetables[i].children[0].innerHTML !== escapeeName){
+    if(vegetables[i].children[0].innerHTML !== escapeeName && !isVegetable){
       vegetables[i].children[3].innerHTML = `<button class="eat">EAT ME!!!!</button>`;
       vegetables[i].classList.add('green');
     } else {
