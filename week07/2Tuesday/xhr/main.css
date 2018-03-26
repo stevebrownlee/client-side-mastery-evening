@@ -24,3 +24,13 @@
 .animal-image{
   width: 400px;
 }
+
+
+.dead{
+  color: red;
+  position: relative;
+  font-size: 100px;
+  top: -200px;
+  transform: rotate(-45deg);
+  background-color: white;
+}

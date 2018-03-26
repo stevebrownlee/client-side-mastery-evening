@@ -57,6 +57,7 @@ const showVegetables = (escapeeName) => {
       vegetables[i].classList.add('green');
     }
   }
+  initalizeEatmeButtons();
 };
 
 const showFoundButton = (runAway) => {
@@ -75,6 +76,29 @@ const initalizeFoundButton = () => {
     }
     addedEscapedEventListeners();
   });
+};
+
+const initalizeEatmeButtons = () => {
+  const eatMes = document.getElementsByClassName('eat');
+  for (let i = 0; i < eatMes.length; i++) {
+    eatMes[i].addEventListener('click', alreadyBeenEaten);
+  }
+};
+
+const alreadyBeenEaten = (e) => {
+  const currentAnimal = e.target.parentNode;
+  let currentNumber = currentAnimal.parentNode.children[1].innerHTML;
+  let newNumber = currentNumber*1 - 1;
+  if(newNumber < 1){
+    currentAnimal.parentNode.children[1].innerHTML = 0;
+    currentAnimal.parentNode.children[3].innerHTML = "";
+    currentAnimal.parentNode.classList.remove('green');
+    currentAnimal.parentNode.classList.remove('vegetable');
+    currentAnimal.parentNode.innerHTML += `<div class="dead">DEAD</div>`;
+  }else {
+    currentAnimal.parentNode.children[1].innerHTML = newNumber;
+  }
+  
 };
 
 function executeThisCodeIfXHRFails () {
