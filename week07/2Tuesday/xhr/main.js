@@ -32,8 +32,9 @@ const addedEscapedEventListeners = () => {
 
 const animalEscaped = (e) => {
   const badAnimal = e.target.parentNode;
+  const escapeeName = e.target.parentNode.parentNode.children[0].innerHTML;
   showCarnivores();
-  showVegetables();
+  showVegetables(escapeeName);
   showFoundButton(badAnimal);
 };
 
@@ -45,11 +46,16 @@ const showCarnivores = () => {
   }
 };
 
-const showVegetables = () => {
+const showVegetables = (escapeeName) => {
   const vegetables = document.getElementsByClassName('vegetable');
   for (let i = 0; i < vegetables.length; i++) {
-    vegetables[i].children[3].innerHTML = `<button class="eat">EAT ME!!!!</button>`;
-    vegetables[i].classList.add('green');
+    if(vegetables[i].children[0].innerHTML !== escapeeName){
+      vegetables[i].children[3].innerHTML = `<button class="eat">EAT ME!!!!</button>`;
+      vegetables[i].classList.add('green');
+    } else {
+      vegetables[i].children[3].innerHTML = "";
+      vegetables[i].classList.add('green');
+    }
   }
 };
 
@@ -76,7 +82,7 @@ function executeThisCodeIfXHRFails () {
 }
 
 function executeThisCodeAfterFileLoaded () {
-  const data = JSON.parse(this.responseText); //must parse because it comes back as a string and we want to use it like an object
+  const data = JSON.parse(this.responseText);
   buildDomString(data.animals);
   addedEscapedEventListeners();
 }
