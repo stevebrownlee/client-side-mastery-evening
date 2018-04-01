@@ -1,3 +1,3 @@
-# Week ??? - Day 3
+# Week 8 - Day 3
 
-> **Agenda:** 
+> **Agenda:** Bootstrap exercises

@@ -1,3 +1,3 @@
-# Week ??? - Day 2
+# Week 8 - Day 2
 
-> **Agenda:** 
+> **Agenda:** Bootstrap and XHR

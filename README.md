@@ -57,16 +57,16 @@
 #### Week 7 (March 26 - 31)
 * **Day 1** - JSON
 * **Day 2** - XHR
-* **HW** - treehouse cage match, put personal site blogs/projects in JSON, ES6, README
+* **HW** -  clicky planets on steroids, put personal site blogs/projects in JSON, ES6, README
 * **Lab Day** - XHR Exercises
 
 ***
 
 #### Week 8 (April 2 - 7)
-* **Day 1** - Bootstrap 3
-* **Day 2** - Bootstrap 3
-* **HW** - clicky planets on steroids, personal site add bootstrap
-* **Lab Day** - event bubbling, Bootstrap exercises
+* **Day 1** - Bootstrap and XHR
+* **Day 2** - Bootstrap and XHR
+* **HW** - treehouse cage match, personal site add bootstrap
+* **Lab Day** - Bootstrap exercises
 
 ***
 
@@ -110,15 +110,15 @@
 ***
 
 #### Week 14 (May 14 - 19)
-* **Day 1** - Promises
-* **Day 2** - Promises
+* **Day 1** - Promises and this
+* **Day 2** - Promises and this
 * **HW** - redo browserify + XHR + jquery exercise (something like acme explosives - 3 jsons)
 * **Lab Day** - exercises
 
 ***
 
 #### Week 15 (May 21 - 26)
-* **Day 1** - promise review, SASS
+* **Day 1** - SASS
 * **Day 2** - Advanced SASS
 * **HW** - exercises
 * **Lab Day** - exercises
