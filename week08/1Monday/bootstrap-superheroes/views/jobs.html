@@ -34,7 +34,6 @@
           <li>
             <a href="./superheroes.html">Superheroes</a>
           </li>
-          </li>
           <li>
             <a href="./jobs.html">Jobs</a>
           </li>
@@ -46,9 +45,23 @@
   </nav>
 
 
-  <h2>Superheroes:</h2>
+  <h2>Jobs:</h2>
+  <!--Danger buttons with dropdown menu-->
+  <div class="btn-group" id='superhero-dropdown'>
+    <button type="button" class="btn btn-danger">Select a Superhero:</button>
+    <button type="button" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" id='superhero-dropdown-ul'> 
 
-  <div id='heroes'></div>
+    </ul>
+  </div>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
   <script src="../javascripts/jobs.js"></script>
 </body>
 
