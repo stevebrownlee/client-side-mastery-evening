@@ -1,8 +1,19 @@
 {
   "superheroes": [
     {
-      "id": 0,
-      "skills": [],
+      "id": "hero0",
+      "jobIds": [
+        "job36",
+        "job25",
+        "job40",
+        "job18",
+        "job30",
+        "job20",
+        "job26",
+        "job4",
+        "job37",
+        "job33"
+      ],
       "gender": "Female",
       "name": "Rogue",
       "description": "",
@@ -10,8 +21,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/c/90/537bc196df2fb/standard_xlarge.jpg"
     },
     {
-      "id": 1,
-      "skills": [],
+      "id": "hero1",
+      "jobIds": [
+        "job38",
+        "job49",
+        "job1",
+        "job44",
+        "job22",
+        "job27",
+        "job15",
+        "job28",
+        "job12",
+        "job39"
+      ],
       "gender": "Female",
       "name": "Storm",
       "description":
@@ -20,8 +42,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/c/c0/537bc5db7c77d/standard_xlarge.jpg"
     },
     {
-      "id": 2,
-      "skills": [],
+      "id": "hero2",
+      "jobIds": [
+        "job17",
+        "job10",
+        "job13",
+        "job23",
+        "job3",
+        "job48",
+        "job11",
+        "job7",
+        "job6",
+        "job29"
+      ],
       "gender": "Male",
       "name": "Captain America",
       "description":
@@ -30,8 +63,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/3/50/537ba56d31087/standard_xlarge.jpg"
     },
     {
-      "id": 3,
-      "skills": [],
+      "id": "hero3",
+      "jobIds": [
+        "job43",
+        "job32",
+        "job0",
+        "job2",
+        "job16",
+        "job9",
+        "job21",
+        "job47",
+        "job8",
+        "job41"
+      ],
       "gender": "Male",
       "name": "Gamora",
       "description":
@@ -40,8 +84,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/9/70/537bab57b84d4/standard_xlarge.jpg"
     },
     {
-      "id": 4,
-      "skills": [],
+      "id": "hero4",
+      "jobIds": [
+        "job35",
+        "job46",
+        "job31",
+        "job42",
+        "job5",
+        "job45",
+        "job24",
+        "job19",
+        "job34",
+        "job14"
+      ],
       "gender": "Male",
       "name": "Groot",
       "description":
@@ -50,8 +105,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/7/10/538caf1975d39/standard_xlarge.jpg"
     },
     {
-      "id": 5,
-      "skills": [],
+      "id": "hero5",
+      "jobIds": [
+        "job43",
+        "job14",
+        "job1",
+        "job6",
+        "job2",
+        "job49",
+        "job21",
+        "job39",
+        "job37",
+        "job10"
+      ],
       "gender": "Male",
       "name": "Iron Man",
       "description":
@@ -60,8 +126,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/6/a0/55b6a25e654e6/standard_xlarge.jpg"
     },
     {
-      "id": 6,
-      "skills": [],
+      "id": "hero6",
+      "jobIds": [
+        "job22",
+        "job35",
+        "job15",
+        "job18",
+        "job46",
+        "job29",
+        "job23",
+        "job4",
+        "job36",
+        "job19"
+      ],
       "gender": "Female",
       "name": "Wasp",
       "description":
@@ -70,8 +147,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/5390dfd5ef165/standard_xlarge.jpg"
     },
     {
-      "id": 7,
-      "skills": [],
+      "id": "hero7",
+      "jobIds": [
+        "job47",
+        "job3",
+        "job34",
+        "job32",
+        "job48",
+        "job20",
+        "job28",
+        "job33",
+        "job42",
+        "job12"
+      ],
       "gender": "Male",
       "name": "Beast",
       "description": "",
@@ -79,8 +167,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/6/40/537ba156b62e6/standard_xlarge.jpg"
     },
     {
-      "id": 8,
-      "skills": [],
+      "id": "hero8",
+      "jobIds": [
+        "job27",
+        "job40",
+        "job11",
+        "job45",
+        "job24",
+        "job31",
+        "job26",
+        "job44",
+        "job5",
+        "job13"
+      ],
       "gender": "Male",
       "name": "Cyclops",
       "description": "",
@@ -88,8 +187,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/6/70/526547e2d90ad/standard_xlarge.jpg"
     },
     {
-      "id": 9,
-      "skills": [],
+      "id": "hero9",
+      "jobIds": [
+        "job30",
+        "job0",
+        "job25",
+        "job9",
+        "job38",
+        "job41",
+        "job16",
+        "job17",
+        "job7",
+        "job8"
+      ],
       "gender": "Female",
       "name": "Emma Frost",
       "description": "",
@@ -97,8 +207,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/c/80/537ba9fe1c75a/standard_xlarge.jpg"
     },
     {
-      "id": 10,
-      "skills": [],
+      "id": "hero10",
+      "jobIds": [
+        "job34",
+        "job40",
+        "job12",
+        "job18",
+        "job22",
+        "job47",
+        "job49",
+        "job3",
+        "job20",
+        "job15"
+      ],
       "gender": "Male",
       "name": "Drax",
       "description":
@@ -107,8 +228,18 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/e/d0/526032deabbff/standard_xlarge.jpg"
     },
     {
-      "id": 11,
-      "skills": [],
+      "id": "hero11",
+      "jobIds": [
+        "job10",
+        "job43",
+        "job23",
+        "job21",
+        "job4",
+        "job25",
+        "job2",
+        "job0",
+        "job37"
+      ],
       "gender": "Male",
       "name": "Wolverine",
       "description":
@@ -117,8 +248,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/2/60/537bcaef0f6cf/standard_xlarge.jpg"
     },
     {
-      "id": 12,
-      "skills": [],
+      "id": "hero12",
+      "jobIds": [
+        "job31",
+        "job44",
+        "job17",
+        "job11",
+        "job19",
+        "job14",
+        "job27",
+        "job36",
+        "job5",
+        "job39"
+      ],
       "gender": "Male",
       "name": "Rocket Raccoon",
       "description":
@@ -127,8 +269,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/6/60/537bc14068e5d/standard_xlarge.jpg"
     },
     {
-      "id": 13,
-      "skills": [],
+      "id": "hero13",
+      "jobIds": [
+        "job28",
+        "job29",
+        "job41",
+        "job8",
+        "job1",
+        "job9",
+        "job32",
+        "job6",
+        "job16",
+        "job7"
+      ],
       "gender": "Male",
       "name": "Star-Lord",
       "description":
@@ -137,8 +290,20 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/9/a0/537bc55e8b1f5/standard_xlarge.jpg"
     },
     {
-      "id": 14,
-      "skills": [],
+      "id": "hero14",
+      "jobIds": [
+        "job24",
+        "job48",
+        "job26",
+        "job42",
+        "job45",
+        "job46",
+        "job33",
+        "job30",
+        "job13",
+        "job35",
+        "job38"
+      ],
       "gender": "Male",
       "name": "Falcon",
       "description":
@@ -147,8 +312,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/5/b0/537baa6b25323/standard_xlarge.jpg"
     },
     {
-      "id": 15,
-      "skills": [],
+      "id": "hero15",
+      "jobIds": [
+        "job39",
+        "job37",
+        "job20",
+        "job16",
+        "job18",
+        "job21",
+        "job40",
+        "job6",
+        "job30",
+        "job41"
+      ],
       "gender": "Male",
       "name": "Hulk",
       "description":
@@ -157,8 +333,19 @@
         "https://i.annihil.us/u/prod/marvel/i/mg/5/a0/538615ca33ab0/standard_xlarge.jpg"
     },
     {
-      "id": 16,
-      "skills": [],
+      "id": "hero16",
+      "jobIds": [
+        "job34",
+        "job43",
+        "job47",
+        "job35",
+        "job49",
+        "job38",
+        "job2",
+        "job31",
+        "job9",
+        "job26"
+      ],
       "gender": "Male",
       "name": "Thor",
       "description":
