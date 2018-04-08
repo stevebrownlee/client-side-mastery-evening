@@ -9,7 +9,7 @@
       * add boilerplate
       * link tag for styles/main.css
       * add script tag to dist/app.js
-    * touch .gitignore - add .DS_Store and dist/app.js
+    * touch .gitignore - add .DS_Store and dist/app.js and lib/node_modules
     * mkdir javascripts 
     * touch javascripts/main.js  (add console.log)
     * mkdir lib
