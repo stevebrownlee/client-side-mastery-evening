@@ -74,7 +74,7 @@
 * **Day 1** - Task Runners
 * **Day 2** - Browserify + events
 * **HW** - Browserify + events
-* **Lab Day** - Browserify + events
+* **Lab Day** - Browserify review, labday
 
 ***
 

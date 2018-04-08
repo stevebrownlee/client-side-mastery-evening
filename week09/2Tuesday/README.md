@@ -1,3 +1,3 @@
-# Week ??? - Day 2
+# Week 9 - Day 2
 
-> **Agenda:** 
+> **Agenda:** Browserify + events

@@ -1,3 +1,3 @@
-# Week ??? - Day 3
+# Week 9 - Day 3
 
-> **Agenda:** 
+> **Agenda:** Browserify review, labday
