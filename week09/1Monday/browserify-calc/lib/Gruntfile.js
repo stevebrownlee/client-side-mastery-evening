@@ -7,16 +7,22 @@ module.exports = function(grunt) {
           dest: '../dist/app.js'
       }
     },
-    jshint: {
+    eslint: {
       options: {
-        predef: [ "document", "console" ],
-        esnext: true,
-        globalstrict: true,
-        globals: {},
-        browserify: true
+        configFile: '.eslintrc.json'
       },
-      files: ['../javascripts/**/*.js']
+      src: ['../javascripts/**/*.js']
     },
+    // jshint: {
+    //   options: {
+    //     predef: [ "document", "console" ],
+    //     esnext: true,
+    //     globalstrict: true,
+    //     globals: {},
+    //     browserify: true
+    //   },
+    //   files: ['../javascripts/**/*.js']
+    // },
     watch: {
       options: {
         livereload: true,
@@ -29,6 +35,7 @@ module.exports = function(grunt) {
   });
 
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks("gruntify-eslint");
 
-  grunt.registerTask('default', ['jshint', 'browserify', 'watch']);
+  grunt.registerTask('default', ['eslint', 'browserify', 'watch']);
 };

@@ -15,7 +15,7 @@
     * mkdir lib
     * cd lib
       * npm init
-      * npm install grunt grunt-contrib-jshint matchdep grunt-contrib-watch grunt-browserify jshint-stylish --save-dev
+      * npm install grunt grunt-contrib-jshint matchdep grunt-contrib-watch grunt-browserify jshint-stylish gruntify-eslint --save-dev 
     * run application
       * In terminal run hs
       * In vs code terminal run grunt in the lib folder
