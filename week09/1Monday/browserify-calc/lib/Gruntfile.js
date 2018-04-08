@@ -1,41 +1,32 @@
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
   grunt.initConfig({
     browserify: {
       js: {
-          src: ['../javascripts/main.js'],
-          dest: '../dist/app.js'
-      }
+        src: ['../javascripts/main.js',],
+        dest: '../dist/app.js',
+      },
     },
     eslint: {
       options: {
-        configFile: '.eslintrc.json'
+        configFile: '.eslintrc.json',
       },
-      src: ['../javascripts/**/*.js']
+      src: ['../javascripts/**/*.js',],
     },
-    // jshint: {
-    //   options: {
-    //     predef: [ "document", "console" ],
-    //     esnext: true,
-    //     globalstrict: true,
-    //     globals: {},
-    //     browserify: true
-    //   },
-    //   files: ['../javascripts/**/*.js']
-    // },
     watch: {
       options: {
         livereload: true,
       },
       javascripts: {
-        files: ['../javascripts/**/*.js'],
-        tasks: ['jshint', 'browserify']
-      }
-    }
+        files: ['../javascripts/**/*.js',],
+        tasks: ['eslint', 'browserify',],
+      },
+    },
   });
 
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  grunt.loadNpmTasks("gruntify-eslint");
+  require('matchdep')
+    .filterDev('grunt-*')
+    .forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks('gruntify-eslint');
 
-  grunt.registerTask('default', ['eslint', 'browserify', 'watch']);
+  grunt.registerTask('default', ['eslint', 'browserify', 'watch',]);
 };

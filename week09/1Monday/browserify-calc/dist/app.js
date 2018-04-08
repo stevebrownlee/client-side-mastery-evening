@@ -21,11 +21,12 @@ module.exports = divide;
 'use strict';
 
 const MyCalculator = require('./mycalculator');
+const calcElement = document.getElementById('calc');
 
-console.log(MyCalculator.add(1, 2));
-console.log(MyCalculator.subtract(40, 2));
-console.log(MyCalculator.divide(12, 2));
-console.log(MyCalculator.multiply(40, 1));
+calcElement.innerHTML += `<div>Adding: ${MyCalculator.add(1, 2)}</div>`;
+calcElement.innerHTML += `<div>Subtracting: ${MyCalculator.subtract(40, 2)}</div>`;
+calcElement.innerHTML += `<div>Dividing: ${MyCalculator.divide(12, 2)}</div>`;
+calcElement.innerHTML += `<div>Multiplying: ${MyCalculator.multiply(40, 1)}</div>`;
 
 },{"./mycalculator":5}],4:[function(require,module,exports){
 'use strict';
