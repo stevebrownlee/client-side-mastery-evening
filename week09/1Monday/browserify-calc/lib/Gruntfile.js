@@ -23,9 +23,9 @@ module.exports = function (grunt) {
     },
   });
 
-  require('matchdep')
-    .filterDev('grunt-*')
-    .forEach(grunt.loadNpmTasks);
+  grunt.loadNpmTasks('grunt-browserify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('gruntify-eslint');
 
   grunt.registerTask('default', ['eslint', 'browserify', 'watch',]);
