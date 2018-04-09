@@ -2,6 +2,17 @@
 
 > **Agenda:** Task Runners, intro to browserify
 
+### Why are we doing this?
+1.  Our projects are getting much large and one JS file in not manageable.
+2.  Global variables are a problem.
+
+### Demo: 50 Shades
+To change the book price:
+* Load the page
+* Open Terminal
+* Type: ```bookInfo.price = 0.01```
+
+### Task Runners via setting up simple browserify app
 1.  Make browserify-calc application
 2.  setup ticket:
     * touch styles/main.css
