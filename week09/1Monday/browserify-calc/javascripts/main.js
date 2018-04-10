@@ -1,10 +1,12 @@
 // This is the file that RULES THEM ALL
 'use strict';
 
-const MyCalculator = require('./mycalculator');
-const calcElement = document.getElementById('calc');
+const add = require('./add');
+const subtract = require('./subtract');
+const multiply = require('./multiply');
+const divide = require('./divide');
 
-calcElement.innerHTML += `<div>Adding: ${MyCalculator.add(1, 2)}</div>`;
-calcElement.innerHTML += `<div>Subtracting: ${MyCalculator.subtract(40, 2)}</div>`;
-calcElement.innerHTML += `<div>Dividing: ${MyCalculator.divide(12, 2)}</div>`;
-calcElement.innerHTML += `<div>Multiplying: ${MyCalculator.multiply(40, 1)}</div>`;
+console.log('Adding: ', add(1, 2));
+console.log('Subtracting: ', subtract(40, 2));
+console.log('Dividing: ', divide(12, 2));
+console.log('Multiplying: ', multiply(40, 1));
