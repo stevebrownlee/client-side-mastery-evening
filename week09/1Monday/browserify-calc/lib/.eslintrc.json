@@ -52,11 +52,11 @@
       { "avoidEscape": true, "allowTemplateLiterals": true }
     ],
     "semi": ["error", "always"],
-    "spaced-comment": ["error", "always"],
-    "space-in-parens": ["error", "never"],
-    "space-infix-ops": "error",
     "space-before-blocks": ["error", "always"],
     "space-before-function-paren": ["error", "always"],
+    "space-in-parens": ["error", "never"],
+    "space-infix-ops": "error",
+    "spaced-comment": ["error", "always"],
     "template-curly-spacing": ["error", "never"],
     "yoda": ["error", "never"]
   }
