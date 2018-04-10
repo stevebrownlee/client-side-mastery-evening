@@ -1,3 +1,3 @@
-const a = 2;
-const b = 3;
-a + b;
+const data = require('./data');
+
+data.initializer();
