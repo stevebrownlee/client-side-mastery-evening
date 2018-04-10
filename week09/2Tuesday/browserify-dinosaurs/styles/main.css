@@ -1,0 +1,11 @@
+body {
+  background-color: firebrick;
+}
+
+.dino-image{
+  width:  80%;
+}
+
+.panel {
+  height: 570px;
+}

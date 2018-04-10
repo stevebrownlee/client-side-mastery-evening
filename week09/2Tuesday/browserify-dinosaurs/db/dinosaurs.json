@@ -1,0 +1,36 @@
+{
+  "dinosaurs": [
+    {
+      "type": "Tyrannosaurus Rex",
+      "img": "https://truimg.toysrus.com/product/images/toy-story-rex-dinosaur--5EAD492C.zoom.jpg?fit=inside|1212.5:1212.5"
+    },
+    {
+      "type": "Velociraptor",
+      "img": "http://images.dinosaurpictures.org/velociraptor_12_c4fd.jpg"
+    },
+    {
+      "type": "Triceratops",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/41rH8CZP-sL._SL500_AC_SS350_.jpg"
+    },
+    {
+      "type": "Brontosaurus",
+      "img": "https://img1.cgtrader.com/items/804379/c5c4fbe02d/large/brontosaurus-3d-model-low-poly-max-obj-fbx-ma-mb-mtl.png"
+    },
+    {
+      "type": "Pterodactyl",
+      "img": "https://www.everythingdinosaur.com/wp-content/uploads/2016/10/Bullyland-Pteranodon-model.jpg"
+    },
+    {
+      "type": "Spinosaurus",
+      "img": "https://vignette.wikia.nocookie.net/orion-dino-horde/images/0/03/Spino.png/revision/latest?cb=20131010125530"
+    },
+    {
+      "type": "Ankylosaurus",
+      "img": "http://www.dododex.com/media/creature/ankylosaurus.png"
+    },
+    {
+      "type": "Archaeopteryx",
+      "img": "http://www.dinosaur-world.com/feathered_dinosaurs/species/archaeopteryx_lithographica.gif"
+    }
+  ]
+}
