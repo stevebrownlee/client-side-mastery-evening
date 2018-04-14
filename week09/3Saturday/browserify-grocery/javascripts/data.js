@@ -1,28 +1,36 @@
-'use strict';
-
-const printToDom = require('./dom');
-const loadItems = require('./items');
-
 let items = [];
-
-const errorFunction = function () {
-  console.error('Shit broke :(');
-};
-
-const whenItemsLoad = function () {
-  items = JSON.parse(this.responseText).items;
-  printToDom(items);
-};
-
-const initializer = () => {
-  loadItems(whenItemsLoad, errorFunction);
-};
+let departments = [];
 
 const getItems = () => {
-  return loadItems;
+  return items;
+};
+
+const getDepartments = () => {
+  return departments;
+};
+
+const setItems = (newItems) => {
+  items = newItems;
+};
+
+const setDepartments = (newDepartments) => {
+  departments = newDepartments;
+};
+
+const getItemsByDepartment = (departmentId) => {
+  const selectedItems = [];
+  items.forEach((item) => {
+    if (item.departmentId === departmentId) {
+      selectedItems.push(item);
+    }
+  });
+  return selectedItems;
 };
 
 module.exports = {
-  initializer,
+  getItemsByDepartment,
+  getDepartments,
   getItems,
+  setItems,
+  setDepartments,
 };
