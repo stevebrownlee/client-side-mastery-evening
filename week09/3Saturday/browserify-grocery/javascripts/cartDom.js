@@ -4,7 +4,8 @@ const data = require('./data');
 const cartOutputDiv = document.getElementById('cart');
 
 const cartDomString = (items) => {
-  let domString = '<div class="col-xs-8 col-xs-offset-2">';
+  let domString = `<div class="row text-center"><h3>Your Cart:</h3></div>`;
+  domString += '<div class="col-xs-8 col-xs-offset-2">';
   domString += `<table class="table table-striped">`;
   domString +=   `<tr>`;
   domString +=     `<th>Name</th>`;
