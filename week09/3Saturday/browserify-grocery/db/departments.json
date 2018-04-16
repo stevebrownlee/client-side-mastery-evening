@@ -1,0 +1,44 @@
+{
+  "departments": [
+    {
+      "id": "department1",
+      "name": "Produce",
+      "img": "https://az616578.vo.msecnd.net/files/2016/08/26/6360782591888615351324020251_Produce%20(1).jpg"
+    },
+    {
+      "id": "department2",
+      "name": "Meat",
+      "img": "https://static1.squarespace.com/static/57d74d2d15d5db47a2e44def/t/57d9c9b903596e21e423c7a0/1473890759128/Lassak-Market-Deli-Smoked-Meats.JPG?format=2500w"
+    },
+    {
+      "id": "department3",
+      "name": "Bakery",
+      "img": "https://static1.squarespace.com/static/536d89aae4b096ba2b583666/544da96be4b0023e704c045b/544da96de4b0529748d66859/1414375790921/IMG_0904.jpg"
+    },
+    {
+      "id": "department4",
+      "name": "Frozen Food",
+      "img": "http://1.bp.blogspot.com/-IXyGJGxurWU/Uv5R7n_fcDI/AAAAAAAAAB8/CsU_orUvBDo/s1600/Final+In+Store+Pic+blog.jpg"
+    },
+    {
+      "id": "department5",
+      "name": "Baby",
+      "img": "http://www.newhope.com/sites/newhope360.com/files/kroger-once-upon-a-farm_0.jpg"
+    },
+    {
+      "id": "department6",
+      "name": "Dairy",
+      "img": "https://media1.popsugar-assets.com/files/2010/09/38/3/192/1922664/42ed76befca94e5e_2430896.jpg"
+    },
+    {
+      "id": "department7",
+      "name": "Condiments",
+      "img": "https://media.fooducate.com/comments/images/55608EC8-F3EF-1616-4088-90A1F7EBA62B.jpeg"
+    },
+    {
+      "id": "department8",
+      "name": "Packaged Food",
+      "img": "https://c1.staticflickr.com/6/5591/14861371950_93519a37d4_b.jpg"
+    }
+  ]
+}
