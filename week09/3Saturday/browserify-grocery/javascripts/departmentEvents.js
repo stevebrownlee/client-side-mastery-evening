@@ -3,7 +3,7 @@ const data = require('./data');
 
 const departmentCards = document.getElementsByClassName('department');
 const departmentDiv = document.getElementById('departments');
-const returnToDepartmetns = document.getElementById('go-to-departments');
+const returnToDepartments = document.getElementById('go-to-departments');
 
 const showDepartmentName = (e) => {
   const departmentName = e.target.children[0].children[0];
@@ -31,7 +31,7 @@ const showItems = (e) => {
 
   const selectedItems = data.getItemsByDepartment(departmentId);
   departmentDiv.innerHTML = '';
-  returnToDepartmetns.classList.remove('hide');
+  returnToDepartments.classList.remove('hide');
   itemsDom(selectedItems);
 };
 
