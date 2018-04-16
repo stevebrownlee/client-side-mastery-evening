@@ -22,7 +22,7 @@ const cartButton = () => {
     returnToDepartments.classList.remove('hide');
     departmentsButton();
     goToCart.classList.add('hide');
-    cartDom.initializer();
+    cartDom.printCartToDom();
   });
 };
 

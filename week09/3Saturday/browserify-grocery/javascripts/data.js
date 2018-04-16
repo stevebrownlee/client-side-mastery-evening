@@ -28,6 +28,10 @@ const getItemsByDepartment = departmentId => {
   return selectedItems;
 };
 
+const getCart = () => {
+  return cart;
+};
+
 const setCart = (itemId, numberToAdd) => {
   const cartPosition = cart
     .map(function (c) {
@@ -58,4 +62,5 @@ module.exports = {
   setItems,
   setDepartments,
   setCart,
+  getCart,
 };
