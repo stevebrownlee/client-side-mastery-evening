@@ -1,4 +1,4 @@
-const events = require('./events').addDepartmentEvents;
+const departmentEvents = require('./departmentEvents');
 
 const departmentsOutputDiv = document.getElementById('departments');
 
@@ -18,7 +18,7 @@ const departmentsDomString = (departments) => {
 
 const printDepartmentsToDom = (departments) => {
   departmentsOutputDiv.innerHTML = departmentsDomString(departments);
-  events();
+  departmentEvents();
 };
 
 module.exports = printDepartmentsToDom;

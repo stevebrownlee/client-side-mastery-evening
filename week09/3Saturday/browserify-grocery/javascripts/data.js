@@ -1,5 +1,6 @@
 let items = [];
 let departments = [];
+const cart = [];
 
 const getItems = () => {
   return items;
@@ -9,22 +10,45 @@ const getDepartments = () => {
   return departments;
 };
 
-const setItems = (newItems) => {
+const setItems = newItems => {
   items = newItems;
 };
 
-const setDepartments = (newDepartments) => {
+const setDepartments = newDepartments => {
   departments = newDepartments;
 };
 
-const getItemsByDepartment = (departmentId) => {
+const getItemsByDepartment = departmentId => {
   const selectedItems = [];
-  items.forEach((item) => {
+  items.forEach(item => {
     if (item.departmentId === departmentId) {
       selectedItems.push(item);
     }
   });
   return selectedItems;
+};
+
+const setCart = (itemId, numberToAdd) => {
+  const cartPosition = cart
+    .map(function (c) {
+      return c.id;
+    })
+    .indexOf(itemId);
+
+  if (cartPosition === -1) {
+    const itemPosition = items
+      .map(function (item) {
+        return item.id;
+      })
+      .indexOf(itemId);
+    const newItem = items[itemPosition];
+    newItem.purchaseNum = numberToAdd;
+    cart.push(newItem);
+  } else {
+    cart[cartPosition].purchaseNum = numberToAdd;
+  }
+  console.log(itemId);
+  console.log(numberToAdd);
 };
 
 module.exports = {
@@ -33,4 +57,5 @@ module.exports = {
   getItems,
   setItems,
   setDepartments,
+  setCart,
 };

@@ -1,3 +1,5 @@
+const itemEvents = require('./itemEvents');
+
 const itemsOutputDiv = document.getElementById('items');
 
 const itemsDomString = (items) => {
@@ -7,7 +9,7 @@ const itemsDomString = (items) => {
     domString += `<div class="col-sm-3 text-center item">`;
     domString +=   `<div class="panel panel-info">`;
     domString +=     `<div class="panel-heading">`;
-    domString +=       `<h3 class="panel-title">${item.name}</h3>`;
+    domString +=       `<h3 class="panel-title" data-item-id="${item.id}">${item.name}</h3>`;
     domString +=     `</div>`;
     domString +=     `<div class="panel-body">`;
     domString +=       `<div class="row">`;
@@ -31,7 +33,7 @@ const itemsDomString = (items) => {
     domString +=         `</div>`;
     domString +=       `</div>`;
     domString +=       `<div class="row">`;
-    domString +=         `<button type="button" class="btn btn-info cart-button">Add to Cart</button>`;
+    domString +=         `<button type="button" class="btn btn-info item-add">Add to Cart</button>`;
     domString +=       `</div>`;
     domString +=     `</div>`;
     domString +=   `</div>`;
@@ -42,6 +44,7 @@ const itemsDomString = (items) => {
 
 const printItemsToDom = (items) => {
   itemsOutputDiv.innerHTML = itemsDomString(items);
+  itemEvents();
 };
 
 module.exports = printItemsToDom;

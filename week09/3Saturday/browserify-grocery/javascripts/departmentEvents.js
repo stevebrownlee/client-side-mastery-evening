@@ -21,7 +21,6 @@ const hideDepartmentName = (e) => {
 };
 
 const showItems = (e) => {
-  console.log('e', e);
   let departmentId = '';
   if (e.target.classList.contains('department-image')) {
     departmentId = e.target.parentNode.children[0].dataset.departmentId;
@@ -42,6 +41,4 @@ const addDepartmentEvents = () => {
   }
 };
 
-module.exports = {
-  addDepartmentEvents,
-};
+module.exports = addDepartmentEvents;
