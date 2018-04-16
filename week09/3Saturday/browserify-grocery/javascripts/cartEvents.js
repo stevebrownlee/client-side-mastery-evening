@@ -11,6 +11,7 @@ const removeItems = (e) => {
   }
   data.removeCartItem(itemId);
   cartDom.printCartToDom();
+  addCartEvents();
 };
 
 const addCartEvents = () => {
