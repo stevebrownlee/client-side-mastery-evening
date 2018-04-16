@@ -1,5 +1,5 @@
-const crap = require('./crap');
 const data = require('./data');
+const cartDom = require ('./cartDom');
 const cartItems = document.getElementsByClassName('trash-it');
 
 const removeItems = (e) => {
@@ -10,7 +10,7 @@ const removeItems = (e) => {
     itemId = e.target.dataset.itemId;
   }
   data.removeCartItem(itemId);
-  crap();
+  cartDom.printCartToDom();
 };
 
 const addCartEvents = () => {

@@ -1,5 +1,6 @@
 const dataGatekeeper = require('./dataGatekeeper');
 const cartDom = require('./cartDom');
+const bindCartEvents = require('./cartEvents');
 
 const returnToDepartments = document.getElementById('go-to-departments');
 const itemsDiv = document.getElementById('items');
@@ -23,6 +24,7 @@ const cartButton = () => {
     departmentsButton();
     goToCart.classList.add('hide');
     cartDom.printCartToDom();
+    bindCartEvents();
   });
 };
 

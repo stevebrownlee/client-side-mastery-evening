@@ -1,6 +1,4 @@
 const data = require('./data');
-const cartEvents = require('./cartEvents');
-
 const cartOutputDiv = document.getElementById('cart');
 
 const cartDomString = (items) => {
@@ -56,7 +54,6 @@ const totalsString = (totalItems, totalPrice) => {
 const printCartToDom = () => {
   const cartItems = data.getCart();
   cartOutputDiv.innerHTML = cartDomString(cartItems);
-  cartEvents();
 };
 
 module.exports = {
