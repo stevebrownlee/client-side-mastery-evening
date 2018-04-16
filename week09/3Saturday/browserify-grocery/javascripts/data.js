@@ -51,8 +51,15 @@ const setCart = (itemId, numberToAdd) => {
   } else {
     cart[cartPosition].purchaseNum = numberToAdd;
   }
-  console.log(itemId);
-  console.log(numberToAdd);
+};
+
+const removeCartItem = itemId => {
+  const cartPosition = cart
+    .map(function (c) {
+      return c.id;
+    })
+    .indexOf(itemId);
+  cart.splice(cartPosition,1);
 };
 
 module.exports = {
@@ -63,4 +70,5 @@ module.exports = {
   setDepartments,
   setCart,
   getCart,
+  removeCartItem,
 };
