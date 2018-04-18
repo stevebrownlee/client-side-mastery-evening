@@ -1,10 +1,11 @@
 .DS_Store
 
-week09/1Monday/browserify-calc/dist
-week09/1Monday/browserify-calc/lib/node_modules
 
-week09/2Tuesday/browserify-dinosaurs/dist
-week09/2Tuesday/browserify-dinosaurs/lib/node_modules
+week09 - grunt_browserify/1Monday/browserify-calc/dist
+week09 - grunt_browserify/1Monday/browserify-calc/lib/node_modules
+
+week09 - grunt_browserify/2Tuesday/browserify-dinosaurs/dist
+week09 - grunt_browserify/2Tuesday/browserify-dinosaurs/lib/node_modules
 
 week09/3Saturday/browserify-grocery/dist
 week09/3Saturday/browserify-grocery/lib/node_modules
