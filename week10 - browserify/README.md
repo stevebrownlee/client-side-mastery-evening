@@ -2,4 +2,4 @@
 * **Day 1** - Browserify
 * **Day 2** - Browserify
 * **HW** - Browserify
-* **Lab Day** - Browserify
+* **Lab Day** - GROUP PROJECT
