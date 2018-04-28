@@ -1,8 +1,6 @@
 # NSS Evening Class Curriculum
 
-
 ### Week by week doccumentation of what was covered - Currently for E7
-
 
 ***
 
@@ -18,7 +16,7 @@
 * **Day 1** - intro to command line, VS Code, Github
 * **Day 2** - Github branching
 * **HW** - CSS, HTML HW
-* **Lab Day** - Advanced CSS, Dev tools,  github review, exercise time, 
+* **Lab Day** - Advanced CSS, Dev tools,  github review, exercise time,
 
 ***
 
@@ -33,7 +31,7 @@
 #### Week 4 (March 5 - 10)
 * **Day 1** - Advanced JS - array methods
 * **Day 2** -  Git for teams, wireframes, give assignment to plan out(not temp converter)
-* **HW** - 
+* **HW** -
 * **Lab Day** - Exercises
 
 ***
@@ -49,7 +47,7 @@
 #### Week 6 (March 19 - 24)
 * **Day 1** - Demo Group Project, ES6, Markdown (README.md)
 * **Day 2** -  Interacting with the dom (Event Listeners, traversing, dynamic event listeners)
-* **HW** - Travel Diary 
+* **HW** - Travel Diary
 * **Lab Day** - exercises
 
 ***
@@ -104,48 +102,48 @@
 #### Week 13 (May 7 - 12) - BREAK
 * **Day 1** - BREAK
 * **Day 2** - BREAK
-* **HW** - 
+* **HW** -
 * **Lab Day** - BREAK
 
 ***
 
 #### Week 14 (May 14 - 19)
-* **Day 1** - Promises and this
-* **Day 2** - Promises and this
+* **Day 1** - Promises
+* **Day 2** - Promises
 * **HW** - redo browserify + XHR + jquery exercise (something like acme explosives - 3 jsons)
 * **Lab Day** - exercises
 
 ***
 
 #### Week 15 (May 21 - 26)
-* **Day 1** - SASS
-* **Day 2** - Advanced SASS
-* **HW** - exercises
-* **Lab Day** - exercises
+* **Day 1** - APIs
+* **Day 2** - APIs
+* **HW** - APIs
+* **Lab Day** - APIs, intro to firebase
 
 ***
 
 #### Week 16 (May 28 - June 2)
 * **Day 1** - HOLIDAY: Memorial Day
-* **Day 2** - APIs
-* **HW** - APIs
-* **Lab Day** - APIs 
-
-***
-
-#### Week 17 (June 4 - 9)
-* **Day 1** - firebase
 * **Day 2** - firebase
 * **HW** - firebase
 * **Lab Day** - firebase
 
 ***
 
-#### Week 18 (June 11 - 16)
+#### Week 17 (June 4 - 9)
 * **Day 1** - firebase auth
 * **Day 2** - firebase auth
 * **HW** - firebase auth
 * **Lab Day** - firebase auth
+
+***
+
+#### Week 18 (June 11 - 16)
+* **Day 1** - SASS
+* **Day 2** - Advanced SASS
+* **HW** - exercises
+* **Lab Day** - exercises
 
 ***
 
@@ -164,7 +162,6 @@
 * **Lab Day** - REACT
 
 ***
-
 
 #### Week 21 (July 2 - 7)
 * **Day 1** - REACT
