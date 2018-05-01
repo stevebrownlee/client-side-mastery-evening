@@ -2,6 +2,7 @@
 const loadFishes = require('./fishes');
 const fishDom = require('./fishDom');
 const bindEvents = require('./events');
+const applySale = require('./discount');
 
 const errorFunction = (error) =>  {
   console.error({error: error,});
@@ -12,6 +13,7 @@ const whenFishesLoad = (data) => {
   const fishStringToPrint = fishDom(fishes);
   $('#available').append(fishStringToPrint);
   bindEvents();
+  applySale();
 };
 
 const initializer = () => {
@@ -20,7 +22,20 @@ const initializer = () => {
 
 module.exports = initializer;
 
-},{"./events":2,"./fishDom":3,"./fishes":4}],2:[function(require,module,exports){
+},{"./discount":2,"./events":3,"./fishDom":4,"./fishes":5}],2:[function(require,module,exports){
+const discount = 0.2;
+
+const applySale = () => {
+  $('#available .fish.on-sale').each((i, fish) => {
+    const oldFishPrice = $(fish).find('.price');
+    const newPrice = (parseInt(oldFishPrice.html()) * (1 - discount)).toFixed(2);
+    oldFishPrice.html(newPrice);
+  });
+};
+
+module.exports = applySale;
+
+},{}],3:[function(require,module,exports){
 // Filter fish that are "on sale"
 const filterFish = () => {
   $('#available .fish').not('.on-sale').toggle();
@@ -42,6 +57,13 @@ const changeButtonText = () => {
 const moveToCart = (e) => {
   const fishCard = $(e.target).closest('.fish');
   $('#snagged').append(fishCard);
+  $(e.target).text('Remove from Basket').removeClass('add').addClass('remove');
+};
+
+const removeFromBasket = (e) => {
+  const fishToRemoveFromBasket = $(e.target).closest('.fish');
+  $('#available').append(fishToRemoveFromBasket);
+  $(e.target).text('Add to Basket').removeClass('remove').addClass('add');
 };
 
 const bindEvents = () => {
@@ -49,12 +71,15 @@ const bindEvents = () => {
     changeButtonText();
     filterFish();
   });
-  $('button.add').click(moveToCart);
+  $('body').on('click', 'button.add', moveToCart);
+  $('body').on('click', 'button.remove', removeFromBasket);
+  // $('button.add').on('click', moveToCart);
+  // $('button.remove').on('click', removeFromBasket);
 };
 
 module.exports = bindEvents;
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 const writeFishes = (fishes) => {
   let domString = '';
   fishes.forEach((fish) => {
@@ -78,7 +103,7 @@ const writeFishes = (fishes) => {
 
 module.exports = writeFishes;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 const loadItems = (loadFunction, errorFunction) => {
   $.get('/db/fishes.json')
     .done(loadFunction)
@@ -87,9 +112,9 @@ const loadItems = (loadFunction, errorFunction) => {
 
 module.exports = loadItems;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 const initializer = require('./data');
 
 initializer();
 
-},{"./data":1}]},{},[5]);
+},{"./data":1}]},{},[6]);

@@ -19,6 +19,13 @@ const changeButtonText = () => {
 const moveToCart = (e) => {
   const fishCard = $(e.target).closest('.fish');
   $('#snagged').append(fishCard);
+  $(e.target).text('Remove from Basket').removeClass('add').addClass('remove');
+};
+
+const removeFromBasket = (e) => {
+  const fishToRemoveFromBasket = $(e.target).closest('.fish');
+  $('#available').append(fishToRemoveFromBasket);
+  $(e.target).text('Add to Basket').removeClass('remove').addClass('add');
 };
 
 const bindEvents = () => {
@@ -26,7 +33,10 @@ const bindEvents = () => {
     changeButtonText();
     filterFish();
   });
-  $('button.add').click(moveToCart);
+  $('body').on('click', 'button.add', moveToCart);
+  $('body').on('click', 'button.remove', removeFromBasket);
+  // $('button.add').on('click', moveToCart);
+  // $('button.remove').on('click', removeFromBasket);
 };
 
 module.exports = bindEvents;
