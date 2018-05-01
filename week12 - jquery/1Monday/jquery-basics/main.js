@@ -3,35 +3,45 @@ const availableContainer = $('#available')
 const basketContainer = $('#snagged')
 let discount = 0.2;
 
-const applySale = () => {
-   const fishForSale = $('#available .fish')
-   let onSaleFishes = fishForSale.filter('.on-sale')
-   onSaleFishes.each((fish) => {
-       const oldFishPrice = $(onSaleFishes[fish]).find('.price');
-       const newPrice = (parseInt(oldFishPrice.html()) * (1 - discount)).toFixed(2);
-       oldFishPrice.html(newPrice);
-   })
-}
+
 
 const filterFish = () => {
-    const fishForSale = $('#available .fish')
-    fishForSale.not('.on-sale').toggle();
+    const fishForSale = $('#available .fish') // step 2
+    fishForSale.not('.on-sale').toggle(); // step 2
 }
 
 saleButton.click((e) => {
-    filterFish();
+    filterFish(); // step 2
     $(e.target).text(function(i, text) {
         return text === "Show Sale Fish" ? "Show All Fish" : "Show Sale Fish"
     });
 });
 
 const addToBasket = (e) => {
-    const fishForSale = $('#available .fish')
-    const fishToAddToBasket = $(e.target).closest('.fish');
-    basketContainer.append(fishToAddToBasket)
+    const fishForSale = $('#available .fish') // step1
+    $(e.target).text('Remove From Basket').removeClass('add').addClass('remove')
+    const fishToAddToBasket = $(e.target).closest('.fish'); // step1
+    basketContainer.append(fishToAddToBasket) // step1
+    $('.remove').on('click', removeFromBasket);
 }
 
+const removeFromBasket = (e) => {
+    const fishForSale = $('#snagged .fish')
+    $(e.target).text('Add to Basket').removeClass('remove').addClass('add')
+    const fishToRemoveFromBasket = $(e.target).closest('.fish');
+    availableContainer.append(fishToRemoveFromBasket)
+    $('.add').on('click', addToBasket);
+}
 
+const applySale = () => {
+    const fishForSale = $('#available .fish')
+    let onSaleFishes = fishForSale.filter('.on-sale')
+    onSaleFishes.each((fish) => {
+        const oldFishPrice = $(onSaleFishes[fish]).find('.price');
+        const newPrice = (parseInt(oldFishPrice.html()) * (1 - discount)).toFixed(2);
+        oldFishPrice.html(newPrice);
+    })
+ }
 
 const writeFishes = (fishes) => {
     const fishArray = fishes.fishes;
