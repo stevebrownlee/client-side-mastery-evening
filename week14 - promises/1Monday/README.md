@@ -1,3 +1,3 @@
-# Week 12 - Day 1
+# Week 14 - Day 1
 
-> **Agenda:** demo chatty, jQuery selectors
+> **Agenda:** Promises

@@ -148,10 +148,10 @@
 ***
 
 #### Week 19 (June 18 - 23)
-* **Day 1** - Group Project - Theme park?
-* **Day 2** - Group Project - Theme park?
-* **HW** - Group Project - Theme park?
-* **Lab Day** - Group Project - Theme park?
+* **Day 1** - Group Project - Theme park
+* **Day 2** - Group Project - Theme park
+* **HW** - Group Project - Theme park
+* **Lab Day** - Group Project - Theme park
 
 ***
 
@@ -166,7 +166,7 @@
 #### Week 21 (July 2 - 7)
 * **Day 1** - REACT
 * **Day 2** - REACT
-* **HW** - REACT
+* **HW** - REACT (NO STUDYGROUPS - 4th of July)
 * **Lab Day** - REACT
 
 ***
@@ -180,10 +180,10 @@
 ***
 
 #### Week 23 (July 16 - 21)
-* **Day 1** - REACT GROUP PROJECT
-* **Day 2** - REACT GROUP PROJECT
-* **HW** - REACT GROUP PROJECT
-* **Lab Day** - REACT GROUP PROJECT
+* **Day 1** - CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - CAPSTONES
+* **Lab Day** - CAPSTONES
 
 ***
 

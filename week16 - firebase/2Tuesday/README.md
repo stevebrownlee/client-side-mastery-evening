@@ -1,3 +1,3 @@
-# Week 12 - Day 2
+# Week 16 - Day 2
 
-> **Agenda:** jQuery ajax
+> **Agenda:** firebase
