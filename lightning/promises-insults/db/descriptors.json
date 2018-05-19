@@ -1,0 +1,451 @@
+{
+	"descriptors": [{
+			"id": 0,
+			"text": "acidic"
+		},
+		{
+			"id": 1,
+			"text": "antique"
+		},
+		{
+			"id": 2,
+			"text": "bawdy"
+		},
+		{
+			"id": 3,
+			"text": "beef-witted"
+		},
+		{
+			"id": 4,
+			"text": "beslubbering"
+		},
+		{
+			"id": 5,
+			"text": "boil-brained"
+		},
+		{
+			"id": 6,
+			"text": "bootless"
+		},
+		{
+			"id": 7,
+			"text": "common-kissing"
+		},
+		{
+			"id": 8,
+			"text": "contemptible"
+		},
+		{
+			"id": 9,
+			"text": "coughed-up"
+		},
+		{
+			"id": 10,
+			"text": "craven"
+		},
+		{
+			"id": 11,
+			"text": "crook-pated"
+		},
+		{
+			"id": 12,
+			"text": "culturally-unsound"
+		},
+		{
+			"id": 13,
+			"text": "currish"
+		},
+		{
+			"id": 14,
+			"text": "dankish"
+		},
+		{
+			"id": 15,
+			"text": "decayed"
+		},
+		{
+			"id": 16,
+			"text": "despicable"
+		},
+		{
+			"id": 17,
+			"text": "dizzy-eyed"
+		},
+		{
+			"id": 18,
+			"text": "dread-bolted"
+		},
+		{
+			"id": 19,
+			"text": "droning"
+		},
+		{
+			"id": 20,
+			"text": "egg-sucking"
+		},
+		{
+			"id": 21,
+			"text": "elf-skinned"
+		},
+		{
+			"id": 22,
+			"text": "evil"
+		},
+		{
+			"id": 23,
+			"text": "fawning"
+		},
+		{
+			"id": 24,
+			"text": "fermented"
+		},
+		{
+			"id": 25,
+			"text": "festering"
+		},
+		{
+			"id": 26,
+			"text": "flap-mouthed"
+		},
+		{
+			"id": 27,
+			"text": "fly-bitten"
+		},
+		{
+			"id": 28,
+			"text": "fool-born"
+		},
+		{
+			"id": 29,
+			"text": "foul"
+		},
+		{
+			"id": 30,
+			"text": "frothy ruttish"
+		},
+		{
+			"id": 31,
+			"text": "full-gorged"
+		},
+		{
+			"id": 32,
+			"text": "fulminating"
+		},
+		{
+			"id": 33,
+			"text": "gleeking"
+		},
+		{
+			"id": 34,
+			"text": "goatish"
+		},
+		{
+			"id": 35,
+			"text": "gorbellied"
+		},
+		{
+			"id": 36,
+			"text": "hacked-up"
+		},
+		{
+			"id": 37,
+			"text": "half-faced"
+		},
+		{
+			"id": 38,
+			"text": "halfbaked"
+		},
+		{
+			"id": 39,
+			"text": "hasty-witted"
+		},
+		{
+			"id": 40,
+			"text": "headless"
+		},
+		{
+			"id": 41,
+			"text": "hedge-born"
+		},
+		{
+			"id": 42,
+			"text": "horn-beat"
+		},
+		{
+			"id": 43,
+			"text": "hugger-muggered"
+		},
+		{
+			"id": 44,
+			"text": "humid"
+		},
+		{
+			"id": 45,
+			"text": "ill-borne"
+		},
+		{
+			"id": 46,
+			"text": "impertinent"
+		},
+		{
+			"id": 47,
+			"text": "impure"
+		},
+		{
+			"id": 48,
+			"text": "industrial"
+		},
+		{
+			"id": 49,
+			"text": "inept"
+		},
+		{
+			"id": 50,
+			"text": "infected"
+		},
+		{
+			"id": 51,
+			"text": "inferior "
+		},
+		{
+			"id": 52,
+			"text": "jarring"
+		},
+		{
+			"id": 53,
+			"text": "left-over"
+		},
+		{
+			"id": 54,
+			"text": "lewd-minded"
+		},
+		{
+			"id": 55,
+			"text": "loggerheaded"
+		},
+		{
+			"id": 56,
+			"text": "low-quality"
+		},
+		{
+			"id": 57,
+			"text": "lumpish"
+		},
+		{
+			"id": 58,
+			"text": "malodorous"
+		},
+		{
+			"id": 59,
+			"text": "mangled"
+		},
+		{
+			"id": 60,
+			"text": "measled"
+		},
+		{
+			"id": 61,
+			"text": "milk-livered"
+		},
+		{
+			"id": 62,
+			"text": "motley-mind"
+		},
+		{
+			"id": 63,
+			"text": "off-color"
+		},
+		{
+			"id": 64,
+			"text": "onion-eyed"
+		},
+		{
+			"id": 65,
+			"text": "penguin-molesting"
+		},
+		{
+			"id": 66,
+			"text": "petrified"
+		},
+		{
+			"id": 67,
+			"text": "pickled"
+		},
+		{
+			"id": 68,
+			"text": "pignutted"
+		},
+		{
+			"id": 69,
+			"text": "plume-plucked"
+		},
+		{
+			"id": 70,
+			"text": "pointy-nosed"
+		},
+		{
+			"id": 71,
+			"text": "porous"
+		},
+		{
+			"id": 72,
+			"text": "pox-marked"
+		},
+		{
+			"id": 731,
+			"text": "pribbling"
+		},
+		{
+			"id": 74,
+			"text": "puking"
+		},
+		{
+			"id": 75,
+			"text": "puny"
+		},
+		{
+			"id": 76,
+			"text": "rank"
+		},
+		{
+			"id": 77,
+			"text": "reeky"
+		},
+		{
+			"id": 78,
+			"text": "rude-snouted"
+		},
+		{
+			"id": 79,
+			"text": "rump-fed"
+		},
+		{
+			"id": 80,
+			"text": "salty"
+		},
+		{
+			"id": 81,
+			"text": "saucyspleened"
+		},
+		{
+			"id": 82,
+			"text": "sausage-snorfling"
+		},
+		{
+			"id": 83,
+			"text": "sheep-biting"
+		},
+		{
+			"id": 84,
+			"text": "spam-sucking"
+		},
+		{
+			"id": 85,
+			"text": "spongy"
+		},
+		{
+			"id": 86,
+			"text": "spur-galled"
+		},
+		{
+			"id": 87,
+			"text": "squishy"
+		},
+		{
+			"id": 88,
+			"text": "surly"
+		},
+		{
+			"id": 89,
+			"text": "swag-bellied"
+		},
+		{
+			"id": 90,
+			"text": "tastless"
+		},
+		{
+			"id": 91,
+			"text": "tempestuous"
+		},
+		{
+			"id": 92,
+			"text": "tepid"
+		},
+		{
+			"id": 93,
+			"text": "thick"
+		},
+		{
+			"id": 94,
+			"text": "tickle-brained"
+		},
+		{
+			"id": 95,
+			"text": "toad-spotted"
+		},
+		{
+			"id": 96,
+			"text": "tofu-nibbling"
+		},
+		{
+			"id": 97,
+			"text": "tottering"
+		},
+		{
+			"id": 98,
+			"text": "uninspiring"
+		},
+		{
+			"id": 99,
+			"text": "unintelligent"
+		},
+		{
+			"id": 100,
+			"text": "unmuzzled"
+		},
+		{
+			"id": 101,
+			"text": "unoriginal"
+		},
+		{
+			"id": 102,
+			"text": "vain"
+		},
+		{
+			"id": 103,
+			"text": "vapid"
+		},
+		{
+			"id": 104,
+			"text": "villainous"
+		},
+		{
+			"id": 105,
+			"text": "warped"
+		},
+		{
+			"id": 106,
+			"text": "wayward"
+		},
+		{
+			"id": 107,
+			"text": "weasel-smelling"
+		},
+		{
+			"id": 108,
+			"text": "weather-bitten"
+		},
+		{
+			"id": 109,
+			"text": "weedy"
+		},
+		{
+			"id": 110,
+			"text": "wretched"
+		},
+		{
+			"id": 111,
+			"text": "yeasty"
+		}
+	]
+}

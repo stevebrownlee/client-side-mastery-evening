@@ -1,5 +1,7 @@
 .DS_Store
 
+lightning/promises-insults/dist
+lightning/promises-insults/lib/node_modules
 
 week09 - grunt_browserify/1Monday/browserify-calc/dist
 week09 - grunt_browserify/1Monday/browserify-calc/lib/node_modules
