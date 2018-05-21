@@ -56,10 +56,22 @@ const wishlistEvents = () => {
   });
 };
 
+const deleteMovie = () => {
+  $('body').on('click', '.delete', (e) => {
+    const movieId = $(e.target).data('firebase-id');
+    firebaseApi.deleteMovie(movieId).then((result) => {
+      getMahMovies();
+    }).catch((err) => {
+      console.log('error deleting movie', err);
+    });
+  });
+};
+
 const bindEvents = () => {
   pressEnter();
   wishlistEvents();
   navigation();
+  deleteMovie();
 };
 
 module.exports = {
