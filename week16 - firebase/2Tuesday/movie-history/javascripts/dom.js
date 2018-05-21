@@ -17,7 +17,7 @@ const domString = (movieArray, config, whereToPrint, myMovieMode = null) => {
     domStrang += `        <h3 class='title'>${movieArray[i].title}</h3>`;
     domStrang += `        <p class='overview'>${movieArray[i].overview}</p>`;
     if (!myMovieMode) {
-      domStrang += `      <p><a class='btn btn-primary' role='button'>Review</a> <a class='btn btn-default wishlist' role='button'>Wishlist</a></p>`;
+      domStrang += `      <p><a class='btn btn-primary review' role='button'>Review</a> <a class='btn btn-default wishlist' role='button'>Wishlist</a></p>`;
     }
     domStrang += `      </div>`;
     domStrang += `    </div>`;

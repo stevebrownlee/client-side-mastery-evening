@@ -56,6 +56,27 @@ const wishlistEvents = () => {
   });
 };
 
+const watchMovieEvents = () => {
+  console.log('b;e');
+  $('body').on('click', '.review', (e) => {
+    console.log('e', e);
+    const movieToAdd = e.target.closest('.movie');
+    const newMovie = {
+      'title': $(movieToAdd).find('.title').html(),
+      'overview': $(movieToAdd).find('.overview').html(),
+      'poster_path': $(movieToAdd).find('.poster_path').attr('src').split('/').pop(),
+      'rating': 0,
+      'isWatched': true,
+    };
+
+    firebaseApi.saveMovie(newMovie).then(() => {
+      $(movieToAdd).remove();
+    }).catch((err) => {
+      console.log(`Movie did not save to wishlist`, err);
+    });
+  });
+};
+
 const deleteMovie = () => {
   $('body').on('click', '.delete', (e) => {
     const movieId = $(e.target).data('firebase-id');
@@ -72,6 +93,7 @@ const bindEvents = () => {
   wishlistEvents();
   navigation();
   deleteMovie();
+  watchMovieEvents();
 };
 
 module.exports = {
