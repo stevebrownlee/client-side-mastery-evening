@@ -12,6 +12,20 @@ const pressEnter = () => {
   });
 };
 
+const navigation = () => {
+  $(document).click((e) => {
+    // Search TMDB Page
+    if ($(e.target).parents('#navSearch').length) {
+      $('#searchPage').removeClass('hide');
+      $('#myMoviesPage').addClass('hide');
+    // Wishlist Page
+    } else if ($(e.target).parents('#navMyMovies').length) {
+      $('#myMoviesPage').removeClass('hide');
+      $('#searchPage').addClass('hide');
+    }
+  });
+};
+
 const wishlistEvents = () => {
   $('body').on('click', '.wishlist', (e) => {
     const movieToAdd = e.target.closest('.movie');
@@ -26,7 +40,7 @@ const wishlistEvents = () => {
     firebaseApi.saveMovie(newMovie).then(() => {
       $(movieToAdd).remove();
     }).catch((err) => {
-      console.log("watchlist didn't save", err);
+      console.log(`Movie did not save to wishlist`, err);
     });
   });
 };
@@ -34,6 +48,7 @@ const wishlistEvents = () => {
 const bindEvents = () => {
   pressEnter();
   wishlistEvents();
+  navigation();
 };
 
 module.exports = {

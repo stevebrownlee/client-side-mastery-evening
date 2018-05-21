@@ -26,8 +26,8 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="#">Authenticate</a></li>
-	        <li><a href="#">My Movies</a></li>
-	        <li><a href="#">Search</a></li>
+	        <li id="navMyMovies"><a>My Movies</a></li>
+	        <li id="navSearch"><a>Search</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -35,13 +35,18 @@
 
 
 
-
+<div id="searchPage">
 	<div class="input-group input-group-lg col-xs-6 col-xs-offset-3">
 	  <span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
 	  <input type="text" class="form-control" placeholder="Star Wars" id="searchBar">
 	</div>
 
   <div id="movies"></div>
+</div>
+
+<div id="myMoviesPage">
+	<div id="myMovies"></div>
+</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
