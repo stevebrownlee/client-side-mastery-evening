@@ -1,8 +1,6 @@
 'use strict';
 
-const outputDiv = $('#movies');
-
-const domString = (movieArray, config) => {
+const domString = (movieArray, config, whereToPrint, myMovieMode = null) => {
   let domStrang = ``;
   for (let i = 0; i < movieArray.length; i++) {
     if (i % 3 === 0) {
@@ -15,7 +13,9 @@ const domString = (movieArray, config) => {
     domStrang += `      <div class='caption'>`;
     domStrang += `        <h3 class='title'>${movieArray[i].title}</h3>`;
     domStrang += `        <p class='overview'>${movieArray[i].overview}</p>`;
-    domStrang += `        <p><a class='btn btn-primary' role='button'>Review</a> <a class='btn btn-default wishlist' role='button'>Wishlist</a></p>`;
+    if (!myMovieMode) {
+      domStrang += `      <p><a class='btn btn-primary' role='button'>Review</a> <a class='btn btn-default wishlist' role='button'>Wishlist</a></p>`;
+    }
     domStrang += `      </div>`;
     domStrang += `    </div>`;
     domStrang += `  </div>`;
@@ -24,15 +24,15 @@ const domString = (movieArray, config) => {
       domStrang += `</div>`;
     }
   }
-  printToDom(domStrang);
+  printToDom(whereToPrint, domStrang);
 };
 
-const printToDom = (strang) => {
-  outputDiv.append(strang);
+const printToDom = (outputDiv, strang) => {
+  $(`#${outputDiv}`).append(strang);
 };
 
-const clearDom = () => {
-  outputDiv.empty();
+const clearDom = (divToEmpty) => {
+  $(`#${divToEmpty}`).empty();
 };
 
 module.exports = {

@@ -20,7 +20,27 @@ const saveMovie = (movie) => {
   });
 };
 
+const getMovieList = () => {
+  const movies = [];
+  return new Promise((resolve, reject) => {
+    $.ajax(`${firebaseKey.databaseURL}/movies.json`)
+      .then((fbMovies) => {
+        if (fbMovies !== null) {
+          Object.keys(fbMovies).forEach((key) => {
+            fbMovies[key].id = key;
+            movies.push(fbMovies[key]);
+          });
+        }
+        resolve(movies);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+};
+
 module.exports = {
   setKey,
   saveMovie,
+  getMovieList,
 };

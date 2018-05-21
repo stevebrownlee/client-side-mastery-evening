@@ -42,6 +42,10 @@ const getConfig = () => {
   });
 };
 
+const getImageConfig = () => {
+  return imgConfig;
+};
+
 // START WITH THIS TO SHOW YOU CAN DO THE ASSIGNMENT WITHOUT WAITING FOR SOMEONE TO COME UP WITH the API CALLS
 // const showResults = () => {
 // let singleMovie = {
@@ -64,8 +68,8 @@ const getConfig = () => {
 // };
 
 const showResults = (movieArray) => {
-  dom.clearDom();
-  dom.domString(movieArray, imgConfig);
+  dom.clearDom('movies');
+  dom.domString(movieArray, imgConfig, 'movies');
 };
 
 const setKey = (key) => {
@@ -77,4 +81,5 @@ module.exports = {
   setKey,
   getConfig,
   searchMovies,
+  getImageConfig,
 };

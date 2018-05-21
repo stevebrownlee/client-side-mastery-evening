@@ -1,5 +1,6 @@
 const tmdb = require('./tmdb');
 const firebaseApi = require('./firebaseApi');
+const dom = require('./dom');
 
 const searchBar = $('#searchBar');
 
@@ -18,11 +19,21 @@ const navigation = () => {
     if ($(e.target).parents('#navSearch').length) {
       $('#searchPage').removeClass('hide');
       $('#myMoviesPage').addClass('hide');
-    // Wishlist Page
+      // Wishlist Page
     } else if ($(e.target).parents('#navMyMovies').length) {
       $('#myMoviesPage').removeClass('hide');
       $('#searchPage').addClass('hide');
+      getMahMovies();
     }
+  });
+};
+
+const getMahMovies = () => {
+  firebaseApi.getMovieList().then((result) => {
+    dom.clearDom('myMovies');
+    dom.domString(result, tmdb.getImageConfig(), 'myMovies', true);
+  }).catch((err) => {
+    console.log('error in getMovieList', err);
   });
 };
 
