@@ -14,10 +14,15 @@ const domString = (movieArray, config, idToPrintIn, myCollectionMode = false) =>
     strang +=       `<h3 class="mv-title">${movie.original_title ? movie.original_title : movie.title}</h3>`;
     strang +=       `<p class="mv-overview">${movie.overview}</p>`;
 
-    if (myCollectionMode) {
+    if (myCollectionMode && movie.isWatched) {
       strang +=       `<p>This is where star rating will go eventually.</p>`;
+    } else if (myCollectionMode && !movie.isWatched) {
+      strang +=       `<p><a class="btn btn-primary updateToWatched" role="button">Watched It!</a></p>`;
     } else {
-      strang +=       `<p><a class="btn btn-primary" role="button">Review</a> <a class="btn btn-default addToWishlist" role="button">Wishlist</a></p>`;
+      strang +=       `<p>
+                        <a class="btn btn-primary addToWatchedList" role="button">Add to Watched Collection</a> 
+                        <a class="btn btn-default addToWishlist" role="button">Wishlist</a>
+                      </p>`;
     }
     strang +=     `</div>`;
     strang +=   `</div>`;

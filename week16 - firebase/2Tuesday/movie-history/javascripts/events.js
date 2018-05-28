@@ -53,6 +53,40 @@ const addMovieToWishlistEvent = () => {
   });
 };
 
+const addMovieToWatchedListEvent = () => {
+  $(document).on('click', '.addToWatchedList', (e) => {
+    const movieCard = $(e.target).closest('.movie');
+    const movieToAdd = {
+      title: movieCard.find('.mv-title').text(),
+      poster_path: movieCard.find('.mv-poster_path')[0].dataset['poster_path'],
+      overview: movieCard.find('.mv-overview').text(),
+      rating: 0,
+      isWatched: true,
+    };
+    firebaseApi.addMovieToDB(movieToAdd)
+      .then((singleMovieKey) => {
+        movieCard.remove();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
+};
+
+const updateMovieToWatchInCollectionEvent = () => {
+  $(document).on('click', '.updateToWatched', (e) => {
+    const movieToUpdate = $(e.target).closest('.movie');
+    const movieToUpdateId = movieToUpdate.data('firebaseId');
+    firebaseApi.updateWatchedForMovieInDb(movieToUpdateId)
+      .then((updatedMovie) => {
+        getMyMovieCollection();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  });
+};
+
 const getMyMovieCollection = () => {
   firebaseApi.getMoviesFromDB()
     .then((allMovies) => {
@@ -79,7 +113,9 @@ const deleteMovieFromWishlistEvent = () => {
 
 const initializer = () => {
   addMovieToWishlistEvent();
+  addMovieToWatchedListEvent();
   deleteMovieFromWishlistEvent();
+  updateMovieToWatchInCollectionEvent();
   myLinks();
   pressEnter();
 };
