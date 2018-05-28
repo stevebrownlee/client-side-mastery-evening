@@ -20,7 +20,25 @@ const addMovieToDB = (movie) => {
   });
 };
 
+const getMoviesFromDB = () => {
+  return new Promise((resolve, reject) => {
+    $.get(`${firebaseConfig.databaseURL}/movies.json`)
+      .done((allMoviesObj) => {
+        const allMoviesArray = [];
+        Object.keys(allMoviesObj).forEach((movieKey) => {
+          allMoviesObj[movieKey].id = movieKey;
+          allMoviesArray.push(allMoviesObj[movieKey]);
+        });
+        resolve(allMoviesArray);
+      })
+      .fail((error) => {
+        reject(error);
+      });
+  });
+};
+
 module.exports = {
   setConfig,
   addMovieToDB,
+  getMoviesFromDB,
 };
