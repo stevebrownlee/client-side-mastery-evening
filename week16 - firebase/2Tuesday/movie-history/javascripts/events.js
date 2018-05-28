@@ -98,6 +98,28 @@ const getMyMovieCollection = () => {
     });
 };
 
+const getOnlyWatched = () => {
+  firebaseApi.getWatchedFromDB()
+    .then((allMovies) => {
+      dom.domString(allMovies, tmdb.getImageConfig(), 'myMoviesCollection', true);
+      initializeStars();
+    })
+    .catch((error) => {
+      console.error('error from get movies event', error);
+    });
+};
+
+const getOnlyWishlist = () => {
+  firebaseApi.getWishlistfromDB()
+    .then((allMovies) => {
+      dom.domString(allMovies, tmdb.getImageConfig(), 'myMoviesCollection', true);
+      initializeStars();
+    })
+    .catch((error) => {
+      console.error('error from get movies event', error);
+    });
+};
+
 const deleteMovieFromWishlistEvent = () => {
   $(document).on('click', '.deleteMovieFromCollection', (e) => {
     const movieToDelete = $(e.target).closest('.movie');
@@ -135,11 +157,26 @@ const initializeStars = () => {
   });
 };
 
+const watchedAndWishlistToggle = () => {
+  $(document).on('click', '.filterButtons', (e) => {
+    const clickedButtonId = $(e.target)[0].id;
+    console.log(clickedButtonId);
+    if (clickedButtonId === 'showWatched') {
+      getOnlyWatched();
+    } else if (clickedButtonId === 'showWishlist') {
+      getOnlyWishlist();
+    } else if (clickedButtonId === 'showAll') {
+      getMyMovieCollection();
+    }
+  });
+};
+
 const initializer = () => {
   addMovieToWishlistEvent();
   addMovieToWatchedListEvent();
   deleteMovieFromWishlistEvent();
   updateMovieToWatchInCollectionEvent();
+  watchedAndWishlistToggle();
   myLinks();
   pressEnter();
 };
