@@ -70,10 +70,27 @@ const updateWatchedForMovieInDb = (movieToUpdateId) => {
   });
 };
 
+const updateMovieWithStarRating = (updatedMovie, movieBeingRatedId) => {
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      method: 'PUT',
+      data: JSON.stringify(updatedMovie),
+      url: `${firebaseConfig.databaseURL}/movies/${movieBeingRatedId}.json`,
+    })
+      .done((updatedMovie) => {
+        resolve(updatedMovie);
+      })
+      .fail((error) => {
+        reject(error);
+      });
+  });
+};
+
 module.exports = {
   setConfig,
   addMovieToDB,
   getMoviesFromDB,
   deleteMovieFromDB,
   updateWatchedForMovieInDb,
+  updateMovieWithStarRating,
 };

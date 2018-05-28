@@ -58,7 +58,7 @@ const addMovieToWatchedListEvent = () => {
     const movieCard = $(e.target).closest('.movie');
     const movieToAdd = {
       title: movieCard.find('.mv-title').text(),
-      poster_path: movieCard.find('.mv-poster_path')[0].dataset['poster_path'],
+      poster_path: movieCard.find('.mv-poster_path').data('poster_path'),
       overview: movieCard.find('.mv-overview').text(),
       rating: 0,
       isWatched: true,
@@ -91,6 +91,7 @@ const getMyMovieCollection = () => {
   firebaseApi.getMoviesFromDB()
     .then((allMovies) => {
       dom.domString(allMovies, tmdb.getImageConfig(), 'myMoviesCollection', true);
+      initializeStars();
     })
     .catch((error) => {
       console.error('error from get movies event', error);
@@ -108,6 +109,29 @@ const deleteMovieFromWishlistEvent = () => {
       .catch((error) => {
         console.error('error in deleting movie', error);
       });
+  });
+};
+
+const initializeStars = () => {
+  $('.movie').each((index, movie) => {
+    const movieId = $(movie).data('firebase-id');
+    $('#stars_' + movieId).rating({min: 0, max: 5, step: 1, stars: 5,}).on('rating.change', (e, value) => {
+      const movieToUpdate = $(movie);
+      const modifiedMovie = {
+        title: $(movieToUpdate).find('.mv-title').text(),
+        overview: $(movieToUpdate).find('.mv-overview').text(),
+        poster_path: $(movieToUpdate).find('.mv-poster_path').data('poster_path'),
+        rating: value,
+        isWatched: true,
+      };
+      firebaseApi.updateMovieWithStarRating(modifiedMovie, movieId)
+        .then((results) => {
+          getMyMovieCollection();
+        })
+        .catch((err) => {
+          console.log('star rating movie error', err);
+        });
+    });
   });
 };
 

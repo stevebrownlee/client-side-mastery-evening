@@ -15,7 +15,8 @@ const domString = (movieArray, config, idToPrintIn, myCollectionMode = false) =>
     strang +=       `<p class="mv-overview">${movie.overview}</p>`;
 
     if (myCollectionMode && movie.isWatched) {
-      strang +=       `<p>This is where star rating will go eventually.</p>`;
+      strang +=       `<label for="stars_${movie.id}" class="control-label star-collection">Rate This</label>`;
+      strang +=       `<input id="stars_${movie.id}" name="stars_${movie.id}"  class="stars" value="${movie.rating}" class="rating-loading">`;
     } else if (myCollectionMode && !movie.isWatched) {
       strang +=       `<p><a class="btn btn-primary updateToWatched" role="button">Watched It!</a></p>`;
     } else {
