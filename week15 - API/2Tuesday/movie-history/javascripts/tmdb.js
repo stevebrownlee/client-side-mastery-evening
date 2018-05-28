@@ -64,7 +64,7 @@ const getConfig = () => {
 // };
 
 const showResults = (movieArray) => {
-  dom.clearDom();
+  dom.clearDom('movies');
   dom.domString(movieArray, imgConfig);
 };
 

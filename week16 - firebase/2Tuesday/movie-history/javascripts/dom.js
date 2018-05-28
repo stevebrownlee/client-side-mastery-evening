@@ -1,44 +1,32 @@
-'use strict';
+const domString = (movieArray, config) => {
+  let strang = '';
+  movieArray.forEach((movie, index) => {
+    if (index % 3 === 0) {
+      strang += `<div class="row">`;
+    }
+    strang += `<div class="col-sm-6 col-md-4">`;
+    strang +=   `<div class="thumbnail">`;
+    strang +=     `<img src="${config.base_url}/w342/${movie.poster_path}" alt="Movie Poster">`;
+    strang +=     `<div class="caption">`;
+    strang +=       `<h3>${movie.original_title}</h3>`;
+    strang +=       `<p>${movie.overview}</p>`;
+    strang +=       `<p><a href="#" class="btn btn-primary" role="button">Review</a> <a href="#" class="btn btn-default" role="button">Wishlist</a></p>`;
+    strang +=     `</div>`;
+    strang +=   `</div>`;
+    strang += `</div>`;
 
-const domString = (movieArray, config, whereToPrint, myMovieMode = null) => {
-  let domStrang = ``;
-  for (let i = 0; i < movieArray.length; i++) {
-    if (i % 3 === 0) {
-      domStrang += `<div class='row'>`;
+    if (index % 3 === 2) {
+      strang += `</div>`;
     }
+  });
 
-    domStrang += `  <div class='col-sm-6 col-md-4 movie'>`;
-    domStrang += `    <div class='thumbnail'>`;
-    if (myMovieMode) {
-      domStrang += `<a class="btn btn-default delete" data-firebase-id="${movieArray[i].id}">X</a>`;
-    }
-    domStrang += `      <img class='poster_path' src='${config.base_url}/w342/${movieArray[i].poster_path}' alt='...'>`;
-    domStrang += `      <div class='caption'>`;
-    domStrang += `        <h3 class='title'>${movieArray[i].title}</h3>`;
-    domStrang += `        <p class='overview'>${movieArray[i].overview}</p>`;
-    if (!myMovieMode) {
-      domStrang += `      <p><a class='btn btn-primary review' role='button'>Review</a> <a class='btn btn-default wishlist' role='button'>Wishlist</a></p>`;
-    }
-    domStrang += `      </div>`;
-    domStrang += `    </div>`;
-    domStrang += `  </div>`;
-
-    if (i % 3 === 2) {
-      domStrang += `</div>`;
-    }
-  }
-  printToDom(whereToPrint, domStrang);
+  printToDom(strang);
 };
 
-const printToDom = (outputDiv, strang) => {
-  $(`#${outputDiv}`).append(strang);
-};
-
-const clearDom = (divToEmpty) => {
-  $(`#${divToEmpty}`).empty();
+const printToDom = (stringz) => {
+  $('#movies').html(stringz);
 };
 
 module.exports = {
   domString,
-  clearDom,
 };
