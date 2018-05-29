@@ -41,7 +41,7 @@ const getMoviesFromDB = () => {
 
 const getWatchedFromDB = () => {
   return new Promise((resolve, reject) => {
-    $.get(`${firebaseConfig.databaseURL}/movies/json?orderBy="isWatched"&equalTo=true`)
+    $.get(`${firebaseConfig.databaseURL}/movies.json?orderBy="isWatched"&equalTo=true`)
       .done((allWatchedMoviesObj) => {
         const allWatchedMoviesArray = [];
         if (allWatchedMoviesObj != null) {
@@ -60,7 +60,7 @@ const getWatchedFromDB = () => {
 
 const getWishlistfromDB = () => {
   return new Promise((resolve, reject) => {
-    $.get(`${firebaseConfig.databaseURL}/movies/json?orderBy="isWatched"&equalTo=false`)
+    $.get(`${firebaseConfig.databaseURL}/movies.json?orderBy="isWatched"&equalTo=false`)
       .done((allWishlistMoviesObj) => {
         const allWishlistMoviesArray = [];
         if (allWishlistMoviesObj != null) {
