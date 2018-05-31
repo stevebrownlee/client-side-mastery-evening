@@ -1,26 +1,27 @@
-'use strict';
-
 const tmdb = require('./tmdb');
+const firebaseApi = require('./firebaseApi');
 
 const apiKeys = () => {
   return new Promise((resolve, reject) => {
     $.ajax('./db/apiKeys.json')
-      .done(data => {
+      .done((data) => {
         resolve(data.apiKeys);
       })
-      .fail(error => {
-        reject(error);
+      .fail((err) => {
+        reject(err);
       });
   });
 };
 
 const retrieveKeys = () => {
   apiKeys()
-    .then(results => {
+    .then((results) => {
       tmdb.setKey(results.tmdb.apiKey);
+      firebaseApi.setConfig(results.firebase);
+      firebase.initializeApp(results.firebase);
     })
-    .catch(err => {
-      console.log('err', err);
+    .catch((err) => {
+      console.error('no keys:', err);
     });
 };
 

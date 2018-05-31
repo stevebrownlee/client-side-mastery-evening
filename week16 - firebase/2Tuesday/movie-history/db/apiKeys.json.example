@@ -1,7 +1,15 @@
 {
-	"apiKeys": {
-		"tmdb": {
-			"apiKey": ""
-		}
-	}
+  "apiKeys": {
+    "tmdb": {
+      "apiKey": ""
+    },
+    "firebase": {
+        "apiKey": "",
+        "authDomain": "",
+        "databaseURL": "",
+        "projectId": "",
+        "storageBucket": "",
+        "messagingSenderId": ""
+    }
+  }
 }
