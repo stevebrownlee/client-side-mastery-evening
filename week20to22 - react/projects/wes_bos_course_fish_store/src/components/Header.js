@@ -7,7 +7,7 @@ import React from 'react';
         <span className="of">Of</span>
         <span className="the">The</span>
       </span>
-      the Day</h1>
+      Day</h1>
     <h3 className="tagline">
       { /* here this=component*/ }
       <span>{props.tagline}</span>
