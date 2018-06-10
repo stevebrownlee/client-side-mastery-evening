@@ -1,31 +1,29 @@
-import React, { Component } from 'react';
-import logo from '../images/logo.svg';
+import React from 'react';
+
+import Listings from '../components/Listings/Listings';
+import ListingForm from '../components/ListingForm/ListingForm';
+import Building from '../components/Building/Building';
+
+// css file
 import './App.css';
 
-class App extends Component {
+class App extends React.Component {
   render () {
-    const cowBell = {
-      a: 1 + 2,
-      b: 'cat',
-    };
-
-    // comment
-    const moo = () => {
-      const color = `<div class="red">${'hi'}</div`;
-      if (color === 'red') {
-        console.error('cow', cowBell);
-      }
-    };
-    moo();
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div class="row">
+          <div class="col-xs-6">
+            <Listings />
+          </div>
+          <div class="col-xs-6">
+            <Building />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <ListingForm />
+          </div>
+        </div>
       </div>
     );
   }
