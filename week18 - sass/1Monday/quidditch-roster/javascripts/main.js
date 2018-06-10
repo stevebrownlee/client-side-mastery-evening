@@ -1,12 +1,14 @@
 const firebaseApi = require('./firebaseApi');
 const dom = require('./dom');
 
+// ********* Initialize Application ********* //
 firebaseApi.setConfig().then((config) => {
   firebase.initializeApp(config);
   getAndPrintTeamButtonGroup();
   getAndPrintAllPlayers();
 });
 
+// ********* Populate Dom ********* //
 const getAndPrintAllPlayers = () => {
   firebaseApi.getAllPlayersFromDb()
     .then((players) => {
@@ -33,6 +35,7 @@ const getAndPrintTeamButtonGroup = () => {
     });
 };
 
+// ********* Register an event to be passed down to the button ********* //
 const teamButtonEvent = (e) => {
   const teamId = $(e.target).data('teamId');
   firebaseApi.getPlayersByTeam(teamId)

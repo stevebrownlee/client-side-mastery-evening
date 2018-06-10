@@ -3,6 +3,10 @@ const createPlayerCard = (player) => {
   playerCard.classList.add(`player-team-${(player.team).toLowerCase()}`);
   playerCard.classList.add(`player-card`);
 
+  if (player.subsitute) {
+    playerCard.classList.add(`player-card-subsitute`);
+  }
+
   const playerImage = document.createElement('img');
   playerImage.classList.add('player-img');
   playerImage.setAttribute('src', player.picture);
@@ -12,7 +16,7 @@ const createPlayerCard = (player) => {
   playerName.textContent = player.name;
 
   const playerPosition = document.createElement('h5');
-  playerPosition.classList.add('player-position');
+  playerPosition.classList.add(`player-position-${(player.position).toLowerCase()}`);
   playerPosition.textContent = player.position;
 
   playerCard.appendChild(playerImage);
