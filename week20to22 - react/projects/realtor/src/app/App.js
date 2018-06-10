@@ -3,7 +3,20 @@ import logo from '../images/logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
+  render () {
+    const cowBell = {
+      a: 1 + 2,
+      b: 'cat',
+    };
+
+    // comment
+    const moo = () => {
+      const color = `<div class="red">${'hi'}</div`;
+      if (color === 'red') {
+        console.error('cow', cowBell);
+      }
+    };
+    moo();
     return (
       <div className="App">
         <header className="App-header">
