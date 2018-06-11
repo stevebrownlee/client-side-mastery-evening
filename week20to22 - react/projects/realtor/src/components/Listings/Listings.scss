@@ -1,8 +1,9 @@
 .Listings {
-  background-color: green;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  height: 60vh;
+  overflow: scroll;
 
   ul{
     padding: 0;
