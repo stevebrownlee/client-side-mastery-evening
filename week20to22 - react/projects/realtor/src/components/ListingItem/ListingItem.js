@@ -15,11 +15,11 @@ export default class ListingItem extends React.Component {
   render () {
     const {listing, index} = this.props;
     return (
-      <div className='ListingItem'>
+      <div className='ListingItem text-center'>
         <span className="col-xs-2"><strong>Listing {index + 1}:</strong></span>
         <span className="col-xs-4">{listing.address} <br/> {listing.city}, {listing.state} {listing.zip}</span>
-        <span className="col-xs-3">Bedrooms: {listing.numBeds} <br/> Bathrooms: {listing.numBaths}</span>
-        <span className="col-xs-3">List Price: {formatPrice(listing.price)}</span>
+        <span className="col-xs-3">{listing.numBeds} Bed/{listing.numBaths} Bath <br/> Built in {listing.yearBuilt}</span>
+        <span className="col-xs-3">{formatPrice(listing.price)} <br/> {listing.squareFootage} ft<sup>2</sup></span>
       </div>
     );
   }
