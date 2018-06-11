@@ -17,6 +17,17 @@ export default class Building extends React.Component {
 
   render () {
     const {listing} = this.props;
+
+    if (!listing.price) {
+      return (
+        <div className="Building text-center">
+          <div className="row">
+            <h1 className="unknown-listing"><span className="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Select a listing</h1>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="Building text-center">
         <div className="row">

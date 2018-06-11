@@ -35,16 +35,8 @@ class App extends React.Component {
   render () {
     const {selectedListingId} = this.state;
     // find returns thing if it finds it.  if it doesn't it returns undefined (so will be undefined for initial state of -1)
-    const selectedListing = this.state.listings.find((listing) => listing.id === selectedListingId);
-    let listingViewComponent;
+    const selectedListing = this.state.listings.find((listing) => listing.id === selectedListingId) || {};
 
-    if (selectedListing) {
-      listingViewComponent = (
-        <Building
-          listing={selectedListing}
-        />
-      );
-    }
     return (
       <div className="App">
         <div className="col-xs-6">
@@ -54,7 +46,9 @@ class App extends React.Component {
           />
         </div>
         <div className="col-xs-6">
-          {listingViewComponent}
+          <Building
+            listing={selectedListing}
+          />
         </div>
         <div className="col-xs-12">
           <ListingForm />
