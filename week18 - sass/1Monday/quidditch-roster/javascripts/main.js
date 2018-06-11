@@ -37,7 +37,7 @@ const getAndPrintTeamButtonGroup = () => {
 
 // ********* Register an event to be passed down to the button ********* //
 const teamButtonEvent = (e) => {
-  const teamId = $(e.target).data('teamId');
+  const teamId = $(e.target).closest('button').data('teamId');
   firebaseApi.getPlayersByTeam(teamId)
     .then((players) => {
       firebaseApi.getFullPlayerInfo(players)

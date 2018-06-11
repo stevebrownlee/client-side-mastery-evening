@@ -27,8 +27,12 @@ module.exports = function (grunt) {
         files: ['../javascripts/**/*.js',],
         tasks: ['eslint', 'browserify',],
       },
+      styles: {
+        files: ['../sass/**/*.scss',],
+        tasks: ['sass',],
+      },
     },
-    clean: {
+    clean: { 
       options: { force: true, },
       public: ['../build',],
     },

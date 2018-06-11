@@ -1,11 +1,13 @@
 const createPlayerCard = (player) => {
   const playerCard = document.createElement('li');
   playerCard.classList.add(`player-team-${(player.team).toLowerCase()}`);
-  playerCard.classList.add(`player-card`);
 
   if (player.subsitute) {
     playerCard.classList.add(`player-card-subsitute`);
   }
+
+  const imageHolder = document.createElement('div');
+  imageHolder.classList.add('img-holder');
 
   const playerImage = document.createElement('img');
   playerImage.classList.add('player-img');
@@ -19,7 +21,8 @@ const createPlayerCard = (player) => {
   playerPosition.classList.add(`player-position-${(player.position).toLowerCase()}`);
   playerPosition.textContent = player.position;
 
-  playerCard.appendChild(playerImage);
+  imageHolder.appendChild(playerImage);
+  playerCard.appendChild(imageHolder);
   playerCard.appendChild(playerName);
   playerCard.appendChild(playerPosition);
 
