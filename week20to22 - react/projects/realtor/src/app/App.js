@@ -14,17 +14,17 @@ class App extends React.Component {
     selectedListingId: -1,
   };
 
-  listingSelect = (selectedListingId) => {
+  listingSelect = selectedListingId => {
     this.setState({
       selectedListingId: selectedListingId,
-    })
+    });
   };
 
   componentDidMount () {
     axios.get(`https://realtor-test.firebaseio.com/listings.json`).then(res => {
       const listings = [];
       if (res.data !== null) {
-        Object.keys(res.data).forEach((fbKey) => {
+        Object.keys(res.data).forEach(fbKey => {
           res.data[fbKey].id = fbKey;
           listings.push(res.data[fbKey]);
         });
@@ -35,21 +35,17 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        <div className="row">
-          <div className="col-xs-6">
-            <Listings
-              listings={this.state.listings}
-              onListingSelect = {this.listingSelect}
-            />
-          </div>
-          <div className="col-xs-6">
-            <Building />
-          </div>
+        <div className="col-xs-6">
+          <Listings
+            listings={this.state.listings}
+            onListingSelect={this.listingSelect}
+          />
         </div>
-        <div className="row">
-          <div className="col-xs-12">
-            <ListingForm />
-          </div>
+        <div className="col-xs-6">
+          <Building />
+        </div>
+        <div className="col-xs-12">
+          <ListingForm />
         </div>
       </div>
     );
