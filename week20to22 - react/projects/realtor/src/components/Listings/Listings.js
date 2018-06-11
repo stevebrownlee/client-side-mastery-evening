@@ -9,13 +9,18 @@ import './Listings.css';
 export default class Listings extends React.Component {
   static propTypes = {
     listings: PropTypes.arrayOf(LISTINGS_PROPS),
+    onListingSelect: PropTypes.func,
   };
   render () {
-    const listings = this.props.listings;
+    const {listings, onListingSelect} = this.props;
     const listingsItemComponents = listings.map((listing, index) => {
       return (
         <li key={listing.id} className="item">
-          <ListingItem listing={listing} index={index}/>
+          <ListingItem
+            listing={listing}
+            index={index}
+            onSelect={onListingSelect}
+          />
         </li>
       );
     });

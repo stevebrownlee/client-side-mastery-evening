@@ -11,6 +11,13 @@ import './App.css';
 class App extends React.Component {
   state = {
     listings: [],
+    selectedListingId: -1,
+  };
+
+  listingSelect = (selectedListingId) => {
+    this.setState({
+      selectedListingId: selectedListingId,
+    })
   };
 
   componentDidMount () {
@@ -32,6 +39,7 @@ class App extends React.Component {
           <div className="col-xs-6">
             <Listings
               listings={this.state.listings}
+              onListingSelect = {this.listingSelect}
             />
           </div>
           <div className="col-xs-6">
