@@ -146,6 +146,23 @@ export default class ListingForm extends React.Component {
         cooling,
         imageUrl,
       });
+      this.setState({
+        address: '',
+        city: '',
+        state: '',
+        zip: '',
+        squareFootage: '',
+        price: '',
+        numBeds: '',
+        numBaths: '',
+        description: '',
+        estimatedMonthlyMorgage: '',
+        lotInAcres: '',
+        yearBuilt: '',
+        heating: '',
+        cooling: '',
+        imageUrl: '',
+      });
     } else {
       alert('Please add to ever form field');
     }
@@ -176,7 +193,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="address">Address:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="text"
                 id="address"
                 placeholder="12345 Main Street"
@@ -187,7 +205,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="city">City:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="text"
                 id="city"
                 placeholder="Nashville"
@@ -198,7 +217,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="state">State:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="text"
                 id="state"
                 placeholder="TN"
@@ -209,7 +229,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="zip">Zip Code:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="text"
                 id="zip"
                 placeholder="37209"
@@ -222,7 +243,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="squareFootage">Square Footage:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="number"
                 id="squareFootage"
                 placeholder="123"
@@ -233,7 +255,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="numBeds">Number of bedrooms:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="number"
                 id="numBeds"
                 placeholder="2"
@@ -245,7 +268,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="numBaths">Number of bathrooms:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="number"
                 id="numBaths"
                 placeholder="1"
@@ -258,7 +282,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="price">Price:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="number"
                 id="price"
                 placeholder="12345"
@@ -271,7 +296,8 @@ export default class ListingForm extends React.Component {
                 Estimated Monthly Morgage:
               </label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="number"
                 id="estimatedMonthlyMorgage"
                 placeholder="123"
@@ -284,7 +310,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="lotInAcres">Lot Size (in acres):</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="number"
                 id="lotInAcres"
                 placeholder="0.5"
@@ -296,7 +323,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="yearBuilt">Year Built:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="number"
                 id="yearBuilt"
                 placeholder="1924"
@@ -308,7 +336,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="heating">Heating:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="text"
                 id="heating"
                 placeholder="Fireplace"
@@ -320,7 +349,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-3">
               <label htmlFor="cooling">Cooling:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="text"
                 id="cooling"
                 placeholder="Central Air"
@@ -333,7 +363,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-6">
               <label htmlFor="description">Description:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="text"
                 id="description"
                 placeholder="Lovely one bedroom house"
@@ -345,7 +376,8 @@ export default class ListingForm extends React.Component {
             <fieldset className="col-xs-6">
               <label htmlFor="imageUrl">Image Url:</label>
               <br />
-              <input className="col-xs-12"
+              <input
+                className="col-xs-12"
                 type="text"
                 id="imageUrl"
                 placeholder="http://www.google.com"
@@ -354,7 +386,11 @@ export default class ListingForm extends React.Component {
               />
             </fieldset>
           </div>
-          <input className="col-xs-6 btn btn-danger col-xs-offset-3" type="submit" value="Save house" />
+          <input
+            className="col-xs-6 btn btn-danger col-xs-offset-3"
+            type="submit"
+            value="Save house"
+          />
         </div>
       </form>
     );

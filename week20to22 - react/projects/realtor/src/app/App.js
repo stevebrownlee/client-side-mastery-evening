@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+
+import listingRequests from '../firebaseRequests/listings';
 
 import Listings from '../components/Listings/Listings';
 import ListingForm from '../components/ListingForm/ListingForm';
@@ -21,24 +22,20 @@ class App extends React.Component {
   };
 
   formSubmit = newListing => {
-    axios
-      .post(`https://realtor-test.firebaseio.com/listings.json`, newListing)
-      .then(res => {
-        console.error(res);
-        console.error(res.data);
+    listingRequests.postRequest(newListing).then((response) => {
+      listingRequests.getRequest().then((listings) => {
+        this.setState({listings});
       });
+    }).catch((err) => {
+      console.error('error with get request', err);
+    });
   };
 
   componentDidMount () {
-    axios.get(`https://realtor-test.firebaseio.com/listings.json`).then(res => {
-      const listings = [];
-      if (res.data !== null) {
-        Object.keys(res.data).forEach(fbKey => {
-          res.data[fbKey].id = fbKey;
-          listings.push(res.data[fbKey]);
-        });
-      }
+    listingRequests.getRequest().then((listings) => {
       this.setState({ listings });
+    }).catch((err) => {
+      console.error('error with get request', err);
     });
   }
   render () {
