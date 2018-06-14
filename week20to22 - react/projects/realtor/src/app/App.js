@@ -20,6 +20,15 @@ class App extends React.Component {
     });
   };
 
+  formSubmit = newListing => {
+    axios
+      .post(`https://realtor-test.firebaseio.com/listings.json`, newListing)
+      .then(res => {
+        console.error(res);
+        console.error(res.data);
+      });
+  };
+
   componentDidMount () {
     axios.get(`https://realtor-test.firebaseio.com/listings.json`).then(res => {
       const listings = [];
@@ -33,9 +42,11 @@ class App extends React.Component {
     });
   }
   render () {
-    const {selectedListingId} = this.state;
+    const { selectedListingId } = this.state;
     // find returns thing if it finds it.  if it doesn't it returns undefined (so will be undefined for initial state of -1)
-    const selectedListing = this.state.listings.find((listing) => listing.id === selectedListingId) || {};
+    const selectedListing =
+      this.state.listings.find(listing => listing.id === selectedListingId) ||
+      {};
 
     return (
       <div className="App">
@@ -46,12 +57,10 @@ class App extends React.Component {
           />
         </div>
         <div className="col-xs-6">
-          <Building
-            listing={selectedListing}
-          />
+          <Building listing={selectedListing} />
         </div>
         <div className="col-xs-12">
-          <ListingForm />
+          <ListingForm onSubmit={this.formSubmit} />
         </div>
       </div>
     );

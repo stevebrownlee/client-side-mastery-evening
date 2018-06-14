@@ -11,7 +11,6 @@ export const LISTINGS_PROPS = PropTypes.shape({
   numBaths: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   estimatedMonthlyMorgage: PropTypes.number.isRequired,
-  type: PropTypes.string.isRequired,
   lotInAcres: PropTypes.number.isRequired,
   yearBuilt: PropTypes.number.isRequired,
   heating: PropTypes.string.isRequired,
