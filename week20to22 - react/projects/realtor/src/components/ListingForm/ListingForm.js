@@ -12,15 +12,15 @@ export default class ListingForm extends React.Component {
     address: '',
     city: '',
     state: '',
-    zip: '',
-    squareFootage: '',
-    price: '',
-    numBeds: '',
-    numBaths: '',
+    zip: 0,
+    squareFootage: 0,
+    price: 0,
+    numBeds: 0,
+    numBaths: 0,
     description: '',
-    estimatedMonthlyMorgage: '',
-    lotInAcres: '',
-    yearBuilt: '',
+    estimatedMonthlyMorgage: 0,
+    lotInAcres: 0,
+    yearBuilt: 0,
     heating: '',
     cooling: '',
     imageUrl: '',
@@ -29,6 +29,12 @@ export default class ListingForm extends React.Component {
   formFieldState = (name, e) => {
     this.setState({
       [name]: e.target.value,
+    });
+  };
+
+  formFieldNumberState = (name, e) => {
+    this.setState({
+      [name]: e.target.value * 1,
     });
   };
 
@@ -45,23 +51,23 @@ export default class ListingForm extends React.Component {
   };
 
   zipChange = e => {
-    this.formFieldState('zip', e);
+    this.formFieldNumberState('zip', e);
   };
 
   squareFootageChange = e => {
-    this.formFieldState('squareFootage', e);
+    this.formFieldNumberState('squareFootage', e);
   };
 
   priceChange = e => {
-    this.formFieldState('price', e);
+    this.formFieldNumberState('price', e);
   };
 
   numBedsChange = e => {
-    this.formFieldState('numBeds', e);
+    this.formFieldNumberState('numBeds', e);
   };
 
   numBathsChange = e => {
-    this.formFieldState('numBaths', e);
+    this.formFieldNumberState('numBaths', e);
   };
 
   descriptionChange = e => {
@@ -69,15 +75,15 @@ export default class ListingForm extends React.Component {
   };
 
   estimatedMonthlyMorgageChange = e => {
-    this.formFieldState('estimatedMonthlyMorgage', e);
+    this.formFieldNumberState('estimatedMonthlyMorgage', e);
   };
 
   lotInAcresChange = e => {
-    this.formFieldState('lotInAcres', e);
+    this.formFieldNumberState('lotInAcres', e);
   };
 
   yearBuiltChange = e => {
-    this.formFieldState('yearBuilt', e);
+    this.formFieldNumberState('yearBuilt', e);
   };
 
   heatingChange = e => {
@@ -150,15 +156,15 @@ export default class ListingForm extends React.Component {
         address: '',
         city: '',
         state: '',
-        zip: '',
-        squareFootage: '',
-        price: '',
-        numBeds: '',
-        numBaths: '',
+        zip: 0,
+        squareFootage: 0,
+        price: 0,
+        numBeds: 0,
+        numBaths: 0,
         description: '',
-        estimatedMonthlyMorgage: '',
-        lotInAcres: '',
-        yearBuilt: '',
+        estimatedMonthlyMorgage: 0,
+        lotInAcres: 0,
+        yearBuilt: 0,
         heating: '',
         cooling: '',
         imageUrl: '',
@@ -231,7 +237,7 @@ export default class ListingForm extends React.Component {
               <br />
               <input
                 className="col-xs-12"
-                type="text"
+                type="number"
                 id="zip"
                 placeholder="37209"
                 value={zip}
