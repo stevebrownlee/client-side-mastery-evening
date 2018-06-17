@@ -6,7 +6,7 @@ import { formatPrice } from '../../helpers';
 
 import './ListingItem.css';
 
-export default class ListingItem extends React.Component {
+class ListingItem extends React.Component {
   static propTypes = {
     listing: LISTINGS_PROPS,
     index: PropTypes.number,
@@ -36,3 +36,5 @@ export default class ListingItem extends React.Component {
     );
   }
 }
+
+export default ListingItem;

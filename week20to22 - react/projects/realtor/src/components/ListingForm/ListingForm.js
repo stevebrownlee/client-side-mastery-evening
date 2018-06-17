@@ -21,7 +21,7 @@ const defaultListing = {
   imageUrl: '',
 };
 
-export default class ListingForm extends React.Component {
+class ListingForm extends React.Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
   };
@@ -348,3 +348,5 @@ export default class ListingForm extends React.Component {
     );
   }
 }
+
+export default ListingForm;

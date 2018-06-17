@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LISTINGS_PROPS } from '../../propz/listingsProps';
+import { LISTINGS_PROPS_OPTIONAL } from '../../propz/listingsProps';
 import { formatPrice } from '../../helpers';
 
 // import css
@@ -12,13 +12,13 @@ import flame from './images/flame.png';
 import hill from './images/hill.png';
 import snow from './images/snow.png';
 
-export default class Building extends React.Component {
-  static propTypes = {listing: LISTINGS_PROPS}
+class Building extends React.Component {
+  static propTypes = {listing: LISTINGS_PROPS_OPTIONAL}
 
   render () {
     const {listing} = this.props;
 
-    if (!listing.price) {
+    if (!Object.keys(listing).length) {
       return (
         <div className="Building text-center">
           <div className="row">
@@ -73,3 +73,5 @@ export default class Building extends React.Component {
     );
   }
 }
+
+export default Building;

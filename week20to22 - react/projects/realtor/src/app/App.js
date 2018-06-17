@@ -44,8 +44,7 @@ class App extends React.Component {
     const { selectedListingId } = this.state;
     // find returns thing if it finds it.  if it doesn't it returns undefined (so will be undefined for initial state of -1)
     const selectedListing =
-      this.state.listings.find(listing => listing.id === selectedListingId) ||
-      {};
+      this.state.listings.find(listing => listing.id === selectedListingId) || {};
 
     return (
       <div className="App">

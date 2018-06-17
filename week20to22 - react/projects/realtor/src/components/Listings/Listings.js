@@ -6,7 +6,7 @@ import { LISTINGS_PROPS } from '../../propz/listingsProps';
 
 import './Listings.css';
 
-export default class Listings extends React.Component {
+class Listings extends React.Component {
   // explain what static means and when/why it is used
   static propTypes = {
     listings: PropTypes.arrayOf(LISTINGS_PROPS),
@@ -34,3 +34,5 @@ export default class Listings extends React.Component {
     );
   }
 }
+
+export default Listings;
