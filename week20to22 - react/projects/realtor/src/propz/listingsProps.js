@@ -1,3 +1,4 @@
+// define it and export at the end
 import PropTypes from 'prop-types';
 
 export const LISTINGS_PROPS = PropTypes.shape({

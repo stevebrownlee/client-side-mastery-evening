@@ -7,19 +7,21 @@ import { LISTINGS_PROPS } from '../../propz/listingsProps';
 import './Listings.css';
 
 export default class Listings extends React.Component {
+  // explain what static means and when/why it is used
   static propTypes = {
     listings: PropTypes.arrayOf(LISTINGS_PROPS),
-    onListingSelect: PropTypes.func,
+    onListingSelection: PropTypes.func,
   };
+
   render () {
-    const {listings, onListingSelect} = this.props;
+    const {listings, onListingSelection} = this.props;
     const listingsItemComponents = listings.map((listing, index) => {
       return (
         <li key={listing.id} className="item">
           <ListingItem
             listing={listing}
             index={index}
-            onSelect={onListingSelect}
+            onSelect={onListingSelection}
           />
         </li>
       );

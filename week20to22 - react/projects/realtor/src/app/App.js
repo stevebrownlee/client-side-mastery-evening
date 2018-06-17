@@ -15,13 +15,15 @@ class App extends React.Component {
     selectedListingId: -1,
   };
 
-  listingSelect = selectedListingId => {
+  // any event funcitions end in event any non event functions end in function
+  // change this to listingSelectEvent
+  listingSelectEvent = selectedListingId => {
     this.setState({
       selectedListingId: selectedListingId,
     });
   };
 
-  formSubmit = newListing => {
+  formSubmitEvent = newListing => {
     listingRequests.postRequest(newListing).then((response) => {
       listingRequests.getRequest().then((listings) => {
         this.setState({listings});
@@ -50,14 +52,14 @@ class App extends React.Component {
         <div className="col-xs-6">
           <Listings
             listings={this.state.listings}
-            onListingSelect={this.listingSelect}
+            onListingSelection={this.listingSelectEvent}
           />
         </div>
         <div className="col-xs-6">
           <Building listing={selectedListing} />
         </div>
         <div className="col-xs-12">
-          <ListingForm onSubmit={this.formSubmit} />
+          <ListingForm onSubmit={this.formSubmitEvent} />
         </div>
       </div>
     );

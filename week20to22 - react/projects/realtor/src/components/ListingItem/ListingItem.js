@@ -18,6 +18,7 @@ export default class ListingItem extends React.Component {
     // preventDefault = prevents the browsers default action. ie url doesn't change
     // stopPropagation = stops the event from bubbling up the chain.  nothing at the call site fires.
     e.stopPropagation();
+    // this is crystal ballin' so if the function is not passed the page still renders
     if (onSelect) {
       onSelect(listing.id);
     }

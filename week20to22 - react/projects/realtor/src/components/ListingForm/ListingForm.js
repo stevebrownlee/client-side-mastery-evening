@@ -3,39 +3,47 @@ import PropTypes from 'prop-types';
 
 import './ListingForm.css';
 
+const defaultListing = {
+  address: '',
+  city: '',
+  state: '',
+  zip: 0,
+  squareFootage: 0,
+  price: 0,
+  numBeds: 0,
+  numBaths: 0,
+  description: '',
+  estimatedMonthlyMorgage: 0,
+  lotInAcres: 0,
+  yearBuilt: 0,
+  heating: '',
+  cooling: '',
+  imageUrl: '',
+};
+
 export default class ListingForm extends React.Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
   };
 
-  state = {
-    address: '',
-    city: '',
-    state: '',
-    zip: 0,
-    squareFootage: 0,
-    price: 0,
-    numBeds: 0,
-    numBaths: 0,
-    description: '',
-    estimatedMonthlyMorgage: 0,
-    lotInAcres: 0,
-    yearBuilt: 0,
-    heating: '',
-    cooling: '',
-    imageUrl: '',
-  };
+  state = {newListing: defaultListing};
 
   formFieldState = (name, e) => {
-    this.setState({
-      [name]: e.target.value,
-    });
+    const newListing = {...this.state.newListing};
+    newListing[name] = e.target.value;
+    this.setState({newListing});
+    // this.setState({
+    //   [name]: e.target.value,
+    // });
   };
 
   formFieldNumberState = (name, e) => {
-    this.setState({
-      [name]: e.target.value * 1,
-    });
+    const newListing = {...this.state.newListing};
+    newListing[name] = e.target.value * 1;
+    this.setState({newListing});
+    // this.setState({
+    //   [name]: e.target.value * 1,
+    // });
   };
 
   addressChange = e => {
@@ -100,97 +108,34 @@ export default class ListingForm extends React.Component {
 
   formSubmit = e => {
     const { onSubmit } = this.props;
-    const {
-      address,
-      city,
-      state,
-      zip,
-      squareFootage,
-      price,
-      numBeds,
-      numBaths,
-      description,
-      estimatedMonthlyMorgage,
-      lotInAcres,
-      yearBuilt,
-      heating,
-      cooling,
-      imageUrl,
-    } = this.state;
+    const {newListing} = this.state;
     e.preventDefault();
     if (
-      address &&
-      city &&
-      state &&
-      zip &&
-      squareFootage &&
-      price &&
-      numBeds &&
-      numBaths &&
-      description &&
-      estimatedMonthlyMorgage &&
-      lotInAcres &&
-      yearBuilt &&
-      heating &&
-      cooling &&
-      imageUrl
+      newListing.address &&
+      newListing.city &&
+      newListing.state &&
+      newListing.zip &&
+      newListing.squareFootage &&
+      newListing.price &&
+      newListing.numBeds &&
+      newListing.numBaths &&
+      newListing.description &&
+      newListing.estimatedMonthlyMorgage &&
+      newListing.lotInAcres &&
+      newListing.yearBuilt &&
+      newListing.heating &&
+      newListing.cooling &&
+      newListing.imageUrl
     ) {
-      onSubmit({
-        address,
-        city,
-        state,
-        zip,
-        squareFootage,
-        price,
-        numBeds,
-        numBaths,
-        description,
-        estimatedMonthlyMorgage,
-        lotInAcres,
-        yearBuilt,
-        heating,
-        cooling,
-        imageUrl,
-      });
-      this.setState({
-        address: '',
-        city: '',
-        state: '',
-        zip: 0,
-        squareFootage: 0,
-        price: 0,
-        numBeds: 0,
-        numBaths: 0,
-        description: '',
-        estimatedMonthlyMorgage: 0,
-        lotInAcres: 0,
-        yearBuilt: 0,
-        heating: '',
-        cooling: '',
-        imageUrl: '',
-      });
+      onSubmit(this.state.newListing);
+      this.setState({newListing: defaultListing});
     } else {
-      alert('Please add to ever form field');
+      // dear god why?????
+      alert('Please add to every form field');
     }
   };
   render () {
-    const {
-      address,
-      city,
-      state,
-      zip,
-      squareFootage,
-      price,
-      numBeds,
-      numBaths,
-      description,
-      estimatedMonthlyMorgage,
-      lotInAcres,
-      yearBuilt,
-      heating,
-      cooling,
-      imageUrl,
-    } = this.state;
+    const {newListing} = this.state;
     return (
       <form onSubmit={this.formSubmit}>
         <h2 className="text-center">Submit new property:</h2>
@@ -204,7 +149,7 @@ export default class ListingForm extends React.Component {
                 type="text"
                 id="address"
                 placeholder="12345 Main Street"
-                value={address}
+                value={newListing.address}
                 onChange={this.addressChange}
               />
             </fieldset>
@@ -216,7 +161,7 @@ export default class ListingForm extends React.Component {
                 type="text"
                 id="city"
                 placeholder="Nashville"
-                value={city}
+                value={newListing.city}
                 onChange={this.cityChange}
               />
             </fieldset>
@@ -228,7 +173,7 @@ export default class ListingForm extends React.Component {
                 type="text"
                 id="state"
                 placeholder="TN"
-                value={state}
+                value={newListing.state}
                 onChange={this.stateChange}
               />
             </fieldset>
@@ -240,7 +185,7 @@ export default class ListingForm extends React.Component {
                 type="number"
                 id="zip"
                 placeholder="37209"
-                value={zip}
+                value={newListing.zip}
                 onChange={this.zipChange}
               />
             </fieldset>
@@ -254,7 +199,7 @@ export default class ListingForm extends React.Component {
                 type="number"
                 id="squareFootage"
                 placeholder="123"
-                value={squareFootage}
+                value={newListing.squareFootage}
                 onChange={this.squareFootageChange}
               />
             </fieldset>
@@ -266,7 +211,7 @@ export default class ListingForm extends React.Component {
                 type="number"
                 id="numBeds"
                 placeholder="2"
-                value={numBeds}
+                value={newListing.numBeds}
                 onChange={this.numBedsChange}
               />
             </fieldset>
@@ -279,7 +224,7 @@ export default class ListingForm extends React.Component {
                 type="number"
                 id="numBaths"
                 placeholder="1"
-                value={numBaths}
+                value={newListing.numBaths}
                 onChange={this.numBathsChange}
               />
             </fieldset>
@@ -293,7 +238,7 @@ export default class ListingForm extends React.Component {
                 type="number"
                 id="price"
                 placeholder="12345"
-                value={price}
+                value={newListing.price}
                 onChange={this.priceChange}
               />
             </fieldset>
@@ -307,7 +252,7 @@ export default class ListingForm extends React.Component {
                 type="number"
                 id="estimatedMonthlyMorgage"
                 placeholder="123"
-                value={estimatedMonthlyMorgage}
+                value={newListing.estimatedMonthlyMorgage}
                 onChange={this.estimatedMonthlyMorgageChange}
               />
             </fieldset>
@@ -321,7 +266,7 @@ export default class ListingForm extends React.Component {
                 type="number"
                 id="lotInAcres"
                 placeholder="0.5"
-                value={lotInAcres}
+                value={newListing.lotInAcres}
                 onChange={this.lotInAcresChange}
               />
             </fieldset>
@@ -334,7 +279,7 @@ export default class ListingForm extends React.Component {
                 type="number"
                 id="yearBuilt"
                 placeholder="1924"
-                value={yearBuilt}
+                value={newListing.yearBuilt}
                 onChange={this.yearBuiltChange}
               />
             </fieldset>
@@ -347,7 +292,7 @@ export default class ListingForm extends React.Component {
                 type="text"
                 id="heating"
                 placeholder="Fireplace"
-                value={heating}
+                value={newListing.heating}
                 onChange={this.heatingChange}
               />
             </fieldset>
@@ -360,7 +305,7 @@ export default class ListingForm extends React.Component {
                 type="text"
                 id="cooling"
                 placeholder="Central Air"
-                value={cooling}
+                value={newListing.cooling}
                 onChange={this.coolingChange}
               />
             </fieldset>
@@ -374,7 +319,7 @@ export default class ListingForm extends React.Component {
                 type="text"
                 id="description"
                 placeholder="Lovely one bedroom house"
-                value={description}
+                value={newListing.description}
                 onChange={this.descriptionChange}
               />
             </fieldset>
@@ -387,11 +332,12 @@ export default class ListingForm extends React.Component {
                 type="text"
                 id="imageUrl"
                 placeholder="http://www.google.com"
-                value={imageUrl}
+                value={newListing.imageUrl}
                 onChange={this.imageUrlChange}
               />
             </fieldset>
           </div>
+          {/* can this be a button tag? */}
           <input
             className="col-xs-6 btn btn-danger col-xs-offset-3"
             type="submit"
