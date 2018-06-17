@@ -1,16 +1,11 @@
 import React from 'react';
 
+import BuildingTile from '../BuildingTile/BuildingTile';
 import { LISTINGS_PROPS_OPTIONAL } from '../../propz/listingsProps';
 import { formatPrice } from '../../helpers';
 
 // import css
 import './Building.css';
-
-// import logos
-import cal from './images/cal.png';
-import flame from './images/flame.png';
-import hill from './images/hill.png';
-import snow from './images/snow.png';
 
 class Building extends React.Component {
   static propTypes = {listing: LISTINGS_PROPS_OPTIONAL}
@@ -44,30 +39,26 @@ class Building extends React.Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-xs-3">
-            <div className="image-detail">
-              <img src={cal} alt="calendar" />
-              <p>Built: {listing.yearBuilt}</p>
-            </div>
-          </div>
-          <div className="col-xs-3">
-            <div className="image-detail">
-              <img src={hill} alt="hill" />
-              <p>{listing.lotInAcres} acres</p>
-            </div>
-          </div>
-          <div className="col-xs-3">
-            <div className="image-detail">
-              <img src={flame} alt="fire" />
-              <p>{listing.heating}</p>
-            </div>
-          </div>
-          <div className="col-xs-3">
-            <div className="image-detail">
-              <img src={snow} alt="snowflake" />
-              <p>{listing.cooling}</p>
-            </div>
-          </div>
+          <BuildingTile
+            imageSrc='cal'
+            atlText='calendar'
+            pTagText={`Built: ${listing.yearBuilt}`}
+          />
+          <BuildingTile
+            imageSrc='hill'
+            atlText='hill'
+            pTagText={`${listing.lotInAcres} acres`}
+          />
+          <BuildingTile
+            imageSrc='flame'
+            atlText='fire'
+            pTagText={listing.heating}
+          />
+          <BuildingTile
+            imageSrc='snow'
+            atlText='snowflake'
+            pTagText={listing.cooling}
+          />
         </div>
       </div>
     );
