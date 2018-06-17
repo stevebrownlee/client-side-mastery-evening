@@ -1,0 +1,12 @@
+const constants =  {
+  firebaseConfig: {
+    apiKey: '',
+    authDomain: 'tdot-signs.firebaseapp.com',
+    databaseURL: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: '',
+  },
+};
+
+export default {constants};
