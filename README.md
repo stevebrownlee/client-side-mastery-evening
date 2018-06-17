@@ -140,7 +140,7 @@
 ***
 
 #### Week 18 (June 11 - 16)
-* **Day 1** - Group Project - Nutshell
+* **Day 1** - exercises
 * **Day 2** - Group Project - Nutshell
 * **HW** - Group Project - Nutshell
 * **Lab Day** - Group Project - Nutshell
@@ -148,10 +148,10 @@
 ***
 
 #### Week 19 (June 18 - 23)
-* **Day 1** - Nutshell Demo, Intro to SASS
-* **Day 2** - SASS
+* **Day 1** - Group Project - Nutshell
+* **Day 2** - Nutshell Demo, Intro to SASS
 * **HW** - finish local weather, portfolio
-* **Lab Day** - Finish SASS, personal site
+* **Lab Day** - SASS, personal site
 
 
 ***
