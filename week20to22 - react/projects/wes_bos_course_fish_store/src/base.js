@@ -1,6 +1,6 @@
 import Rebase from 're-base';
 import firebase from 'firebase';
-import constant from './constants'
+import constant from './constants';
 
 const firebaseApp = firebase.initializeApp(constant.firebaseConfig);
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 import listingRequests from '../firebaseRequests/listings';
 
+import fbConection from '../firebaseRequests/connection';
 import Listings from '../components/Listings/Listings';
 import ListingForm from '../components/ListingForm/ListingForm';
 import Building from '../components/Building/Building';
@@ -34,6 +35,7 @@ class App extends React.Component {
   };
 
   componentDidMount () {
+    fbConection();
     listingRequests.getRequest().then((listings) => {
       this.setState({ listings });
     }).catch((err) => {

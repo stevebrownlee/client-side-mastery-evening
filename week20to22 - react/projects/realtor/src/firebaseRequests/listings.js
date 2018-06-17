@@ -1,9 +1,10 @@
 import axios from 'axios';
+import constants from '../constants';
 
 const getRequest = () => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`https://realtor-test.firebaseio.com/listings.json`)
+      .get(`${constants.firebaseConfig.databaseURL}/listings.json`)
       .then(res => {
         const listings = [];
         if (res.data !== null) {
@@ -23,7 +24,7 @@ const getRequest = () => {
 const postRequest = listing => {
   return new Promise((resolve, reject) => {
     axios
-      .post(`https://realtor-test.firebaseio.com/listings.json`, listing)
+      .post(`${constants.firebaseConfig.databaseURL}/listings.json`, listing)
       .then(res => {
         resolve(res.data);
       })
