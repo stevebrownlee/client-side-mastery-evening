@@ -140,47 +140,48 @@
 ***
 
 #### Week 18 (June 11 - 16)
-* **Day 1** - SASS
-* **Day 2** - Advanced SASS
-* **HW** - exercises
-* **Lab Day** - exercises
+* **Day 1** - Group Project - Nutshell
+* **Day 2** - Group Project - Nutshell
+* **HW** - Group Project - Nutshell
+* **Lab Day** - Group Project - Nutshell
 
 ***
 
 #### Week 19 (June 18 - 23)
-* **Day 1** - Group Project - Theme park
-* **Day 2** - Group Project - Theme park
-* **HW** - Group Project - Theme park
-* **Lab Day** - Group Project - Theme park
+* **Day 1** - Nutshell Demo, Intro to SASS
+* **Day 2** - SASS
+* **HW** - finish local weather, portfolio
+* **Lab Day** - Finish SASS, personal site
+
 
 ***
 
 #### Week 20 (June 25 - 30)
-* **Day 1** - REACT
-* **Day 2** - REACT
-* **HW** - REACT
-* **Lab Day** - REACT
+* **Day 1** - What is a framework, intro to react, react setup, simple app with component, setup realtor
+* **Day 2** - realtor READ
+* **HW** - 1st react assignment, personal site
+* **Lab Day** - capstone 101, personal site review, Realtor POST
 
 ***
 
 #### Week 21 (July 2 - 7)
-* **Day 1** - REACT
-* **Day 2** - REACT
+* **Day 1** - setup fishstore, react routing
+* **Day 2** - fish store
 * **HW** - REACT (NO STUDYGROUPS - 4th of July)
-* **Lab Day** - REACT
+* **Lab Day** - fish store, capstone proposals due
 
 ***
 
 #### Week 22 (July 9 - 14)
-* **Day 1** - REACT
-* **Day 2** - REACT
-* **HW** - REACT
-* **Lab Day** - REACT
+* **Day 1** - Group Project - Pinterest
+* **Day 2** - Group Project - Pinterest
+* **HW** - Group Project - Pinterest
+* **Lab Day** - Group Project - Pinterest, Capstone 1-on-1s
 
 ***
 
 #### Week 23 (July 16 - 21)
-* **Day 1** - CAPSTONES
+* **Day 1** - pinterest lightning demos, CAPSTONES
 * **Day 2** - CAPSTONES
 * **HW** - CAPSTONES
 * **Lab Day** - CAPSTONES
@@ -197,7 +198,7 @@
 
 #### Week 25 (July 30 - August 4)
 * **Day 1** - CAPSTONES
-* **Day 2** - CAPSTONES
+* **Day 2** - CAPSTONES, capstone MVP demos
 * **HW** - CAPSTONES
 * **Lab Day** - CAPSTONES
 
