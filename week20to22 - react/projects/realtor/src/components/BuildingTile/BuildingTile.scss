@@ -1,6 +1,8 @@
+@import 'styles/_colors';
+
 .BuildingTile{
   .image-detail{
-    border: 2px dashed black;
+    border: 2px dashed $black;
     margin: 20px;
 
     img {
