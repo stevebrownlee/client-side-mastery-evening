@@ -26,24 +26,18 @@ class ListingForm extends React.Component {
     onSubmit: PropTypes.func.isRequired,
   };
 
-  state = {newListing: defaultListing};
+  state = { newListing: defaultListing };
 
   formFieldState = (name, e) => {
-    const newListing = {...this.state.newListing};
+    const newListing = { ...this.state.newListing };
     newListing[name] = e.target.value;
-    this.setState({newListing});
-    // this.setState({
-    //   [name]: e.target.value,
-    // });
+    this.setState({ newListing });
   };
 
   formFieldNumberState = (name, e) => {
-    const newListing = {...this.state.newListing};
+    const newListing = { ...this.state.newListing };
     newListing[name] = e.target.value * 1;
-    this.setState({newListing});
-    // this.setState({
-    //   [name]: e.target.value * 1,
-    // });
+    this.setState({ newListing });
   };
 
   addressChange = e => {
@@ -108,7 +102,7 @@ class ListingForm extends React.Component {
 
   formSubmit = e => {
     const { onSubmit } = this.props;
-    const {newListing} = this.state;
+    const { newListing } = this.state;
     e.preventDefault();
     if (
       newListing.address &&
@@ -128,18 +122,18 @@ class ListingForm extends React.Component {
       newListing.imageUrl
     ) {
       onSubmit(this.state.newListing);
-      this.setState({newListing: defaultListing});
+      this.setState({ newListing: defaultListing });
     } else {
       // dear god why?????
       alert('Please add to every form field');
     }
   };
   render () {
-    const {newListing} = this.state;
+    const { newListing } = this.state;
     return (
-      <form onSubmit={this.formSubmit}>
+      <div className="col-xs-8 col-xs-offset-2">
         <h2 className="text-center">Submit new property:</h2>
-        <div className="col-xs-8 col-xs-offset-2">
+        <form onSubmit={this.formSubmit}>
           <div className="row">
             <fieldset className="col-xs-3">
               <label htmlFor="address">Address:</label>
@@ -338,13 +332,11 @@ class ListingForm extends React.Component {
             </fieldset>
           </div>
           {/* can this be a button tag? */}
-          <input
-            className="col-xs-6 btn btn-danger col-xs-offset-3"
-            type="submit"
-            value="Save house"
-          />
-        </div>
-      </form>
+          <button className="col-xs-6 btn btn-danger col-xs-offset-3">
+            Save house
+          </button>
+        </form>
+      </div>
     );
   }
 }
