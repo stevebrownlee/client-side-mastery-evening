@@ -25,20 +25,19 @@ import {
   BrowserRouter as Router,
   Route,
   Redirect,
-  withRouter,
 } from 'react-router-dom';
 
 import Auth from './components/Auth/Auth';
+import App from './components/App/App';
 import Navbar from './components/Navbar/Navbar';
 
-const AuthExample = () => (
+const FishStore = () => (
   <Router>
     <div>
       <Navbar />
-      <Route path='/public' component={Public} />
       <Route path='/login' component={Auth} status='login'/>
       <Route path='/register' component={Auth} status='register'/>
-      <PrivateRoute path='/protected' component={Protected} />
+      <PrivateRoute path='/protected' component={App} />
     </div>
   </Router>
 );
@@ -73,7 +72,6 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   />
 );
 
-const Public = () => <h3>Public</h3>;
 const Protected = () => <h3>Protected</h3>;
 
-export default AuthExample;
+export default FishStore;

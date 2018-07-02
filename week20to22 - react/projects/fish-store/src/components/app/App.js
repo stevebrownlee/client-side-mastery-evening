@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import fbConection from '../firebaseRequests/connection';
-import fishRequests from '../firebaseRequests/fishes';
+import fbConection from '../../firebaseRequests/connection';
+import fishRequests from '../../firebaseRequests/fishes';
 
 class App extends Component {
   state = {
