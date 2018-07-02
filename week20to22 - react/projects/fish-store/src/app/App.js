@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import fbConection from '../firebaseRequests/connection';
+import fishRequests from '../firebaseRequests/fishes';
+
 class App extends Component {
+  state = {
+    fishes: [],
+  };
+
+  componentDidMount () {
+    fbConection();
+    fishRequests.getRequest().then((fishes) => {
+      this.setState({ fishes });
+    }).catch((err) => {
+      console.error('error with fishes get request', err);
+    });
+  }
+
   render () {
     return (
       <div className="App">
