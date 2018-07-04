@@ -5,7 +5,6 @@ import { Navbar, Nav, NavItem} from 'react-bootstrap';
 import './Navbar.css';
 
 class Auth extends React.Component {
-
   render () {
     return (
       <Navbar inverse collapseOnSelect>
@@ -18,10 +17,13 @@ class Auth extends React.Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem componentClass='span'>
-              <Link to='/public'>Public Page</Link>
+              <Link to='/login'>Login Page</Link>
             </NavItem>
             <NavItem componentClass='span'>
-              <Link to='/protected'>Protected Page</Link>
+              <Link to='/inventory'>Inventory Page</Link>
+            </NavItem>
+            <NavItem componentClass='span'>
+              <Link to='/logout'>Logout</Link>
             </NavItem>
           </Nav>
         </Navbar.Collapse>
