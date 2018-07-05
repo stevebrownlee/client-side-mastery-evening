@@ -17,7 +17,7 @@ const FishStore = () => (
       <Route path="/login" component={Auth} status="login" />
       <Route path="/register" component={Auth} status="register" />
       <Route path="/logout" render={Logout} status="register" />
-      <PrivateRoute path="/inventory" component={App} />
+      <PrivateRoute path="/inventory" authed={authRequests.isAuthenticated} component={App} />
     </div>
   </Router>
 );
@@ -33,13 +33,11 @@ const Logout = () => {
   );
 };
 
-const isAuthenticated = authRequests.isAuthenticated();
-
-const PrivateRoute = ({ component: Component, ...rest }) => (
+const PrivateRoute = ({ component: Component, authed, ...rest }) => (
   <Route
     {...rest}
     render={props =>
-      isAuthenticated ? (
+      authed() === true ? (
         <Component {...props} />
       ) : (
         <Redirect
