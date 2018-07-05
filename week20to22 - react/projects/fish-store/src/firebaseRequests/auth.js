@@ -1,13 +1,7 @@
 import firebase from 'firebase';
 
-const isAuthenticated = () => {
-  let authStatus = false;
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      authStatus = true;
-    }
-    return authStatus;
-  });
+const logoutUser = () => {
+  return firebase.auth().signOut();
 };
 
 const registerUser = user => {
@@ -20,4 +14,4 @@ const loginUser = user => {
   return firebase.auth().signInWithEmailAndPassword(user.email, user.password);
 };
 
-export default { isAuthenticated, registerUser, loginUser };
+export default { logoutUser, registerUser, loginUser };

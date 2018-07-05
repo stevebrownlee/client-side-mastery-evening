@@ -22,7 +22,7 @@ class Auth extends React.Component {
     authRequests
       .loginUser(user)
       .then(() => {
-        this.props.history.push('/inventory');
+        this.props.history.push('/orders');
       })
       .catch(error => {
         console.error('there was an error in registering', error);
