@@ -6,6 +6,8 @@ import Login from '../components/Login/Login';
 import Register from '../components/Register/Register';
 import Home from '../components/Home/Home';
 import Orders from '../components/Orders/Orders';
+import SingleOrder from '../components/SingleOrder/SingleOrder';
+import Inventory from '../components/Inventory/Inventory';
 import Navbar from '../components/Navbar/Navbar';
 
 import fbConection from '../firebaseRequests/connection';
@@ -107,7 +109,17 @@ class App extends Component {
                   path="/orders"
                   component={Orders}
                 />
-                {/* <Route component={Home} /> */}
+                <PrivateRoute
+                  authed={this.state.authed}
+                  path="/order/:id"
+                  component={SingleOrder}
+                />
+                <PrivateRoute
+                  authed={this.state.authed}
+                  path="/inventory"
+                  component={Inventory}
+                />
+
               </Switch>
             </div>
           </div>

@@ -2,12 +2,11 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 import authRequests from '../../firebaseRequests/auth';
 import './Navbar.css';
 
-class Auth extends React.Component {
+class Navbar extends React.Component {
   render () {
     const { authed, runAway } = this.props;
     const logoutClickEvent = () => {
@@ -16,43 +15,59 @@ class Auth extends React.Component {
     };
 
     return (
-      <Navbar inverse collapseOnSelect>
-        <Navbar.Header>
-          <Navbar.Brand>
+      <nav className="navbar navbar-inverse">
+        <div className="container-fluid">
+          <div className="navbar-header">
+            <button
+              type="button"
+              className="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+            </button>
             <Link to="/" className="navbar-brand">
               Fish Store
             </Link>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          {authed ? (
-            <Nav pullRight>
-              <NavItem componentClass="span">
-                <Link to="/inventory">Inventory Page</Link>
-              </NavItem>
-              <NavItem componentClass="span">
-                <button
-                  style={{ border: 'none', background: 'transparent' }}
-                  onClick={logoutClickEvent}
-                  className="navbar-brand"
-                >
-                  Logout
-                </button>
-              </NavItem>
+          </div>
 
-            </Nav>
-          ) : (
-            <Nav pullRight>
-              <NavItem componentClass="span">
-                <Link to="/login">Login Page</Link>
-              </NavItem>
-            </Nav>
-          )}
-        </Navbar.Collapse>
-      </Navbar>
+          <div
+            className="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            {authed ? (
+              <ul className="nav navbar-nav navbar-right">
+                <li>
+                  <Link to="/inventory">Inventory</Link>
+                </li>
+                <li>
+                  <Link to="/orders">Orders</Link>
+                </li>
+                <li class="navbar-form">
+                  <button
+                    onClick={logoutClickEvent}
+                    className="btn btn-danger"
+                  >
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            ) : (
+              <ul className="nav navbar-nav navbar-right">
+                <li>
+                  <Link to="/login">Login Page</Link>
+                </li>
+              </ul>
+            )}
+          </div>
+        </div>
+      </nav>
     );
   }
 }
 
-export default Auth;
+export default Navbar;
