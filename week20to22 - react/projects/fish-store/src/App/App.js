@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Route, BrowserRouter, Redirect, Switch } from 'react-router-dom';
 import firebase from 'firebase';
 
-import Auth from '../components/Auth/Auth';
+import Login from '../components/Login/Login';
+import Register from '../components/Register/Register';
 import Home from '../components/Home/Home';
 import Orders from '../components/Orders/Orders';
 import Navbar from '../components/Navbar/Navbar';
@@ -92,13 +93,13 @@ class App extends Component {
                 <PublicRoute
                   authed={this.state.authed}
                   path="/login"
-                  component={Auth}
+                  component={Login}
                   status="login"
                 />
                 <PublicRoute
                   authed={this.state.authed}
                   path="/register"
-                  component={Auth}
+                  component={Register}
                   status="register"
                 />
                 <PrivateRoute

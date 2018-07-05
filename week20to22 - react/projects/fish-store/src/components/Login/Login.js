@@ -3,13 +3,10 @@ import { Link } from 'react-router-dom';
 
 import authRequests from '../../firebaseRequests/auth';
 
-import './Auth.css';
+import './Login.css';
 
-class Auth extends React.Component {
+class Login extends React.Component {
   state = {
-    authButton: null,
-    otherAction: null,
-    submitAction: null,
     user: {
       email: 'zoeames@gmail.com',
       password: '123456',
@@ -29,19 +26,6 @@ class Auth extends React.Component {
       });
   };
 
-  registerClickEvent = e => {
-    const { user } = this.state;
-    e.preventDefault();
-    authRequests
-      .registerUser(user)
-      .then(() => {
-        this.props.history.push('/login');
-      })
-      .catch(error => {
-        console.error('there was an error in registering', error);
-      });
-  };
-
   emailChange = e => {
     const tempUser = { ...this.state.user };
     tempUser.email = e.target.value;
@@ -54,28 +38,12 @@ class Auth extends React.Component {
     this.setState({ user: tempUser });
   };
 
-  componentDidMount () {
-    if (this.props.location.pathname === '/login') {
-      this.setState({
-        authButton: 'Login',
-        otherAction: <Link to="/register">Need to Register?</Link>,
-        submitAction: this.loginClickEvent,
-      });
-    } else {
-      this.setState({
-        authButton: 'Register',
-        otherAction: <Link to="/login">Need to Login?</Link>,
-        submitAction: this.registerClickEvent,
-      });
-    }
-  }
-
   render () {
     const { user } = this.state;
     return (
-      <div className="Auth">
+      <div className="Login">
         <div id="login-form">
-          <h1 className="text-center">{this.state.authButton}</h1>
+          <h1 className="text-center">Login</h1>
           <form className="form-horizontal col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">
             <div className="form-group">
               <label htmlFor="inputEmail" className="col-sm-2 control-label">
@@ -109,7 +77,7 @@ class Auth extends React.Component {
             </div>
             <div className="form-group">
               <div className="col-sm-offset-2 col-sm-10 text-center">
-                {this.state.otherAction}
+                <Link to="/register">Need to Register?</Link>
               </div>
             </div>
             <div className="form-group">
@@ -117,9 +85,9 @@ class Auth extends React.Component {
                 <button
                   type="submit"
                   className="btn btn-default col-xs-12"
-                  onClick={this.state.submitAction}
+                  onClick={this.loginClickEvent}
                 >
-                  {this.state.authButton}
+                  Login
                 </button>
               </div>
             </div>
@@ -130,4 +98,4 @@ class Auth extends React.Component {
   }
 }
 
-export default Auth;
+export default Login;
