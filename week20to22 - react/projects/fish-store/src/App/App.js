@@ -8,6 +8,7 @@ import Home from '../components/Home/Home';
 import Orders from '../components/Orders/Orders';
 import SingleOrder from '../components/SingleOrder/SingleOrder';
 import Inventory from '../components/Inventory/Inventory';
+import New from '../components/New/New';
 import Navbar from '../components/Navbar/Navbar';
 
 import fbConection from '../firebaseRequests/connection';
@@ -119,7 +120,11 @@ class App extends Component {
                   path="/inventory"
                   component={Inventory}
                 />
-
+                <PrivateRoute
+                  authed={this.state.authed}
+                  path="/new"
+                  component={New}
+                />
               </Switch>
             </div>
           </div>
