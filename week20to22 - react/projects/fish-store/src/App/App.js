@@ -5,7 +5,7 @@ import firebase from 'firebase';
 import Login from '../components/Login/Login';
 import Register from '../components/Register/Register';
 import Home from '../components/Home/Home';
-import Orders from '../components/Orders/Orders';
+import OrderSpa from '../components/OrderSpa/OrderSpa';
 import SingleOrder from '../components/SingleOrder/SingleOrder';
 import Inventory from '../components/Inventory/Inventory';
 import New from '../components/New/New';
@@ -108,7 +108,7 @@ class App extends Component {
                 <PrivateRoute
                   authed={this.state.authed}
                   path="/orders"
-                  component={Orders}
+                  component={OrderSpa}
                 />
                 <PrivateRoute
                   authed={this.state.authed}
