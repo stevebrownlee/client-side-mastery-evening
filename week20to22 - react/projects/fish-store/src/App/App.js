@@ -16,6 +16,7 @@ fbConection();
 
 const PrivateRoute = ({ component: Component, authed, ...rest }) => {
   return (
+    // renders a route and passes in all the props (...rest is all the other props)
     <Route
       {...rest}
       render={props =>

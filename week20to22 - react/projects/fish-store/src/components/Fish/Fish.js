@@ -13,6 +13,12 @@ class Fish extends React.Component {
       price: PropTypes.number,
     }),
   };
+
+  addClickEvent = (e) => {
+    e.preventDefault();
+    this.props.addToOrder(this.props.index);
+  };
+
   render () {
     const { details } = this.props;
     const isAvailable = details.status === 'available';
@@ -25,7 +31,10 @@ class Fish extends React.Component {
           <span className="price">{formatPrice(details.price)}</span>
         </h3>
         <p>{details.desc}</p>
-        <button disabled={!isAvailable} >
+        <button
+          disabled={!isAvailable}
+          onClick={this.addClickEvent}
+        >
           {isAvailable ? 'Add To Order' : 'Sold Out!'}
         </button>
       </li>
