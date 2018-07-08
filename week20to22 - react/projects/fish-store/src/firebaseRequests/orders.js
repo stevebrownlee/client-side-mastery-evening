@@ -1,19 +1,19 @@
 import axios from 'axios';
 import constants from '../constants';
 
-const getRequest = () => {
+const getRequest = (uid) => {
   return new Promise((resolve, reject) => {
     axios
-      .get(`${constants.firebaseConfig.databaseURL}/fishes.json`)
+      .get(`${constants.firebaseConfig.databaseURL}/orders.json?orderBy="uid"&equalTo="${uid}"`)
       .then(res => {
-        const fishes = [];
+        const orders = [];
         if (res.data !== null) {
           Object.keys(res.data).forEach(fbKey => {
             res.data[fbKey].id = fbKey;
-            fishes.push(res.data[fbKey]);
+            orders.push(res.data[fbKey]);
           });
         }
-        resolve(fishes);
+        resolve(orders);
       })
       .catch(err => {
         reject(err);
