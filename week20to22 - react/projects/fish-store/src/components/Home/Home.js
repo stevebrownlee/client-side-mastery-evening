@@ -1,9 +1,10 @@
 import React from 'react';
 
+import './Home.css';
 class Home extends React.Component {
   render () {
     return (
-      <div className="catch-of-the-day">
+      <div className="Home">
         <div className="menu">
           <header className="top">
             <h1>
