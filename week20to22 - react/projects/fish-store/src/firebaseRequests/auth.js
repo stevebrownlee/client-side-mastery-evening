@@ -14,4 +14,8 @@ const loginUser = user => {
   return firebase.auth().signInWithEmailAndPassword(user.email, user.password);
 };
 
-export default { logoutUser, registerUser, loginUser };
+const getUid = () => {
+  return firebase.auth().currentUser.uid;
+};
+
+export default { getUid, logoutUser, registerUser, loginUser };

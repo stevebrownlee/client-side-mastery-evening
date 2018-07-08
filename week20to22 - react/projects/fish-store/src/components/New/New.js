@@ -1,6 +1,8 @@
 import React from 'react';
 
 import fishRequests from '../../firebaseRequests/fishes';
+import orderRequests from '../../firebaseRequests/orders';
+import authRequests from '../../firebaseRequests/auth';
 
 import Fish from '../Fish/Fish';
 import Order from '../Order/Order';
@@ -21,6 +23,29 @@ class New extends React.Component {
     // 3. Call setState to update our state object
     this.setState({ order });
   };
+
+  removeFromOrder = key => {
+    // 1. take a copy of state
+    const order = { ...this.state.order };
+    // 2. remove that item from order
+    delete order[key];
+    // 3. Call setState to update our state object
+    this.setState({ order });
+  };
+
+  saveNewOrder = () => {
+    const newOrder = {fishes: { ...this.state.order }};
+    newOrder.dateTime = Date.now();
+    newOrder.uid = authRequests.getUid();
+    orderRequests
+      .postRequest(newOrder)
+      .then((res) => {
+        this.props.history.push('/orders');
+      })
+      .catch((err) => {
+        console.error('error in order post', err);
+      });
+  }
 
   componentDidMount () {
     fishRequests
@@ -55,6 +80,7 @@ class New extends React.Component {
           fishes={this.state.fishes}
           order={this.state.order}
           removeFromOrder={this.removeFromOrder}
+          saveNewOrder={this.saveNewOrder}
         />
       </div>
     );

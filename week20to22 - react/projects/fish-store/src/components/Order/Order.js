@@ -10,41 +10,46 @@ class Order extends React.Component {
     fishes: PropTypes.array,
     order: PropTypes.object,
     removeFromOrder: PropTypes.func,
+    saveNewOrder: PropTypes.func,
   }
+
+  saveOrder = () => {
+    this.props.saveNewOrder();
+  }
+
   renderOrder = key => {
     const fish = this.props.fishes.find(x => x.id === key);
     const count = this.props.order[key];
-    // const isAvailable = fish && fish.status === 'available';
-    // const transitionOptions = {
-    //   classNames: 'order',
-    //   key,
-    //   timeout: { enter: 500, exit: 500 },
-    // };
-    // Make sure the fish is loaded before we continue!
-    if (!fish) return null;
+    const xClickFunction = () => {
+      this.props.removeFromOrder(key);
+    };
 
-    // if (!isAvailable) {
-    //   return (
-    //     <li key={key}>
-    //       Sorry {fish ? fish.name : 'fish'} is no longer available
-    //     </li>
-    //   );
-    // }
+    if (!fish) return null;
     return (
-      <li key={key}>
-        <span>
-          <span>{count}</span>
-          lbs {fish.name}
+      <li key={key} className="text-left">
+        <div className="col-xs-2 count">
+          {count} lbs
+        </div>
+        <div className="col-xs-5">
+          {fish.name}
+        </div>
+        <div className="col-xs-3">
           {formatPrice(count * fish.price)}
-          <button onClick={() => this.props.removeFromOrder(key)}>
+        </div>
+        <div className="col-xs-2">
+          <button
+            className="btn btn-default"
+            onClick={xClickFunction}
+          >
             &times;
           </button>
-        </span>
+        </div>
       </li>
     );
   };
   render () {
     const orderIds = Object.keys(this.props.order);
+    const orderExists = Object.keys(this.props.order).length > 0;
     const total = orderIds.reduce((prevTotal, key) => {
       const fish = this.props.fishes.find(x => x.id === key);
       const count = this.props.order[key];
@@ -55,12 +60,26 @@ class Order extends React.Component {
       return prevTotal;
     }, 0);
     return (
-      <div className="Order">
+      <div className="Order col-xs-4">
         <h2>Order</h2>
         {orderIds.map(this.renderOrder)}
         <div className="total">
           Total:
           <strong>{formatPrice(total)}</strong>
+        </div>
+        <div className="text-center">
+          {
+            orderExists ? (
+              <button
+                className="btn btn-default"
+                onClick={this.saveOrder}
+              >
+                Save Order
+              </button>
+            ) : (
+              <div>Add Inventory to your order </div>
+            )
+          }
         </div>
       </div>
     );
