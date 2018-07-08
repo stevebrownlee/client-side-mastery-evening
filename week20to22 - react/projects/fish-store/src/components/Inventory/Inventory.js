@@ -32,7 +32,7 @@ class Inventory extends React.Component {
     });
 
     return (
-      <div className="Inventory">
+      <div className="Inventory col-xs-12">
         <h2>Inventory</h2>
         <ul className="fishes">
           {fishComponents}
