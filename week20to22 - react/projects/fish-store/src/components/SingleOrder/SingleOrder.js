@@ -74,7 +74,7 @@ class SingleOrder extends React.Component {
               {purchasedFish.name}
             </div>
             <div className="col-xs-3">
-              {formatPrice(order.fishes[o] * purchasedFish.price)}
+              {formatPrice(purchasedFish.price)}
             </div>
             <div className="col-xs-2">
               <button
@@ -100,6 +100,16 @@ class SingleOrder extends React.Component {
       this.updateOrderClick(firebaseId);
     };
 
+    const total = Object.keys(this.state.order.fishes).reduce((prevTotal, key) => {
+      const fish = this.state.fishes.find(x => x.id === key);
+      const count = this.state.order.fishes[key];
+      const isAvailable = fish && fish.status === 'available';
+      if (isAvailable) {
+        return prevTotal + count * fish.price;
+      }
+      return prevTotal;
+    }, 0);
+
     return (
       <div className="SingleOrder col-xs-12 text-center">
         <h2>Order Number: {orderNumber}</h2>
@@ -109,6 +119,11 @@ class SingleOrder extends React.Component {
             <ul>
               {fishComponents}
             </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-8 col-xs-offset-2 totals">
+            <h3>Total Cost: <strong>{formatPrice(total)}</strong></h3>
           </div>
         </div>
         <div>

@@ -34,7 +34,7 @@ class Order extends React.Component {
           {fish.name}
         </div>
         <div className="col-xs-3">
-          {formatPrice(count * fish.price)}
+          {formatPrice(fish.price)}
         </div>
         <div className="col-xs-2">
           <button
