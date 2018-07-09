@@ -41,6 +41,21 @@ class SingleOrder extends React.Component {
     this.setState({ order: modifiedOrder});
   }
 
+  deleteOrderClick (firebaseId) {
+    orderRequests
+      .deleteRequest(firebaseId)
+      .then(() => {
+        this.props.history.push('/orders');
+      })
+      .catch(err => {
+        console.error('error with get delete request', err);
+      });
+  }
+
+  updateOrderClick (firebaseId) {
+    console.error('order to update', firebaseId);
+  }
+
   render () {
     const {order} = this.state;
     const orderNumber = this.props.match.params.id;
@@ -75,6 +90,16 @@ class SingleOrder extends React.Component {
       return ('');
     });
 
+    const deleteOrder = () => {
+      const firebaseId = this.props.match.params.id;
+      this.deleteOrderClick(firebaseId);
+    };
+
+    const updateOrder = () => {
+      const firebaseId = this.props.match.params.id;
+      this.updateOrderClick(firebaseId);
+    };
+
     return (
       <div className="SingleOrder col-xs-12 text-center">
         <h2>Order Number: {orderNumber}</h2>
@@ -88,10 +113,16 @@ class SingleOrder extends React.Component {
         </div>
         <div>
           <div className="col-xs-6">
-            <button className="col-xs-12 btn btn-default">Update Order</button>
+            <button
+              className="col-xs-12 btn btn-default"
+              onClick={updateOrder}
+            >Update Order</button>
           </div>
           <div className="col-xs-6">
-            <button className="col-xs-12 btn btn-danger">Delete Order</button>
+            <button
+              className="col-xs-12 btn btn-danger"
+              onClick={deleteOrder}
+            >Delete Order</button>
           </div>
         </div>
       </div>
