@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 import orderRequests from '../../firebaseRequests/orders';
@@ -18,6 +17,7 @@ class SingleOrder extends React.Component {
     },
     fishes: [],
   };
+
   componentDidMount () {
     const firebaseId = this.props.match.params.id;
     orderRequests
@@ -39,7 +39,8 @@ class SingleOrder extends React.Component {
     this.setState({ order: modifiedOrder });
   }
 
-  deleteOrderClick (firebaseId) {
+  deleteOrderClick = () => {
+    const firebaseId = this.props.match.params.id;
     orderRequests
       .deleteRequest(firebaseId)
       .then(() => {
@@ -50,8 +51,8 @@ class SingleOrder extends React.Component {
       });
   }
 
-  updateOrderClick (firebaseId) {
-    console.error('order to update', this.state.order);
+  updateOrderClick = () => {
+    const firebaseId = this.props.match.params.id;
     orderRequests
       .putRequest(firebaseId, this.state.order)
       .then(() => {
@@ -89,16 +90,6 @@ class SingleOrder extends React.Component {
       return '';
     });
 
-    const deleteOrder = () => {
-      const firebaseId = this.props.match.params.id;
-      this.deleteOrderClick(firebaseId);
-    };
-
-    const updateOrder = () => {
-      const firebaseId = this.props.match.params.id;
-      this.updateOrderClick(firebaseId);
-    };
-
     const total = Object.keys(this.state.order.fishes).reduce(
       (prevTotal, key) => {
         const fish = this.state.fishes.find(x => x.id === key);
@@ -130,12 +121,12 @@ class SingleOrder extends React.Component {
         </div>
         <div>
           <div className="col-xs-6">
-            <button className="col-xs-12 btn btn-default" onClick={updateOrder}>
+            <button className="col-xs-12 btn btn-default" onClick={this.updateOrderClick}>
               Update Order
             </button>
           </div>
           <div className="col-xs-6">
-            <button className="col-xs-12 btn btn-danger" onClick={deleteOrder}>
+            <button className="col-xs-12 btn btn-danger" onClick={this.deleteOrderClick}>
               Delete Order
             </button>
           </div>

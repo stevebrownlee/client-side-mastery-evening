@@ -47,7 +47,7 @@ class Register extends React.Component {
           <form className="form-horizontal col-sm-6 col-sm-offset-3">
             <div className="form-group">
               <label htmlFor="inputEmail" className="col-sm-4 control-label">
-                Email
+                Email:
               </label>
               <div className="col-sm-8">
                 <input
@@ -62,7 +62,7 @@ class Register extends React.Component {
             </div>
             <div className="form-group">
               <label htmlFor="inputPassword" className="col-sm-4 control-label">
-                Password
+                Password:
               </label>
               <div className="col-sm-8">
                 <input
