@@ -21,6 +21,19 @@ const getRequest = (uid) => {
   });
 };
 
+const getSingleRequest = (id) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`${constants.firebaseConfig.databaseURL}/orders/${id}.json`)
+      .then(res => {
+        resolve(res.data);
+      })
+      .catch(err => {
+        reject(err);
+      });
+  });
+};
+
 const postRequest = (newOrder) => {
   return new Promise((resolve, reject) => {
     axios
@@ -34,4 +47,4 @@ const postRequest = (newOrder) => {
   });
 };
 
-export default { getRequest, postRequest };
+export default { getRequest, getSingleRequest, postRequest };
