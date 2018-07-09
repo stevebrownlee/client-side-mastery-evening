@@ -1,12 +1,18 @@
 /* eslint no-restricted-globals: ["error", "history"] */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import authRequests from '../../firebaseRequests/auth';
 import './Navbar.css';
 
 class Navbar extends React.Component {
+  static propTypes = {
+    authed: PropTypes.bool,
+    runAway: PropTypes.func,
+  }
+
   render () {
     const { authed, runAway } = this.props;
     const logoutClickEvent = () => {
