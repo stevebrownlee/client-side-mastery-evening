@@ -1,194 +1,194 @@
 # NSS Evening Class Curriculum
 
-### Week by week doccumentation of what was covered - Currently for E7
+### Week by week doccumentation of what was covered - Currently for E8
 
 ***
 
-#### Week 1 (February 12 - 17)
+#### Week 1 (August 13 - 18)
 * **Day 1** - Introductions, John's Intro talk, Class Expectations, Installs
-* **Day 2** - Finish Installs, HTML
-* **HW** - Finish prework, surveys (personality type, studygroup location)
-* **Lab Day** - Finsh HTML, CSS
+* **Day 2** - Finish Installs, HTML, CSS
+* **HW** - Finish prework, surveys (studygroup location)
+* **Lab Day** - E7 Demos
 
 ***
 
-#### Week 2 (February 19 - 24)
+#### Week 2 (August 20 - 25)
 * **Day 1** - intro to command line, VS Code, Github
 * **Day 2** - Github branching
-* **HW** - CSS, HTML HW
-* **Lab Day** - Advanced CSS, Dev tools,  github review, exercise time,
+* **HW** - CSS, HTML, github HW
+* **Lab Day** - JS Functions, ES6 vs ES5
 
 ***
 
-#### Week 3 (February 26 - March 3)
-* **Day 1** - JS Strings
-* **Day 2** - JS Arrays
+#### Week 3 (August 27 - September 1)
+* **Day 1** - JS Arrays and Strings
+* **Day 2** - JS Objects and advanced array methods
 * **HW** - JS
-* **Lab Day** - JS Objects, JS Functions
+* **Lab Day** - Advanced CSS, Dev tools
 
 ***
 
-#### Week 4 (March 5 - 10)
-* **Day 1** - Advanced JS - array methods
-* **Day 2** -  Git for teams, wireframes, give assignment to plan out(not temp converter)
+#### Week 4 (September 3 - 8)
+* **Day 1** - Holiday: Labor Day
+* **Day 2** -  Git for teams, wireframes
+* **HW** -
+* **Lab Day** - markdown, Exercises
+
+***
+
+#### Week 5 (September 10 - 15)
+* **Day 1** - Group Project: Band Website
+* **Day 2** - Group Project: Band Website
+* **HW** - Group Project: Band Website
+* **Lab Day** - Group Project: Band Website
+
+***
+
+#### Week 6 (September 17 - 22)
+* **Day 1** - Demo Group Project, event listeners
+* **Day 2** -  bootstrap 4
+* **HW** -
+* **Lab Day** - exercises
+
+***
+
+#### Week 7 (September 24 - 29)
+* **Day 1** - Task runners
+* **Day 2** - simple es6 modules
 * **HW** -
 * **Lab Day** - Exercises
 
 ***
 
-#### Week 5 (March 12 - 17)
-* **Day 1** - Group Project
-* **Day 2** - Group Project
-* **HW** - Group Project
-* **Lab Day** - Group Project
-
-***
-
-#### Week 6 (March 19 - 24)
-* **Day 1** - Demo Group Project, ES6, Markdown (README.md)
-* **Day 2** -  Interacting with the dom (Event Listeners, traversing, dynamic event listeners)
-* **HW** - Travel Diary
-* **Lab Day** - exercises
-
-***
-
-#### Week 7 (March 26 - 31)
-* **Day 1** - JSON
-* **Day 2** - XHR
-* **HW** -  clicky planets on steroids, put personal site blogs/projects in JSON, ES6, README
-* **Lab Day** - XHR Exercises
-
-***
-
-#### Week 8 (April 2 - 7)
-* **Day 1** - Bootstrap and XHR
-* **Day 2** - Bootstrap and XHR
-* **HW** - treehouse cage match, personal site add bootstrap
-* **Lab Day** - Bootstrap exercises
-
-***
-
-#### Week 9 (April 9 - 14)
-* **Day 1** - Task Runners
-* **Day 2** - Browserify + events
-* **HW** - Browserify + events
-* **Lab Day** - Browserify review, labday
-
-***
-
-#### Week 10 (April 16 - 21)
-* **Day 1** - Browserify + XHR
-* **Day 2** - Browserify + XHR
-* **HW** - Browserify + XHR
-* **Lab Day** -  Group Project - Chatty
-
-***
-#### Week 11 (April 23 - 28)
-* **Day 1** - Group Project - Chatty
-* **Day 2** - Group Project - Chatty
-* **HW** - Group Project - Chatty
-* **Lab Day** - Group Project - Chatty
-
-***
-
-#### Week 12 (April 30 - May 5)
-* **Day 1** - demo chatty, jQuery selectors
-* **Day 2** - jQuery ajax
-* **HW** - add jquery to personalsite, browserify + XHR + jquery exercise (something like acme explosives - 3 jsons)
-* **Lab Day** - jQuery exercises
-
-***
-
-#### Week 13 (May 7 - 12) - BREAK
-* **Day 1** - BREAK
-* **Day 2** - BREAK
+#### Week 8 (October 1 - 6)
+* **Day 1** - JSON and XHR
+* **Day 2** - ES6 modules and events
 * **HW** -
-* **Lab Day** - BREAK
+* **Lab Day** - Exercises
 
 ***
 
-#### Week 14 (May 14 - 19)
+#### Week 9 (October 8 - 13)
+* **Day 1** - Group Project: Chatty
+* **Day 2** - Group Project: Chatty
+* **HW** - Group Project: Chatty
+* **Lab Day** - Group Project: Chatty
+
+***
+
+#### Week 10 (October 15 - 20)
+* **Day 1** - demo chatty, jquery
+* **Day 2** - jquery ajax
+* **HW** - jquery
+* **Lab Day** -  Mini Hackathon
+
+***
+#### Week 11 (October 22 - 27)
 * **Day 1** - Promises
-* **Day 2** - Promises
-* **HW** - redo browserify + XHR + jquery exercise (something like acme explosives - 3 jsons)
+* **Day 2** - Intro to API, promises and APIs
+* **HW** - promises
 * **Lab Day** - exercises
 
 ***
 
-#### Week 15 (May 21 - 26)
-* **Day 1** - APIs
-* **Day 2** - APIs
-* **HW** - APIs
-* **Lab Day** - APIs, intro to firebase
+#### Week 12 (October 29 - November 3)
+* **Day 1** - axios
+* **Day 2** - axios
+* **HW** -
+* **Lab Day** - exercises
 
 ***
 
-#### Week 16 (May 28 - June 2)
-* **Day 1** - HOLIDAY: Memorial Day
-* **Day 2** - firebase
-* **HW** - firebase
-* **Lab Day** - firebase
-
-***
-
-#### Week 17 (June 4 - 9)
-* **Day 1** - firebase auth
+#### Week 13 (November 5 - 10)
+* **Day 1** - Intro to Firebase
 * **Day 2** - firebase auth
-* **HW** - firebase auth
-* **Lab Day** - firebase auth
+* **HW** -
+* **Lab Day** - exercises
 
 ***
 
-#### Week 18 (June 11 - 16)
-* **Day 1** - exercises
-* **Day 2** - Group Project - Nutshell
-* **HW** - Group Project - Nutshell
-* **Lab Day** - Group Project - Nutshell
+#### Week 14 (November 12 - 17)
+* **Day 1** - firebase
+* **Day 2** - firebase
+* **HW** -
+* **Lab Day** - exercises
 
 ***
 
-#### Week 19 (June 18 - 23)
-* **Day 1** - Group Project - Nutshell
-* **Day 2** - Nutshell Demo, Intro to SASS
+#### Week 15 (November 19 - 24)
+* **Day 1** - Full crud lightning exercise
+* **Day 2** - Full crud lightning exercise
+* **HW** - THANKSGIVING HOLIDAY
+* **Lab Day** - THANKSGIVING HOLIDAY
+
+***
+
+#### Week 16 (November 26 - December 1)
+* **Day 1** - Intro to SASS
+* **Day 2** - SASS, personal site
+* **HW** -
+* **Lab Day** - Group Project: Nutshell
+
+***
+
+#### Week 17 (December 3 - 8)
+* **Day 1** - Group Project: Nutshell
+* **Day 2** - Group Project: Nutshell
+* **HW** - Group Project: Nutshell
+* **Lab Day** - Group Project: Nutshell
+
+***
+
+#### Week 18 (December 10 - 15)
+* **Day 1** - demo nutshell, Intro to React
+* **Day 2** - React SPA
+* **HW** -
+* **Lab Day** - React SPA
+
+***
+
+#### Week 19 (December 17 - 22)
+* **Day 1** - React SPA
+* **Day 2** - React SPA, capstone discussion
 * **HW** - finish local weather, portfolio
-* **Lab Day** - SASS, personal site
+* **Lab Day** - BREAK: HOLIDAY
 
 
 ***
 
-#### Week 20 (June 25 - 30)
-* **Day 1** - What is a framework, intro to react, react setup, simple app with component, setup realtor
-* **Day 2** - realtor READ
-* **HW** - 1st react assignment, personal site
-* **Lab Day** - capstone 101, personal site review, Realtor POST
+#### Week 20 (December 24 - 29)
+* **Day 1** - BREAK: HOLIDAY
+* **Day 2** - BREAK: HOLIDAY
+* **HW** -
+* **Lab Day** - BREAK: HOLIDAY
 
 ***
 
-#### Week 21 (July 2 - 7)
-* **Day 1** - setup fishstore, react routing
-* **Day 2** - fish store
-* **HW** - REACT (NO STUDYGROUPS - 4th of July)
-* **Lab Day** - fish store, capstone proposals due
+#### Week 21 (December 31 - January 5)
+* **Day 1** - BREAK: HOLIDAY
+* **Day 2** - BREAK: HOLIDAY
+* **HW** -
+* **Lab Day** - BREAK: HOLIDAY
 
 ***
 
-#### Week 22 (July 9 - 14)
-* **Day 1** - Group Project - Pinterest
-* **Day 2** - Group Project - Pinterest
-* **HW** - Group Project - Pinterest
-* **Lab Day** - Group Project - Pinterest, Capstone 1-on-1s
+#### Week 22 (January 7 - 12)
+* **Day 1** - React Routing
+* **Day 2** - React Routing
+* **HW** -
+* **Lab Day** - React Routing
 
 ***
 
-#### Week 23 (July 16 - 21)
-* **Day 1** - pinterest lightning demos, CAPSTONES
-* **Day 2** - CAPSTONES
-* **HW** - CAPSTONES
-* **Lab Day** - CAPSTONES
+#### Week 23 (January 14 - 19)
+* **Day 1** - React Routing
+* **Day 2** - React Routing
+* **HW** -
+* **Lab Day** - React Routing
 
 ***
 
-#### Week 24 (July 23 - 28)
+#### Week 24 (January 21 - 26)
 * **Day 1** - CAPSTONES
 * **Day 2** - CAPSTONES
 * **HW** - CAPSTONES
@@ -196,7 +196,15 @@
 
 ***
 
-#### Week 25 (July 30 - August 4)
+#### Week 25 (January 28 - February 2)
+* **Day 1** - CAPSTONES
+* **Day 2** - CAPSTONES
+* **HW** - CAPSTONES
+* **Lab Day** - CAPSTONES
+
+***
+
+#### Week 26 (February 4-9)
 * **Day 1** - CAPSTONES
 * **Day 2** - CAPSTONES, capstone MVP demos
 * **HW** - CAPSTONES

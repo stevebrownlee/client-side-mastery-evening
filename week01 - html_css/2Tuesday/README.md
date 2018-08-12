@@ -1,3 +1,3 @@
-# Week 1 - Day 2 (February 13)
+# Week 1 - Day 2 (August 14)
 
-> **Agenda:** Finish Installs, HTML
+> **Agenda:** Finish Installs, HTML, CSS

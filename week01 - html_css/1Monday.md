@@ -1,4 +1,4 @@
-# Week 1 - Day 1 (February 12)
+# Week 1 - Day 1 (August 13)
 
 > **Agenda:** Introductions, John's Intro talk, Class Expectations, Installs
 
