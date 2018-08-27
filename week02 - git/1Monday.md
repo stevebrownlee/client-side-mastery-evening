@@ -19,3 +19,25 @@
 ``` git config --global user.name "Zoe Ames" ```
 * Add your [email](https://help.github.com/articles/setting-your-commit-email-address-in-git/)
 ``` git config --global user.email "zoeames@gmail.com" ```
+
+### Command line
+Cover the following commands:
+* pwd
+* cd
+* mkdir
+* touch
+* ls
+* mv
+* cp
+* rm
+* man
+* open .
+* code .
+
+### Install tree
+Mac: `brew install tree`
+
+Windows:  `cmd //c tree`
+
+### Create Class File Structure:
+![file structure](./workspace_file_structure.png)
