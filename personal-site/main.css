@@ -1,0 +1,41 @@
+/* Util Shtuff */
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/* Project Page Shtuff */
+.cardContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.cardContainer .card {
+  width: 30%;
+}
+
+
+/* Footer Shtuff */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.fullPage {
+  flex: 1 0 auto;
+}
+
+#contactInfo .contact__footer {
+  max-width: 15%;
+  margin: 1% 5%;
+}
+
+#contactInfo .contact__footer > img {
+  max-width: 15%;
+}
+
