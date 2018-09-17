@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -7,46 +8,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./main.css">
   <title>Document</title>
 </head>
-<body>
-  <div class="row">
-    <div class="card text-white bg-info mb-3 m-2 w-25" id="card--1">
-      <div class="card-header">Header</div>
-      <div class="card-body">
-        <h5 class="card-title">Danger card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-      <button class="btn btn-primary" id="btn--1">Delete this shit</button>
-    </div>
-    <div class="card text-white bg-info mb-3 m-2 w-25" id="card--2">
-      <div class="card-header">Header</div>
-      <div class="card-body">
-        <h5 class="card-title">Danger card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-      <button class="btn btn-primary" id="btn--2">Delete this shit</button>
-    </div>
-    <div class="card text-white bg-info mb-3 m-2 w-25" id="card--3">
-      <div class="card-header">Header</div>
-      <div class="card-body">
-        <h5 class="card-title">Danger card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-      <button class="btn btn-primary" id="btn--3">Delete this shit</button>
-    </div>
-  </div>
-  
 
-  <!-- Optional JavaScript -->
+<body class="container">
+  <div class="row">
+    <h1 class="mx-auto text-center m-2">The Procrastinators Fridge</h1>
+  </div>
+
+  <div class="row">
+    <form id="addCard" class="mx-auto bg-secondary text-light w-50 p-2">
+      <div class="form-group">
+        <label for="toDo__addCard">To Do</label>
+        <input type="text" class="form-control" id="toDo__addCard" aria-describedby="emailHelp" placeholder="What do you have to do?">
+      </div>
+      <div class="form-group">
+        <label for="notes__addCard">Notes</label>
+        <textarea class="form-control" id="notes__addCard" cols="30" rows="3"></textarea>
+      </div>
+      <button id="submit__addCard" type="submit" class="btn btn-primary">Add Card</button>
+    </form>
+  </div>
+
+
+  <div class="row" id="outputCards"></div>
+
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
