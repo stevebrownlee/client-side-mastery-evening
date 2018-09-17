@@ -1,3 +1,7 @@
+// TODO: Go over event listener pieces basics
+
+
+
 var outputEl = document.getElementById("output-target")
 
 /*
@@ -16,12 +20,16 @@ var articleEl = document.getElementsByClassName("article-section")
     event to the handler function for the event.
 */
 function handleSectionClick (event) {
+    // ANSWER: console.log(event.target.innerHTML)
     console.log(event)
 }
 
 for (var i = 0; i < articleEl.length; i++) {
-    articleEl.item(i).addEventListener("click", handleSectionClick)
+    articleEl[i].addEventListener("click", handleSectionClick)
 }
+
+//ANSWER: 
+// const header = document.getElementById('page-header');
 
 /*
     Define functions that hold logic to be performed when mouse
@@ -101,4 +109,5 @@ document.getElementById("add-rounding").addEventListener("click", function() {
  */
 document.querySelector("body").addEventListener("click", function(event) {
     console.log("You clicked on the body of the DOM")
+    // TODO: Go into DOM traversal here
 })
