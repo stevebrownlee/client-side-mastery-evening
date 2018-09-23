@@ -9,26 +9,38 @@ let calc = {
 };
 
 
-const calculate = (num1, num2, mathType) => {
+const calculate = () => {
   let answer = 0;
-  switch (mathType) {
+  switch (calc.mathType) {
     case 'add':
-      answer = add(num1, num2);
+      answer = add(calc.firstNumber, calc.secondNumber);
       break;
     case 'subtract':
-      answer = subtract(num1, num2);
+      answer = subtract(calc.firstNumber, calc.secondNumber);
       break;
     case 'multiply':
-      answer = multiply(num1, num2);
+      answer = multiply(calc.firstNumber, calc.secondNumber);
       break;
     case 'divide':
-      answer = divide(num1, num2);
+      answer = divide(calc.firstNumber, calc.secondNumber);
       break;
     default:
       answer = 'you broke it'
   }
-
-  printToDom(answer, 'result');
+  setDisplay(answer);
 };
 
-export default {calculate};
+const setDisplay = (num) => {
+  calc.display = num;
+  printToDom(calc.display, 'result');
+};
+
+const setMathType = (newType) => {
+  calc.mathType = newType;
+};
+
+const initialDisplay = () => {
+  printToDom(0, 'result');
+}
+
+export default {calculate, setMathType, initialDisplay};

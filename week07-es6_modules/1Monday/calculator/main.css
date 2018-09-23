@@ -11,3 +11,7 @@
 .btn{
   margin: 5px
 }
+
+.selectedButton{
+  border: solid 2px orange;
+}
