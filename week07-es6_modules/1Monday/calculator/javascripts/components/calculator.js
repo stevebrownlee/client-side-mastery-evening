@@ -1,7 +1,15 @@
 import {printToDom} from './../helpers/util.js'
 import {add, subtract, multiply, divide} from './../helpers/maths.js'
 
-const calcualte = (num1, num2, mathType) => {
+let calc = {
+  firstNumber: '',
+  secondNumber: '',
+  mathType: '',
+  display: ''
+};
+
+
+const calculate = (num1, num2, mathType) => {
   let answer = 0;
   switch (mathType) {
     case 'add':
@@ -23,4 +31,4 @@ const calcualte = (num1, num2, mathType) => {
   printToDom(answer, 'result');
 };
 
-export default calcualte;
+export default {calculate};
