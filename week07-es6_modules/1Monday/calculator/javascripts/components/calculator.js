@@ -41,6 +41,16 @@ const setMathType = (newType) => {
 
 const initialDisplay = () => {
   printToDom(0, 'result');
-}
+};
 
-export default {calculate, setMathType, initialDisplay};
+const addNumber = (num) => {
+  if(calc.mathType === '') {
+    calc.firstNumber += num;
+    setDisplay(calc.firstNumber);
+  } else {
+    calc.secondNumber += num;
+    setDisplay(calc.secondNumber);
+  }
+};
+
+export default {calculate, setMathType, initialDisplay, addNumber};

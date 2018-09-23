@@ -18,6 +18,7 @@ const zeroButton = document.getElementById('zeroButton');
 
 const addNumber = (e) => {
   console.log('you clicked ', e.target.innerHTML);
+  calc.addNumber(e.target.innerHTML);
 };
 
 const divideButtonEvent = () => {
