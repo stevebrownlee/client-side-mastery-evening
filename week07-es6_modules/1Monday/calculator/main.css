@@ -1,0 +1,13 @@
+.calculator {
+  border: 2px solid black;
+  text-align: center;
+}
+
+.result {
+  border-bottom: 2px solid black;
+  text-align: right;
+}
+
+.btn{
+  margin: 5px
+}
