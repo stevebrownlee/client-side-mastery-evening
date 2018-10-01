@@ -13,10 +13,18 @@ const createEvents = () => {
 };
 
 const buildCharacter = (person) => {
-    let domString = `<div class="character" id="${person.id}">`;
-    domString += `<button class="btn btn-danger" id="close">x</button>`;
-    domString += `<h1>${person.name}</h1>`;
-    domString += `<h1>${person.house}</h1>`;
+    let domString = '';
+    domString += `<div class="character col-6 offset-md-3" id="${person.id}">`;
+    domString +=   `<div class="row"><button class="btn btn-danger" id="close">x</button></div>`;
+    domString +=   `<div class="row">`
+    domString +=     `<div class='col'>`
+    domString +=       `<img class="char-image" src="${person.imageUrl}" alt="${person.name}"/>`
+    domString +=     `</div>`
+    domString +=     `<div class='col'>`
+    domString +=       `<h1>${person.name}</h1>`;
+    domString +=       `<h3>House: ${person.house}</h3>`;
+    domString +=     `</div>`
+    domString +=   `</div>`;
     domString += `</div>`;
   printToDom(domString, 'character');
   createEvents();
