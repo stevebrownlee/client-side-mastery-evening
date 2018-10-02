@@ -31,9 +31,31 @@ const createEvents = () => {
   }
 };
 
-const builder = () => {
+const sortPeople = (e) => {
+  console.log('clicked sort button', e.target.id);
+  const house = e.target.id;
+  switch (house) {
+    case 'Stark':
+      const starks = people.filter(x => x.house === house);
+      builder(starks)
+      break;
+    default:
+    builder(people);
+    break;
+  }
+};
+
+const sortEvents = () => {
+  const allButton = document.getElementById('All');
+  const starkButton = document.getElementById('Stark');
+  allButton.addEventListener('click', sortPeople);
+  starkButton.addEventListener('click', sortPeople);
+
+};
+
+const builder = (allPeople) => {
   let domString = '';
-  people.forEach((person) => {
+  allPeople.forEach((person) => {
     domString += `<div class="col-2 person" id="${person.id}">`;
     domString +=   `<div class="card">`;
     domString +=     `<img class="card-img-top" src="${person.imageUrl}" alt="Card image cap">`;
@@ -47,4 +69,4 @@ const builder = () => {
   createEvents();
 };
 
-export {builder, getPeople, setPeople};
+export {builder, getPeople, setPeople, sortEvents};

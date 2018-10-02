@@ -1,10 +1,10 @@
 import {printToDom} from './../helpers/util.js'
-import {builder} from './people.js';
+import {builder, getPeople} from './people.js';
 
 const clearCharacterDiv = () => {
   const characterDiv = document.getElementById('character');
   characterDiv.innerHTML = '';
-  builder();
+  builder(getPeople());
 };
 
 const createEvents = () => {
