@@ -7,7 +7,6 @@ function executeThisCodeIfXHRFails () {
 function executeThisCodeAfterFileLoaded () {
   const data = JSON.parse(this.responseText);
   setPeople(data.characters);
-  console.log('data', data.characters);
   builder(getPeople());
 }
 
