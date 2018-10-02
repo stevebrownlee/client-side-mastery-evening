@@ -1,7 +1,7 @@
-import {builder} from './components/people.js';
+import {getCharacters} from './data/charactersData.js'
 
 const initializeApp = () => {
-  builder();
+  getCharacters();
 };
 
 initializeApp();

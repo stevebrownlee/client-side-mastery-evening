@@ -4,6 +4,14 @@ import {buildCharacter} from './character.js';
 let people = [];
 
 
+const getPeople = () => {
+  return people;
+};
+
+const setPeople = (peopleArray) => {
+  people = peopleArray;
+};
+
 const clearPeopleDiv = () => {
   const peopleDiv = document.getElementById('people');
   peopleDiv.innerHTML = '';
@@ -39,6 +47,4 @@ const builder = () => {
   createEvents();
 };
 
-
-
-export {builder};
+export {builder, getPeople, setPeople};
