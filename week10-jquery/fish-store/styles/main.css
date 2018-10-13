@@ -1,0 +1,7 @@
+body {
+    text-align: center;
+}
+
+.on-sale .card-body {
+    border: 1px solid red;
+}
