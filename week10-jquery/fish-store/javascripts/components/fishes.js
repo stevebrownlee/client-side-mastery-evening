@@ -42,7 +42,7 @@ const bindEvents = () => {
 const writeFishes = (fishes) => {
   let domString = '';
   fishes.forEach((fish) => {
-    domString += `<div class="${fish.onSale ? 'on-sale' : ''} fish card col-md-6 col-md-offset-3">`;
+    domString += `<div class="${fish.onSale ? 'on-sale' : ''} fish card col-md-6 offset-md-3">`;
     domString +=    `<img class="card-img-top" src="${fish.imageSoure}" alt="" width="40%">`;
     domString +=      `<div class="card-body">`;
     domString +=         `<h3 class="card-title" id="thumbnail-label">${fish.name}</h3>`;
