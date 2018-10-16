@@ -54,7 +54,6 @@ const writeFishes = (fishes) => {
     domString += `</div>`;
   });
   $('#available').append(domString);
-
 };
 
 const initialFishView = (fishes) => {
