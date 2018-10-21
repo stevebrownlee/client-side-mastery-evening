@@ -1,3 +1,15 @@
+.page-container {
+  margin: 1%;
+}
+
+.pcard {
+  border-radius: 15px;
+}
+
+.pcard:hover {
+  background-color: lightgrey;
+}
+
 .board-card {
   /* border: 2px solid gray; */
   max-width: 20%;
@@ -12,10 +24,21 @@
   position: relative;
 }
 
-.pin-card > p {
+.pin-card a {
   position: absolute;
   left: 0; bottom: 10px;
   width: 100%;
   text-align: center;
+  display: none;
+  color: inherit;
   /* color: #fff; */
+}
+
+.pin-card:hover a {
+  display: block;
+}
+
+.arrow {
+  max-height: 10px;
+  max-width: 10px;
 }

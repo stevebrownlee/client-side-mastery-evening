@@ -1,14 +1,14 @@
 import {loadPinsForBoard} from '../data/pinsData.js';
 
+const shortenLink = (full_url) => {
+  const hostname = new URL(full_url).hostname;
+  return hostname;
+}
+
 const bindEvents = () => {
-  $('.pin-card').hover(
-  (e) => {
-    const pinId = $(e.target).closest('.pin-card').attr('id');
-    $(`#${pinId}.pin-card > p`).show()
-  },
-  (e) => {
-    const pinId = $(e.target).closest('.pin-card').attr('id');
-    $(`#${pinId}.pin-card > p`).hide()
+  $('#toBoardsBtn').click(() => {
+    $('#pins-page').hide();
+    $('#boards-page').show();
   });
 }
 
@@ -16,9 +16,9 @@ const writePins = (pins) => {
   let domString = '';
   pins.forEach((pin) => {
     domString += `
-        <div id='${pin.id}' class="pin-card p-2">
+        <div id='${pin.id}' class="pcard pin-card p-2">
           <img class="card-img-top" src="${pin.image_url}" alt="pin image">
-          <p style='display: none;'>Link</p>
+          <a href='${pin.link}' target='_blank'>${shortenLink(pin.link)}</a>
         </div>
       `
   })

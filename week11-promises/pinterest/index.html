@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <div id="boards-page">
+  <div id="boards-page" class="page-container">
     <h1 class="text-center">My Boards</h1>
     <div id="user-boards" class="d-flex flex-row flex-wrap"></div>
   </div>
-  <div id="pins-page" style="display: none;">
+  <div id="pins-page" class="page-container" style="display: none;">
+    <button type="button" class="btn btn-secondary float-left" id="toBoardsBtn">Back to Boards</button>
     <h1 class="text-center">Pins</h1>
     <div id="pins-on-board" class="d-flex flex-row flex-wrap"></div>
   </div>
