@@ -1,0 +1,21 @@
+.board-card {
+  /* border: 2px solid gray; */
+  max-width: 20%;
+}
+
+.card-img-top {
+  border-radius: 15px;
+}
+
+.pin-card {
+  max-width: 14%;
+  position: relative;
+}
+
+.pin-card > p {
+  position: absolute;
+  left: 0; bottom: 10px;
+  width: 100%;
+  text-align: center;
+  /* color: #fff; */
+}

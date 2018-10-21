@@ -1,0 +1,34 @@
+{
+  "boards": [
+    {
+      "id": 1,
+      "name": "All the CatZ",
+      "user_id": 33
+    },
+    {
+      "id": 2,
+      "name": "Cute Dogs",
+      "user_id": 33
+    },
+    {
+      "id": 3,
+      "name": "Halloween Costumes",
+      "user_id": 33
+    },
+    {
+      "id": 4,
+      "name": "Crafty Things",
+      "user_id": 33
+    },
+    {
+      "id": 5,
+      "name": "Unhealthy Eating",
+      "user_id": 33
+    },
+    {
+      "id": 6,
+      "name": "Cute Houses",
+      "user_id": 33
+    }
+  ]
+}
