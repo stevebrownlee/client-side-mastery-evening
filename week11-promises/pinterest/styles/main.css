@@ -31,14 +31,11 @@
   text-align: center;
   display: none;
   color: inherit;
-  /* color: #fff; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* text-decoration: none; */
 }
 
 .pin-card:hover a {
   display: block;
-}
-
-.arrow {
-  max-height: 10px;
-  max-width: 10px;
 }

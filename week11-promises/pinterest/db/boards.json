@@ -2,32 +2,37 @@
   "boards": [
     {
       "id": 1,
-      "name": "All the CatZ",
+      "name": "Garden Gnomes",
       "user_id": 33
     },
     {
       "id": 2,
-      "name": "Cute Dogs",
+      "name": "Cool Toasters",
       "user_id": 33
     },
     {
       "id": 3,
-      "name": "Halloween Costumes",
+      "name": "Happy Meal Toys",
       "user_id": 33
     },
     {
       "id": 4,
-      "name": "Crafty Things",
+      "name": "Adding Machines",
       "user_id": 33
     },
     {
       "id": 5,
-      "name": "Unhealthy Eating",
+      "name": "Fried Foods",
       "user_id": 33
     },
     {
       "id": 6,
-      "name": "Cute Houses",
+      "name": "Toilet Seat Covers",
+      "user_id": 33
+    },
+    {
+      "id": 7,
+      "name": "Dino Costumes",
       "user_id": 33
     }
   ]
