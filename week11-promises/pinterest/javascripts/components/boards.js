@@ -29,8 +29,8 @@ const writeBoards = (boards) => {
   $('#user-boards').html(domString);
 }
 
-const initialBoardsView = (userId) => {
-  loadBoards(userId).then((boards) => {
+const initialBoardsView = () => {
+  loadBoards().then((boards) => {
     return loadPinsOnBoards(boards);
   }).then((boardsWithPins) => {
     writeBoards(boardsWithPins);

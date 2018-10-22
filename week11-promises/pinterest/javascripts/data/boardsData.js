@@ -1,9 +1,8 @@
-const loadBoards = (userId) => {
+const loadBoards = () => {
   return new Promise((resolve, reject) => {
     $.get('../db/boards.json')
       .done((data) => {
-        const boards = data.boards.filter(board => board.user_id == userId);
-        resolve(boards);
+        resolve(data.boards);
       })
       .fail((error) => {
         reject('Got an error!', error);
