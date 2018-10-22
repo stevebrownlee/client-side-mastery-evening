@@ -1,0 +1,39 @@
+{
+  "boards": [
+    {
+      "id": 1,
+      "name": "Garden Gnomes",
+      "user_id": 33
+    },
+    {
+      "id": 2,
+      "name": "Cool Toasters",
+      "user_id": 33
+    },
+    {
+      "id": 3,
+      "name": "Happy Meal Toys",
+      "user_id": 33
+    },
+    {
+      "id": 4,
+      "name": "Adding Machines",
+      "user_id": 33
+    },
+    {
+      "id": 5,
+      "name": "Fried Foods",
+      "user_id": 33
+    },
+    {
+      "id": 6,
+      "name": "Toilet Seat Covers",
+      "user_id": 33
+    },
+    {
+      "id": 7,
+      "name": "Dino Costumes",
+      "user_id": 33
+    }
+  ]
+}
