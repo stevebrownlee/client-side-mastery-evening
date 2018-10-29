@@ -1,5 +1,5 @@
 #### Week 12 (October 29 - November 3)
-* **Day 1** - Axios
-* **Day 2** - Axios
+* **Day 1** - Task Runners
+* **Day 2** - Shotz HW Review
 * **HW** -
-* **Lab Day** - Exercises
+* **Lab Day** - Axios

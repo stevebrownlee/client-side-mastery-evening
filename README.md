@@ -93,7 +93,7 @@
 
 #### Week 12 (October 29 - November 3)
 * **Day 1** - Task Runners, ES6 modules, promises
-* **Day 2** - review / 1-on-1s
+* **Day 2** - Shotz HW Review
 * **HW** -
 * **Lab Day** - Axios
 
