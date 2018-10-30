@@ -7,11 +7,13 @@
     "build": "NODE_ENV=production webpack",
     "lint": "eslint ./src --ext .js",
     "dev": "NODE_ENV=development webpack-dev-server --content-base dist --hot",
-    "start": "npm run lint && npm run dev"
+    "start": "npm run lint && npm run dev",
+    "movies": "json-server db/movies.json --port 3003",
+    "locations": "json-server db/locations.json --port 3004"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

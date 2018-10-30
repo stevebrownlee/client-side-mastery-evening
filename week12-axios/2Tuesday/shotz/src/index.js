@@ -1,10 +1,18 @@
-import $ from 'jquery';
+import 'jquery';
 import 'bootstrap';
-
-import message from './message';
 
 import './index.scss';
 
-$('#click-button').on('click', () => {
-  $('#important-text').append(message);
-});
+// const locationFile = require('./db/locations.json');
+// console.log('locationFile', locationFile);
+
+import movieView from './javascripts/components/movies';
+import locationView from './javascripts/components/locations';
+
+
+const initializeApp = () => {
+  movieView.initalizeMoviesView();
+  locationView.initalizelocationsView();
+};
+
+initializeApp();
