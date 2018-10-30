@@ -1,6 +1,6 @@
 import movieData from '../data/moviesData';
 
-const initalizeMoviesView = () => {
+const initializeMoviesView = () => {
   movieData.loadMovies().then((movies) => {
     console.log('movies', movies);
   }).catch((error) => {
@@ -8,4 +8,4 @@ const initalizeMoviesView = () => {
   });
 };
 
-export default { initalizeMoviesView };
+export default { initializeMoviesView };

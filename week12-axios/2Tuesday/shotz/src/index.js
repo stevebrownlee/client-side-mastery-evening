@@ -11,8 +11,8 @@ import locationView from './javascripts/components/locations';
 
 
 const initializeApp = () => {
-  movieView.initalizeMoviesView();
-  locationView.initalizelocationsView();
+  movieView.initializeMoviesView();
+  locationView.initializeLocationsView();
 };
 
 initializeApp();
