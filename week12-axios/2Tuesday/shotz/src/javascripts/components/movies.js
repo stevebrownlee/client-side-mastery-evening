@@ -26,7 +26,6 @@ const writeMovies = (movies) => {
 
 const initializeMoviesView = () => {
   movieData.loadMovies().then((movies) => {
-    console.log('movies', movies);
     writeMovies(movies);
   }).catch((error) => {
     console.error(error);
