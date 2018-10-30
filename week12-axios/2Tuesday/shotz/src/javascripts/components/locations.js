@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 import locationData from '../data/locationsData';
+import movieData from '../data/moviesData';
 
 const shootTimeClass = (shootTime) => {
   let selectedClass = '';
@@ -35,6 +36,7 @@ const writeLocations = (locations) => {
           <div class="card-body">
           <img class="card-img-top" src="${location.imageUrl}" alt="${location.name}">
           <h5 class="card-title">${location.address}</h5>
+          <p class="card-text">Used in ${location.movies.length} Movies</p>
           </div>
         </div>
       </div>
@@ -45,7 +47,14 @@ const writeLocations = (locations) => {
 
 const initializeLocationsView = () => {
   locationData.loadLocations().then((locations) => {
-    writeLocations(locations);
+    movieData.loadMovies().then((movies) => {
+      const locationsWithMovies = locations.map((location) => {
+        const newLocation = location;
+        newLocation.movies = movies.filter(movie => movie.locations.includes(location.id));
+        return newLocation;
+      });
+      writeLocations(locationsWithMovies);
+    });
   }).catch((error) => {
     console.error(error);
   });
