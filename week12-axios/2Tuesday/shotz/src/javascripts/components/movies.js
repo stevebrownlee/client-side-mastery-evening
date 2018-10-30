@@ -2,11 +2,13 @@ import $ from 'jquery';
 
 import movieData from '../data/moviesData';
 
+import setMovieViewEvents from './movieView';
+
 const writeMovies = (movies) => {
   let domString = '';
   movies.forEach((movie) => {
     domString += `
-      <div id='${movie.id}' class='col-4 cardz'>
+      <div id='${movie.id}' class='col-4 movie'>
         <div class="card">
           <div class="card-header">
             ${movie.name}
@@ -22,6 +24,7 @@ const writeMovies = (movies) => {
     `;
   });
   $('#movie-container').html(domString);
+  setMovieViewEvents();
 };
 
 const initializeMoviesView = () => {
