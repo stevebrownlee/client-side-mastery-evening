@@ -28,7 +28,7 @@ const writeLocations = (locations) => {
   let domString = '';
   locations.forEach((location) => {
     domString += `
-      <div id='${location.id}' class='col-3 location'>
+      <div id='${location.id}' class='location'>
         <div class="card">
           <div class="card-header ${shootTimeClass(location.shootTime)}">
             ${location.name}

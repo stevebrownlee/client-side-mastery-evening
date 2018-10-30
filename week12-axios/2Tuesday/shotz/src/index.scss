@@ -7,6 +7,10 @@ body {
   }
 }
 
-.movie, .location {
-  display: inline-block;
+.movie {
+  min-width: 25%;
+}
+
+.location {
+  min-width: 20%;
 }
