@@ -14,7 +14,7 @@
       "genre": "Thriller",
       "releaseDate": "10/16/2020",
       "description": "super exclusive can't tell you",
-      "locations": ["location1", "location2", "location3"]
+      "locations": ["location1", "location2"]
     },
     {
       "id": "movie3",
@@ -22,7 +22,7 @@
       "genre": "Thriller",
       "releaseDate": "10/17/2020",
       "description": "super exclusive can't tell you",
-      "locations": ["location4", "location5", "location6"]
+      "locations": ["location1", "location2", "location3", "location4", "location5", "location6", "location7", "location8", "location9"]
     },
     {
       "id": "movie4",
