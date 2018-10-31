@@ -1,5 +1,7 @@
 .DS_Store
 
+# **/node_modules
+
 lightning/promises-insults/dist
 lightning/promises-insults/lib/node_modules
 

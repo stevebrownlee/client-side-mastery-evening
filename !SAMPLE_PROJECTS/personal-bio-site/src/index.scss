@@ -1,0 +1,159 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0px;
+  background-size: cover;
+  background-color: bisque;
+  margin-top: 65px;
+}
+
+body:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  z-index: -1;
+  background-image: url("./images/StIzzyLongShot.jpg");
+  background-size: cover;
+  margin: 0;
+}
+
+.navigation {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: bisque;
+  border-bottom: black solid;
+}
+
+.navigation,
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation ul,
+#technologiesPage ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navigation li,
+#tech li {
+  list-style: none;
+  color: black;
+  padding: 5px;
+  border-right: solid;
+}
+
+.navigation a,
+.page-footer a {
+  text-decoration: none;
+}
+
+.navigation li:last-child {
+  border-right: none;
+}
+
+a:hover {
+  color: whitesmoke;
+}
+
+#home-title {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4em;
+}
+
+#technologiesPage #bioPage {
+  margin: 5px;
+  height: 90%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#technologiesPage h2 {
+  text-align: center;
+  display: block;
+}
+
+#tech li {
+  border-right: none;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+#tech li img {
+  width: 100px;
+  height: 100px;
+}
+
+#bioPage {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 100%;
+}
+
+.bioPic {
+  width: 40%;
+  height: auto;
+  align-self: flex-start;
+}
+
+#bio {
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  background-color: black;
+  padding: 5px;
+  text-align: justify;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.projectInfo {
+  display: column;
+}
+
+#footer-div {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  border: solid black;
+  margin: 5px;
+  background-color: bisque;
+}
+
+#footer-h3 {
+  display: block;
+  text-align: center;
+}
+
+.page-footer p {
+  margin: auto auto 0 auto;
+  justify-content: space-around;
+}
