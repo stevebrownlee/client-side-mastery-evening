@@ -1,0 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: burlywood;
+  p {
+    color: red;
+  }
+}
+
+.movie {
+  min-width: 25%;
+}
+
+.location {
+  min-width: 20%;
+}

@@ -53,10 +53,10 @@
 ***
 
 #### Week 7 (September 24 - 29)
-* **Day 1** - encoding/decoding solution, Exercises
-* **Day 2** - Exercises
+* **Day 1** - ES6 Modules
+* **Day 2** - ES6 Modules
 * **HW** -
-* **Lab Day** - ES6 Modules
+* **Lab Day** - Exercises
 
 ***
 
@@ -80,22 +80,22 @@
 * **Day 1** - demo chatty, jquery
 * **Day 2** - jquery ajax
 * **HW** - jquery
-* **Lab Day** -  Mini Hackathon
+* **Lab Day** - BREAK
 
 ***
 #### Week 11 (October 22 - 27)
 * **Day 1** - Promises
-* **Day 2** - Intro to API, promises and APIs
+* **Day 2** - Exercises
 * **HW** - promises
-* **Lab Day** - exercises
+* **Lab Day** - Intro to API, promises and APIs
 
 ***
 
 #### Week 12 (October 29 - November 3)
-* **Day 1** - axios
-* **Day 2** - axios
+* **Day 1** - Task Runners, ES6 modules, promises
+* **Day 2** - Shotz HW Review
 * **HW** -
-* **Lab Day** - exercises
+* **Lab Day** - Axios
 
 ***
 
