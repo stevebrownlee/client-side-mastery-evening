@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
+@import './styles/variables';
 
 body {
-  background-color: red;
+  background-color:$darkgray;
 }

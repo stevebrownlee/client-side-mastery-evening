@@ -1,5 +1,12 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 import 'bootstrap';
+
+import loadNavbar from './components/Navbar/navbar';
+
 import './index.scss';
 
-console.log('help', $(this));
+const initializeApp = () => {
+  loadNavbar();
+};
+
+initializeApp();

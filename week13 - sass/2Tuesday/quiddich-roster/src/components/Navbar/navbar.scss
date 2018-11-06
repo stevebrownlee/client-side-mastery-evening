@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+
+nav {
+  background-color: $lightgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: $box-shadow;
+
+  & + * {
+    margin-top: 76px;
+  }
+
+
+  & > * {
+    padding: 0 20px;
+  }
+
+  .brand-logo {
+    @include default-font(2em);
+    height: 56px;
+    line-height: 56px;
+  }
+
+  ul {
+    list-style-type: none;
+    height: 56px;
+    line-height: 56px;
+    float: right;
+
+    li {
+      padding: 1.5px 10px;
+      color: white;
+      @include default-font(15px);
+    }
+
+    li:hover {
+      background-color: $darkgray;
+    }
+  }
+}
