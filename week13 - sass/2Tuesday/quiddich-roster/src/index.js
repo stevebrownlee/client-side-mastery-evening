@@ -4,6 +4,7 @@ import 'bootstrap';
 import loadNavbar from './components/Navbar/navbar';
 import dataGetter from './helpers/dataGetter';
 import createTeamButtonGroup from './components/TeamButtonGroup/teamButtonGroup';
+import createPlayerList from './components/PlayerList/playerList';
 
 import './index.scss';
 
@@ -19,10 +20,34 @@ const getAndPrintTeamButtonGroup = () => {
     });
 };
 
+// const getAndPrintAllPlayers = () => {
+//   dataGetter.getAllPlayersFromDb()
+//     .then((data) => {
+//       $('#main-container').html(createPlayerList(data.data));
+//     })
+//     .catch((error) => {
+//       console.error('Error in getting teams', error);
+//     });
+// };
+
+
+const getAndPrintAllPlayers = () => {
+  dataGetter.getAllPlayersFromDb()
+    .then((players) => {
+      dataGetter.getFullPlayerInfo(players.data)
+        .then((allPlayersArray) => {
+          $('#main-container').html(createPlayerList(allPlayersArray));
+        });
+    })
+    .catch((error) => {
+      console.error('Error in getting players', error);
+    });
+};
+
 const initializeApp = () => {
   loadNavbar();
   getAndPrintTeamButtonGroup();
-  // getAndPrintAllPlayers();
+  getAndPrintAllPlayers();
 };
 
 initializeApp();
