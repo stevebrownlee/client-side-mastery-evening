@@ -12,11 +12,8 @@ nav {
   justify-content: space-between;
   box-shadow: $box-shadow;
 
-  & + * {
-    margin-top: 76px;
-  }
-
-
+  // this means reference the parrent (& - in this case nav)
+  // and select any direct descendents (> - in this case the a tag and the ul tag)
   & > * {
     padding: 0 20px;
   }
