@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import firebase from 'firebase/app';
 import 'bootstrap';
 
 import loadNavbar from './components/Navbar/navbar';
@@ -7,12 +8,13 @@ import createTeamButtonGroup from './components/TeamButtonGroup/teamButtonGroup'
 import teamButton from './components/TeamButton/teamButton';
 import createPlayerList from './components/PlayerList/playerList';
 
+import apiKeys from '../db/apiKeys.json';
 import './index.scss';
 
 const getAndPrintTeamButtonGroup = () => {
   dataGetter.getAllTeamsFromDb()
     .then((data) => {
-      $('#button-container').html(createTeamButtonGroup(data.data));
+      $('#button-container').html(createTeamButtonGroup(data));
       $('.team-button').on('click', teamButton.buttonEventFunction);
     })
     .catch((error) => {
@@ -23,7 +25,7 @@ const getAndPrintTeamButtonGroup = () => {
 const getAndPrintAllPlayers = () => {
   dataGetter.getAllPlayersFromDb()
     .then((players) => {
-      dataGetter.getFullPlayerInfo(players.data)
+      dataGetter.getFullPlayerInfo(players)
         .then((allPlayersArray) => {
           $('#main-container').html(createPlayerList(allPlayersArray));
         });
@@ -34,6 +36,7 @@ const getAndPrintAllPlayers = () => {
 };
 
 const initializeApp = () => {
+  firebase.initializeApp(apiKeys.firebaseKeys);
   loadNavbar();
   getAndPrintTeamButtonGroup();
   getAndPrintAllPlayers();
