@@ -100,32 +100,32 @@
 ***
 
 #### Week 13 (November 5 - 10)
-* **Day 1** - Intro to Firebase
+* **Day 1** - Exercises, checkins
+* **Day 2** - SASS
+* **HW** -
+* **Lab Day** - Intro to Firebase
+
+***
+
+#### Week 14 (November 12 - 17)
+* **Day 1** - firebase auth
 * **Day 2** - firebase auth
 * **HW** -
 * **Lab Day** - exercises
 
 ***
 
-#### Week 14 (November 12 - 17)
-* **Day 1** - firebase
-* **Day 2** - firebase
-* **HW** -
-* **Lab Day** - exercises
-
-***
-
 #### Week 15 (November 19 - 24)
-* **Day 1** - Full crud lightning exercise
-* **Day 2** - Full crud lightning exercise
+* **Day 1** - firebase crud
+* **Day 2** - firebase crud
 * **HW** - THANKSGIVING HOLIDAY
 * **Lab Day** - THANKSGIVING HOLIDAY
 
 ***
 
 #### Week 16 (November 26 - December 1)
-* **Day 1** - Intro to SASS
-* **Day 2** - SASS, personal site
+* **Day 1** - Firebase complex data
+* **Day 2** - Firebase complex data
 * **HW** -
 * **Lab Day** - Group Project: Nutshell
 
@@ -150,7 +150,7 @@
 #### Week 19 (December 17 - 22)
 * **Day 1** - React SPA
 * **Day 2** - React SPA, capstone discussion
-* **HW** - finish local weather, portfolio
+* **HW** -
 * **Lab Day** - BREAK: HOLIDAY
 
 
