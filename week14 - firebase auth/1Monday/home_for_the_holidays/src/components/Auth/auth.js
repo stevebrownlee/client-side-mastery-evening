@@ -2,6 +2,8 @@ import $ from 'jquery';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import './auth.scss';
+
 const loginButton = () => {
   const domString = `
     <button id="googleAuth" class="btn btn-danger">Login</button>
