@@ -10,14 +10,22 @@ const checkLoginStatus = () => {
       // User is signed in.
       $('#guests').hide();
       $('#auth').hide();
+      $('#navbar-button-auth').hide();
       $('#holidays').show();
+      $('#navbar-button-holidays').show();
+      $('#navbar-button-guests').show();
+      $('#navbar-button-logout').show();
       // call the getMoviesEvent
       // getAllMoviesEvent();
     } else {
       // No user is signed in.
-      $('#guests').hide();
+      $('#navbar-button-auth').show();
       $('#auth').show();
+      $('#guests').hide();
       $('#holidays').hide();
+      $('#navbar-button-holidays').hide();
+      $('#navbar-button-guests').hide();
+      $('#navbar-button-logout').hide();
     }
   });
 };
