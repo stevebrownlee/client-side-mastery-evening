@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import axios from 'axios';
 
 const printToDom = (stringToPrint, divId) => {
   const selectedDiv = document.getElementById(divId);
@@ -25,7 +25,7 @@ const createProjectCards = (projects) => {
 };
 
 const projectPromise = () => new Promise((resolve, reject) => {
-  $.get('http://localhost:3001/projects')
+  axios.get('http://localhost:3001/projects')
     .done((data) => {
       resolve(data);
     })
