@@ -1,20 +1,20 @@
 import $ from 'jquery';
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import googleLogin from './glogin.png';
-import checkLoginStatus from '../../helpers/authEvents';
 
+import googleImage from './Sign-in-with-Google.png';
 import './auth.scss';
 
 const loginButton = () => {
   const domString = `
-    <button id="googleAuth" class="btn btn-secondary"><img src='${googleLogin}'></button>
+    <button id="google-auth" class="btn btn-secondary">
+      <img src="${googleImage}"/>
+    </button>
   `;
   $('#auth').html(domString);
-  $('#googleAuth').on('click', () => {
+  $('#google-auth').on('click', () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
-    checkLoginStatus();
   });
 };
 
