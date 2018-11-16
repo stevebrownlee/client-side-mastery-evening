@@ -22,4 +22,17 @@ const getFriends = uid => new Promise((resolve, reject) => {
     });
 });
 
-export default { getFriends };
+const getSingleFriend = friendId => new Promise((resolve, reject) => {
+  axios
+    .get(`${baseUrl}/friends/${friendId}.json`)
+    .then((result) => {
+      const friend = result.data;
+      friend.id = friendId;
+      resolve(result.data);
+    })
+    .catch((err) => {
+      reject(err);
+    });
+});
+
+export default { getFriends, getSingleFriend };

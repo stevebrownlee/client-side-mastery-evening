@@ -2,6 +2,7 @@ import $ from 'jquery';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import friendsData from '../../helpers/data/friendsData';
+import singleFriend from '../SingleFriend/singleFriend';
 import './friendsDropdown.scss';
 
 const buildDomString = (friends) => {
@@ -18,6 +19,7 @@ const friendsDropdown = () => {
   friendsData.getFriends(uid).then((friends) => {
     strang = buildDomString(friends);
     $('#friendsDropdown').html(strang);
+    $('.friend').on('click', singleFriend);
   }).catch((err) => {
     console.error('problem with getFriends', err);
   });
