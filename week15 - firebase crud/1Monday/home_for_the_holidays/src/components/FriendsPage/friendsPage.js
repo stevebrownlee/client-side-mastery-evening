@@ -1,6 +1,4 @@
 import $ from 'jquery';
-// import firebase from 'firebase/app';
-// import 'firebase/auth';
 import './friendsPage.scss';
 import friendsDropdown from '../FriendsDropdown/friendsDropdown';
 
