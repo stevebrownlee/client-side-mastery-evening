@@ -7,15 +7,15 @@ const getFriends = uid => new Promise((resolve, reject) => {
   axios
     .get(`${baseUrl}/friends.json?orderBy="uid"&equalTo="${uid}"`)
     .then((result) => {
-      const friendsOnDatTeamObj = result.data;
-      const friendsOnDatTeamArray = [];
-      if (friendsOnDatTeamObj != null) {
-        Object.keys(friendsOnDatTeamObj).forEach((friendId) => {
-          friendsOnDatTeamObj[friendId].id = friendId;
-          friendsOnDatTeamArray.push(friendsOnDatTeamObj[friendId]);
+      const friendsObj = result.data;
+      const friendsArray = [];
+      if (friendsObj != null) {
+        Object.keys(friendsObj).forEach((friendId) => {
+          friendsObj[friendId].id = friendId;
+          friendsArray.push(friendsObj[friendId]);
         });
       }
-      resolve(friendsOnDatTeamArray);
+      resolve(friendsArray);
     })
     .catch((err) => {
       reject(err);
