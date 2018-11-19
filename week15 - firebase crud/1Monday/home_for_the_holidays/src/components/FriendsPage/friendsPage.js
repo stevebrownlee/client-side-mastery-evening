@@ -77,6 +77,16 @@ const deleteFriend = (e) => {
   });
 };
 
+const editFriendPage = (e) => {
+  const friendToEdit = e.target.id;
+  $('#auth').hide();
+  $('#friends').hide();
+  $('#holidays').hide();
+  $('#single-friend-container').html('');
+  $('#add-edit-friends').show();
+  addEditFriends.editButton(friendToEdit);
+};
+
 const addFriendPage = () => {
   $('#auth').hide();
   $('#friends').hide();
@@ -89,6 +99,7 @@ const addFriendPage = () => {
 const bindEvents = () => {
   $('body').on('click', '.dropdown-item', getPrintFriend);
   $('body').on('click', '.delete-btn', deleteFriend);
+  $('body').on('click', '.edit-btn', editFriendPage);
   $('#add-friend-button').on('click', addFriendPage);
 };
 

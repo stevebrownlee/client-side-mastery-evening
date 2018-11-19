@@ -9,7 +9,6 @@ import initializeFriendsPage from '../FriendsPage/friendsPage';
 
 const formBuilder = (friendObj) => {
   const domString = `
-    <h2>Add a New Friend:<h2>
     <div class="form-group">
       <label for="form-friend-name">Name:</label>
       <input type="text" value="${friendObj.name}" class="form-control" id="form-friend-name" placeholder="John Smith">
@@ -65,6 +64,7 @@ const addButton = () => {
     relationship: '',
   };
   const domSting = `
+  <h2>Add a New Friend:<h2>
   ${formBuilder(friendObject)}
   <button id="add-new-friend-button" class="btn btn-primary">Save New Friend</buttonid>
   `;
@@ -72,4 +72,40 @@ const addButton = () => {
   $('#add-new-friend-button').on('click', saveNewFriend);
 };
 
-export default { addButton };
+
+const saveEditedFriend = () => {
+  const friendToEdit = {
+    name: $('#form-friend-name').val(),
+    address: $('#form-friend-address').val(),
+    phoneNumber: $('#form-friend-phone').val(),
+    email: $('#form-friend-email').val(),
+    relationship: $('#form-friend-relationship').val(),
+    isAvoiding: false,
+    uid: authHelpers.getCurrentUid(),
+  };
+
+  const friendId = $('#friend-id').html();
+  friendsData.putFriend(friendId, friendToEdit).then(() => {
+    $('#add-edit-friends').hide();
+    $('#friends').show();
+    initializeFriendsPage();
+  }).catch((err) => {
+    console.error('problem with getFriends', err);
+  });
+};
+
+const editButton = (friendId) => {
+  friendsData.getSingleFriend(friendId).then((friend) => {
+    const domSting = `
+    <h2>Edit a Friend: <span id='friend-id'>${friend.id}</span><h2>
+    ${formBuilder(friend)}
+    <button id="edit-friend-button" class="btn btn-primary">Edit Friend</buttonid>
+    `;
+    $('#add-edit-friends').html(domSting);
+    $('#edit-friend-button').on('click', saveEditedFriend);
+  }).catch((err) => {
+    console.error('problem with getFriends', err);
+  });
+};
+
+export default { addButton, editButton };
