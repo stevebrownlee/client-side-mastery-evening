@@ -3,8 +3,6 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import './navbar.scss';
 
-import friendsPage from '../FriendsPage/friendsPage';
-
 const navbarEvents = () => {
   $('.nav-link').on('click', (e) => {
     if (e.target.id === 'navbar-button-logout') {
@@ -23,7 +21,6 @@ const navbarEvents = () => {
       $('#auth').hide();
       $('#friends').show();
       $('#holidays').hide();
-      friendsPage();
     } else {
       // click authentication
       $('#auth').show();
