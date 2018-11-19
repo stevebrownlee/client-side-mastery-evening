@@ -25,7 +25,8 @@ const getPrintFriend = (e) => {
           <div class='single-parent'>
             <h1>${friend.name}<h1>
             <h3>${friend.relationship}<h3>
-            <button class="btn btn-danger delete-btn" data-delete-id="${friend.id}">X</button>
+            <button class="btn btn-danger delete-btn" id="${friend.id}">X</button>
+            <button class="btn btn-info edit-btn" id="${friend.id}">Edit</button>
             <p>${friend.address}<p>
             <p>${friend.email}<p>
             <p>${friend.phoneNumber}<p>
@@ -67,7 +68,7 @@ const friendsPage = () => {
 };
 
 const deleteFriend = (e) => {
-  const idToDelete = e.target.dataset.deleteId;
+  const idToDelete = e.target.id;
   friendsData.deleteFriend(idToDelete).then(() => {
     $('#single-friend-container').html('');
     friendsPage();
