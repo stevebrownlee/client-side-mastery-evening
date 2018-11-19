@@ -1,6 +1,5 @@
 import firebase from 'firebase/app';
 import 'bootstrap';
-// import 'popper.js';
 
 import apiKeys from '../db/apiKeys.json';
 

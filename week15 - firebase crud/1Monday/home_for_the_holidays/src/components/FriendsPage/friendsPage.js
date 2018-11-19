@@ -2,6 +2,9 @@ import $ from 'jquery';
 import axios from 'axios';
 
 import authHelpers from '../../helpers/authHelpers';
+import friendsData from '../../helpers/data/friendsData';
+
+import addEditFriends from '../AddEditFriends/addEditFriends';
 
 const getPrintFriend = (e) => {
   const friendId = e.target.dataset.dropdownId;
@@ -19,7 +22,7 @@ const getPrintFriend = (e) => {
       <p data-single-id"${friend.id}">IsAvoiding: ${friend.isAvoiding}<p>
       </div>
       `;
-    $('#single-container').html(friendToPrint);
+    $('#single-friend-container').html(friendToPrint);
   }).catch((err) => {
     console.error(err);
   });
@@ -29,7 +32,7 @@ const buildDropdown = (friendsArray) => {
   let dropdown = `
     <div class="dropdown show">
     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      My Friends
+      Pick a Friend.....
     </a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -42,32 +45,35 @@ const buildDropdown = (friendsArray) => {
 };
 
 const friendsPage = () => {
-  axios.get(`${authHelpers.getBaseUrl()}/friends.json?orderBy="uid"&equalTo="${authHelpers.getCurrentUid()}"`).then((result) => {
-    const friendsObj = result.data;
-    const friendsArray = [];
-    if (friendsObj != null) {
-      Object
-        .keys(friendsObj)
-        .forEach((friendId) => {
-          friendsObj[friendId].id = friendId;
-          friendsArray.push(friendsObj[friendId]);
-        });
-    }
-    buildDropdown(friendsArray);
+  const uid = authHelpers.getCurrentUid();
+  friendsData.getFriends(uid).then((friends) => {
+    buildDropdown(friends);
+  }).catch((err) => {
+    console.error('problem with getFriends', err);
   });
 };
 
 const deleteFriend = (e) => {
   const idToDelete = e.target.dataset.deleteId;
   axios.delete(`${authHelpers.getBaseUrl()}/friends/${idToDelete}.json`).then(() => {
+    $('#single-friend-container').html('');
     friendsPage();
-    $(e.target).closest('.single-parent').remove();
   });
+};
+
+const addFriendPage = () => {
+  $('#auth').hide();
+  $('#friends').hide();
+  $('#holidays').hide();
+  $('#single-friend-container').html('');
+  $('#add-edit-friends').show();
+  addEditFriends.addButton();
 };
 
 const bindEvents = () => {
   $('body').on('click', '.dropdown-item', getPrintFriend);
   $('body').on('click', '.delete-btn', deleteFriend);
+  $('#add-friend-button').on('click', addFriendPage);
 };
 
 const initializeFriendsPage = () => {
