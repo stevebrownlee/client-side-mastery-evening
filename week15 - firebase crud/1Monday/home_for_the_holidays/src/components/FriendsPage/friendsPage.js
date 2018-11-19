@@ -1,30 +1,43 @@
 import $ from 'jquery';
-import axios from 'axios';
 
 import authHelpers from '../../helpers/authHelpers';
 import friendsData from '../../helpers/data/friendsData';
+import holidayFriendsData from '../../helpers/data/holidayFriendsData';
+import holidaysData from '../../helpers/data/holidaysData';
 
 import addEditFriends from '../AddEditFriends/addEditFriends';
 
+const holidayStringBuilder = (holidays) => {
+  let holidayString = '<h3>Holidays:</h3>';
+  holidays.forEach((holiday) => {
+    holidayString += `<h5>${holiday.name} ${holiday.Date}</h5>`;
+  });
+  return holidayString;
+};
+
 const getPrintFriend = (e) => {
-  const friendId = e.target.dataset.dropdownId;
-  axios.get(`${authHelpers.getBaseUrl()}/friends/${friendId}.json`).then((result) => {
-    const friend = result.data;
-    friend.id = friendId;
-    const friendToPrint = `
-      <div class='single-parent'>
-      <h1>${friend.name}<h1>
-      <h3>${friend.relationship}<h3>
-      <button class="btn btn-danger delete-btn" data-delete-id="${friend.id}">X</button>
-      <p>${friend.address}<p>
-      <p>${friend.email}<p>
-      <p>${friend.phoneNumber}<p>
-      <p data-single-id"${friend.id}">IsAvoiding: ${friend.isAvoiding}<p>
-      </div>
-      `;
-    $('#single-friend-container').html(friendToPrint);
+  const selectedFriend = e.target.dataset.dropdownId;
+  const uid = authHelpers.getCurrentUid();
+  friendsData.getSingleFriend(selectedFriend).then((friend) => {
+    holidayFriendsData.getHolidayIdsForFriend(selectedFriend).then((holidayIds) => {
+      holidaysData.getHolidaysByArrayOfIds(uid, holidayIds).then((holidays) => {
+        const friendToPrint = `
+          <div class='single-parent'>
+            <h1>${friend.name}<h1>
+            <h3>${friend.relationship}<h3>
+            <button class="btn btn-danger delete-btn" data-delete-id="${friend.id}">X</button>
+            <p>${friend.address}<p>
+            <p>${friend.email}<p>
+            <p>${friend.phoneNumber}<p>
+            <p data-single-id"${friend.id}">IsAvoiding: ${friend.isAvoiding}<p>
+            <div class="holiday-container">${holidayStringBuilder(holidays)}</div>
+          </div>
+        `;
+        $('#single-friend-container').html(friendToPrint);
+      });
+    });
   }).catch((err) => {
-    console.error(err);
+    console.error('problem with getFriends', err);
   });
 };
 
@@ -55,9 +68,11 @@ const friendsPage = () => {
 
 const deleteFriend = (e) => {
   const idToDelete = e.target.dataset.deleteId;
-  axios.delete(`${authHelpers.getBaseUrl()}/friends/${idToDelete}.json`).then(() => {
+  friendsData.deleteFriend(idToDelete).then(() => {
     $('#single-friend-container').html('');
     friendsPage();
+  }).catch((err) => {
+    console.error('problem with getFriends', err);
   });
 };
 
