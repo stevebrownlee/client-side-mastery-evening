@@ -1,4 +1,6 @@
 /* eslint import/no-cycle: 0 */
+// above line lets us re-draw dropdown.
+//  its ugly but we know it won't cause issues
 import $ from 'jquery';
 
 import authHelpers from '../../helpers/authHelpers';
