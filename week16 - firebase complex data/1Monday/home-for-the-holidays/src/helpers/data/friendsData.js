@@ -39,10 +39,35 @@ const addNewFriend = friendObject => axios.post(`${firebaseUrl}/friends.json`, J
 
 const updateFriend = (friendObject, friendId) => axios.put(`${firebaseUrl}/friends/${friendId}.json`, JSON.stringify(friendObject));
 
+const getFriendsByArrayOfIds = (uid, friendIdsArray) => new Promise((resolve, reject) => {
+  axios
+    .get(`${firebaseUrl}/friends.json?orderBy="uid"&equalTo="${uid}"`)
+    .then((result) => {
+      const friendsObj = result.data;
+      const friendsArray = [];
+      if (friendsObj != null) {
+        Object.keys(friendsObj).forEach((friendId) => {
+          friendsObj[friendId].id = friendId;
+          friendsArray.push(friendsObj[friendId]);
+        });
+      }
+      if (friendIdsArray.length > 0) {
+        const selectedFriends = friendsArray.filter(x => friendIdsArray.includes(x.id));
+        resolve(selectedFriends);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch((err) => {
+      reject(err);
+    });
+});
+
 export default {
   getAllFriends,
   getSingleFriend,
   deleteFriend,
   addNewFriend,
   updateFriend,
+  getFriendsByArrayOfIds,
 };

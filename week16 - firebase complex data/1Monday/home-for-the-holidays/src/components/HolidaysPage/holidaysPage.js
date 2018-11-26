@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import authHelpers from '../../helpers/authHelpers';
 import holidaysData from '../../helpers/data/holidaysData';
+import holidayFriendsData from '../../helpers/data/holidayFriendsData';
+import friendsData from '../../helpers/data/friendsData';
 
 import './holidaysPage.scss';
 
@@ -25,7 +27,20 @@ const holidaysPage = () => {
     });
 };
 
-const printSingleHoliday = (holiday) => {
+const friendListStringBuilder = (friends) => {
+  let friendsString = '<h4>Friends Attending</h4><ul>';
+  friends.forEach((friend) => {
+    if (friend.isAvoiding) {
+      friendsString += `<li class='avoiding'>${friend.name}</li>`;
+    } else {
+      friendsString += `<li>${friend.name}</li>`;
+    }
+  });
+  friendsString += '</ul>';
+  return friendsString;
+};
+
+const printSingleHoliday = (holiday, friends) => {
   const domString = `
   <div class="row">
     <div class="col">
@@ -37,7 +52,10 @@ const printSingleHoliday = (holiday) => {
       <h4>${holiday.startTime}</h4>
       <h5>${holiday.location}</h5>
     </div>
-  </div>
+    <div class="col">
+      ${friendListStringBuilder(friends)}
+    </div>
+    </div>
   `;
   $('#single-holiday').html(domString);
 };
@@ -45,9 +63,14 @@ const printSingleHoliday = (holiday) => {
 const getSingleHoliday = (e) => {
   $('#all-holidays').html('');
   const holidayId = e.target.id;
+  const uid = authHelpers.getCurrentUid();
   holidaysData.getSingleHoliday(holidayId)
     .then((singleHoliday) => {
-      printSingleHoliday(singleHoliday);
+      holidayFriendsData.getFriendIdsForHoliday(holidayId).then((friendIds) => {
+        friendsData.getFriendsByArrayOfIds(uid, friendIds).then((friends) => {
+          printSingleHoliday(singleHoliday, friends);
+        });
+      });
     })
     .catch((error) => {
       console.error('error in getting one friend', error);
