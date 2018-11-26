@@ -1,11 +1,11 @@
 import axios from 'axios';
 import apiKeys from '../../../db/apiKeys.json';
 
-const baseUrl = apiKeys.firebaseKeys.databaseURL;
+const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getHolidaysByArrayOfIds = (uid, holidayIdsArray) => new Promise((resolve, reject) => {
   axios
-    .get(`${baseUrl}/holidays.json?orderBy="uid"&equalTo="${uid}"`)
+    .get(`${firebaseUrl}/holidays.json?orderBy="uid"&equalTo="${uid}"`)
     .then((result) => {
       const holidaysObj = result.data;
       const holidaysArray = [];
@@ -27,4 +27,34 @@ const getHolidaysByArrayOfIds = (uid, holidayIdsArray) => new Promise((resolve, 
     });
 });
 
-export default { getHolidaysByArrayOfIds };
+const getAllHolidays = uid => new Promise((resolve, reject) => {
+  axios.get(`${firebaseUrl}/holidays.json?orderBy="uid"&equalTo="${uid}"`)
+    .then((results) => {
+      const holidaysObject = results.data;
+      const holidaysArray = [];
+      if (holidaysObject !== null) {
+        Object.keys(holidaysObject).forEach((holidayId) => {
+          holidaysObject[holidayId].id = holidayId;
+          holidaysArray.push(holidaysObject[holidayId]);
+        });
+      }
+      resolve(holidaysArray);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
+const getSingleHoliday = holidayId => new Promise((resolve, reject) => {
+  axios.get(`${firebaseUrl}/holidays/${holidayId}.json`)
+    .then((result) => {
+      const singleHoliday = result.data;
+      singleHoliday.id = holidayId;
+      resolve(singleHoliday);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+
+export default { getHolidaysByArrayOfIds, getAllHolidays, getSingleHoliday };
