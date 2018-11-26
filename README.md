@@ -125,7 +125,7 @@
 
 #### Week 16 (November 26 - December 1)
 * **Day 1** - Firebase complex data
-* **Day 2** - Firebase complex data
+* **Day 2** - exercises
 * **HW** -
 * **Lab Day** - Group Project: Nutshell
 
@@ -148,7 +148,7 @@
 ***
 
 #### Week 19 (December 17 - 22)
-* **Day 1** - React SPA
+* **Day 1** - Exercises
 * **Day 2** - React SPA, capstone discussion
 * **HW** -
 * **Lab Day** - BREAK: HOLIDAY
