@@ -28,7 +28,11 @@ const holidaysPage = () => {
 };
 
 const friendListStringBuilder = (friends) => {
-  let friendsString = '<h4>Friends Attending</h4><ul>';
+  let friendsString = `
+    <h4>Friends Attending</h4>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</button>
+    <ul>
+  `;
   friends.forEach((friend) => {
     if (friend.isAvoiding) {
       friendsString += `<li class='avoiding'>${friend.name}</li>`;
@@ -38,6 +42,30 @@ const friendListStringBuilder = (friends) => {
   });
   friendsString += '</ul>';
   return friendsString;
+};
+
+const displayModal = () => {
+  const domString = `
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
+  $('body').append(domString);
 };
 
 const printSingleHoliday = (holiday, friends) => {
@@ -58,6 +86,7 @@ const printSingleHoliday = (holiday, friends) => {
     </div>
   `;
   $('#single-holiday').html(domString);
+  displayModal();
 };
 
 const getSingleHoliday = (e) => {
@@ -77,9 +106,14 @@ const getSingleHoliday = (e) => {
     });
 };
 
+// const openFriendModal = (e) => {
+//   const holidayId = e.target.id;
+//   console.log('modal', holidayId);
+// };
+
 const bindEvents = () => {
   $('body').on('click', '.holiday', getSingleHoliday);
-  // $('body').on('click', '.delete-btn', deleteFriend);
+  // $('body').on('click', '.edit-attending-friends', openFriendModal);
 };
 
 const initializeFriendsPage = () => {
