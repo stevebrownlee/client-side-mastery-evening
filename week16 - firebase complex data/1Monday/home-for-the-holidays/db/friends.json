@@ -24,7 +24,7 @@
 		"email": "santa@yomamma.com",
 		"relationship": "Nope, nope, nope",
 		"isAvoiding": true,
-		"uid": "12345"
+		"uid": "2r7yR0vUPUb3cWdj3zrSibtJlj12"
 	},
 	"friend4": {
 		"name": "Other Adam",
@@ -33,7 +33,7 @@
 		"email": "other@yomamma.com",
 		"relationship": "2nd best adam",
 		"isAvoiding": false,
-		"uid": "12345"
+		"uid": "2r7yR0vUPUb3cWdj3zrSibtJlj12"
 	},
 	"friend5": {
 		"name": "Holiday Armidillo",
@@ -42,6 +42,6 @@
 		"email": "armidillo@yomamma.com",
 		"relationship": "Bringing joy to all the children",
 		"isAvoiding": false,
-		"uid": "67890"
+		"uid": "2r7yR0vUPUb3cWdj3zrSibtJlj12"
 	}
 }
