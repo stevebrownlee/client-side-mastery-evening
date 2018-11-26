@@ -63,6 +63,8 @@ const getFriendsByArrayOfIds = (uid, friendIdsArray) => new Promise((resolve, re
     });
 });
 
+const updatedIsAvoiding = (friendId, isAvoiding) => axios.patch(`${firebaseUrl}/friends/${friendId}.json`, { isAvoiding });
+
 export default {
   getAllFriends,
   getSingleFriend,
@@ -70,4 +72,5 @@ export default {
   addNewFriend,
   updateFriend,
   getFriendsByArrayOfIds,
+  updatedIsAvoiding,
 };
