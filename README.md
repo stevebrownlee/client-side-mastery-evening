@@ -141,15 +141,15 @@
 
 #### Week 18 (December 10 - 15)
 * **Day 1** - demo nutshell, Intro to React
-* **Day 2** - React SPA
+* **Day 2** - React SPA, firebase AUTH
 * **HW** -
-* **Lab Day** - React SPA
+* **Lab Day** - React SPA create and delete, exercises
 
 ***
 
 #### Week 19 (December 17 - 22)
 * **Day 1** - Exercises
-* **Day 2** - React SPA, capstone discussion
+* **Day 2** - React SPA add and update, capstone discussion
 * **HW** -
 * **Lab Day** - BREAK: HOLIDAY
 
