@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import listingProps from '../../helpers/propz/listingProp';
+import formatPrice from '../../helpers/formatPrice';
 import './ListingItem.scss';
 
 
@@ -17,7 +18,7 @@ class ListingItem extends React.Component {
     return (
       <li className='listing-item text-center'>
         <span className="col">{listing.address}</span>
-        <span className="col">{listing.price}</span>
+        <span className="col">{formatPrice(listing.price)}</span>
       </li>
     );
   }
