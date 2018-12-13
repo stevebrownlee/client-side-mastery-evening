@@ -6,6 +6,7 @@ import './App.scss';
 
 import authRequests from '../helpers/data/auth';
 import connection from '../helpers/data/connection';
+import listingRequests from '../helpers/data/listingRequests';
 
 import Auth from '../components/Auth/Auth';
 import Building from '../components/Building/Building';
@@ -16,10 +17,18 @@ import MyNavbar from '../components/MyNavbar/MyNavbar';
 class App extends Component {
   state = {
     authed: false,
+    listings: [],
   };
 
   componentDidMount() {
     connection();
+    listingRequests.getRequest()
+      .then((listings) => {
+        this.setState({ listings });
+      })
+      .catch((err) => {
+        console.error('error with listing GET', err);
+      });
     this.removeListener = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({
