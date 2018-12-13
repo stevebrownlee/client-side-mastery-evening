@@ -13,7 +13,7 @@ class MyNavbar extends React.Component {
   render() {
     const { isAuthenticated, logoutClickEvent } = this.props;
     return (
-      <div className="my-navbar">
+      <div className="my-navbar col">
         <Navbar color="dark" dark expand="md">
           <NavbarBrand href="/">Zillone</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />

@@ -16,7 +16,7 @@ class Auth extends React.Component {
 
   render() {
     return (
-      <div className="col-xs-8 col-xs-offset-2">
+      <div className="auth">
         <button className="btn btn-secondary" onClick={this.authenticateUser}>
           <img src={ googleImage } alt="google button" />
         </button>

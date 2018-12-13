@@ -7,7 +7,7 @@ import './Building.scss';
 class Building extends React.Component {
   render() {
     return (
-      <div className="col-xs-8 col-xs-offset-2">
+      <div className="col">
         <h2>Building</h2>
       </div>
     );

@@ -39,7 +39,7 @@ class App extends Component {
 
   isAuthenticated = () => {
     this.setState({ authed: true });
-  }
+  };
 
   render() {
     const logoutClickEvent = () => {
@@ -50,17 +50,33 @@ class App extends Component {
     if (!this.state.authed) {
       return (
         <div className="App">
-          <MyNavbar isAuthenticated={this.state.authed} logoutClickEvent={logoutClickEvent}/>
-          <Auth isAuthenticated={this.isAuthenticated}/>
+          <div className="row">
+            <MyNavbar
+              isAuthenticated={this.state.authed}
+              logoutClickEvent={logoutClickEvent}
+            />
+          </div>
+          <div className="row">
+            <Auth isAuthenticated={this.isAuthenticated} />
+          </div>
         </div>
       );
     }
     return (
       <div className="App">
-        <MyNavbar isAuthenticated={this.state.authed} logoutClickEvent={logoutClickEvent}/>
-        <Listings />
-        <Building />
-        <ListingForm />
+          <div className="row">
+            <MyNavbar
+              isAuthenticated={this.state.authed}
+              logoutClickEvent={logoutClickEvent}
+            />
+          </div>
+          <div className="row">
+            <Listings />
+            <Building />
+          </div>
+          <div className="row">
+            <ListingForm />
+          </div>
       </div>
     );
   }
