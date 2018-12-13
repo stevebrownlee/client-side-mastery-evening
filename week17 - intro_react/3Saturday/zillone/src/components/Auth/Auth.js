@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import authRequests from '../../helpers/data/auth';
 import googleImage from './google.png';
 import './Auth.scss';
 
 class Auth extends React.Component {
+  static propTypes = {
+    isAuthenticated: PropTypes.func,
+  };
+
   authenticateUser = (e) => {
     e.preventDefault();
     authRequests

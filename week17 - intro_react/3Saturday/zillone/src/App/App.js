@@ -70,7 +70,7 @@ class App extends Component {
               logoutClickEvent={logoutClickEvent}
             />
           </div>
-          <div className="row">
+          <div className="row row-eq-height">
             <Listings />
             <Building />
           </div>
