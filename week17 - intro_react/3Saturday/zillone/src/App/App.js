@@ -80,7 +80,7 @@ class App extends Component {
             />
           </div>
           <div className="row row-eq-height">
-            <Listings />
+            <Listings listings={this.state.listings}/>
             <Building />
           </div>
           <div className="row">
