@@ -17,8 +17,9 @@ class ListingItem extends React.Component {
     const { listing } = this.props;
     return (
       <li className='listing-item text-center'>
-        <span className="col">{listing.address}</span>
+        <span className="col-8">{listing.address}</span>
         <span className="col">{formatPrice(listing.price)}</span>
+        <span className="col"><button className="btn btn-default">X</button></span>
       </li>
     );
   }
