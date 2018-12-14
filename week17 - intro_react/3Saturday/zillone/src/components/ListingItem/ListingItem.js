@@ -19,6 +19,7 @@ class ListingItem extends React.Component {
       <li className='listing-item text-center'>
         <span className="col-7">{listing.address}</span>
         <span className="col-3">{formatPrice(listing.price)}</span>
+        <span className="col"><button className="btn btn-default"><i className="fas fa-pencil-alt"></i></button></span>
         <span className="col"><button className="btn btn-default"><i className="fas fa-trash-alt"></i></button></span>
       </li>
     );
