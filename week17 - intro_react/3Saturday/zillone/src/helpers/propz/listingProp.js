@@ -6,11 +6,10 @@ const listingShape = PropTypes.shape({
   price: PropTypes.number.isRequired,
   numBeds: PropTypes.number.isRequired,
   numBaths: PropTypes.number.isRequired,
-  lotInAcres: PropTypes.number.isRequired,
-  yearBuilt: PropTypes.number.isRequired,
   heating: PropTypes.string.isRequired,
   cooling: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
+  uid: PropTypes.string.isRequired,
 });
 
 export default { listingShape };
