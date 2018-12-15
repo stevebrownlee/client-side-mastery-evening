@@ -56,7 +56,7 @@ class App extends Component {
         listingRequests.getRequest()
           .then((listings) => {
             this.setState({ listings });
-          })
+          });
       })
       .catch(error => console.error('error in deleting friend', error));
   }
