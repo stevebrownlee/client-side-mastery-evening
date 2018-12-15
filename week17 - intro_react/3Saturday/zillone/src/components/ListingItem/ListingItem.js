@@ -6,7 +6,6 @@ import listingProps from '../../helpers/propz/listingProp';
 import formatPrice from '../../helpers/formatPrice';
 import './ListingItem.scss';
 
-
 class ListingItem extends React.Component {
   static propTypes = {
     listing: listingProps.listingShape,
