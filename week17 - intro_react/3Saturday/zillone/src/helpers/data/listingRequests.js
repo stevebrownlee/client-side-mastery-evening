@@ -1,9 +1,11 @@
 import axios from 'axios';
 import constants from '../../constants';
 
+const firebaseUrl = constants.firebaseConfig.databaseURL;
+
 const getRequest = () => new Promise((resolve, reject) => {
   axios
-    .get(`${constants.firebaseConfig.databaseURL}/listings.json`)
+    .get(`${firebaseUrl}/listings.json`)
     .then((res) => {
       const listings = [];
       if (res.data !== null) {
@@ -19,4 +21,9 @@ const getRequest = () => new Promise((resolve, reject) => {
     });
 });
 
-export default { getRequest };
+const deleteListing = listingId => axios.delete(`${firebaseUrl}/listings/${listingId}.json`);
+
+export default {
+  getRequest,
+  deleteListing,
+};

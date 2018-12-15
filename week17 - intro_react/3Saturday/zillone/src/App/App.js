@@ -50,6 +50,17 @@ class App extends Component {
     this.setState({ authed: true });
   };
 
+  deleteSingleListing = (listingId) => {
+    listingRequests.deleteListing(listingId)
+      .then(() => {
+        listingRequests.getRequest()
+          .then((listings) => {
+            this.setState({ listings });
+          })
+      })
+      .catch(error => console.error('error in deleting friend', error));
+  }
+
   render() {
     const logoutClickEvent = () => {
       authRequests.logoutUser();
@@ -80,7 +91,10 @@ class App extends Component {
             />
           </div>
           <div className="row row-eq-height">
-            <Listings listings={this.state.listings}/>
+            <Listings
+              listings={this.state.listings}
+              deleteSingleListing={this.deleteSingleListing}
+            />
             <Building />
           </div>
           <div className="row">
