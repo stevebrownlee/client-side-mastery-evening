@@ -79,7 +79,7 @@ class ListingForm extends React.Component {
     return (
       <div className="col">
         <h2>Submit New Listing:</h2>
-        <form onSubmit={this.formSubmit} className="col-8 ">
+        <form onSubmit={this.formSubmit} className="col-8 offset-2">
           <div className="row">
             <div className="col form-group">
               <label htmlFor="address" className="col-form-label">Address:</label>
