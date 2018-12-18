@@ -1,5 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import authRequests from '../../helpers/data/auth';
+import listingRequests from '../../helpers/data/listingRequests';
+
 import './ListingForm.scss';
 
 const defaultListing = {
@@ -16,6 +20,8 @@ const defaultListing = {
 class ListingForm extends React.Component {
   state = {
     newListing: defaultListing,
+    editId: PropTypes.string,
+    isEditing: PropTypes.bool,
   };
 
   formFieldStringState = (name, e) => {
@@ -74,11 +80,33 @@ class ListingForm extends React.Component {
     }
   }
 
+  componentDidUpdate(prevProps) {
+    const { isEditing, editId } = this.props;
+    if (prevProps !== this.props && isEditing) {
+      listingRequests.getSingleListing(editId)
+        .then((listing) => {
+          this.setState({ newListing: listing.data });
+        })
+        .catch((err) => {
+          console.error('error with listings post', err);
+        });
+    }
+  }
+
   render() {
     const { newListing } = this.state;
+    const { isEditing } = this.props;
+
+    const title = () => {
+      if (isEditing) {
+        return <h2>Edit Listing:</h2>;
+      }
+      return <h2>Submit New Listing:</h2>;
+    };
     return (
       <div className="col">
-        <h2>Submit New Listing:</h2>
+
+        {title()}
         <form onSubmit={this.formSubmit} className="col-8 offset-2">
           <div className="row">
             <div className="col form-group">

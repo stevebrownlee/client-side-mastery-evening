@@ -11,12 +11,19 @@ class ListingItem extends React.Component {
     listing: listingProps.listingShape,
     deleteSingleListing: PropTypes.func,
     onSelect: PropTypes.func,
+    passListingToEdit: PropTypes.func,
   }
 
   deleteListing = (e) => {
     e.preventDefault();
     const { deleteSingleListing } = this.props;
     deleteSingleListing(this.props.listing.id);
+  }
+
+  editListing = (e) => {
+    e.preventDefault();
+    const { passListingToEdit, listing } = this.props;
+    passListingToEdit(listing.id);
   }
 
   listingClick = (e) => {
@@ -32,7 +39,7 @@ class ListingItem extends React.Component {
       if (listing.uid === uid) {
         return (
           <div>
-            <span className="col"><button className="btn btn-default"><i className="fas fa-pencil-alt"></i></button></span>
+            <span className="col"><button className="btn btn-default" onClick={this.editListing}><i className="fas fa-pencil-alt"></i></button></span>
             <span className="col"><button className="btn btn-default" onClick={this.deleteListing}><i className="fas fa-trash-alt"></i></button></span>
           </div>
         );

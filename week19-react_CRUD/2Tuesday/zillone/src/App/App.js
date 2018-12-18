@@ -19,6 +19,8 @@ class App extends Component {
     authed: false,
     listings: [],
     selectedListingId: -1,
+    isEditing: false,
+    editId: -1,
   };
 
   listingSelectEvent = (id) => {
@@ -28,16 +30,34 @@ class App extends Component {
   }
 
   formSubmitEvent = (newListing) => {
-    listingRequests.postRequest(newListing)
-      .then(() => {
-        listingRequests.getRequest()
-          .then((listings) => {
-            this.setState({ listings });
-          });
-      })
-      .catch((err) => {
-        console.error('error with listings post', err);
-      });
+    const { editId, isEditing } = this.state;
+    if (isEditing) {
+      listingRequests.updateRequest(editId, newListing)
+        .then(() => {
+          listingRequests.getRequest()
+            .then((listings) => {
+              this.setState({
+                listings,
+                isEditing: false,
+                editId: -1,
+              });
+            });
+        })
+        .catch((err) => {
+          console.error('error with listings post', err);
+        });
+    } else {
+      listingRequests.postRequest(newListing)
+        .then(() => {
+          listingRequests.getRequest()
+            .then((listings) => {
+              this.setState({ listings });
+            });
+        })
+        .catch((err) => {
+          console.error('error with listings post', err);
+        });
+    }
   }
 
   componentDidMount() {
@@ -78,11 +98,20 @@ class App extends Component {
             this.setState({ listings });
           });
       })
-      .catch(error => console.error('error in deleting friend', error));
+      .catch(error => console.error('error in deleting listing', error));
+  }
+
+  passListingToEdit = (listingId) => {
+    this.setState({ isEditing: true, editId: listingId });
   }
 
   render() {
-    const { selectedListingId, listings } = this.state;
+    const {
+      selectedListingId,
+      listings,
+      isEditing,
+      editId,
+    } = this.state;
     const selectedListing = listings.find(listing => listing.id === selectedListingId) || { nope: 'nope' };
     const logoutClickEvent = () => {
       authRequests.logoutUser();
@@ -117,11 +146,12 @@ class App extends Component {
               listings={this.state.listings}
               deleteSingleListing={this.deleteSingleListing}
               onListingSelection={this.listingSelectEvent}
+              passListingToEdit={this.passListingToEdit}
             />
             <Building listing={selectedListing}/>
           </div>
           <div className="row">
-            <ListingForm onSubmit={this.formSubmitEvent}/>
+            <ListingForm onSubmit={this.formSubmitEvent} isEditing={isEditing} editId={editId}/>
           </div>
       </div>
     );
