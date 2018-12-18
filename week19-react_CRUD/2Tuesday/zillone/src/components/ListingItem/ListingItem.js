@@ -10,12 +10,19 @@ class ListingItem extends React.Component {
   static propTypes = {
     listing: listingProps.listingShape,
     deleteSingleListing: PropTypes.func,
+    onSelect: PropTypes.func,
   }
 
   deleteListing = (e) => {
     e.preventDefault();
     const { deleteSingleListing } = this.props;
     deleteSingleListing(this.props.listing.id);
+  }
+
+  listingClick = (e) => {
+    e.stopPropagation();
+    const { listing, onSelect } = this.props;
+    onSelect(listing.id);
   }
 
   render() {
@@ -34,7 +41,7 @@ class ListingItem extends React.Component {
     };
 
     return (
-      <li className='listing-item text-center'>
+      <li className='listing-item text-center' onClick={this.listingClick}>
         <span className="col-7">{listing.address}</span>
         <span className="col-3">{formatPrice(listing.price)}</span>
         {makeButtons()}

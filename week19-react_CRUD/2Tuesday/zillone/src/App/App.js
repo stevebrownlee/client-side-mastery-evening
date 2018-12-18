@@ -18,7 +18,14 @@ class App extends Component {
   state = {
     authed: false,
     listings: [],
+    selectedListingId: -1,
   };
+
+  listingSelectEvent = (id) => {
+    this.setState({
+      selectedListingId: id,
+    });
+  }
 
   formSubmitEvent = (newListing) => {
     listingRequests.postRequest(newListing)
@@ -75,6 +82,8 @@ class App extends Component {
   }
 
   render() {
+    const { selectedListingId, listings } = this.state;
+    const selectedListing = listings.find(listing => listing.id === selectedListingId) || { nope: 'nope' };
     const logoutClickEvent = () => {
       authRequests.logoutUser();
       this.setState({ authed: false });
@@ -107,8 +116,9 @@ class App extends Component {
             <Listings
               listings={this.state.listings}
               deleteSingleListing={this.deleteSingleListing}
+              onListingSelection={this.listingSelectEvent}
             />
-            <Building />
+            <Building listing={selectedListing}/>
           </div>
           <div className="row">
             <ListingForm onSubmit={this.formSubmitEvent}/>

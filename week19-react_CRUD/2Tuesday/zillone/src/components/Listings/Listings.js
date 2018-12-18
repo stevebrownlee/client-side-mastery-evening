@@ -10,15 +10,17 @@ class Listings extends React.Component {
   static propTypes = {
     listings: PropTypes.arrayOf(listingProps.listingShape),
     deleteSingleListing: PropTypes.func,
+    onListingSelection: PropTypes.func,
   };
 
   render() {
-    const { listings } = this.props;
+    const { listings, onListingSelection } = this.props;
     const listingsItemComponents = listings.map((listing, index) => (
       <ListingItem
         listing={listing}
         key={listing.id}
         deleteSingleListing={this.props.deleteSingleListing}
+        onSelect={onListingSelection}
       />
     ));
     return (
