@@ -176,15 +176,15 @@
 * **Day 1** - React Routing
 * **Day 2** - React Routing
 * **HW** -
-* **Lab Day** - React Routing
+* **Lab Day** - React Routing, react-nutshell
 
 ***
 
 #### Week 23 (January 14 - 19)
-* **Day 1** - React Routing
-* **Day 2** - React Routing
+* **Day 1** - react-nutshell
+* **Day 2** - react-nutshell, demos
 * **HW** -
-* **Lab Day** - React Routing
+* **Lab Day** - Capstone Checkins
 
 ***
 
