@@ -1,1 +1,0 @@
-# cats-vs-dogs

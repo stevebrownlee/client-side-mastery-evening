@@ -1,1 +1,0 @@
-# Pintrest (with promises)
