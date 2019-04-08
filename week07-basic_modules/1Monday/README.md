@@ -18,3 +18,7 @@ To change the book price:
 * Type: ```bookInfo.price = 0.01```
 
 ## Build out the 50 Shades Project with modules
+* Create `javascripts/helpers/book.js`  with the book info
+* Import that into main.js and show how you can get stuff from other files
+* Create store component
+* Create cart component
