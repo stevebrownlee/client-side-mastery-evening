@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sandwich Maker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body class="text-center">
+    <h1>Sandwich Maker</h1>
+    <h2>Select Ingredients:</h2>
+
+    <div class="container">
+      <h3 class="text-left">Bread:</h3>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-control custom-radio">
+            <input type="radio" id="rye" name="bread" class="custom-control-input" checked>
+            <label class="custom-control-label" for="rye">Rye</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-radio">
+            <input type="radio" id="sourdough" name="bread" class="custom-control-input">
+            <label class="custom-control-label" for="sourdough">Sourdough</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-radio">
+            <input type="radio" id="white" name="bread" class="custom-control-input">
+            <label class="custom-control-label" for="white">White</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-radio">
+            <input type="radio" id="wheat" name="bread" class="custom-control-input">
+            <label class="custom-control-label" for="wheat">Wheat</label>
+          </div>
+        </div>
+      </div>
+      <h3 class="text-left">Meat:</h3>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="nomeat" name="meat">
+            <label class="custom-control-label" for="nomeat">NONE</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="bacon" name="meat">
+            <label class="custom-control-label" for="bacon">Bacon</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="chicken" name="meat">
+            <label class="custom-control-label" for="chicken">Chicken</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="ham" name="meat">
+            <label class="custom-control-label" for="ham">Ham</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="salami" name="meat">
+            <label class="custom-control-label" for="salami">Salami</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="seitan" name="meat">
+            <label class="custom-control-label" for="seitan">Seitan</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="spam" name="meat">
+            <label class="custom-control-label" for="spam">Spam</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="tofu" name="meat">
+            <label class="custom-control-label" for="tofu">Tofu</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="turkey" name="meat">
+            <label class="custom-control-label" for="turkey">Turkey</label>
+          </div>
+        </div>
+      </div>
+      <h3 class="text-left">Cheese:</h3>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="nocheese" name="cheese">
+            <label class="custom-control-label" for="nocheese">NONE</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="swiss" name="cheese">
+            <label class="custom-control-label" for="swiss">Swiss</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="blue" name="cheese">
+            <label class="custom-control-label" for="blue">Blue</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="cheddar" name="cheese">
+            <label class="custom-control-label" for="cheddar">Cheddar</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="brie" name="cheese">
+            <label class="custom-control-label" for="brie">Brie</label>
+          </div>
+        </div>
+      </div>
+      <h3 class="text-left">Veggies:</h3>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="noveggies" name="veggie">
+            <label class="custom-control-label" for="noveggies">NONE</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="habanero" name="veggie">
+            <label class="custom-control-label" for="habanero">Habanero</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="avocado" name="veggie">
+            <label class="custom-control-label" for="avocado">Avocado</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="carrot" name="veggie">
+            <label class="custom-control-label" for="carrot">Carrot</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="lettuce" name="veggie">
+            <label class="custom-control-label" for="lettuce">Lettuce</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="tomato" name="veggie">
+            <label class="custom-control-label" for="tomato">Tomato</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="redonion" name="veggie">
+            <label class="custom-control-label" for="redonion">Red Onion</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="pickle" name="veggie">
+            <label class="custom-control-label" for="pickle">Pickle</label>
+          </div>
+        </div>
+      </div>
+      <h3 class="text-left">Condiments:</h3>
+      <div class="row">
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="nomeat" name="condiment">
+            <label class="custom-control-label" for="nomeat">NONE</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="mayo" name="condiment">
+            <label class="custom-control-label" for="mayo">Mayo</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="mustard" name="condiment">
+            <label class="custom-control-label" for="mustard">Mustard</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="avocado" name="condiment">
+            <label class="custom-control-label" for="avocado">Avocado</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="beercheese" name="condiment">
+            <label class="custom-control-label" for="beercheese">Beer Cheese</label>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="relish" name="condiment">
+            <label class="custom-control-label" for="relish">Relish</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-danger" id="makeIt">Sudo, Make me a Sandwich</button>
+    <div id="receipt"></div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <script src="./javascripts/main.js" type="module"></script>
+  </body>
+</html>
