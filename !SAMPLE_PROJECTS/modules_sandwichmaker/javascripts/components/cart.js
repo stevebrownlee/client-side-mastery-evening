@@ -1,5 +1,8 @@
 import breadChecker from '../helpers/ingredients/bread.js';
+import cheeseChecker from '../helpers/ingredients/cheese.js';
+import condimentChecker from '../helpers/ingredients/condiments.js';
 import meatChecker from '../helpers/ingredients/meat.js';
+import veggieChecker from '../helpers/ingredients/veggies.js';
 
 import util from '../helpers/util.js';
 
@@ -12,14 +15,31 @@ const selectBread = () => {
 
 const selectMeat = () => {
   const meats = document.querySelectorAll('input[name = meat]:checked');
-  console.log(meats);
   meats.forEach((meat) => {
     cart.push(meatChecker.addMeat(meat.id));
   })
-
 };
 
+const selectCheese = () => {
+  const cheeses = document.querySelectorAll('input[name = cheese]:checked');
+  cheeses.forEach((cheese) => {
+    cart.push(cheeseChecker.addCheese(cheese.id));
+  })
+};
 
+const selectCondiments = () => {
+  const condiments = document.querySelectorAll('input[name = condiment]:checked');
+  condiments.forEach((condiment) => {
+    cart.push(condimentChecker.addCondiments(condiment.id));
+  })
+};
+
+const selectVeggies = () => {
+  const veggies = document.querySelectorAll('input[name = veggie]:checked');
+  veggies.forEach((veggie) => {
+    cart.push(veggieChecker.addVeggies(veggie.id));
+  })
+};
 
 const makeReceipt = () => {
   const totalCost = cart.reduce((a, b) => {return a + b.price}, 0);
@@ -56,6 +76,9 @@ const collectIngredients = (e) => {
   cart = [];
   selectBread();
   selectMeat();
+  selectCheese();
+  selectCondiments();
+  selectVeggies();
   makeReceipt();
 };
 
