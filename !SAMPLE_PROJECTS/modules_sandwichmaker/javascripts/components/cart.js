@@ -1,4 +1,5 @@
 import breadChecker from '../helpers/ingredients/bread.js';
+import meatChecker from '../helpers/ingredients/meat.js';
 
 import util from '../helpers/util.js';
 
@@ -8,6 +9,16 @@ const selectBread = () => {
   const bread = document.querySelector('input[name = bread]:checked').id;
   cart.push(breadChecker.addBread(bread));
 };
+
+const selectMeat = () => {
+  const meats = document.querySelectorAll('input[name = meat]:checked');
+  console.log(meats);
+  meats.forEach((meat) => {
+    cart.push(meatChecker.addMeat(meat.id));
+  })
+
+};
+
 
 
 const makeReceipt = () => {
@@ -27,11 +38,11 @@ const makeReceipt = () => {
     domString += '<tr>';
     domString +=   `<td scope="row">${item.type}</td>`;
     domString +=   `<td>${item.name}</td>`;
-    domString +=   `<td>$${item.price}</td>`;
+    domString +=   `<td>$${item.price.toFixed(2)}</td>`;
     domString += '</tr>';
     });
   domString +=     '<tr class="table-info">';
-  domString +=       `<th scope="row" colspan="2" class="text-right">Total: </th><th>$${totalCost}</th>`;
+  domString +=       `<th scope="row" colspan="2" class="text-right">Total: </th><th>$${totalCost.toFixed(2)}</th>`;
   domString +=     '</tr>';
   domString +=   '</tbody>';
   domString += '</table>';
@@ -44,6 +55,7 @@ const collectIngredients = (e) => {
   e.preventDefault();
   cart = [];
   selectBread();
+  selectMeat();
   makeReceipt();
 };
 
