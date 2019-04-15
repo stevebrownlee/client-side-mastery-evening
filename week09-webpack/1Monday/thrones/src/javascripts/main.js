@@ -1,7 +1,9 @@
+import characterData from './heplers/characterData';
+
 import '../styles/main.scss';
 
 const init = () => {
-  console.error('nope');
+  characterData.getCharacterData();
 };
 
 init();
