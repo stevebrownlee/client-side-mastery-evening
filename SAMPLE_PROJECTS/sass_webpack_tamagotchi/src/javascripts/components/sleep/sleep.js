@@ -1,6 +1,6 @@
-import util from '../helpers/util';
+import util from '../../helpers/util';
 
-import '../../styles/components/sleep.scss';
+import './sleep.scss';
 
 const energy = 100;
 

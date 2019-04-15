@@ -1,6 +1,6 @@
-import util from '../helpers/util';
+import util from '../../helpers/util';
 
-import '../../styles/components/fight.scss';
+import './fight.scss';
 
 const strength = 99;
 

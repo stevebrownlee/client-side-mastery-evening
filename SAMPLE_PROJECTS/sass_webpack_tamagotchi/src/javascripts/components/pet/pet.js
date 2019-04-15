@@ -1,7 +1,7 @@
-import util from '../helpers/util';
-import petImg from '../../assets/dino.png';
+import util from '../../helpers/util';
+import petImg from '../../../assets/dino.jpg';
 
-import '../../styles/components/pet.scss';
+import './pet.scss';
 
 const domStringBuilder = () => {
   let domString = '';

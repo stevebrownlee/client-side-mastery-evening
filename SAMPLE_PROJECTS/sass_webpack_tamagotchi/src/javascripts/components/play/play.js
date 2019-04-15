@@ -1,6 +1,6 @@
-import util from '../helpers/util';
+import util from '../../helpers/util';
 
-import '../../styles/components/play.scss';
+import './play.scss';
 
 const fun = 100;
 

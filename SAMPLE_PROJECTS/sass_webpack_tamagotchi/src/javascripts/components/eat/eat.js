@@ -1,6 +1,6 @@
-import util from '../helpers/util';
+import util from '../../helpers/util';
 
-import '../../styles/components/eat.scss';
+import './eat.scss';
 
 const full = 100;
 
