@@ -1,0 +1,77 @@
+@import '../../../styles/colors';
+@import '../../../styles/variables';
+
+#characters{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+
+  %char {
+    width: 23%;
+    margin: 1%;
+    border-radius: 3px;
+    background-color: $gold;
+    box-shadow: $box-shadow;
+
+    .img-holder {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .char-name {
+      text-align: center;
+    }
+  }
+
+  .house-stark {
+    @extend %char;
+
+    h2 {
+      color: $stark;
+    }
+  }
+
+  .house-targaryen {
+    @extend %char;
+
+    h2 {
+      color: $targaryen;
+    }
+  }
+
+  .house-lannister {
+    @extend %char;
+
+    h2 {
+      color: $lannister;
+    }
+  }
+
+  .house-baratheon {
+    @extend %char;
+
+    h2 {
+      color: $baratheon;
+    }
+  }
+
+  .house-martell {
+    @extend %char;
+
+    h2 {
+      color: $martell;
+    }
+  }
+}
