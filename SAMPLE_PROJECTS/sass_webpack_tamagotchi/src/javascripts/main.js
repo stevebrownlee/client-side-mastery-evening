@@ -12,11 +12,6 @@ const init = () => {
   play.domStringBuilder();
   sleep.domStringBuilder();
   pet.domStringBuilder();
-
-  // console.error(eat.getFull());
-  // console.error(fight.getStrength());
-  // console.error(play.getFun());
-  // console.error(sleep.getEnergy());
 };
 
 init();
