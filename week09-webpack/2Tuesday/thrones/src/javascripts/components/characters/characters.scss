@@ -7,7 +7,7 @@
   display: flex;
   flex-flow: row wrap;
 
-  .char {
+  %char {
     width: 23%;
     margin: 1%;
     border-radius: 3px;
@@ -31,7 +31,47 @@
     }
 
     .char-name {
+      text-align: center;
+    }
+  }
 
+  .house-stark {
+    @extend %char;
+
+    h2 {
+      color: $stark;
+    }
+  }
+
+  .house-targaryen {
+    @extend %char;
+
+    h2 {
+      color: $targaryen;
+    }
+  }
+
+  .house-lannister {
+    @extend %char;
+
+    h2 {
+      color: $lannister;
+    }
+  }
+
+  .house-baratheon {
+    @extend %char;
+
+    h2 {
+      color: $baratheon;
+    }
+  }
+
+  .house-martell {
+    @extend %char;
+
+    h2 {
+      color: $martell;
     }
   }
 }

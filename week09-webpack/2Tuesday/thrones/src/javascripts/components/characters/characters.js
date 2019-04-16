@@ -12,7 +12,7 @@ const setCharacters = (charArray) => {
 const domStringBuilder = () => {
   let domString = '';
   characters.forEach((char) => {
-    domString += '<div class="char">';
+    domString += `<div class="house-${char.house.toLowerCase()}">`;
     domString += '<div class="img-holder">';
     domString += `<img src=${char.imageUrl} />`;
     domString += '</div>';
