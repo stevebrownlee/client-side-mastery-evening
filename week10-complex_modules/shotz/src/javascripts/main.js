@@ -1,3 +1,13 @@
+import events from './helpers/events';
+import movies from './components/movies/movies';
+import locationView from './components/locations/locations';
+
 import '../styles/main.scss';
 
-console.error('hi');
+const init = () => {
+  events();
+  movies.initializeMoviesView();
+  locationView.initializeLocationsView();
+};
+
+init();
