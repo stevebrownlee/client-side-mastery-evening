@@ -1,33 +1,5 @@
-import $ from 'jquery';
+import axios from 'axios';
 
-const loadLocations = () => {
-  const locationPromise = new Promise((resolve, reject) => {
-    $.get('../db/locations.json')
-      .done((data) => {
-        resolve(data.locations);
-      })
-      .fail((error) => {
-        reject(error);
-      });
-  });
+const getLocationsData = () => axios.get('../db/locations.json');
 
-  return locationPromise;
-};
-
-const getMovieLocations = (locationIds) => {
-  const locationsPromise = new Promise((resolve, reject) => {
-    $.get('../db/locations.json')
-      .done((data) => {
-        const correctLocations = data.locations.filter(x => locationIds.includes(x.id));
-        resolve(correctLocations);
-      })
-      .fail((error) => {
-        reject(error);
-      });
-  });
-
-  return locationsPromise;
-};
-
-
-export default { loadLocations, getMovieLocations };
+export default { getLocationsData };

@@ -1,7 +1,9 @@
-import $ from 'jquery';
+import locationsData from '../../helpers/data/locationsData';
+import util from '../../helpers/util';
 
-import movieData from '../../helpers/data/moviesData';
-import locationData from '../../helpers/data/locationsData';
+import './locations.scss';
+
+let locations = [];
 
 const shootTimeClass = (shootTime) => {
   let selectedClass = '';
@@ -24,40 +26,72 @@ const shootTimeClass = (shootTime) => {
   return selectedClass;
 };
 
-const writeLocations = (locations) => {
+const domStringBuilder = (locArray) => {
   let domString = '';
-  locations.forEach((location) => {
-    domString += `
-      <div id='${location.id}' class='location'>
-        <div class="card">
-          <div class="card-header ${shootTimeClass(location.shootTime)}">
-            ${location.name}
-          </div>
-          <div class="card-body">
-          <img class="card-img-top" src="${location.imageUrl}" alt="${location.name}">
-          <h5 class="card-title">${location.address}</h5>
-          <p class="card-text">Used in ${location.movies.length} Movies</p>
-          </div>
-        </div>
-      </div>
-    `;
+  locArray.forEach((location) => {
+    domString += `<div id=${location.id} class="card location col-2">`;
+    domString += `<div class="card-header ${shootTimeClass(location.shootTime)}">${location.name}</div>`;
+    domString += '<div class="card-body">';
+    domString += `<img class="card-img-top" src="${location.imageUrl}" alt="${location.name}">`;
+    domString += `<h5 class="card-title">${location.address}</h5>`;
+    domString += '</div>';
+    domString += '</div>';
   });
-  $('#location-container').html(domString);
+  util.printToDom('locations', domString);
 };
 
-const initializeLocationsView = () => {
-  locationData.loadLocations().then((locations) => {
-    movieData.loadMovies().then((movies) => {
-      const locationsWithMovies = locations.map((location) => {
-        const newLocation = location;
-        newLocation.movies = movies.filter(movie => movie.locations.includes(location.id));
-        return newLocation;
-      });
-      writeLocations(locationsWithMovies);
-    });
-  }).catch((error) => {
-    console.error(error);
-  });
+const filterButtonEvent = (e) => {
+  const buttonId = e.target.id;
+  const darkLocations = locations.filter(x => x.shootTime === 'After Dark');
+  const morningLocations = locations.filter(x => x.shootTime === 'Morning');
+  const afternoonLocations = locations.filter(x => x.shootTime === 'Afternoon');
+  const eveningLocations = locations.filter(x => x.shootTime === 'Evening');
+  switch (buttonId) {
+    case 'morning':
+      domStringBuilder(morningLocations);
+      break;
+    case 'afternoon':
+      domStringBuilder(afternoonLocations);
+      break;
+    case 'evening':
+      domStringBuilder(eveningLocations);
+      break;
+    case 'dark':
+      domStringBuilder(darkLocations);
+      break;
+    default:
+      domStringBuilder(locations);
+  }
 };
 
-export default { initializeLocationsView };
+const filterByTextEvent = (e) => {
+  const searchText = e.target.value;
+  const searchLocations = locations.filter((x) => {
+    const hasName = x.name.includes(searchText);
+    const hasAddress = x.address.includes(searchText);
+    return hasName || hasAddress;
+  });
+  domStringBuilder(searchLocations);
+};
+
+const initializeEvents = () => {
+  document.getElementById('dark').addEventListener('click', filterButtonEvent);
+  document.getElementById('afternoon').addEventListener('click', filterButtonEvent);
+  document.getElementById('evening').addEventListener('click', filterButtonEvent);
+  document.getElementById('morning').addEventListener('click', filterButtonEvent);
+  document.getElementById('all').addEventListener('click', filterButtonEvent);
+  document.getElementById('text-input').addEventListener('keyup', filterByTextEvent);
+};
+
+const initializeLocations = () => {
+  locationsData.getLocationsData()
+    .then((resp) => {
+      const locationResults = resp.data.locations;
+      locations = locationResults;
+      domStringBuilder(locations);
+      initializeEvents();
+    })
+    .catch(err => console.error(err));
+};
+
+export default { initializeLocations };

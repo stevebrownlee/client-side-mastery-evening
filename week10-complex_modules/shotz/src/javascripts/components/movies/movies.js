@@ -1,38 +1,34 @@
-import $ from 'jquery';
+import moviesData from '../../helpers/data/moviesData';
+import util from '../../helpers/util';
 
-import movieData from '../../helpers/data/moviesData';
+import './movies.scss';
 
-import setMovieViewEvents from '../movieView/movieView';
+let movies = [];
 
-const writeMovies = (movies) => {
+const domStringBuilder = () => {
   let domString = '';
   movies.forEach((movie) => {
-    domString += `
-      <div id='${movie.id}' class='col-4 movie'>
-        <div class="card">
-          <div class="card-header">
-            ${movie.name}
-          </div>
-          <div class="card-body">
-          <h5 class="card-title">${movie.genre}</h5>
-          <h5 class="card-title">${movie.releaseDate}</h5>
-          <h5 class="card-title">${movie.description}</h5>
-          <p class="card-text">${movie.locations.length} Locations</p>
-          </div>
-        </div>
-      </div>
-    `;
+    domString += `<div id=${movie.id} class="card movie col-3">`;
+    domString += `<div class="card-header">${movie.name}</div>`;
+    domString += '<div class="card-body">';
+    domString += `<h5 class="card-title">${movie.genre}</h5>`;
+    domString += `<h5 class="card-title">${movie.releaseDate}</h5>`;
+    domString += `<h5 class="card-title">${movie.description}</h5>`;
+    domString += `<p class="card-text">${movie.locations.length} Locations</p>`;
+    domString += '</div>';
+    domString += '</div>';
   });
-  $('#movie-container').html(domString);
-  setMovieViewEvents();
+  util.printToDom('movies', domString);
 };
 
-const initializeMoviesView = () => {
-  movieData.loadMovies().then((movies) => {
-    writeMovies(movies);
-  }).catch((error) => {
-    console.error(error);
-  });
+const initializeMovies = () => {
+  moviesData.getMoviesData()
+    .then((resp) => {
+      const movieResults = resp.data.movies;
+      movies = movieResults;
+      domStringBuilder();
+    })
+    .catch(err => console.error(err));
 };
 
-export default { initializeMoviesView };
+export default { initializeMovies };

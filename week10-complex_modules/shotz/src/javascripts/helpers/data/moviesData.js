@@ -1,33 +1,5 @@
-import $ from 'jquery';
+import axios from 'axios';
 
-const loadMovies = () => {
-  const moviePromise = new Promise((resolve, reject) => {
-    $.get('../db/movies.json')
-      .done((data) => {
-        resolve(data.movies);
-      })
-      .fail((error) => {
-        reject(error);
-      });
-  });
+const getMoviesData = () => axios.get('../db/movies.json');
 
-  return moviePromise;
-};
-
-const getMovieById = (movieId) => {
-  const singleMoviePromise = new Promise((resolve, reject) => {
-    $.get('../db/movies.json')
-      .done((data) => {
-        const selectedMovie = data.movies.find(movie => movie.id === movieId);
-        resolve(selectedMovie);
-      })
-      .fail((error) => {
-        reject(error);
-      });
-  });
-
-  return singleMoviePromise;
-};
-
-
-export default { loadMovies, getMovieById };
+export default { getMoviesData };
