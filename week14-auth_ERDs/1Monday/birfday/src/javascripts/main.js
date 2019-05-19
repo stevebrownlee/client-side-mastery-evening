@@ -4,7 +4,7 @@ import firebase from 'firebase/app';
 import apiKeys from './helpers/apiKeys.json';
 
 // import createNavbar from './components/Navbar/navbar';
-// import loginButton from './components/Auth/Auth';
+import auth from './components/Auth/Auth';
 import authData from './helpers/data/authData';
 
 import '../styles/main.scss';
@@ -14,7 +14,7 @@ const init = () => {
   console.error(firebase);
   // createNavbar();
   authData.checkLoginStatus();
-  // loginButton();
+  auth.loginButton();
 };
 
 init();
