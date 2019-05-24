@@ -1,6 +1,8 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import birthday from '../../components/Birthday/Birthday';
+
 const authDiv = document.getElementById('auth');
 const birfdayDiv = document.getElementById('birfday');
 const birfdayNavbar = document.getElementById('navbar-button-birfday');
@@ -10,6 +12,7 @@ const logoutNavbar = document.getElementById('navbar-button-logout');
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
+      birthday.showBirthday(user.uid);
       authDiv.classList.add('hide');
       birfdayDiv.classList.remove('hide');
       birfdayNavbar.classList.remove('hide');
@@ -25,4 +28,6 @@ const checkLoginStatus = () => {
   });
 };
 
-export default { checkLoginStatus };
+const getCurrentUid = () => firebase.auth().currentUser.uid;
+
+export default { checkLoginStatus, getCurrentUid };
