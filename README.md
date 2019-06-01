@@ -107,3 +107,19 @@
 * **Lab Day** - Exercises
 
 ***
+
+#### Week 14 (May 20 - 26)
+* **Day 1** - Firebase Auth
+* **Day 2** - ERDs
+* **HW** -
+* **Lab Day** - Create/READ
+
+***
+
+#### Week 15 (May 27 - June 2)
+* **Day 1** - HOLIDAY
+* **Day 2** - Exercises
+* **HW** -
+* **Lab Day** - UPDATE/DELETE
+
+***
