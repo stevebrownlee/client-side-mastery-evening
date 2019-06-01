@@ -36,6 +36,21 @@ const newFriendButton = () => {
   saveNewFriendButton.addEventListener('click', createNewFriend);
 };
 
+const deleteFriendButton = (e) => {
+  const friendId = e.target.id;
+  friendsData.deleteFriend(friendId)
+    .then(() => showList(firebase.auth().currentUser.uid)) // eslint-disable-line no-use-before-define
+    .catch(err => console.error('friend no delete', err));
+};
+
+const addEvents = () => {
+  document.getElementById('add-friend-button').addEventListener('click', newFriendButton);
+  const deleteButtons = document.getElementsByClassName('delete-friend');
+  for (let i = 0; i < deleteButtons.length; i += 1) {
+    deleteButtons[i].addEventListener('click', deleteFriendButton);
+  }
+};
+
 const showList = (uid) => {
   friendsData.getFriendsByUid(uid)
     .then((friends) => {
@@ -46,7 +61,8 @@ const showList = (uid) => {
       domString += '<thead>';
       domString += '<tr>';
       domString += '<th scope="col">Name</th>';
-      domString += ' <th scope="col">Email</th>';
+      domString += '<th scope="col">Email</th>';
+      domString += '<th scope="col"></th>';
       domString += '</tr>';
       domString += '</thead>';
       domString += '<tbody>';
@@ -54,13 +70,14 @@ const showList = (uid) => {
         domString += '<tr>';
         domString += `<td>${friend.name}</td>`;
         domString += `<td>${friend.email}</td>`;
+        domString += `<th scope="col"><button id=${friend.id} class="btn btn-danger delete-friend">X</button></th>`;
         domString += '</tr>';
       });
       domString += '</tbody>';
       domString += '</table>';
       domString += '</div>';
       util.printToDom('friends', domString);
-      document.getElementById('add-friend-button').addEventListener('click', newFriendButton);
+      addEvents();
     })
     .catch(err => console.error('no friends', err));
 };
