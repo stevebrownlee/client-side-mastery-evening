@@ -123,3 +123,27 @@
 * **Lab Day** - UPDATE/DELETE
 
 ***
+
+#### Week 16 (June 3-9)
+* **Day 1** - Exercises
+* **Day 2** - Group Project: Nutshell
+* **HW** - Group Project: Nutshell
+* **Lab Day** - Group Project: Nutshell
+
+***
+
+#### Week 17 (June 10 - 16)
+* **Day 1** - Group Project: Nutshell
+* **Day 2** - Group Project: Nutshell
+* **HW** - Group Project: Nutshell
+* **Lab Day** - Demo Nutshell, Create-react-app
+
+***
+
+#### Week 18 (June 17-23)
+* **Day 1** - React State and Props
+* **Day 2** - Kristin talks, Exercises
+* **HW** -
+* **Lab Day** - Exercises
+
+***
