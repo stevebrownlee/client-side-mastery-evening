@@ -1,6 +1,6 @@
 import React from 'react';
-import firebase from 'firebase';
-
+import firebase from 'firebase/app';
+import MyNavbar from '../components/MyNavbar/MyNavbar';
 import Auth from '../components/Auth/Auth';
 import Home from '../components/Home/Home';
 
@@ -42,6 +42,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <MyNavbar authed={this.state.authed} />
         {loadComponent()}
       </div>
     );
