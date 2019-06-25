@@ -21,7 +21,7 @@ class Fish extends React.Component {
     this.props.addToOrder(this.props.index);
   };
 
-  render () {
+  render() {
     const { details } = this.props;
     const isAvailable = details.status === 'available';
     const image = require(`${details.image}`);

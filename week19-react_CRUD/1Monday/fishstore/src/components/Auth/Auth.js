@@ -7,7 +7,6 @@ import googleImage from './Sign-in-with-Google.png';
 import './Auth.scss';
 
 class Auth extends React.Component {
-
   loginClickEvent = (e) => {
     e.preventDefault();
     const provider = new firebase.auth.GoogleAuthProvider();
