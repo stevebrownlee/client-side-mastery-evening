@@ -26,24 +26,11 @@ const getSingleRequest = id => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-const postRequest = newOrder => new Promise((resolve, reject) => {
-  axios
-    .post(`${baseUrl}/orders.json`, newOrder)
-    .then(res => resolve(res))
-    .catch(err => reject(err));
-});
+const postRequest = newOrder => axios.post(`${baseUrl}/orders.json`, newOrder);
 
-const deleteRequest = orderId => new Promise((resolve, reject) => {
-  axios.delete(`${baseUrl}/orders/${orderId}.json`)
-    .then(res => resolve(res))
-    .catch(err => reject(err));
-});
+const deleteRequest = orderId => axios.delete(`${baseUrl}/orders/${orderId}.json`);
 
-const putRequest = (orderId, updatedOrder) => new Promise((resolve, reject) => {
-  axios.put(`${baseUrl}/orders/${orderId}.json`, updatedOrder)
-    .then(res => resolve(res))
-    .catch(err => reject(err));
-});
+const putRequest = (orderId, updatedOrder) => axios.put(`${baseUrl}/orders/${orderId}.json`, updatedOrder);
 
 export default {
   deleteRequest,

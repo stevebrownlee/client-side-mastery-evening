@@ -1,9 +1,10 @@
 import React from 'react';
-import moment from 'moment';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import orderData from '../../helpers/data/orderData';
+
+import OrderRow from '../OrderRow/OrderRow';
 
 import './Orders.scss';
 
@@ -26,18 +27,16 @@ class Orders extends React.Component {
     this.getOrders();
   }
 
+  deleteOrder = (orderId) => {
+    orderData.deleteRequest(orderId)
+      .then(() => this.getOrders())
+      .catch(err => console.error('error with delete request', err));
+  }
+
   render() {
-    const orderComponents = this.state.orders.map((order) => {
-      const numFish = Object.values(order.fishes).reduce((a, b) => a + b);
-      return (
-        <tr key={order.id}>
-          <th scope="row">{order.id}</th>
-          <td>{moment(order.dateTime).format('LLL')}</td>
-          <td>{numFish}</td>
-          <td><button className="btn btn-danger">X</button></td>
-        </tr>
-      );
-    });
+    const orderComponents = this.state.orders.map(order => (
+      <OrderRow key={order.id} order={order} deleteOrder={this.deleteOrder}/>
+    ));
 
     return (
       <div className="Orders col-xs-12 text-center">

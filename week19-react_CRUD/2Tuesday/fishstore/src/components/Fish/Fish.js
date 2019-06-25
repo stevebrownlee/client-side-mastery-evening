@@ -24,6 +24,7 @@ class Fish extends React.Component {
   render() {
     const { details } = this.props;
     const isAvailable = details.status === 'available';
+    // eslint-disable-next-line
     const image = require(`${details.image}`);
     return (
       <li className="Fish">
