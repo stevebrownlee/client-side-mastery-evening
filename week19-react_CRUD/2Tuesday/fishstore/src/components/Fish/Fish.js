@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import fishShape from '../../helpers/propz/fishShapes';
 
 import format from '../../helpers/format';
 
@@ -7,14 +7,8 @@ import './Fish.scss';
 
 class Fish extends React.Component {
   static propTypes = {
-    details: PropTypes.shape({
-      image: PropTypes.string,
-      name: PropTypes.string,
-      desc: PropTypes.string,
-      status: PropTypes.string,
-      price: PropTypes.number,
-    }),
-  };
+    fish: fishShape.fishShape,
+  }
 
   addClickEvent = (e) => {
     e.preventDefault();
