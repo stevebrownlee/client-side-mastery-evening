@@ -148,11 +148,18 @@
 
 ***
 
-
 #### Week 19 (June 24 - 30)
 * **Day 1** - React CRUD with firebase
 * **Day 2** - React CRUD with firebase
 * **HW** - Doggie Day Care Part 2 & 3
+* **Lab Day** - React CRUD with firebase, Exercises
+
+***
+
+#### Week 20 (July 1 - 6)
+* **Day 1** - React CRUD with firebase
+* **Day 2** - React Routing
+* **HW** - React Hoarder Parts 1 & 2
 * **Lab Day** - Exercises
 
 ***
