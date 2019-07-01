@@ -6,8 +6,9 @@ import './Orders.scss';
 
 class Orders extends React.Component {
   render() {
+    const { deleteOrder, selectOrderToEdit } = this.props;
     const orderComponents = this.props.orders.map(order => (
-      <OrderRow key={order.id} order={order} deleteOrder={this.props.deleteOrder}/>
+      <OrderRow key={order.id} order={order} deleteOrder={deleteOrder} selectOrderToEdit={selectOrderToEdit}/>
     ));
 
     return (

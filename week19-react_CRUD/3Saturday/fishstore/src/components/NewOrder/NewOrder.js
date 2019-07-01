@@ -11,16 +11,28 @@ class NewOrder extends React.Component {
     order: PropTypes.object,
     removeFromOrder: PropTypes.func,
     saveNewOrder: PropTypes.func,
+    orderEditId: PropTypes.string,
   }
 
   state= {
     orderName: '',
   }
 
+  componentWillUpdate(nextProps) {
+    if (nextProps.orderEditing !== this.props.orderEditing && nextProps.orderEditing.name) {
+      this.setState({ orderName: nextProps.orderEditing.name });
+    }
+  }
+
   saveOrder = () => {
     this.props.saveNewOrder(this.state.orderName);
     this.setState({ orderName: '' });
   }
+
+  nameChange = (e) => {
+    e.preventDefault();
+    this.setState({ orderName: e.target.value });
+  };
 
   renderOrder = (key) => {
     const fish = this.props.fishes.find(x => x.id === key);
@@ -53,14 +65,9 @@ class NewOrder extends React.Component {
     );
   };
 
-  nameChange = (e) => {
-    // const orderName = this.state.orderName;
-    const orderName = e.target.value;
-    this.setState({ orderName });
-  };
-
   render() {
     const { orderName } = this.state;
+    const { orderEditing } = this.props;
     const orderIds = Object.keys(this.props.order);
     const orderExists = Object.keys(this.props.order).length > 0;
     const total = orderIds.reduce((prevTotal, key) => {
@@ -75,7 +82,8 @@ class NewOrder extends React.Component {
 
     return (
       <div className="NewOrder">
-        <h2>New Order</h2>
+        <h2>{Object.keys(orderEditing).length < 1 ? 'New Order' : 'Edit Order'}</h2>
+        {Object.keys(orderEditing).length < 1 ? '' : (<h4>Order Id: {orderEditing.id}</h4>)}
         <form className='col-6 offset-3'>
           <div className="form-group">
             <label htmlFor="order-name">Order Name:</label>
