@@ -63,8 +63,8 @@ class Home extends React.Component {
     this.setState({ order });
   };
 
-  saveNewOrder = () => {
-    const newOrder = { fishes: { ...this.state.order } };
+  saveNewOrder = (orderName) => {
+    const newOrder = { fishes: { ...this.state.order }, name: orderName };
     newOrder.dateTime = Date.now();
     newOrder.uid = firebase.auth().currentUser.uid;
     orderRequests

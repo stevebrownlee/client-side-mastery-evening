@@ -13,8 +13,13 @@ class NewOrder extends React.Component {
     saveNewOrder: PropTypes.func,
   }
 
+  state= {
+    orderName: '',
+  }
+
   saveOrder = () => {
-    this.props.saveNewOrder();
+    this.props.saveNewOrder(this.state.orderName);
+    this.setState({ orderName: '' });
   }
 
   renderOrder = (key) => {
@@ -48,7 +53,14 @@ class NewOrder extends React.Component {
     );
   };
 
+  nameChange = (e) => {
+    // const orderName = this.state.orderName;
+    const orderName = e.target.value;
+    this.setState({ orderName });
+  };
+
   render() {
+    const { orderName } = this.state;
     const orderIds = Object.keys(this.props.order);
     const orderExists = Object.keys(this.props.order).length > 0;
     const total = orderIds.reduce((prevTotal, key) => {
@@ -64,6 +76,19 @@ class NewOrder extends React.Component {
     return (
       <div className="NewOrder">
         <h2>New Order</h2>
+        <form className='col-6 offset-3'>
+          <div className="form-group">
+            <label htmlFor="order-name">Order Name:</label>
+            <input
+              type="text"
+              className="form-control"
+              id="order-name"
+              placeholder="John's Order"
+              value={orderName}
+              onChange={this.nameChange}
+            />
+          </div>
+        </form>
         <ul>{orderIds.map(this.renderOrder)}</ul>
         <div className="total">
           Total:

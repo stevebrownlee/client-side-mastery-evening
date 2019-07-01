@@ -25,7 +25,7 @@ class OrderRow extends React.Component {
     const numFish = Object.values(order.fishes).reduce((a, b) => a + b);
     return (
       <tr className="OrderRow">
-        <th scope="row">{order.id}</th>
+        <th scope="row">{order.name}</th>
         <td>{moment(order.dateTime).format('LLL')}</td>
         <td>{numFish}</td>
         <td><button className="btn btn-danger" onClick={this.deleteOrderEvent}>X</button></td>
