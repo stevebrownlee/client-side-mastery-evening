@@ -143,7 +143,16 @@
 #### Week 18 (June 17-23)
 * **Day 1** - React State and Props
 * **Day 2** - Kristin talks, Exercises
-* **HW** -
+* **HW** - Doggie Day Care
+* **Lab Day** - Exercises
+
+***
+
+
+#### Week 19 (June 24 - 30)
+* **Day 1** - React CRUD with firebase
+* **Day 2** - React CRUD with firebase
+* **HW** - Doggie Day Care Part 2 & 3
 * **Lab Day** - Exercises
 
 ***
