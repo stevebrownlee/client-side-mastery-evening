@@ -1,0 +1,28 @@
+{
+  "scats": {
+    "scat1": {
+      "color": "brown",
+      "origin": "big cat",
+      "date": "1/5/2019",
+      "status": "normal"
+    },
+    "scat2": {
+      "color": "green",
+      "origin": "Michael",
+      "date": "10/5/2019",
+      "status": "stringy"
+    },
+    "scat3": {
+      "color": "yellow",
+      "origin": "bear",
+      "date": "2/5/2019",
+      "status": "very runny"
+    },
+    "scat4": {
+      "color": "dark brown",
+      "origin": "dog",
+      "date": "3/5/2019",
+      "status": "very runny"
+    }
+  }
+}
