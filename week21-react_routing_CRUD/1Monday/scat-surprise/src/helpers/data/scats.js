@@ -19,4 +19,6 @@ const getRequest = uid => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-export default { getRequest };
+const deleteRequest = scatId => axios.delete(`${baseUrl}/scats/${scatId}.json`);
+
+export default { getRequest, deleteRequest };

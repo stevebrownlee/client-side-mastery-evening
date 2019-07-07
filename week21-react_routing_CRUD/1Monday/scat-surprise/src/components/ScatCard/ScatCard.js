@@ -3,6 +3,12 @@ import React from 'react';
 import './ScatCard.scss';
 
 class ScatCard extends React.Component {
+  deleteMe = (e) => {
+    e.preventDefault();
+    const { scat, deleteScat } = this.props;
+    deleteScat(scat.id);
+  }
+
   render() {
     const { scat } = this.props;
     return (
@@ -12,8 +18,8 @@ class ScatCard extends React.Component {
             <h5 className="card-title">{scat.title}</h5>
             <p className="card-text">{scat.color}</p>
             <p className="card-text">{scat.origin}</p>
-            <a className="btn btn-danger">Edit</a>
-            <a className="btn btn-primary">Delete</a>
+            {/* <a className="btn btn-primary">Edit</a> */}
+            <button onClick={this.deleteMe} className="btn btn-danger">Delete</button>
           </div>
         </div>
       </div>
