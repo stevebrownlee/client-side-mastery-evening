@@ -1,28 +1,36 @@
 {
   "scats": {
     "scat1": {
+      "title": "OMG HUGE1",
       "color": "brown",
       "origin": "big cat",
       "date": "1/5/2019",
-      "status": "normal"
+      "status": "normal",
+      "uid": "376FQGiJubTIDDR9cKaCaJx594S2"
     },
     "scat2": {
+      "title": "OMG HUGE2",
       "color": "green",
       "origin": "Michael",
       "date": "10/5/2019",
-      "status": "stringy"
+      "status": "stringy",
+      "uid": "376FQGiJubTIDDR9cKaCaJx594S2"
     },
     "scat3": {
+      "title": "OMG HUG3",
       "color": "yellow",
       "origin": "bear",
       "date": "2/5/2019",
-      "status": "very runny"
+      "status": "very runny",
+      "uid": "12345"
     },
     "scat4": {
+      "title": "OMG HUGE4",
       "color": "dark brown",
       "origin": "dog",
       "date": "3/5/2019",
-      "status": "very runny"
+      "status": "very runny",
+      "uid": "12345"
     }
   }
 }
