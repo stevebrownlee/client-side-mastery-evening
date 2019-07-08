@@ -21,4 +21,6 @@ const getRequest = uid => new Promise((resolve, reject) => {
 
 const deleteRequest = scatId => axios.delete(`${baseUrl}/scats/${scatId}.json`);
 
-export default { getRequest, deleteRequest };
+const postRequest = newScat => axios.post(`${baseUrl}/scats.json`, newScat);
+
+export default { getRequest, deleteRequest, postRequest };
