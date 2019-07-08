@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+import scatShape from '../../helpers/propz/scatShape';
 
 import './ScatCard.scss';
 
 class ScatCard extends React.Component {
+  static propTypes = {
+    scat: scatShape.scatCardShape,
+    deleteScat: PropTypes.func.isRequired,
+  }
+
   deleteMe = (e) => {
     e.preventDefault();
     const { scat, deleteScat } = this.props;
