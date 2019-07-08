@@ -148,11 +148,50 @@
 
 ***
 
-
 #### Week 19 (June 24 - 30)
 * **Day 1** - React CRUD with firebase
 * **Day 2** - React CRUD with firebase
 * **HW** - Doggie Day Care Part 2 & 3
+* **Lab Day** - React CRUD with firebase, Exercises
+
+***
+
+#### Week 20 (July 1 - 6)
+* **Day 1** - React CRUD with firebase
+* **Day 2** - React Routing
+* **HW** - React Hoarder Parts 1 & 2
 * **Lab Day** - Exercises
+
+***
+
+#### Week 21 (July 7 - 13)
+* **Day 1** - React Routing + CRUD
+* **Day 2** - React Routing + CRUD
+* **HW** - React Hoarder Parts 1 & 2
+* **Lab Day** - Exercises, 1st capstone Checkins
+
+***
+
+#### Week 22 (July 14 - 20)
+* **Day 1** - Capstones
+* **Day 2** - Capstones
+* **HW** - Capstones
+* **Lab Day** - Capstones
+
+***
+
+#### Week 23 (July 21 - 27)
+* **Day 1** - Capstones
+* **Day 2** - Capstones
+* **HW** - Capstones
+* **Lab Day** - Capstones
+
+***
+
+#### Week 24 (July 28 - August 3)
+* **Day 1** - Capstones
+* **Day 2** - Capstones
+* **HW** - Capstones
+* **Lab Day** - FINAL DAY
 
 ***
