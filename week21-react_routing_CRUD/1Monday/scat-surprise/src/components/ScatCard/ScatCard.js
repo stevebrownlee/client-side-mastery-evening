@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './ScatCard.scss';
 
@@ -11,6 +12,7 @@ class ScatCard extends React.Component {
 
   render() {
     const { scat } = this.props;
+    const singleLink = `/edit/${scat.id}`;
     return (
       <div className="ScatCard col-3">
         <div className="card">
@@ -18,7 +20,7 @@ class ScatCard extends React.Component {
             <h5 className="card-title">{scat.title}</h5>
             <p className="card-text">{scat.color}</p>
             <p className="card-text">{scat.origin}</p>
-            {/* <a className="btn btn-primary">Edit</a> */}
+            <Link className="btn btn-primary" to={singleLink}>Edit</Link>
             <button onClick={this.deleteMe} className="btn btn-danger">Delete</button>
           </div>
         </div>
