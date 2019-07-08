@@ -1,6 +1,4 @@
 import React from 'react';
-import firebase from 'firebase/app';
-import 'firebase/auth';
 
 import scatData from '../../helpers/data/scats';
 
