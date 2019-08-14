@@ -1,5 +1,5 @@
-# Week 5 (March 18 - 24)
-* **Day 1** - Git for Teams
-* **Day 2** - Bootstrap
-* **HW** - Sorting Hat
-* **Lab Day** - Exercises
+# Week 5 (September 9 - 15)
+* **Day 1** - Wireframes, github projects
+* **Day 2** - Git for Teams
+* **HW** -
+* **Lab Day** - Start Group Project
