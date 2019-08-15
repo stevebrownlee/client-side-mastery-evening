@@ -7,14 +7,14 @@ Week by week documentation of what was covered - Currently for E10
 ## Week 1 (August 12 - 18)
 * **Day 1** - Introductions, John's Intro talk, Class Expectations
 * **Day 2** -
-* **Study Group** -installs
+* **Study Group** - installs and github SSH setup
 * **HW** - minor administrative stuff
-* **Lab Day** - E9 Demos, command line, github setup, vs code
+* **Lab Day** - E9 Demos, command line, vs code
 
 ***
 
 ## Week 2 (August 19 - 25)
-* **Day 1** - git branching
+* **Day 1** - intro to git, git branching
 * **Day 2** - Git review, html/css
 * **HW** -
 * **Lab Day** - JS Overview

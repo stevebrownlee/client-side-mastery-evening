@@ -1,6 +1,6 @@
 # Week 1 - Day 3
 
-> **Agenda:** E9 Demos, command line, basic git, vs code
+> **Agenda:** E9 Demos, command line, vs code
 
 * Give 2 hours for E9 science fair style demos
 * Quick intro to VS Code
@@ -18,9 +18,3 @@
 * Remind them how to open their terminal/git bash
 * Go through basic commands
 * Challenge - Have them create our folder structure
-
-## Basic Git
-[Git Notes](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/git-and-github.md)
-* What is git vs github?
-* Go over basic flow and commands
-* Make a first repo
