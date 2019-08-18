@@ -25,6 +25,8 @@ Talk a little about what flexbox is (they all did some as part of the prework so
 
 Have them create a new github repo called flexbox-intro.  I have already created this repo for [E10](https://github.com/nss-evening-cohort-10/flexbox-intro) - https://github.com/nss-evening-cohort-10/flexbox-intro
 
+Locally the project should live here: `~/workspace/foundations/inclass/flexbox-intro`.
+
 Have them push README.md to master and then create a setup branch that changes the background color of the body and does a console.log.  Once they push to master you are ready to go with the lecture
 
 Do a quick reminder discussion of when to branch - by feature.  So we will be doing a navbar branch and a dogs branch.

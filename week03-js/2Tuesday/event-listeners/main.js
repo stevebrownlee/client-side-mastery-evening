@@ -41,7 +41,7 @@ const pies = [
     bakeTemp: 5000,
     drinkPairing: 'Milk',
     imageUrl: 'https://cookiesandcups.com/wp-content/uploads/2018/10/pecanpie-3.jpg',
-    instructor: 'Saul',
+    instructor: 'Callan',
     iceCream: 'Vanilla',
   },
   {
@@ -50,7 +50,7 @@ const pies = [
     bakeTemp: 5000,
     drinkPairing: 'Water',
     imageUrl: 'https://www.williams-sonoma.com/wsimgs/rk/images/dp/recipe/201851/0020/img38l.jpg',
-    instructor: 'Saul',
+    instructor: 'Callan',
     iceCream: 'none',
   },
 ];
@@ -83,11 +83,11 @@ const buttonClick = (e) => {
   // if values of instructor key is the same as buttonId - keep that object
   // once we have all the pies for that instructor - call pieBuilder
   const selectedPies = [];
-  pies.forEach((pie) => {
-    if (pie.instructor === buttonId) {
-      selectedPies.push(pie);
+  for (let i = 0; i < pies.length; i++) {
+    if (pies[i].instructor === buttonId) {
+      selectedPies.push(pie[i]);
     }
-  });
+  }
 
   if (buttonId === 'All') {
     pieBuilder(pies);
@@ -98,7 +98,7 @@ const buttonClick = (e) => {
 
 const buttonEvents = () => {
   document.getElementById('Zoe').addEventListener('click', buttonClick);
-  document.getElementById('Saul').addEventListener('click', buttonClick);
+  document.getElementById('Callan').addEventListener('click', buttonClick);
   document.getElementById('Michael').addEventListener('click', buttonClick);
   document.getElementById('All').addEventListener('click', buttonClick);
 };

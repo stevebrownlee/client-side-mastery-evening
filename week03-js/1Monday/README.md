@@ -19,6 +19,8 @@ Class notes are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Re
 ### Setup
 Have them create a new github repo called dom-loops.  I have already created this repo for [E10](https://github.com/nss-evening-cohort-10/dom-loops) - https://github.com/nss-evening-cohort-10/dom-loops
 
+Locally the project should live here: `~/workspace/foundations/inclass/dom-loops`.
+
 Have them push README.md to master and then create a `setup` branch that changes the background color of the body and does a console.log.  Once they push to master you are ready to go with the lecture
 
 ### Part 1: Intro to Loops
