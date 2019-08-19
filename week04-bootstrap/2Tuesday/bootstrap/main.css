@@ -1,3 +1,15 @@
 body {
-  background-color: red;
+  background-color: lightcyan;
+}
+
+.pie-image {
+  max-height: 390px;
+}
+
+.pie{
+  margin: 20px 0px;
+}
+
+#instructor-buttons{
+  margin: 30px;
 }

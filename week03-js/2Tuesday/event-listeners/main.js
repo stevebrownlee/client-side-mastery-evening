@@ -63,16 +63,13 @@ const printToDom = (divId, textToPrint) => {
 const pieBuilder = (monkeybutts) => {
   let domString = '';
 
-//  for(let i=0; i<monkeybutts.length; i++){
-//    domString += `<h2>${monkeybutts[i].name}</h2>`;
-//  }
-
-  monkeybutts.forEach((pie) => {
+ for(let i=0; i<monkeybutts.length; i++){
     domString += '<div class="card">';
-    domString +=   `<h2>${pie.name}</h2>`;
-    domString +=   `<img src=${pie.imageUrl} alt='Image of ${pie.name}' />`
+    domString +=   `<h2>${monkeybutts[i].name}</h2>`;
+    domString +=   `<img src=${monkeybutts[i].imageUrl} alt='Image of ${monkeybutts[i].name}' />`
     domString += '</div>';
-  });
+ }
+
   printToDom('pies', domString);
 };
 
@@ -85,7 +82,7 @@ const buttonClick = (e) => {
   const selectedPies = [];
   for (let i = 0; i < pies.length; i++) {
     if (pies[i].instructor === buttonId) {
-      selectedPies.push(pie[i]);
+      selectedPies.push(pies[i]);
     }
   }
 
