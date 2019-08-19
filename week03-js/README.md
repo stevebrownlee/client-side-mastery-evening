@@ -1,5 +1,5 @@
-# Week 3 (March 4 - 10)
-* **Day 1** - JS Strings, JS Objects
-* **Day 2** - JS Arrays and Loops
-* **HW** - Personal Site Part 1
-* **Lab Day** - Advanced Array Methods, Exercises
+# Week 3 (August 26 - September 1)
+* **Day 1** - Dev tools, the dom, loops
+* **Day 2** - Basic Event listeners
+* **HW** -
+* **Lab Day** - Exercises

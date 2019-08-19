@@ -1,5 +1,6 @@
-# Week 1 (February 18 - 24)
+# Week 1 (August 12 - 18)
 * **Day 1** - Introductions, John's Intro talk, Class Expectations
-* **Day 2** - E7 Demos
-* **HW** - Finish prework, surveys (studygroup location)
-* **Lab Day** - BREAK - Great Flood of 2019
+* **Day 2** -
+* **Study Group** - installs and github SSH setup
+* **HW** - minor administrative stuff
+* **Lab Day** - E9 Demos, command line, vs code
