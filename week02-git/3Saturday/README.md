@@ -32,19 +32,23 @@ Class notes for Strings are [HERE](https://github.com/nss-nightclass-projects/Ni
 * Objects - talk about key value pairs
 * Pick something arbitrary and represent it with an object.  I have done an employee and an expense as examples
 * Go over dot notation and bracket notation
-
+* Give them `statusMaker` challenge
 * PR and merge the `objects` branch
 
 ## LUNCH BREAK (1 hour)
 
 ## Arrays (1 hour)
-Class notes are [HERE]()
+Class notes are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/js-array-methods.md)
 * have students make a `arrays` branch
-
+* Go over each of the array methods in the Class notes above
+* Give students challenge problems
 * PR and merge the `arrays` branch
 
 ## Combination Special (1 hour)
-Class notes are [HERE]()
 * have students make a `combo` branch
-
+* Most of what we do involves combinations of things.  Specifically arrays of objects.
+* Give them the challenge problems one at a time
 * PR and merge the `combo` branch
+
+## Extra Time?
+* Show them [Code Wars](https://www.codewars.com).  Show them how to search for Katas - 8 is easy level.  They can filter by topic - arrays, strings, objects.  Its a fun way to get some practice
