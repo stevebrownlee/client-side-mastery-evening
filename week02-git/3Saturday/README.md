@@ -46,8 +46,8 @@ Class notes are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Re
 
 ## Combination Special (1 hour)
 * have students make a `combo` branch
-* Most of what we do involves combinations of things.  Specifically arrays of objects.
-* Give them the challenge problems one at a time
+* Most of what we do involves combinations of things.  Specifically arrays of objects.  This section is just a grab bag of anything - minus loops - ain't nobody got time for loops
+* Give them the challenge problems one at a time.  Then go over their answers
 * PR and merge the `combo` branch
 
 ## Extra Time?
