@@ -1,0 +1,48 @@
+.title{
+  font-family: 'Oregano', cursive !important;
+  color: red;
+  font-size: 100px;
+  font-weight: 900;
+}
+
+#book-sale {
+  margin-bottom: 30px;
+}
+
+#book-sale img {
+  height: 400px;
+}
+
+.is-hidden {
+  opacity: 0;
+}
+
+#cart-thumb img {
+  height: 100px;
+}
+
+#cart{
+  margin-top: 130px;
+}
+
+.grey-box {
+  float: left;
+  margin: 2px;
+  width: 200px;
+  height: 200px;
+}
+
+#book-container{
+  position: absolute;
+}
+
+.cart{
+  font-size: 400px;
+  color: lightskyblue;
+}
+
+.cart-stuff{
+  position: absolute;
+  top: 297px;
+  left: 1550px;
+}
