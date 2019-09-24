@@ -41,6 +41,30 @@ Week by week documentation of what was covered - Currently for E10
 * **Day 1** - Wireframes, github projects
 * **Day 2** - Git for Teams
 * **HW** -
-* **Lab Day** - Start Group Project
+* **Lab Day** - Start Group Project - Bandz
+
+***
+
+## Week 6 (September 16 - 22)
+* **Day 1** - Group Project - Bandz
+* **Day 2** - Group Project - Bandz
+* **HW** -
+* **Lab Day** - Group Project - Bandz, Demo
+
+***
+
+## Week 7 (September 23 - 29)
+* **Day 1** - Simple ES6 Modules
+* **Day 2** - Simple ES6 Modules
+* **HW** -
+* **Lab Day** - exercises, Markdown
+
+***
+
+## Week 8 (September 30 - October 6)
+* **Day 1** - Taskrunners and Webpack
+* **Day 2** - SASS
+* **HW** -
+* **Lab Day** - exercises
 
 ***
