@@ -3,4 +3,9 @@ const printToDom = (divId, textToPrint) => {
   selectedDiv.innerHTML = textToPrint;
 };
 
-export default { printToDom };
+const formatPrice = cents => (cents / 100).toLocaleString('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
+
+export default { printToDom, formatPrice };
