@@ -1,5 +1,3 @@
-// import cart from './cart.js';
-// import book from '../helpers/book.js';
 import util from '../helpers/utilities.js';
 
 const cheeses = [
@@ -21,10 +19,6 @@ const getSelectedCheeses = () => {
     }
   }
   return selectedCheeses;
-//   e.preventDefault();
-//   const bookInfo = book.getBook();
-//   cart.setCart(bookInfo);
-//   cart.cartToDom();
 }
 
 const makeCheese = () => {
@@ -37,14 +31,7 @@ const makeCheese = () => {
     <label class="form-check-label" for="${cheeses[i].id}">${cheeses[i].name}</label>
   </div>`;
   }
-
-
-
-
-  // domString += `<button class="btn btn-danger" id="cartButton">add to cart</button>`;
-
   util.printToDom('cheese-counter', domString);
-  // document.getElementById('cartButton').addEventListener('click', addToCartEvent);
 }
 
 export default { makeCheese, getSelectedCheeses };

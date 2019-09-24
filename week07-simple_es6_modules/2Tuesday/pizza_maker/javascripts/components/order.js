@@ -1,7 +1,6 @@
-// import cart from './cart.js';
-// import book from '../helpers/book.js';
 import util from '../helpers/utilities.js';
 import cheese from './cheese.js';
+import meat from './meat.js';
 
 const createFinalOrder = (items) => {
   console.log('final order', items);
@@ -15,7 +14,8 @@ const createFinalOrder = (items) => {
 const createOrderEvent = (e) => {
   e.preventDefault();
   const selectedCheeses = cheese.getSelectedCheeses();
-  const order = [...selectedCheeses];
+  const selectedMeats = meat.getSelectedMeats();
+  const order = [...selectedCheeses, ...selectedMeats];
   createFinalOrder(order);
 };
 
