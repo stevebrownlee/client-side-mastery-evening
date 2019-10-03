@@ -62,9 +62,9 @@ Week by week documentation of what was covered - Currently for E10
 ***
 
 ## Week 8 (September 30 - October 6)
-* **Day 1** - Taskrunners and Webpack
-* **Day 2** - SASS
+* **Day 1** - Task runners and Webpack
+* **Day 2** - exercises
 * **HW** -
-* **Lab Day** - exercises
+* **Lab Day** - SASS
 
 ***
