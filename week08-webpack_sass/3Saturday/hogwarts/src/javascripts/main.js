@@ -1,10 +1,56 @@
 import 'bootstrap';
 
 import '../styles/main.scss';
-import pie from './components/pie';
+import navbar from './components/Navbar/navbar';
 
 const init = () => {
-  pie.makePies();
+  navbar.loadNavbar();
 };
 
 init();
+
+// import $ from 'jquery';
+// import firebase from 'firebase/app';
+// import 'bootstrap';
+
+// import loadNavbar from './components/Navbar/navbar';
+// import dataGetter from './helpers/dataGetter';
+// import createTeamButtonGroup from './components/TeamButtonGroup/teamButtonGroup';
+// import teamButton from './components/TeamButton/teamButton';
+// import createPlayerList from './components/PlayerList/playerList';
+
+// import apiKeys from '../db/apiKeys.json';
+// import './index.scss';
+
+// const getAndPrintTeamButtonGroup = () => {
+//   dataGetter.getAllTeamsFromDb()
+//     .then((data) => {
+//       $('#button-container').html(createTeamButtonGroup(data));
+//       $('.team-button').on('click', teamButton.buttonEventFunction);
+//     })
+//     .catch((error) => {
+//       console.error('Error in getting teams', error);
+//     });
+// };
+
+// const getAndPrintAllPlayers = () => {
+//   dataGetter.getAllPlayersFromDb()
+//     .then((players) => {
+//       dataGetter.getFullPlayerInfo(players)
+//         .then((allPlayersArray) => {
+//           $('#main-container').html(createPlayerList(allPlayersArray));
+//         });
+//     })
+//     .catch((error) => {
+//       console.error('Error in getting players', error);
+//     });
+// };
+
+// const initializeApp = () => {
+//   firebase.initializeApp(apiKeys.firebaseKeys);
+//   loadNavbar();
+//   getAndPrintTeamButtonGroup();
+//   getAndPrintAllPlayers();
+// };
+
+// initializeApp();
