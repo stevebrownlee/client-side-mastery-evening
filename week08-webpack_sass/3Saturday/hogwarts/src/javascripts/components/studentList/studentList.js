@@ -1,6 +1,5 @@
 import utilities from '../../helpers/utilities';
 
-import studentData from '../../helpers/data/studentData';
 import houseData from '../../helpers/data/houseData';
 
 import studentCard from '../studentCard/studentCard';
@@ -8,8 +7,7 @@ import studentCard from '../studentCard/studentCard';
 import './studentList.scss';
 
 
-const createStudentList = () => {
-  const students = studentData.getStudents();
+const createStudentList = (students) => {
   const houses = houseData.getHouses();
   let domString = '<ul class="student-list">';
   for (let i = 0; i < students.length; i += 1) {
