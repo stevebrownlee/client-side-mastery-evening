@@ -1,10 +1,10 @@
-import 'bootstrap';
-
 import '../styles/main.scss';
-import navbar from './components/Navbar/navbar';
+import navbar from './components/navbar/navbar';
+import houseButtonGroup from './components/houseButtonGroup/houseButtonGroup';
 
 const init = () => {
   navbar.loadNavbar();
+  houseButtonGroup.createHouseButtonGroup();
 };
 
 init();
