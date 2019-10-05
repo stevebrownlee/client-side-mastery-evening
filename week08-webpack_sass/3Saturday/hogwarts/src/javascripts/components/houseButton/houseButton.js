@@ -1,8 +1,3 @@
-// import $ from 'jquery';
-
-// import dataGetter from '../../helpers/dataGetter';
-// import createPlayerList from '../PlayerList/playerList';
-
 import studentData from '../../helpers/data/studentData';
 
 import studentList from '../studentList/studentList';

@@ -27,11 +27,6 @@
     margin: 5px;
   }
 
-  h5 {
-    @include default-font(15px);
-    margin: 5px;
-  }
-
   background-color: $gold;
   box-shadow: $box-shadow;
 }
