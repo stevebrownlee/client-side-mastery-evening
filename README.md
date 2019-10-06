@@ -68,3 +68,19 @@ Week by week documentation of what was covered - Currently for E10
 * **Lab Day** - SASS
 
 ***
+
+## Week 9 (October 7-12)
+* **Day 1** - Jquery
+* **Day 2** - linkedin talk, exercises
+* **HW** -
+* **Lab Day** - advanced array methods, exercises
+
+***
+
+## Week 10 (October 14-19)
+* **Day 1** - Group Project
+* **Day 2** - Group Project
+* **HW** - Group Project
+* **Lab Day** - Group Project
+
+***

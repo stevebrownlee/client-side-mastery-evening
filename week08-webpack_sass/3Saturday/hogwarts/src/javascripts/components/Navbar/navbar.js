@@ -6,8 +6,8 @@ const loadNavbar = () => {
   const newString = `
     <nav>
       <a href="#" class="brand-logo">Hogwarts</a>
-      <ul class="nav-links">
-        <li class="active">
+      <ul>
+        <li>
           <a>Home</a>
         </li>
       </ul>
