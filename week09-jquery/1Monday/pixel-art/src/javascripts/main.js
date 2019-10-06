@@ -1,3 +1,11 @@
+import grid from './components/grid/grid';
+// import paintbrush from './components/paintbrush/paintbrush';
 import '../styles/main.scss';
 
-console.log('hi');
+const init = () => {
+  grid.makeGrid(25, 25);
+  // paintbrush.attachEvents();
+  // paintbrush.printColorPicker();
+};
+
+init();
