@@ -26,3 +26,4 @@ ERD when they are done
 * Have students build out a json file for each collection
 * If they haven't already students will need to install axios `npm install axios --save`
 * Have students create a get request to the cows.json file to start - just a console is fine
+* Show students how to do the object.keys crap to get an array of cow objects
