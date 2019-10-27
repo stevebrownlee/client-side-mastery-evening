@@ -6,6 +6,7 @@ const buildCowCard = (cow) => {
     <h5 class="card-title">${cow.name}</h5>
     <p class="card-text">${cow.breed}</p>
     <p class="card-text">Weighing in at ${cow.weight}lbs</p>
+    <p class="card-text">Owner: ${cow.owner.name}</p>
   </div>
 </div>`;
   return domString;
