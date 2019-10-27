@@ -1,7 +1,18 @@
 import axios from 'axios';
 
-// const getCows = () => axios.get('https://teamtreehouse.com/ashleyclaiborne.json');
+const getCows = () => new Promise((resolve, reject) => {
+  axios.get('../../../../db/cows.json')
+    .then((response) => {
+      const demCows = response.data.cows;
+      const cows = [];
+      Object.keys(demCows).forEach((fbKey) => {
+        demCows[fbKey].id = fbKey;
+        cows.push(demCows[fbKey]);
+      });
 
-const getCows = () => axios.get('../../../../db/cows.json');
+      resolve(cows);
+    })
+    .catch((err) => reject(err));
+});
 
 export default { getCows };
