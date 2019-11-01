@@ -3,4 +3,4 @@
 > **Agenda:** Firebase READ
 
 ## Create JSON Data
-
+![ERD for this project](./erd.png)
