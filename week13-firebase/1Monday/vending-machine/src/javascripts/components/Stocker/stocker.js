@@ -16,9 +16,7 @@ const addToMachine = (e) => {
   e.stopImmediatePropagation();
   const { uid } = firebase.auth().currentUser;
   const snackId = e.target.id;
-  console.error('snackId clicked', snackId);
   const inputText = $(e.target).siblings()[0].value;
-  console.error(inputText);
   smash.getAvailablePositions()
     .then((positions) => {
       const selectedPosition = positions.find((x) => x.position.toLowerCase() === inputText.toLowerCase());
@@ -61,6 +59,9 @@ const buildTheStocker = (uid) => {
   smash.getSnacksWithPositions(uid)
     .then((snacks) => {
       let domString = '<h2>STOCK THE MACHINE</h2>';
+      domString += `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+      Add new snack
+    </button>`;
       domString += '<div class="d-flex flex-wrap text-center">';
       snacks.forEach((snack) => {
         domString += stockCard.makeASnack(snack);
