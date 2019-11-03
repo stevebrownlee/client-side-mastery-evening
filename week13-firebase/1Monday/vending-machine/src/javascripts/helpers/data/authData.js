@@ -18,7 +18,6 @@ const checkLoginStatus = () => {
       stockDiv.removeClass('hide');
       logoutNavbar.removeClass('hide');
       stock.buildTheStocker(getCurrentUid());
-      // stockDiv.addClass('show');
     } else {
       authDiv.removeClass('hide');
       stockDiv.addClass('hide');

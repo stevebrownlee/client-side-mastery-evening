@@ -1,6 +1,9 @@
-// import $ from 'jquery';
+import $ from 'jquery';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
-// import snackPosition from '../../helpers/data/snackPositionsData';
+import snackPositionsData from '../../helpers/data/snackPositionsData';
+
 import smash from '../../helpers/data/smash';
 import utilities from '../../helpers/utilities';
 
@@ -8,10 +11,13 @@ import stockCard from '../StockCard/stockCard';
 
 import './stocker.scss';
 
-// const deleteFromMachine = (e) => {
-//   console.log(e.target.id);
-//   snackPosition
-// };
+const deleteFromMachine = (e) => {
+  const { uid } = firebase.auth().currentUser;
+  snackPositionsData.deleteSnackPosition(e.target.id)
+    // eslint-disable-next-line no-use-before-define
+    .then(() => buildTheStocker(uid))
+    .catch((error) => console.error(error));
+};
 
 const buildTheStocker = (uid) => {
   smash.getSnacksWithPositions(uid)
@@ -23,7 +29,7 @@ const buildTheStocker = (uid) => {
       });
       domString += '</div>';
       utilities.printToDom('stock', domString);
-      // $('body').on('click', '.delete-snack-position', deleteFromMachine);
+      $('body').on('click', '.delete-snack-position', deleteFromMachine);
     })
     .catch((error) => {
       console.error(error);
