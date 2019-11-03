@@ -33,4 +33,33 @@ const getCompleteMachine = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default { getCompleteMachine };
+const getSnacksWithPositions = (uid) => new Promise((resolve, reject) => {
+  machineData.getMachines()
+    .then((machine) => positionData.getPositionsByMachineId(machine.id))
+    .then((positions) => {
+      snackPositionsData.getSnackPositionsByMachineId(positions[0].machineId)
+        .then((snackPositions) => {
+          snackData.getSnacksByUid(uid)
+            .then((snacks) => {
+              const newSnacks = [];
+              snacks.forEach((snack) => {
+                const newSnack = { ...snack };
+                const getSnackPosition = snackPositions.find((x) => x.snackId === newSnack.id);
+                if (getSnackPosition) {
+                  const position = positions.find((x) => x.id === getSnackPosition.positionId);
+                  newSnack.snackPositionId = getSnackPosition.id;
+                  newSnack.position = position;
+                } else {
+                  newSnack.position = {};
+                  newSnack.snackPositionId = '';
+                }
+                newSnacks.push(newSnack);
+              });
+              resolve(newSnacks);
+            });
+        });
+    })
+    .catch((error) => reject(error));
+});
+
+export default { getCompleteMachine, getSnacksWithPositions };
