@@ -7,6 +7,7 @@ import snackPositionsData from '../../helpers/data/snackPositionsData';
 import smash from '../../helpers/data/smash';
 import utilities from '../../helpers/utilities';
 
+import machine from '../Machine/machine';
 import stockCard from '../StockCard/stockCard';
 
 import './stocker.scss';
@@ -29,8 +30,11 @@ const addToMachine = (e) => {
           uid,
         };
         snackPositionsData.createSnackPosition(newSnackPosition)
-        // eslint-disable-next-line no-use-before-define
-          .then(() => buildTheStocker(uid));
+          .then(() => {
+            // eslint-disable-next-line no-use-before-define
+            buildTheStocker(uid);
+            machine.buildTheMachine();
+          });
       }
     })
     .catch((error) => console.error(error));
@@ -40,8 +44,11 @@ const deleteFromMachine = (e) => {
   e.preventDefault();
   const { uid } = firebase.auth().currentUser;
   snackPositionsData.deleteSnackPosition(e.target.id)
-    // eslint-disable-next-line no-use-before-define
-    .then(() => buildTheStocker(uid))
+    .then(() => {
+      // eslint-disable-next-line no-use-before-define
+      buildTheStocker(uid);
+      machine.buildTheMachine();
+    })
     .catch((error) => console.error(error));
 };
 
