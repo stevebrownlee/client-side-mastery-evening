@@ -42,6 +42,14 @@ const getSnacksWithPositions = (uid) => new Promise((resolve, reject) => {
           snackData.getSnacksByUid(uid)
             .then((snacks) => {
               const newSnacks = [];
+              const availablePositions = [];
+              positions.forEach((position) => {
+                const newPosition = { ...position };
+                const getSnackPosition = snackPositions.find((x) => x.positionId === newPosition.id);
+                if (!getSnackPosition) {
+                  availablePositions.push(newPosition);
+                }
+              });
               snacks.forEach((snack) => {
                 const newSnack = { ...snack };
                 const getSnackPosition = snackPositions.find((x) => x.snackId === newSnack.id);
@@ -49,9 +57,11 @@ const getSnacksWithPositions = (uid) => new Promise((resolve, reject) => {
                   const position = positions.find((x) => x.id === getSnackPosition.positionId);
                   newSnack.snackPositionId = getSnackPosition.id;
                   newSnack.position = position;
+                  newSnack.availablePositions = [];
                 } else {
                   newSnack.position = {};
                   newSnack.snackPositionId = '';
+                  newSnack.availablePositions = availablePositions;
                 }
                 newSnacks.push(newSnack);
               });
@@ -62,4 +72,24 @@ const getSnacksWithPositions = (uid) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default { getCompleteMachine, getSnacksWithPositions };
+const getAvailablePositions = () => new Promise((resolve, reject) => {
+  machineData.getMachines().then((machine) => {
+    positionData.getPositionsByMachineId(machine.id).then((positions) => {
+      snackPositionsData.getSnackPositionsByMachineId(positions[0].machineId).then((snackPositions) => {
+        const newPositions = [];
+        positions.forEach((position) => {
+          const newPosition = { ...position };
+          const getSnackPosition = snackPositions.find((x) => x.positionId === newPosition.id);
+          if (!getSnackPosition) {
+            newPosition.machineId = machine.id;
+            newPositions.push(newPosition);
+          }
+        });
+        resolve(newPositions);
+      });
+    });
+  })
+    .catch((error) => reject(error));
+});
+
+export default { getCompleteMachine, getSnacksWithPositions, getAvailablePositions };
