@@ -78,9 +78,65 @@ Week by week documentation of what was covered - Currently for E10
 ***
 
 ## Week 10 (October 14-19)
-* **Day 1** - Group Project
-* **Day 2** - Group Project
-* **HW** - Group Project
-* **Lab Day** - Group Project
+* **Day 1** - Group Project - Chatty
+* **Day 2** - Group Project - Chatty
+* **HW** - Group Project - Chatty
+* **Lab Day** - Group Project - Chatty
+
+***
+
+## Week 11 (October 21-26)
+* **Day 1** - Group Project - Chatty
+* **Day 2** - DEMO CHATTY
+* **HW** -
+* **Lab Day** - JSON, ERDs, Axios
+
+***
+
+## Week 12 (October 28- November 2)
+* **Day 1** - Promises
+* **Day 2** - Intro to firebase, Firebase Auth
+* **HW** -
+* **Lab Day** - Firebase READ
+
+***
+
+## Week 13 (November 4-9)
+* **Day 1** - Firebase Create and Delete
+* **Day 2** - Firebase Update
+* **HW** -
+* **Lab Day** - Exercises
+
+***
+
+## Week 14 (November 11-16)
+* **Day 1** - Group Project - nopeshell
+* **Day 2** - Group Project - nopeshell
+* **HW** - Group Project - nopeshell
+* **Lab Day** - Group Project - nopeshell
+
+***
+
+## Week 15 (November 18-23)
+* **Day 1** - Group Project - nopeshell
+* **Day 2** - Demo Nopeshell, switcharoo
+* **HW** -
+* **Lab Day** - Group Project - nopeshell switcharoo
+
+***
+
+## Week 16 (November 25-30)
+* **Day 1** - Group Project - nopeshell switcharoo
+* **Day 2** - Group Project - nopeshell switcharoo
+* **HW** - Group Project - nopeshell switcharoo
+* **Lab Day** - HOLIDAY THANKSGIVING
+
+***
+
+## Week 17 (December 2-7)
+* **Day 1** - DEMO nopeshell switcharoo
+* **Day 2** - intro to react
+* **HW** -
+* **Lab Day** - react state and props
 
 ***
