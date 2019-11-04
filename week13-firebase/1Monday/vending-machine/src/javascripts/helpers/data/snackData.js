@@ -22,4 +22,6 @@ const getSnacksByUid = (uid) => new Promise((resolve, reject) => {
     });
 });
 
-export default { getSnacksByUid };
+const addNewSnack = (newSnack) => axios.post(`${baseUrl}/snacks.json`, newSnack);
+
+export default { getSnacksByUid, addNewSnack };

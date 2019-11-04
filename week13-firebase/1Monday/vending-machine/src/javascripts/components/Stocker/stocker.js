@@ -11,6 +11,7 @@ import machine from '../Machine/machine';
 import stockCard from '../StockCard/stockCard';
 
 import './stocker.scss';
+import snackData from '../../helpers/data/snackData';
 
 const addToMachine = (e) => {
   e.stopImmediatePropagation();
@@ -50,9 +51,30 @@ const deleteFromMachine = (e) => {
     .catch((error) => console.error(error));
 };
 
+const addNewSnack = (e) => {
+  e.stopImmediatePropagation();
+  const { uid } = firebase.auth().currentUser;
+  const newSnack = {
+    name: $('#snack-name').val(),
+    imageUrl: $('#snack-image-url').val(),
+    price: $('#snack-price').val() * 1,
+    currentStocked: 0,
+    lifetimeNum: 0,
+    uid,
+  };
+  snackData.addNewSnack(newSnack)
+    .then(() => {
+      $('#exampleModal').modal('hide');
+      // eslint-disable-next-line no-use-before-define
+      buildTheStocker(uid);
+    })
+    .catch((error) => console.error(error));
+};
+
 const addStockEvents = () => {
   $('#stock').on('click', '.delete-snack-position', deleteFromMachine);
   $('#stock').on('click', '.add-snack-position', addToMachine);
+  $('#add-new-snack').click(addNewSnack);
 };
 
 const buildTheStocker = (uid) => {
