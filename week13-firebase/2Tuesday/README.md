@@ -3,4 +3,5 @@
 > **Agenda:** UPDATE
 
 ## UPDATE
-* Update on snacks
+* Update on snacks: buy from machine
+* update on snack: restock snack
