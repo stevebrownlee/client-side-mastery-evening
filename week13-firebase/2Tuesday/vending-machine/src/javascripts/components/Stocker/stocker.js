@@ -17,7 +17,7 @@ const addToMachine = (e) => {
   e.stopImmediatePropagation();
   const { uid } = firebase.auth().currentUser;
   const snackId = e.target.id;
-  const inputText = $(e.target).siblings()[0].value;
+  const inputText = $(e.target).siblings().val();
   smash.getAvailablePositions()
     .then((positions) => {
       const selectedPosition = positions.find((x) => x.position.toLowerCase() === inputText.toLowerCase());
