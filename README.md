@@ -134,9 +134,39 @@ Week by week documentation of what was covered - Currently for E10
 ***
 
 ## Week 17 (December 2-7)
-* **Day 1** - DEMO nopeshell switcharoo
-* **Day 2** - intro to react
-* **HW** -
-* **Lab Day** - react state and props
+* **Day 1** - Group Project - nopeshell switcharoo
+* **Day 2** - Group Project - nopeshell switcharoo
+* **Studygroup** - DEMO nopeshell switcharoo
+* **HW** - open assignments
+* **Lab Day** - Intro to React/setup
 
 ***
+
+## Week 18 (December 9-14)
+* **Day 1** - React State and Props
+* **Day 2** - Exercises
+* **HW** - state and props HW
+* **Lab Day** - React and FB - Auth, READ, DELETE
+
+***
+
+## Week 19 (December 16-21)
+* **Day 1** - React and FB - CREATE
+* **Day 2** - Exercises
+* **Studygroup** - React and FB - UPDATE
+* **HW** - open assignments
+* **Lab Day** - Exercises, Capstone Discussion
+
+***
+
+## Week 20 (December 23-28)
+* **Day 1** - HOLIDAY XMAS
+* **Day 2** - HOLIDAY XMAS
+* **Lab Day** - HOLIDAY XMAS
+
+***
+
+## Week 20 (December 30 - January 4)
+* **Day 1** - HOLIDAY XMAS
+* **Day 2** - HOLIDAY XMAS
+* **Lab Day** - React Routing
