@@ -18,6 +18,7 @@ class BoardContainer extends React.Component {
   state = {
     boards: [],
     formOpen: false,
+    editBoard: {},
   }
 
   getBoards = () => {
@@ -41,12 +42,25 @@ class BoardContainer extends React.Component {
       .catch((err) => console.error('error saving new board', err));
   }
 
+  putBoard = (boardId, updatedBoard) => {
+    boardData.updateBoard(boardId, updatedBoard)
+      .then(() => {
+        this.getBoards();
+        this.setState({ formOpen: false, editBoard: {} });
+      })
+      .catch((err) => console.error('error saving new board', err));
+  }
+
+  editABoard = (board) => {
+    this.setState({ editBoard: board, formOpen: true });
+  }
+
   render() {
     const { setSingleBoard } = this.props;
-    const makeBoards = this.state.boards.map((b) => <Board key={b.id} board={b} setSingleBoard={setSingleBoard}/>);
+    const makeBoards = this.state.boards.map((b) => <Board key={b.id} board={b} setSingleBoard={setSingleBoard} editABoard={this.editABoard}/>);
     const showForm = () => {
       if (this.state.formOpen) {
-        return <BoardForm saveNewBoard={this.saveNewBoard}/>;
+        return <BoardForm saveNewBoard={this.saveNewBoard} board={this.state.editBoard} putBoard={this.putBoard}/>;
       }
       return '';
     };

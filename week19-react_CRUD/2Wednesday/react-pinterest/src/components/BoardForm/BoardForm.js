@@ -8,11 +8,19 @@ import './BoardForm.scss';
 class BoardForm extends React.Component {
   static propTypes = {
     saveNewBoard: PropTypes.func,
+    putBoard: PropTypes.func,
   }
 
-  state= {
+  state = {
     boardName: '',
     boardDescription: '',
+  }
+
+  componentDidMount() {
+    const { board } = this.props;
+    if (Object.keys(board).length > 0) {
+      this.setState({ boardName: board.name, boardDescription: board.description });
+    }
   }
 
   saveBoard = (e) => {
@@ -23,6 +31,17 @@ class BoardForm extends React.Component {
       uid: authData.getUid(),
     };
     this.props.saveNewBoard(newBoard);
+  }
+
+  updateBoard = (e) => {
+    e.preventDefault();
+    const { board } = this.props;
+    const updatedBoard = {
+      name: this.state.boardName,
+      description: this.state.boardDescription,
+      uid: board.uid,
+    };
+    this.props.putBoard(board.id, updatedBoard);
   }
 
   nameChange = (e) => {
@@ -37,12 +56,12 @@ class BoardForm extends React.Component {
 
   render() {
     const { boardDescription, boardName } = this.state;
-
+    const { board } = this.props;
     return (
       <div>
         <form className='col-6 offset-3 BoardForm'>
           <div className="form-group">
-            <label htmlFor="order-name">Board Name:</label>
+            <label htmlFor="board-name">Board Name:</label>
             <input
               type="text"
               className="form-control"
@@ -63,7 +82,12 @@ class BoardForm extends React.Component {
               onChange={this.descriptionChange}
             />
           </div>
-          <button className="btn btn-secondary" onClick={this.saveBoard}>Save Board</button>
+
+          {Object.keys(board).length > 0 ? (
+            <button className="btn btn-secondary" onClick={this.updateBoard}>Update Board</button>
+          ) : (
+            <button className="btn btn-secondary" onClick={this.saveBoard}>Save Board</button>
+          )}
         </form>
       </div>
     );
