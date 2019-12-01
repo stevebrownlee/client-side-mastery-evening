@@ -14,13 +14,12 @@ class SingleBoard extends React.Component {
     boardId: PropTypes.string,
   }
 
-
   state = {
     board: {},
     pins: [],
   }
 
-  componentDidMount() {
+  getInfo = () => {
     const { boardId } = this.props;
     boardData.getSingleBoard(boardId)
       .then((request) => {
@@ -31,13 +30,23 @@ class SingleBoard extends React.Component {
       .catch(err => console.error('error with get board request', err));
   }
 
+  componentDidMount() {
+    this.getInfo();
+  }
+
+  removePin = (pinId) => {
+    pinData.deletePin(pinId)
+      .then(() => this.getInfo())
+      .catch(err => console.error('error with delete board request', err));
+  }
+
   render() {
     const { board, pins } = this.state;
     const { setSingleBoard } = this.props;
-    const makePins = pins.map((p) => <Pin key={p.id} pin={p} setSingleBoard={setSingleBoard} />)
+    const makePins = pins.map((p) => <Pin key={p.id} pin={p} setSingleBoard={setSingleBoard} removePin={this.removePin} />)
     return (
       <div>
-        <button className="btn btn-danger" onClick={() => {setSingleBoard('')}}>X</button>
+        <button className="btn btn-info" onClick={() => {setSingleBoard('')}}>x Close Board View</button>
         <div className="SingleBoard col-8 offset-2">
           <h2>{board.name}</h2>
           <p>{board.description}</p>
