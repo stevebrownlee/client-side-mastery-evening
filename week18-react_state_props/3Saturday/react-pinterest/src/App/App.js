@@ -4,6 +4,7 @@ import firebase from 'firebase/app';
 import fbConnection from '../helpers/data/connection';
 
 import Auth from '../components/Auth/Auth';
+import MyNavbar from '../components/MyNavbar/MyNavbar';
 import BoardContainer from '../components/BoardContainer/BoardContainer';
 import SingleBoard from '../components/SingleBoard/SingleBoard';
 
@@ -52,6 +53,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <MyNavbar authed={authed} />
         {loadComponent()}
       </div>
     );
