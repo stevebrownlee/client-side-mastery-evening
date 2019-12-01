@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import authData from '../../helpers/data/authData';
 import boardData from '../../helpers/data/boardData';
@@ -8,6 +9,10 @@ import Board from '../Board/Board';
 import './BoardContainer.scss';
 
 class BoardContainer extends React.Component {
+  static propTypes = {
+    setSingleBoard: PropTypes.func,
+  }
+
   state = {
     boards: [],
   }

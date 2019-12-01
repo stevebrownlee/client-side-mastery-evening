@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import boardData from '../../helpers/data/boardData';
 import pinData from '../../helpers/data/pinData';
@@ -8,6 +9,12 @@ import Pin from '../Pin/Pin';
 import './SingleBoard.scss';
 
 class SingleBoard extends React.Component {
+  static propTypes = {
+    setSingleBoard: PropTypes.func,
+    boardId: PropTypes.string,
+  }
+
+
   state = {
     board: {},
     pins: [],
