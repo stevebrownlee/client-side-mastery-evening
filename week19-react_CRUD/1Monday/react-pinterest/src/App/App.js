@@ -1,9 +1,10 @@
 import React from 'react';
 import firebase from 'firebase/app';
 
-import fbConnection from '../helpers/data/connection.js';
+import fbConnection from '../helpers/data/connection';
 
 import Auth from '../components/Auth/Auth';
+import MyNavbar from '../components/MyNavbar/MyNavbar';
 import BoardContainer from '../components/BoardContainer/BoardContainer';
 import SingleBoard from '../components/SingleBoard/SingleBoard';
 
@@ -38,16 +39,21 @@ class App extends React.Component {
   render() {
     const { authed, singleBoardId } = this.state;
     const loadComponent = () => {
+      let componentToLoad = '';
       if (authed && singleBoardId.length === 0) {
-        return <BoardContainer setSingleBoard={this.setSingleBoard} />;
+        componentToLoad = <BoardContainer setSingleBoard={this.setSingleBoard} />;
       } else if (authed && singleBoardId.length > 0) {
-        return <SingleBoard setSingleBoard={this.setSingleBoard} boardId={singleBoardId}/>
+        componentToLoad = <SingleBoard setSingleBoard={this.setSingleBoard} boardId={singleBoardId} />;
+      } else {
+        componentToLoad = <Auth />;
       }
-      return <Auth />;
+
+      return componentToLoad;
     };
 
     return (
       <div className="App">
+        <MyNavbar authed={authed} />
         {loadComponent()}
       </div>
     );
