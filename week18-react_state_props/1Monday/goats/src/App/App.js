@@ -1,13 +1,35 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import goatData from '../helpers/data/goatData';
+
+import GoatCoral from '../components/GoatCoral/GoatCoral';
 import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <button className="btn btn-danger">goat</button>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    goats: [],
+  }
+
+  componentDidMount() {
+    const goats = goatData.getGoats();
+    this.setState({ goats });
+  }
+
+  freeAGoat = (goatId) => {
+    goatData.freeGoat(goatId);
+    const goats = goatData.getGoats();
+    this.setState({ goats });
+  }
+
+  render() {
+    const { goats } = this.state;
+    return (
+      <div className="App">
+        <h1>GOAT YOGA</h1>
+        <GoatCoral goats={goats} freeAGoat={this.freeAGoat}/>
+      </div>
+    );
+  }
 }
 
 export default App;
