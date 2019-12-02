@@ -17,6 +17,12 @@ class Goat extends React.Component {
     freeAGoat(goat.id);
   }
 
+  useGoat = (e) => {
+    const { goat, useAGoat } = this.props;
+    e.preventDefault();
+    useAGoat(goat.id);
+  }
+
   render() {
     const { goat } = this.props;
     return (

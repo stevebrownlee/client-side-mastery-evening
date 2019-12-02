@@ -51,4 +51,12 @@ const freeGoat = (goatId) => {
   });
 };
 
-export default { getGoats, freeGoat };
+const useGoat = (goatId) => {
+  goats.forEach((response) => { // this needs to be response or else eslint rules fail
+    if (response.id === goatId) {
+      response.isBusy = true;
+    }
+  });
+};
+
+export default { getGoats, freeGoat, useGoat };

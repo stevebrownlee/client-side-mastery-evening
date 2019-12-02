@@ -10,12 +10,13 @@ class GoatCoral extends React.Component {
   static propTypes = {
     goats: PropTypes.arrayOf(goatShape.goatShape),
     freeAGoat: PropTypes.func,
+    useAGoat: PropTypes.func,
   }
 
   render() {
-    const { goats, freeAGoat } = this.props;
+    const { goats, freeAGoat, useAGoat } = this.props;
     const makeGoats = goats.map((goat) => (
-      <Goat key={goat.id} goat={goat} freeAGoat={freeAGoat}/>
+      <Goat key={goat.id} goat={goat} freeAGoat={freeAGoat} useAGoat={useAGoat} />
     ));
     return (
       <div className="GoatCoral d-flex flex-wrap">
