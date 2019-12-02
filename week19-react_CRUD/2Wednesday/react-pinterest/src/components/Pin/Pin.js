@@ -12,14 +12,15 @@ class Pin extends React.Component {
   }
 
   render() {
-    const { pin, removePin } = this.props;
+    const { pin, removePin, editAPin } = this.props;
     return (
       <div className="Pin col-3">
         <div className="card">
           <img src={pin.imageUrl} className="card-img-top" alt="" />
           <div className="card-body">
             <h5 className="card-title">{pin.title}</h5>
-            <button className="btn btn-danger" onClick={() => removePin(pin.id)}>X</button>
+            <button className="btn btn-warning col-6" onClick={() => editAPin(pin)}>Edit</button>
+            <button className="btn btn-danger col-6" onClick={() => removePin(pin.id)}>X</button>
           </div>
         </div>
       </div>

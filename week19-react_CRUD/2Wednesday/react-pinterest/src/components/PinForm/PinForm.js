@@ -15,6 +15,13 @@ class PinForm extends React.Component {
     pinImageUrl: '',
   }
 
+  componentDidMount() {
+    const { pin } = this.props;
+    if (Object.keys(pin).length > 0) {
+      this.setState({ pinTitle: pin.title, pinImageUrl: pin.imageUrl });
+    }
+  }
+
   savePin = (e) => {
     e.preventDefault();
     const newPin = {
@@ -23,6 +30,17 @@ class PinForm extends React.Component {
       uid: authData.getUid(),
     };
     this.props.saveNewPin(newPin);
+  }
+
+  updatePin = (e) => {
+    e.preventDefault();
+    const updatedPin = {
+      title: this.state.pinTitle,
+      imageUrl: this.state.pinImageUrl,
+      uid: authData.getUid(),
+      boardId: this.props.pin.boardId,
+    };
+    this.props.putPin(this.props.pin.id, updatedPin);
   }
 
   titleChange = (e) => {
@@ -37,6 +55,7 @@ class PinForm extends React.Component {
 
   render() {
     const { pinImageUrl, pinTitle } = this.state;
+    const { pin } = this.props;
 
     return (
       <div>
@@ -63,7 +82,12 @@ class PinForm extends React.Component {
               onChange={this.imageUrlChange}
             />
           </div>
-          <button className="btn btn-secondary" onClick={this.savePin}>Add Pin</button>
+          {Object.keys(pin).length > 0 ? (
+            <button className="btn btn-secondary" onClick={this.updatePin}>Update Pin</button>
+            // <button className="btn btn-secondary" onClick={this.updateBoard}>Update Board</button>
+          ) : (
+            <button className="btn btn-secondary" onClick={this.savePin}>Add Pin</button>
+          )}
         </form>
       </div>
     );

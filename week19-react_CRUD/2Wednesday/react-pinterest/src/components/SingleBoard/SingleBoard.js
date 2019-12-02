@@ -18,6 +18,7 @@ class SingleBoard extends React.Component {
   state = {
     board: {},
     pins: [],
+    editPin: {},
     formOpen: false,
   }
 
@@ -53,13 +54,26 @@ class SingleBoard extends React.Component {
       .catch((err) => console.error('error saving new pin', err));
   }
 
+  editAPin = (pin) => {
+    this.setState({ editPin: pin, formOpen: true });
+  }
+
+  putPin = (pinId, updatedPin) => {
+    pinData.updatePin(pinId, updatedPin)
+      .then(() => {
+        this.getInfo();
+        this.setState({ formOpen: false, editPin: {} });
+      })
+      .catch((err) => console.error('error saving new board', err));
+  }
+
   render() {
     const { board, pins, formOpen } = this.state;
     const { setSingleBoard } = this.props;
-    const makePins = pins.map((p) => <Pin key={p.id} pin={p} setSingleBoard={setSingleBoard} removePin={this.removePin} />);
+    const makePins = pins.map((p) => <Pin key={p.id} pin={p} setSingleBoard={setSingleBoard} removePin={this.removePin} editAPin={this.editAPin}/>);
     const showForm = () => {
       if (formOpen) {
-        return <PinForm saveNewPin={this.saveNewPin}/>;
+        return <PinForm saveNewPin={this.saveNewPin} pin={this.state.editPin} putPin={this.putPin}/>;
       }
       return '';
     };
