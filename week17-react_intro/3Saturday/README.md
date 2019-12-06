@@ -11,8 +11,16 @@ NOTE:  All work for today will go in `~/workspace/react/inclass`
 4. Have the class setup the rest of the projects that will be needed for the new few weeks:
 
 ## What is react?
-* [React Docs](https://reactjs.org/)
-* React is "A JavaScript library for building user interfaces"
+Feel free to elaborate/go on a tangent - here are the MVP talking points:
+* What is React?
+  * [React Docs](https://reactjs.org/)
+  * React is "A JavaScript library for building user interfaces"
+  * JS libraries are collections of pre-written JS functions.
+  * It was built and is maintained by facebook.  It was first released in 2013
+* What does it do?
+  * Components, components, components!!
+  * React was built around creating components
+* Why would you want to use it?
 
 
 ## Setup a Practice Project
