@@ -19,9 +19,13 @@ Feel free to elaborate/go on a tangent - here are the MVP talking points:
   * It was built and is maintained by facebook.  It was first released in 2013
 * What does it do?
   * Components, components, components!!
-  * React was built around creating components
+  * React was built around creating small re-usable components
+  * React has a built to help build out interactive web uis - this means they are expecting developers to use it to build out super interactive sites - so they made things like events and dom re-rendering super easy to do
 * Why would you want to use it?
-
+  * JSX (JavaScript eXtension) -  JSX looks a lot like the dom strings we have been building. It basically is a function called render inside our JS file but it is simpler to write (no more `domString = blah`) AND it has WAY better performance
+  * Virtual Dom - the is the heart of why react is as popular as it is.  Basically react creates a copy of the websites DOM.  Then when things update on the page the virtual DOM renders.  Then react compares the virtual DOM to the real page DOM and only changes the real DOM where things are different.
+  *  Performance - React is written to be super fast and super performant.  Because of this you don't need to worry as much about performance as you do with vanilla JS (unless your business logic is a large drain on resources)
+  * Developer Efficiency - Coding in react is FUN because a lot of the busy work that exists in vanilla javascript is done for you so you just get to code the exciting business logic for you app. You will find that you code things faster so have more time to do things that used to be stretch goals
 
 ## Setup a Practice Project
 * The lecture notes for setting up a react project are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/react/book-4-react/chapters/react-setup.md).  You can send this link out to the class in Slack.  It is also already on classtracker.
