@@ -144,9 +144,9 @@ Week by week documentation of what was covered - Currently for E10
 
 ## Week 18 (December 9-14)
 * **Day 1** - React State and Props
-* **Day 2** - Exercises
+* **Day 2** - React and FB - Auth
 * **HW** - state and props HW
-* **Lab Day** - React and FB - Auth, READ, DELETE
+* **Lab Day** - React and FB - READ and DELETE
 
 ***
 
