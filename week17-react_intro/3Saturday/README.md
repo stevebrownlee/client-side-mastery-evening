@@ -46,7 +46,10 @@ Feel free to elaborate/go on a tangent - here are the MVP talking points:
 ## Create ALL The projects
 * The rest of the class students can do at their own pace
 * Free them to take a lunch break and complete the repos in whatever order they want.  They need to remain in the building until 2 so this is not an early dismissal just free time to go at their own pace.
-* Repos that need to be made:
+* Inclass repo to make (`~/workspace/react/inclass`)::
+  * goats
+  * react-pinterest
+* HW repos that need to be made (`~/workspace/react/exercises`):
   * shark-attack
   * sports-roster
   * doggie-day-care
