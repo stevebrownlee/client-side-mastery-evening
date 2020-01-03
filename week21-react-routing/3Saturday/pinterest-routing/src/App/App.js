@@ -2,7 +2,10 @@ import React from 'react';
 import {
   BrowserRouter as Router, Route, Redirect, Switch,
 } from 'react-router-dom';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
+import firebaseConnection from '../helpers/data/connection';
 import Home from '../components/pages/Home/Home';
 import Auth from '../components/pages/Auth/Auth';
 
@@ -20,27 +23,35 @@ const PrivateRoute = ({ component: Component, authed, ...rest }) => {
   return <Route render={(props) => routeChecker(props)} />;
 };
 
+firebaseConnection();
+
 class App extends React.Component {
   state = {
     authed: false,
-    testText: 'This text is to make sure you can pass other props from App to your child components. You can delete this.',
   };
 
   componentDidMount() {
+    this.removeListener = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ authed: true });
+      } else {
+        this.setState({ authed: false });
+      }
+    });
   }
 
   componentWillUnmount() {
+    this.removeListener();
   }
 
   render() {
     const { authed } = this.state;
-    const { testText } = this.state;
     return (
       <div className="App">
         <Router>
             <Switch>
               <PublicRoute path="/auth" component={Auth} authed={authed} />
-              <PrivateRoute path="/" exact component={Home} authed={authed} testText={testText}/>
+              <PrivateRoute path="/" exact component={Home} authed={authed} />
             </Switch>
         </Router>
       </div>
