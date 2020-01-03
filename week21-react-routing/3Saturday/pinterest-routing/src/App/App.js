@@ -8,19 +8,21 @@ import 'firebase/auth';
 import firebaseConnection from '../helpers/data/connection';
 import Home from '../components/pages/Home/Home';
 import Auth from '../components/pages/Auth/Auth';
+import NewBoard from '../components/pages/NewBoard/NewBoard';
+import SingleBoard from '../components/pages/SingleBoard/SingleBoard';
 
 import './App.scss';
 
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   // props contains Location, Match, and History
-  const routeChecker = (props) => (authed === false ? <Component {...props} {...rest}/> : <Redirect to={{ pathname: '/home', state: { from: props.location } }} />);
-  return <Route render={(props) => routeChecker(props)} />;
+  const routeChecker = (props) => (authed === false ? <Component {...props} {...rest}/> : <Redirect to={{ pathname: '/', state: { from: props.location } }} />);
+  return <Route {...rest} render={(props) => routeChecker(props)} />;
 };
 
 const PrivateRoute = ({ component: Component, authed, ...rest }) => {
   // props contains Location, Match, and History
   const routeChecker = (props) => (authed === true ? <Component {...props} {...rest}/> : <Redirect to={{ pathname: '/auth', state: { from: props.location } }} />);
-  return <Route render={(props) => routeChecker(props)} />;
+  return <Route {...rest} render={(props) => routeChecker(props)} />;
 };
 
 firebaseConnection();
@@ -50,8 +52,10 @@ class App extends React.Component {
       <div className="App">
         <Router>
             <Switch>
-              <PublicRoute path="/auth" component={Auth} authed={authed} />
               <PrivateRoute path="/" exact component={Home} authed={authed} />
+              <PublicRoute path="/auth" component={Auth} authed={authed} />
+              <PrivateRoute path="/board/new" exact component={NewBoard} authed={authed} />
+              <PrivateRoute path="/board/:boardId" exact component={SingleBoard} authed={authed} />
             </Switch>
         </Router>
       </div>
