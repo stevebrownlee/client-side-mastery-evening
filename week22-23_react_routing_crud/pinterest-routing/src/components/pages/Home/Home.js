@@ -11,7 +11,6 @@ class Home extends React.Component {
     return (
       <div className="Home">
         <h1>BOARDS</h1>
-        <Link className="btn btn-primary" to="/board/new">Create New board</Link>
         <Link className="btn btn-secondary" to={`/board/${boardId}`}>Single board with id = 12345</Link>
       </div>
     );
