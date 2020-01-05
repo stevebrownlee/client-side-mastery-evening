@@ -1,4 +1,5 @@
 import React from 'react';
+import Proptypes from 'prop-types';
 import './Pin.scss';
 
 import pinShape from '../../../helpers/propz/pinShape';
@@ -6,6 +7,7 @@ import pinShape from '../../../helpers/propz/pinShape';
 class Pin extends React.Component {
   static propTypes = {
     pin: pinShape.pinShape,
+    deleteSinglePin: Proptypes.func,
   }
 
   deletePinEvent = (e) => {

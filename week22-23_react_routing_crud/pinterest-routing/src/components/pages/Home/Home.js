@@ -27,6 +27,14 @@ class Home extends React.Component {
       .catch((errFromBoardsContainer) => console.error({ errFromBoardsContainer }));
   }
 
+  deleteSingleBoard = (boardId) => {
+    boardData.deleteBoard(boardId)
+      .then(() => {
+        this.getBoards();
+      })
+      .catch((errorFromDeleteBoard) => console.error(errorFromDeleteBoard));
+  }
+
   render() {
     // const boardId = '12345';
     // <Link className="btn btn-secondary" to={`/board/${boardId}`}>Single board with id = 12345</Link>
@@ -34,7 +42,7 @@ class Home extends React.Component {
       <div className="Home">
         <h1>BOARDS</h1>
         <div className="boards d-flex flex-wrap">
-          {this.state.boards.map((board) => (<Board key={board.id} board={board} />))}
+          {this.state.boards.map((board) => (<Board key={board.id} board={board} deleteSingleBoard={this.deleteSingleBoard}/>))}
         </div>
       </div>
     );
