@@ -20,10 +20,10 @@ class MyNavbar extends React.Component {
       if (authed) {
         return (
           <ul className="navbar-nav ml-auto">
-            <li class="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/board/new">New Board</Link>
             </li>
-            <li class="nav-item">
+            <li className="nav-item">
               <button className="nav-link btn btn-danger" onClick={this.logMeOut}>Logout</button>
             </li>
           </ul>
