@@ -1,4 +1,4 @@
-# Week 3 - Day 1
+# Week 3 - Day 2
 
 > **Agenda:** Dev tools, Loops and the dom
 

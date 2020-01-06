@@ -60,21 +60,15 @@ const printToDom = (divId, textToPrint) => {
   selectedDiv.innerHTML = textToPrint;
 }
 
-const pieBuilder = (piez) => {
+const pieBuilder = (monkeybutts) => {
   let domString = '';
 
-  for (let i = 0; i < piez.length; i++) {
-
-    domString += '<div class="pie col-3">';
+ for(let i=0; i<monkeybutts.length; i++){
     domString += '<div class="card">';
-    domString += `<img src=${piez[i].imageUrl} class="card-img-top pie-image" alt=${piez[i].name}>`;
-    domString += '<div class="card-body">';
-    domString += `<h5 class="card-title">${piez[i].name}</h5>`;
-    domString += `<p class="card-text">${piez[i].drinkPairing}</p>`;
+    domString +=   `<h2>${monkeybutts[i].name}</h2>`;
+    domString +=   `<img src=${monkeybutts[i].imageUrl} alt='Image of ${monkeybutts[i].name}' />`
     domString += '</div>';
-    domString += '</div>';
-    domString += '</div>';
-  }
+ }
 
   printToDom('pies', domString);
 };
