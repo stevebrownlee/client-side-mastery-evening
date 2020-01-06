@@ -8,6 +8,19 @@ class BoardForm extends React.Component {
   state = {
     boardName: '',
     boardDescription: '',
+    isEditing: false,
+  }
+
+  componentDidMount() {
+    if (this.props.path.split('/')[3] === 'edit') {
+      const { boardId } = this.props.match.params;
+      boardData.getSingleBoard(boardId)
+        .then((request) => {
+          const board = request.data;
+          this.setState({ boardName: board.name, boardDescription: board.description, isEditing: true });
+        })
+        .catch((errorFromGetSingleBoard) => console.error({ errorFromGetSingleBoard }));
+    }
   }
 
   saveBoardEvent = (e) => {
@@ -19,7 +32,23 @@ class BoardForm extends React.Component {
     };
     boardData.saveBoard(newBoard)
       .then(() => {
-        this.setState({ boardName: '', boardDescription: '' });
+        this.setState({ boardName: '', boardDescription: '', isEditing: false });
+        this.props.history.push('/');
+      })
+      .catch((errorFromSaveBoard) => console.error({ errorFromSaveBoard }));
+  }
+
+  editBoardEvent= (e) => {
+    e.preventDefault();
+    const { boardId } = this.props.match.params;
+    const newBoard = {
+      name: this.state.boardName,
+      description: this.state.boardDescription,
+      uid: authData.getUid(),
+    };
+    boardData.updateBoard(boardId, newBoard)
+      .then(() => {
+        this.setState({ boardName: '', boardDescription: '', isEditing: false });
         this.props.history.push('/');
       })
       .catch((errorFromSaveBoard) => console.error({ errorFromSaveBoard }));
@@ -36,6 +65,7 @@ class BoardForm extends React.Component {
   }
 
   render() {
+    const { boardName, isEditing, boardDescription } = this.state;
     return (
       <form className='col-6 offset-3 BoardForm'>
         <div className="form-group">
@@ -45,7 +75,7 @@ class BoardForm extends React.Component {
             className="form-control"
             id="board-name"
             placeholder="Enter board name"
-            value={this.state.boardName}
+            value={boardName}
             onChange={this.nameChange}
           />
         </div>
@@ -56,11 +86,14 @@ class BoardForm extends React.Component {
             className="form-control"
             id="board-description"
             placeholder="Enter board description"
-            value={this.state.boardDescription}
+            value={boardDescription}
             onChange={this.descriptionChange}
           />
         </div>
-        <button className="btn btn-secondary" onClick={this.saveBoardEvent}>Save Board</button>
+        { isEditing
+          ? (<button className="btn btn-secondary" onClick={this.editBoardEvent}>Edit Board</button>)
+          : (<button className="btn btn-secondary" onClick={this.saveBoardEvent}>Save Board</button>)
+        }
       </form>
     );
   }
