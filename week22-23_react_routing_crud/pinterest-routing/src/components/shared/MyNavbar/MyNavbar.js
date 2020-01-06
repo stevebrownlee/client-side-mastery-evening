@@ -21,6 +21,9 @@ class MyNavbar extends React.Component {
         return (
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
+              <Link className="nav-link" to="/">Boards</Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link" to="/board/new">New Board</Link>
             </li>
             <li className="nav-item">

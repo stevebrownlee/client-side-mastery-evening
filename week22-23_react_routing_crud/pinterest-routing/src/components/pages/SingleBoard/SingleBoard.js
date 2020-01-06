@@ -50,7 +50,7 @@ class SingleBoard extends React.Component {
         <p>{board.description}</p>
         <Link className="btn btn-primary" to={`/board/${boardId}/pin/new`}>Add a pin</Link>
         <div className="d-flex flex-wrap">
-          { pins.map((pin) => <Pin key={pin.id} pin={pin} deleteSinglePin={this.deleteSinglePin} />)}
+          { pins.map((pin) => <Pin key={pin.id} pin={pin} boardId={boardId} deleteSinglePin={this.deleteSinglePin} />)}
         </div>
       </div>
     );
