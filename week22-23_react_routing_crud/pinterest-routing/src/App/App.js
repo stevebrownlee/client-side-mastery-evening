@@ -11,6 +11,7 @@ import MyNavbar from '../components/shared/MyNavbar/MyNavbar';
 import Home from '../components/pages/Home/Home';
 import Auth from '../components/pages/Auth/Auth';
 import BoardForm from '../components/pages/BoardForm/BoardForm';
+import PinForm from '../components/pages/PinForm/PinForm';
 import SingleBoard from '../components/pages/SingleBoard/SingleBoard';
 
 import './App.scss';
@@ -59,6 +60,7 @@ class App extends React.Component {
               <PublicRoute path="/auth" component={Auth} authed={authed} />
               <PrivateRoute path="/board/new" exact component={BoardForm} authed={authed} />
               <PrivateRoute path="/board/:boardId" exact component={SingleBoard} authed={authed} />
+              <PrivateRoute path="/board/:boardId/pin/new" exact component={PinForm} authed={authed} />
             </Switch>
         </Router>
       </div>
