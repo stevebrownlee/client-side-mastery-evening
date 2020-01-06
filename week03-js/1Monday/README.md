@@ -1,59 +1,54 @@
-# Week 3 - Day 1
+# Week 2 - Day 3
 
-> **Agenda:** Dev tools, Loops and the dom
+> **Agenda:** JS Overview
 
-## Questions and Role
-* Have Greg take role
-* Give a few minutes for students to ask any questions they have from the last class.
+Crash course in JS.  Its 4 one hour sessions with an hour lunch break
 
-## Dev Tools
-This should be an overview to the dev tools - we will be using them continuously over the next few million years.  Show students the following:
-* How to open their dev tools
-* What each tab in the dev tools does
-* How to debug code in the browser - console.log, debugger, breakpoints. Do this as part of the loop and dom lecture.
-Notes for all the above can be found [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/dev-tools.md)
+MAKE THIS INTERACTIVE - HAND OUT DUCKS TO CORRECT ANSWERS.
 
-## Loops and the DOM
-Class notes are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/js-array-looping.md)
+## SETUP - give them 15 minutes to do this
+* Have them create a new github repo called js-intro.  I have already created this repo for [E10](https://github.com/nss-evening-cohort-10/js-intro) - https://github.com/nss-evening-cohort-10/js-intro
+* They should push README.md to master branch
+* Make a setup branch and add index.html, main.css, main.js.  Link everthing together and serve it up
+* Once background color changes, console.log works, and h1 tag shows they can PR and merge.
 
-### Setup
-Have them create a new github repo called dom-loops.  I have already created this repo for [E10](https://github.com/nss-evening-cohort-10/dom-loops) - https://github.com/nss-evening-cohort-10/dom-loops
+## Functions (1 hour)
+Class notes are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/js-functions.md)
+* Play the [nugget factory](https://www.youtube.com/watch?v=VUTXsPFx-qQ) video about functions.  Kinda disturbing but gets the point across.
+* Talk about difference between ES6 and ES5 - you can find notes for that [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/es6-vs-es5.md)
+* Have students make a `functions` branch
+* Have students make a `functions.js` file and add a script tag
+* Do example function problems - there are 2.
+* Give them a few minutes to do the practice functions - there are 2
+* PR and merge the `functions` branch
 
-Locally the project should live here: `~/workspace/foundations/inclass/dom-loops`.
+## Objects (45 minutes)
+Class notes for Objects are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/js-objects.md)
+Class notes for Strings are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/js-strings.md)
+* have students make a `objects` branch
+* Strings - Explain the difference between `==` and `===`
+* Strings - talk about `if` statements
+* Strings - have a ton of methods.  Show the MDN page for strings and pick out 2 methods to show (good options are .indexOf and .length)
+* Objects - talk about key value pairs
+* Pick something arbitrary and represent it with an object.  I have done an employee and an expense as examples
+* Go over dot notation and bracket notation
+* Give them `statusMaker` challenge
+* PR and merge the `objects` branch
 
-Have them push README.md to master and then create a `setup` branch that changes the background color of the body and does a console.log.  Once they push to master you are ready to go with the lecture
+## LUNCH BREAK (1 hour)
 
-### Part 1: Intro to Loops
-* make branch called `intro`
-* create loops.js file and add script tag to index.html
-* EVERYTHING SHOULD BE FUNCTION BASED
-* create an array called colors that has a bunch of colors in it
-* Write a function called `colorLoop` that does a for loops over colors array and consoles each out - use init function to call this function
-* Refactor `colorLoop` to console a single domstring that has each color surrounded by an h1 tag
-* PR and merge branch
+## Arrays (1 hour)
+Class notes are [HERE](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/js-array-methods.md)
+* have students make a `arrays` branch
+* Go over each of the array methods in the Class notes above
+* Give students challenge problems
+* PR and merge the `arrays` branch
 
-### Part 2: Exercise
-* make a branch called `instructors`
-* Have students create an array called isntructors - each instructor should be an object with a firstname and lastname in it.
-* give students 15 minutes to figure out how to console full instructor names.   Then review the solution
-* have them modify their code so they have a single domstring that consoles out instructor names in h1 tags
-* PR and merge branch
+## Combination Special (1 hour)
+* have students make a `combo` branch
+* Most of what we do involves combinations of things.  Specifically arrays of objects.  This section is just a grab bag of anything - minus loops - ain't nobody got time for loops
+* Give them the challenge problems one at a time.  Then go over their answers
+* PR and merge the `combo` branch
 
-### DINNER BREAK - 30 min
-
-### Part 3: Print to DOM
-* Introduce the DOM - what is it?  what does it stand for? etc
-* make branch called DOM
-* Make a div with an id of dinosaurs - write very basic getElementById to show you can set the innerHTML of a div
-* Create an array of dinosaur objects
-* build dom string function to make dinosaur cards
-* create printToDom function to print cards to dom
-* Do some minor flex styling
-* PR and merge branch
-
-### Part 4: Exercise
-* Create branch called HW
-* have students make an array called assignments that has 5 objects.  Each object should have the following keys: title, dueDate, topic, notes, assignmentUrl
-* Give students 20-30 minutes to write function that loops over assignments and makes cards.  Extra points if they can figure out how to reuse the printToDom function from part 3
-* Review assignment
-* PR and merge branch
+## Extra Time?
+* Show them [Code Wars](https://www.codewars.com).  Show them how to search for Katas - 8 is easy level.  They can filter by topic - arrays, strings, objects.  Its a fun way to get some practice
