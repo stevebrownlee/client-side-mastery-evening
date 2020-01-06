@@ -166,7 +166,42 @@ Week by week documentation of what was covered - Currently for E10
 
 ***
 
-## Week 20 (December 30 - January 4)
+## Week 21 (December 30 - January 4)
 * **Day 1** - HOLIDAY XMAS
 * **Day 2** - HOLIDAY XMAS
 * **Lab Day** - React Routing
+
+***
+
+## Week 22 (January 6 - 11)
+* **Day 1** - Exercises
+* **Day 2** - React Routing & CRUD
+* **Lab Day** - exercises
+
+***
+
+## Week 23 (January 13-18)
+* **Day 1** - React Routing & CRUD
+* **Day 2** - React Routing & CRUD
+* **Lab Day** - Capstone Checkins
+
+***
+
+## Week 24 (January 20 - 25)
+* **Day 1** - Capstones
+* **Day 2** - Capstones
+* **Lab Day** - Capstones
+
+***
+
+## Week 25 (January 27 - February 1)
+* **Day 1** - Capstones
+* **Day 2** - Capstones
+* **Lab Day** - Capstones
+
+***
+
+## Week 26 (February 3-8)
+* **Day 1** - Capstones
+* **Day 2** - Capstones
+* **Lab Day** - Capstones
