@@ -1,12 +1,17 @@
-# Week 1 - Day 3
+# Week 1 - Study Group Day
 
-> **Agenda:** E9 Demos, command line, vs code
-
-* Give 2 hours for E9 science fair style demos
+> **Agenda:** installs, command line, vs code
+* Do all PC installs and any MAC installs that didn't happen yesterday
 * Quick intro to VS Code
 * Spend about 45 min on command line overview
 * Spend about 15 minutes getting students to make file structure
-* Spend remainder of class making basic git repos
+
+## PC Installs
+* Complete [Installs](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/setup.md)
+
+Final installation test:
+* students should be able to type `hs` in a terminal and http-server should run
+* Students should be able to type `code .` in ta terminal and vs code should open
 
 ## VS Code
 [VS Code Notes](https://github.com/nss-nightclass-projects/Night-Class-Resources/blob/master/book-1-foundations/chapters/vs_code.md)
