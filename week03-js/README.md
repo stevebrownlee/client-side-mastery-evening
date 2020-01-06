@@ -1,5 +1,5 @@
-# Week 3 (August 26 - September 1)
-* **Day 1** - Dev tools, the dom, loops
-* **Day 2** - Basic Event listeners
+# Week 3 (January 20-26)
+* **Day 1** - JS OVERVIEW
+* **Day 2** - dev tools, DOM, loops
 * **HW** -
 * **Lab Day** - Exercises
