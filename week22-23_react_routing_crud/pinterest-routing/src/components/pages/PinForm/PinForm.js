@@ -8,6 +8,19 @@ class PinForm extends React.Component {
   state = {
     pinTitle: '',
     pinImageUrl: '',
+    isEditing: false,
+  }
+
+  componentDidMount() {
+    if (this.props.path.split('/')[5] === 'edit') {
+      const { pinId } = this.props.match.params;
+      pinData.getSinglePin(pinId)
+        .then((request) => {
+          const pin = request.data;
+          this.setState({ pinTitle: pin.title, pinImageUrl: pin.imageUrl, isEditing: true });
+        })
+        .catch((errorFromGetSingleBoard) => console.error({ errorFromGetSingleBoard }));
+    }
   }
 
   savePinEvent = (e) => {
@@ -21,10 +34,27 @@ class PinForm extends React.Component {
     };
     pinData.savePin(newPin)
       .then(() => {
-        this.setState({ pinTitle: '', pinImageUrl: '' });
+        this.setState({ pinTitle: '', pinImageUrl: '', isEditing: false });
         this.props.history.push(`/board/${boardId}`);
       })
       .catch((errorFromSavePin) => console.error({ errorFromSavePin }));
+  }
+
+  editPinEvent = (e) => {
+    const { boardId, pinId } = this.props.match.params;
+    e.preventDefault();
+    const newPin = {
+      title: this.state.pinTitle,
+      imageUrl: this.state.pinImageUrl,
+      uid: authData.getUid(),
+      boardId,
+    };
+    pinData.updatePin(pinId, newPin)
+      .then(() => {
+        this.setState({ pinTitle: '', pinImageUrl: '', isEditing: false });
+        this.props.history.push(`/board/${boardId}`);
+      })
+      .catch((errorFromUpdatePin) => console.error({ errorFromUpdatePin }));
   }
 
   titleChange = (e) => {
@@ -38,7 +68,7 @@ class PinForm extends React.Component {
   }
 
   render() {
-    const { pinTitle, pinImageUrl } = this.state;
+    const { pinTitle, pinImageUrl, isEditing } = this.state;
     return (
       <form className='col-6 offset-3 PinForm'>
           <div className="form-group">
@@ -63,7 +93,10 @@ class PinForm extends React.Component {
               onChange={this.imageUrlChange}
             />
           </div>
-          <button className="btn btn-secondary" onClick={this.savePinEvent}>Add Pin</button>
+          { isEditing
+            ? (<button className="btn btn-secondary" onClick={this.editPinEvent}>Edit Pin</button>)
+            : (<button className="btn btn-secondary" onClick={this.savePinEvent}>Add Pin</button>)
+          }
         </form>
     );
   }
