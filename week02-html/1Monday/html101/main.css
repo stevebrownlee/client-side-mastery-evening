@@ -1,0 +1,50 @@
+body {
+  background-color: red;
+  margin: 0;
+  text-align: center;
+
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+footer {
+  width: 100%;
+  color: white;
+  background-color: #333;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.card {
+  border: 2px solid #333;
+}
+img {
+  height: 100px;
+}
