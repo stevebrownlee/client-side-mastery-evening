@@ -2,27 +2,79 @@ body {
   background-color: white;
   padding: 0;
   margin: 0;
+  text-align: center;
+
+  min-height: 400px;
+  margin-bottom: 100px;
+  clear: both;
 }
 
+/* NAV */
 nav {
   background-color: #eee;
-  padding: 1em;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-nav .links a {
+h1 {
+  padding: 0 20px;
+  line-height: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li a {
   margin: 1em;
+  display: block;
+  color: #111;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.app {
+li a:hover {
+  color: white;
+  background-color: #111;
+}
+
+
+/* FOOTER */
+footer {
+  width: 100%;
+  color: #111;
+  background-color: #eee;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+
+/* DOGS */
+.dogs {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-.app img {
+.dogs img {
   height: 500px;
+  margin: 50px;
+}
+
+/* CATS */
+.cats {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.cats img {
+  height: 500px;
+  width: 500px;
   margin: 50px;
 }
