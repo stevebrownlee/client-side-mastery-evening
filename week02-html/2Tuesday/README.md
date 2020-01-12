@@ -1,38 +1,46 @@
 # Week 2 - Day 2
 
-> **Agenda:** Git review, html/css, flexbox
+> **Agenda:** Git review, css, flexbox
+
 ## Review git branching
+Take a class pulse and ask how they are doing with git branching.  If the class wants feel free to go over it as a class again.
 
-* Have students make a folder called branch-review2 in `~/workspace/foundations/inclass`
-* Then suddenly get amnesia and let students direct you with how to make a git repo with setup branch merged in:
-1. Locally make a README.md with title in it - add and commit
-1. Create github repo called branch-review
-1. Set remote and push to master
-1. Make a branch called setup
-1. make index.html, main.css, main.js.  js file should have console.log. css file should change background color.  Index should have boilerplate, link and script tag
-1. run code to make sure it works
-1. add, commit, push to setup
-1. make pull request to master
-1. merge PR
-1. locally switch to master and pull down
 
-## 2nd review (if needed)
-If the above step by step process doesn't seem to go well have them do all the steps again on another repo.
+## Flexbox Part 1- intro and setup
+1. Talk a little about what flexbox is (they all did some as part of the prework so this shouldn't be anything new).
+1.  They show them the [CSS tricks site](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).  Walk them through how to use the site - its their first time looking at documentation (RTFM!!!!)
+1. Create a repo called flexbox-intro (`~/workspace/foundations/inclass/flexbox-intro`)
+1. have them go through all the usual stuff - make readme and push to master, make setup branch and do the stuff
+1.  go over setup and then push, PR, and merge
 
-## Flexbox
-Talk a little about what flexbox is (they all did some as part of the prework so this shouldn't be anything new).  They show them the [CSS tricks site](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).  Walk them through how to use the site - its their first time looking at documentation (RTFM!!!!)
+## Flexbox Part 2 - navbar
+1. make a navbar branch
+1. build out the navbar - this time it has a brand and flex
+1. create cats.html and dogs.html - can just have an h2 tag on those
+1. apply some styling
+1. Make sure navbar links all work
+1. PR and merge branch in
 
-Have them create a new github repo called flexbox-intro.  I have already created this repo for [E10](https://github.com/nss-evening-cohort-10/flexbox-intro) - https://github.com/nss-evening-cohort-10/flexbox-intro
+## Flexbox Part 3 - home
+1. Make a home branch
+1. All three html files should have basic semantic structure - header, main , footer
+1. Add some ipsum to the home page - have students chose their favorite generator
+1. PR and merge branch in
 
-Locally the project should live here: `~/workspace/foundations/inclass/flexbox-intro`.
+## Flexbox Part 4 - dogs
+1. make a dogs branch
+1. grab 5 picutres of dogs
+1. flex style them
+1. PR and merge branch in
 
-Have them push README.md to master and then create a setup branch that changes the background color of the body and does a console.log.  Once they push to master you are ready to go with the lecture
+## Flexbox Part 5 - Challenge Cats
+1. Make a cats branch
+1. Student should display 5 or more pictures of kittens.  They have complete styling freedom of how to do this.
+1. Have students share their work - have them pull open their cats page, get everyone to stand up.  And give 5ish min for people to walk around and look at others work
+1.  PR and merge branch in
 
-Do a quick reminder discussion of when to branch - by feature.  So we will be doing a navbar branch and a dogs branch.
-
-Make the navbar branch and do all the code things and then PR.
-
-Make the dogs branch and do all the code things and then PR.
+## Remaining Time
+IF ANY TIME LEFT - Have students make 5 repos (test1 - test5 or test6 - test10 if they did some yesterday) that have single setup branch and everything merged in so master has index.html, main.css, main.js files.  Should see h1 tag, background color change, and console.log statement in each. This is to build muscle memory with git commands.  Slack me when you get to this point so I can gage when to come in and talk about HW
 
 ## HW
-Go over their HW.  It can be found [HERE](https://github.com/nss-evening-cohort-10/e10-homework/blob/master/week02.md).  Explain each assignment - 25 github repos, product cards (done at studygroup).  Show them flexbox froggy and do the first challenge with them.  Any remaining classtime can be used for HW time.  If you finish and its after 9 but before 9:30 let them go home early.
+I will come in and go over this.  I will also talk about the class tracker site.
