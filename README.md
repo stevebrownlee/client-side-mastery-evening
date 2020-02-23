@@ -48,4 +48,52 @@ Week by week documentation of what was covered - Currently for E11
 * **Day 1** - Group Projects - Bandz
 * **Day 2** - Group Projects - Bandz
 * **HW** -
-* **Lab Day** - demos, retrospective, markdown
+* **Lab Day** - Group Projects - Bandz
+
+***
+
+## Week 7 (February 17 - 23)
+* **Day 1** - Bandz demos, retrospective, markdown
+* **Day 2** - Milestone 1 review - Dino Kennel Planning
+* **HW** -
+* **Lab Day** - Milestone 1 review - Dino Kennel Coding
+
+***
+
+## Week 8 (February 24 - March 1)
+* **Day 1** - Basic ES6 Modules
+* **Day 2** - Jquery
+* **HW** -
+* **Lab Day** - Exercises
+
+***
+
+## Week 9 (March 1 - 8)
+* **Day 1** - Task Runners
+* **Day 2** - SASS
+* **HW** -
+* **Lab Day** - Exercises
+
+***
+
+## Week 10 (March 9 - 15)
+* **Day 1** - Review
+* **Day 2** - Group Project: chatty
+* **HW** -
+* **Lab Day** - Group Project: chatty
+
+***
+
+## Week 11 (March 16 - 22)
+* **Day 1** -Group Project: chatty
+* **Day 2** - Demo chatty
+* **HW** -
+* **Lab Day** - ERDS, JSON, axios
+
+***
+
+## Week 12 (March 23 - 29)
+* **Day 1** - Promises
+* **Day 2** - Promises
+* **HW** -
+* **Lab Day** - Exercises
