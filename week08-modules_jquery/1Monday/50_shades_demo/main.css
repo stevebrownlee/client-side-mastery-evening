@@ -1,0 +1,32 @@
+.title{
+  font-family: 'Oregano', cursive !important;
+  color: red;
+  font-weight: 900;
+}
+
+.grey-box {
+  float: left;
+  margin: 2px;
+  width: 200px;
+  height: 200px;
+}
+
+#cart-thumb img {
+  height: 100px;
+}
+
+.cart{
+  margin-top: 130px;
+  font-size: 400px;
+  color: lightskyblue;
+}
+
+#book-container{
+  position: absolute;
+}
+
+#cart-stuff{
+  position: absolute;
+  top: 155px;
+  left: 410px;
+}
