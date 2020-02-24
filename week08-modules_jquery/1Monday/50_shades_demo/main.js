@@ -19,7 +19,6 @@ const fiftyShadesBoxes = () => {
 };
 
 const cartClick = () => {
-  // document.getElementById('cart').classList.remove('is-hidden');
   let domString = '<i class="fas fa-shopping-cart cart"></i>';
   domString += '<div id="cart-stuff">';
   domString += `<h3>My Cart</h3>`;
