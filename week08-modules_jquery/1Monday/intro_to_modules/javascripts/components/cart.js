@@ -1,24 +1,20 @@
+import cartData from '../helpers/data/cartData.js';
 import util from '../helpers/utilities.js';
 
-const cart = [];
-
-const getCart = () => {
-  return cart;
-};
-
-const setCart = (book) => {
-  cart.push(book);
-};
+const addToCart = (book) => {
+  cartData.setCart(book);
+  cartToDom();
+}
 
 const buyEvent = (e) => {
   e.preventDefault();
-  const myCart = getCart();
+  const myCart = cartData.getCart();
   const total = myCart.reduce((a, b) => {return a + b.price}, 0);
   window.alert(`You owe $${total.toFixed(2)}`);
 };
 
 const cartToDom = () => {
-  const myCart = getCart();
+  const myCart = cartData.getCart();
   let domString = '<div class="row">';
   domString += '<h2>Cart:</h2>';
   domString += '<button id="purchase-btn" class="btn btn-secondary">Purchase</button>'
@@ -38,4 +34,4 @@ const cartToDom = () => {
 };
 
 
-export default {getCart, setCart, cartToDom};
+export default {addToCart, cartToDom};

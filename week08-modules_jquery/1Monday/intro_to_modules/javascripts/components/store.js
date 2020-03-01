@@ -5,8 +5,8 @@ import util from '../helpers/utilities.js';
 const addToCartEvent = (e) => {
   e.preventDefault();
   const bookInfo = bookData.getBook();
-  cart.setCart(bookInfo);
-  cart.cartToDom();
+  cart.addToCart(bookInfo);
+  // cart.cartToDom();
 }
 
 const makeStore = () => {
