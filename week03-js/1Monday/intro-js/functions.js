@@ -22,7 +22,7 @@ console.log(dogBreed('a cat'));
 // Challenge #1
 // Write a function that takes any number and returns that number plus 42
 const fortyTwo = (num) => {
-  return num + 47;
+  return num + 42;
 };
 
 console.log(fortyTwo(2));
